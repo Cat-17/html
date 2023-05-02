@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<!-- 关键字  在js中有特殊意思的词汇     举例  let  var  function  if  else  switch  case  break -->
+<!-- 保留字 在目前的js中没意义 ，但未来可能会具有特殊意义的词汇   int  short  long  char -->
+<!-- 标识（标识符）变量名，函数名的另一种叫法  -->
+<!--  表达式  能产生值的代码 ，一般配合运算符出现    举例  10+3  age>=18 -->
+<!-- 语句    一句代码也称之为一条语句 ，一般按用途还会分类：输出语句 声明语句 分支语句  举例 -->
+
+<!-- 简单类型又叫基本数据类型或者值类型 ，复杂类型又叫引用类型 -->
+<!-- 值类型：简单数据类型/基本数据类型，在存储是变量中存储的是值本身，因此叫做值类型 -->
+<!-- 比如    String Number Boolean undefined null-->
+<!-- 引用类型  复杂数据类型 在存储变量中存储的仅仅是地址（引用）因此也叫做引用数据类型 -->
+<!-- 通过new 关键字创建的对象（系统对象自定义对象）如 object   array  date -->
+
+
+
+
+<script>
+    // <!-- 简单数据类型是存放在 栈 里面  
+        //   num1 10 开辟一个空间 num2 10 在开辟一个空间 num2 发生变化 是不会影响num1     -->
+    let num1 = 10
+    let num2 = num1
+    num2 = 20
+    console.log(num1)
+
+    // 对象引用数据类型 栈里面存储的是地址 obj1=obj2 存放的地址是一样的 如果数据发生变化俩个会一起变 数据是存在推里面age: 18
+    let obj1 = {
+        age: 18
+
+    }
+    let obj2 = obj1
+    obj2.age = 20
+    // console.log(obj1,obj1)
+     console.log(obj1)
+
+
+
+   
+</script>
+    
+</body>
+</html>

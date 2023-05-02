@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>平面转换</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .box {
+            /* 设置背景图的大小 */
+            width: 1366px;
+            height: 600px;
+            /*显示 位置 */
+            margin: 20px auto;
+            background-image: url(../day01-字体图标/images/bg.jpg);
+            /* 溢出内容隐藏 找到父级添加 */
+            overflow: hidden;
+
+        }
+        /* 使用伪元素 必须要有 content: '';  不然不生效 */
+        .box::before,
+        .box::after{
+            float: left;
+            content: '';
+            /* 俩张图片是叠在一起的 使用浮动 */
+            width: 50%;
+            height: 600px;
+            background-image: url(../day01-字体图标/images/fm.jpg);
+            /* 现在图片的位置看不到 但是设置一下位置 */
+            /* 过渡元素 */
+            transition: all .5s;
+
+        }
+        .box::after {
+            /* 控制背景图的最右的位置 */
+            background-position: right 0;
+        }
+        /* 鼠标悬停的效果一个向左一个向右 使用位移属性鼠标放在box有效果 但是是里面的内容发生变化 */
+        .box:hover::before{
+            transform: translate(-100%);
+        }
+      .box:hover::after{
+            transform: translateX(100%);
+        }
+        
+
+      
+      
+           
+           
+            
+
+
+        
+
+    </style>
+</head>
+<body>
+    <div class="box">
+       
+    </div>
+    
+</body>
+</html>

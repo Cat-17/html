@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            width: 200px;
+            height: 100px;
+            background-color: pink;
+
+            /* 使用动画  */
+            /* 使用动画的名称 */
+            animation-name: change ;
+            /* 使用动画的时间 */
+            animation-duration: 1s;
+            /* 使用动画的无限循环 */
+            animation-iteration-count: infinite;
+        }
+
+        /* 动画暂停 需要配合hover使用 */
+        .box:hover{
+            /* 用户鼠标点到上面时候动画暂停 */
+            animation-play-state: paused;
+        }
+
+        /* 定义动画 */
+        @keyframes change {
+            from {
+                width: 200px;
+            }
+            to {
+                width: 600px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>

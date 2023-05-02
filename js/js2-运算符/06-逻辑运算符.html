@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>逻辑运算符</title>
+    <!-- 逻辑运算符  如果我们想判断一个数据大于5且小于10 怎么办 
+        逻辑运算符用来解决多重条件判断-->
+    <!-- && 逻辑与 日常读法 并且 符号俩边都是true 结果才为true 一假则假 -->
+    <!-- || 逻辑或 日常读法 或者 符号俩边有一个true 就为true 一真则真 -->
+    <!-- ! 逻辑非 取反 true变false false变true 真变假，假变真 -->
+</head>
+
+<body>
+    <script>
+        //  <!-- && 逻辑与 日常读法 并且 符号俩边都是true 结果才为true 一假则假 --
+        console.log(true && true);
+        console.log(false && true);
+        //<!-- || 逻辑或 日常读法 或者 符号俩边有一个true 就为true 一真则真 -->
+        console.log(!(true || false));
+        console.log(false || false);
+        //  <!-- ! 逻辑非 取反 true变false false变true 真变假，假变真 -->
+        console.log(!true);
+        console.log(!false);
+
+    // 逻辑运算符里的短路
+    // 短路值存在于&& ||中 当满足一定条件会让右边的代码不执行
+    // 原因：通过左边能得到整个式子的结果，因此没必要在判断右边的
+    // 运算结果；无论是&&||，运算结果都是最后被执行的表达式值，一般用在变量赋值
+
+    // 有5个值放false来看的 其余是真的
+    //  false(假的)  数字0   ''  undefined  null 
+
+
+
+
+    </script>
+</body>
+
+</html>

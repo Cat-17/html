@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>子节点查找</title>
+    <!-- childNodes   -->
+</head>
+
+<body>
+    <button>点击</button>
+    <ul>
+        <li>我是孩子</li>
+        <li>我是孩子</li>
+        <li>我是孩子</li>
+        <li>我是孩子</li>
+        <li>我是孩子</li>
+        <li>我是孩子</li>
+    </ul>
+    <script>
+        // 父元素.childeen  father.childeen 仅获得所有元素节点 返回的是一个伪数组
+        let btn = document.querySelector('button')
+        let ul = document.querySelector('ul')
+        btn.addEventListener('click', function () {
+            // 获得ul里面的li 也就是他的孩子 返回的是一个伪数组
+            // console.log(ul.children)
+            // 如果觉得太长 就写一个变量名重新赋值
+            let lis = ul.children
+            for (let i = 0; i < ul.children.length; i++) {
+                lis[i].style.color = 'red'
+            }
+
+        })
+        // 如果要选中第一个变成绿色 数组的计算 从0开始
+        ul.children[0].style.color = 'green'
+        
+
+
+
+
+    </script>
+
+</body>
+
+</html>

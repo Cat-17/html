@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>空间转换</title>
+    <style>
+        .box {
+            width: 200px;
+            height: 200px;
+            /* 上下100间距 左右居中 */
+            margin: 100px auto;
+            background-color: pink;
+            /* 配合鼠标悬停 过渡效果 */
+            transition: all 0.5s;
+
+        }
+        .box:hover {
+            /* z轴 不生效 */
+            transform: translate3d(50px ,100px ,200px);
+            /* 想单独控制左右x轴 */
+           transform:translateX(100px);
+           /* 想单独控制上下y轴 */
+           transform: translateY(100px);
+           /* 不生效 */
+           /* transform: translateZ(100px); */
+
+        }
+
+    </style>
+</head>
+<body>
+    <!-- 三D转换 实现元素在空间内的位移 旋转 缩放等效果 -->
+    <!-- transform:translate3d(x,y,z) ;-->
+    <div class="box"></div>
+
+    
+</body>
+</html>

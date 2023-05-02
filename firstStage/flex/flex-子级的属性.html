@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex子级属性</title>
+    <!-- flex属性 给子元素添加 分配剩余空间 自己占的分数 -->
+    <style>
+        section {
+            display: flex;
+            width: 60%;
+            height: 150px;
+            background-color: pink;
+            margin: 0 auto;
+        }
+        section div:nth-child(1) {
+            width: 100px;
+            height: 150px;
+            background-color: plum;
+        }
+        section div:nth-child(2) {
+            /* 剩余空间分配 自己占的分数 */
+          flex: 1;
+          background-color: gold;
+        }
+        section div:nth-child(3) {
+            width: 100px;
+            height: 150px;
+            background-color: seagreen;
+        }
+
+
+        /* 把p设置宽高 平均分配给里面的span */
+        p {
+            display: flex;
+            width: 60%;
+            height: 150px;
+            background-color: pink;
+            margin: 100px auto; 
+        }
+        /* span 不设置宽高 就按照父级的宽度 span个人占剩余分数的份数 */
+        p span {
+            flex: 1;
+        }
+
+        /* 如果说想要里面的第二个span多占一点 就单独在设置 */
+        p span:nth-child(2) {
+            flex: 2;
+            background-color: plum;
+        }
+
+    </style>
+</head>
+<body>
+    <section>
+        <div></div>
+        <div></div>
+        <div></div>
+    </section>
+
+    <!-- 后面会大量用到分数 -->
+    <p>
+        <span>1</span>
+        <span>2</span>
+        <span>3</span>
+    </p>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* body */
+
+        body {
+
+            color: red;
+        }
+        /* 直接选中标签名，更精准，所以优先级就越高 */
+        div {
+            color: blue !important;
+        }
+        /* 类标签比标签更精准，优先级越高 */
+        .asd {
+            color: aqua;
+        }
+        /* #id 更精准，优先级越高 */
+        #asd {
+            color: blueviolet;
+        }
+        /* !important可以指定最高级，但是不要给继承的添加，自己有样式无法继承父级样式  */
+
+
+
+
+  
+    </style>
+</head>
+<body>
+    <!-- 优先级的意义；当一个标签使用了多个选择器，到底谁生效 -->
+    <!-- style="color: chocolate;  直接在行内式设置更精准 优先级越高-->
+    <div class="asd" id="asd" style="color: chocolate;">测试优先级</div>
+    <!-- 权重叠加计算法 （行内，id，类，标签，一级一级比下去，谁的个数高，就优先谁的生效 -->
+    
+</body>
+</html>

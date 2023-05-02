@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 伪元素 ::before  通过css创建标签，装饰性的不重要的小图 */
+        /* 在父元素内容前面添加伪元素 */
+        .qaz {
+            width: 200px; 
+            height: 100px;
+            background-color: pink;
+        }  
+             /*   添加伪元素 在前面添加就是 选中要添加的标签.qaz::before{content: "老鼠";}*/
+        .qaz::before {
+            /* content:属性是必须添加 否者伪元素不生效 */
+            content: "老鼠";
+            color: green;
+            width: 100px;
+            height: 100px;
+            background-color: #3d2c2c;
+            /*默认是行内元素，加宽高不生效，这时候就把它转成行内块 不换行 display: block;  */
+            display: block;
+        }
+        /* ::after后面添加伪元素 content: "大米" 
+        content 内容告诉后台你要添加什么内容，所有的内容都是在双"" 里面添加*/
+        .qaz::after {
+            content: "大米"
+
+        }
+
+
+       
+
+
+    </style>
+</head>
+<body>
+    <div class="qaz">
+        爱
+    </div>
+    
+</body>
+</html>

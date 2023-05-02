@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>案例 小米侧导航栏</title>
+    <style>
+        /* 先布局 整个盒子的样式 在到里面的内容 */
+        .nav {
+            width: 170px;
+            height: 340px;
+            background-color: gray;
+            border: 1px solid #fff;
+            padding: 10px 20px ;
+            /* 内边距是会撑大盒子 要手动减去 在宽高上面减掉 不能影响实际的盒子大小 */
+            /* 有一种情况 如果盒子没有指定宽度 加内边距不会撑大盒子 */
+
+
+        }
+
+        .nav a {
+            display: block;
+            width: 100%;
+            height: 25px;
+            text-decoration: none;
+            color: #fff;
+            padding-bottom: 10px;
+         
+
+
+        }
+
+        a:hover {
+            background-color: goldenrod;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="nav">
+
+        <a href="#">手机 电话卡</a>
+        <a href="#">手机 电话卡</a>
+        <a href="#">手机 电话卡</a>
+        <a href="#">手机 电话卡</a>
+        <a href="#">手机 电话卡</a>
+        <a href="#">手机 电话卡</a>
+        <a href="#">手机 电话卡</a>
+        <a href="#">手机 电话卡</a>
+        <a href="#">手机 电话卡</a>
+        <a href="#">手机 电话卡</a>
+
+
+    </div>
+
+</body>
+
+</html>

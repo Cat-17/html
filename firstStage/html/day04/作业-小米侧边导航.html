@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .azx {
+            
+            width: 234px;
+            height: 400px;
+            background-color: rgb(73, 71, 75);
+
+        }
+
+        /* 类标签+后代选择器空格隔开选中对里面的内容进行更改 */
+        .azx a {
+            text-decoration: none;
+            /* divs是行内属性 一行一行不换行，这里要把它转成内行快自动换行，在添加要更改的属性 */
+            display: block;
+            width: 234px;
+            height: 42px;
+            color: azure;
+            text-align: center;
+            margin-bottom: 10px;
+
+        }
+
+        .azx a:hover {
+
+            background-color: red;
+        }
+        
+
+    </style>
+</head>
+<body>
+    <div class="azx"> 
+
+        <a href="#">手机 电话卡</a>
+        <a href="#">电视 盒子</a>
+        <a href="#">笔记本 显示器</a>
+        <a href="#">家电 擦线板</a>
+        <a href="#">出行 穿戴</a>
+        <a href="#">智能 路由器</a>
+        <a href="#">电源 配件</a>
+        <a href="#">健康 儿童</a>
+        <a href="#">生活 箱包</a>
+
+    </div>
+
+    
+</body>
+</html>
+

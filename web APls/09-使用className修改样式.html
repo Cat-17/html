@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 300px;
+            height: 300px;
+            background-color: palegoldenrod;
+        }
+
+        /* 如果修改的样式比较多，起一个类  */
+        .active {
+            width: 500px;
+            height: 500px;
+            background-color: pink;
+            margin-left: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="one"></div>
+    <!-- 要求 宽高修改成500 背景颜色改成 pink -->
+    <!-- 第一步 先获取元素对象 -->
+    <script>
+        // 样式比较多 可以通过类名 
+        let num = document.querySelector('div')
+        // 会把之前的类 覆盖掉
+        // 如果想保留之前的类 就在修改样式里面把之前的类加上
+        // num.className = 'one active'
+
+
+        
+
+
+    //     // 第二步 修改样式  对象.style.样式 = 值
+    //     num.style.width = '500px'
+    //     num.style.height = '500px'
+    //     // 修改样式 背景色变成粉色
+    //    num.style.backgroundColor = 'pink'
+    // //    左边外边距
+    //    num.style.marginLeft = '50px'
+
+
+
+    </script>
+</body>
+</html>

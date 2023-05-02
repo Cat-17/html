@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>叠放次序</title>
+    <!-- 在使用定位布局时，可能会出现盒子重叠的情况，此时，可以使用 （z-index）来控制和的前后次序 （z轴） -->
+    <!-- z-index: 6; 后面像素值越大，越靠上  -->
+    <!-- 只有定位的盒子才有z-index属性 -->
+    <style>
+        .box {
+            width: 200px;
+            height: 200px;
+        }
+
+        .wsd {
+            position: absolute;
+            left: 0;
+            top: 0;
+            background-color: skyblue;
+            z-index: 2;
+        }
+
+        .wsf {
+            position: absolute;
+            left: 0;
+            top: 0;
+            background-color: aquamarine;
+            z-index: 1;
+            top: 50px;
+            left: 50px;
+        }
+
+        .yhn {
+            position: absolute;
+            left: 0;
+            top: 0;
+            background-color: darkgoldenrod;
+            left: 100px;
+            top: 100px;
+            z-index: 3;
+        }
+        /* 都加了定位的情况下，相同的属性会叠加，后来着居上 */
+    </style>
+</head>
+
+<body>
+    <div class="box wsd">1</div>
+    <div class="box wsf">2</div>
+    <div class="box yhn">3</div>
+
+
+</body>
+
+</html>

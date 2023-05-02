@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+           
+            /* 标签里面加了绝对定位还能不能居中，我们加一个试试 */
+            /*  margin: 0 auto;不生效   */
+            /* margin: 0 auto; */
+             /* 绝对定位居中，取值百分比，负值取盒子的一半*/
+            position: absolute;
+            /* 如果是水平居中 取百分比%  因为没有父级 就参考占比浏览器窗口*/
+            /* left: 50%;,整个盒子移动到浏览器中间偏右的位置  */
+            left: 50%;
+            /* 把盒子向左侧移动 负值取盒子的一半 */
+            /* margin-left: -150px ; */
+            /* 如果盒子是在靠下的位置 */
+            top: 50%;
+            /* 想把盒子往上移动，负值取盒子的一半 */
+            /* margin-top: -150px; */
+            /* 如果出现宽高不是整数，不好用取值 又想居中怎么办 */
+            /* 需要用到位移居中 自己算值 */
+            /* 位移；自己宽高高度的一半 */
+            /* 如果宽高发生变化，设置好位移属性，css会自动取值居中 */
+            transform: translate(-50%,-50%);
+
+
+    
+            width: 400px;
+            height: 200px;
+            background-color: pink;
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+    
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>函数传参练习</title>
+</head>
+<body>
+    <!-- 封装函数 计算1~10的累加和-->
+    <script>
+        // function and() {
+        //     let sum = 0
+        //    for(let i = 0; i <= 10 ; i++) {
+        //      sum += i
+            
+             
+        //    }
+        //    document.write(sum)
+          
+         
+
+        // }
+        // //调用
+        // and() 
+
+        // // 封装 函数传参的魅力 打印 1·10之间的和跟1··100之间的和
+        // function and (num1 , num2) {
+        //     let sum = 0
+        //     for (let i = num1; i <= num2 ; i++) {
+
+        //         sum += i
+
+        //     }
+        //     document.write(sum)
+        // }
+        // // 调用
+        // and(2,10)
+        // and(2,100)
+
+
+
+//  document.write(undefined + 10)
+//  document.write(undefined + true)
+//  document.write(undefined + undefined)
+//  document.write(undefined + null)
+// //  只要+左右有一个数据是字符串 就会拼接
+//  document.write(undefined + 'pink')
+ 
+        // 解疑
+        // 什么时候当假的看 0 false  undefined null ''
+        // function 执行的时候 直接跳过 函数体内的数据 直接到调用
+        function getSum (x,y) {
+            // 调用了以后 x相当于1
+            // 逻辑或判断 左边的为真 逻辑中断 不在执行后面的0 0就失效了
+            // 形参如果不被赋值就是undefined
+            x = x || 0
+            y = y  || 0
+            document.write(x + y)
+       // 如果调用的时候我们没有传递实参，则默认是0
+    //    这时候合理利用逻辑中断
+
+        }
+        // 调用
+        getSum()
+        // 后面如果调用 程序也不会又bag
+        getSum(1,2)
+
+
+
+    </script>
+    
+</body>
+</html>

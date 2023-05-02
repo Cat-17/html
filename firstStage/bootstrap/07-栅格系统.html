@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../Ee/H2/bootstrap/css/bootstrap.min.css">
+    <!-- 栅格系统 是把屏幕划分成12等份 -->
+    <style>
+        [class^="col"] {
+            border: 1px solid #000;
+        }
+        .container .row:nth-child(1) {
+            background-color: plum;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- container 响应式容器 row 是行 一行里面 在划分几列  屏幕划分12等份-->
+    <!-- 调用不同的类名 实现在不同屏幕下的下划次数
+         col-lg-3 意思就是在大屏幕下 占3等份 12分数除4列得到划分的3等份数  -->
+         <!-- 每一列默认左右有15的内边距 -->
+    <div class="container">
+        <div class="row">
+            <!-- 大屏幕下 -->
+            <div class="col-lg-3 col-md-4 clo-sm-6  col-xs-12">2</div>
+            <div  class="col-lg-3 col-md-4 clo-sm-6  col-xs-12">1</div>
+            <div  class="col-lg-3 col-md-4 clo-sm-6  col-xs-12">2</div>
+            <div  class="col-lg-3 col-md-4 clo-sm-6  col-xs-12">3</div>
+
+        </div>
+        <!-- r如果孩子的份数相加等于12，则孩子会暂满整个container容器 -->
+        <div class="row">
+            <div class="col-lg-6">2</div>
+            <div  class="col-lg-2">1</div>
+            <div  class="col-lg-2">2</div>
+            <div  class="col-lg-2">3</div>
+
+        </div>
+
+        <!-- 如果孩子的份数相加小于12则会占不满整个container的宽度 会有空白 -->
+        <div class="row">
+            <div class="col-lg-6">2</div>
+            <div  class="col-lg-2">1</div>
+            <div  class="col-lg-2">2</div>
+            <div  class="col-lg-1">3</div>
+
+        </div>
+
+<!-- 如果孩子的份数相加 大于12 多余的那一列会另起一行显示 -->
+        <div class="row">
+            <div class="col-lg-6">2</div>
+            <div  class="col-lg-2">1</div>
+            <div  class="col-lg-2">2</div>
+            <div  class="col-lg-3">3</div>
+
+        </div>
+
+
+
+        <!-- 在中等屏幕下 -->
+
+        
+    </div>
+    
+</body>
+</html>

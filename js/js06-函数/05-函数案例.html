@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>函数案例</title>
+</head>
+
+<body>
+    <!-- 需求 1  封装一个函数 计算俩个数之间的和-->
+    <script>
+        function addSquares() {
+            let num1 = 10
+            let num2 = 30
+            document.write(num1 + num2)
+
+
+        }
+        // 调用才会执行里面函数体的内容
+        addSquares()
+
+        // 2.求1-100的累加和 封装函数
+        function addSquares100() {
+            let sum = 0
+            for (let i = 0; i <= 100; i++) {
+                sum += i
+            }
+            document.write(sum)
+           
+        }
+        // 调用执行
+        addSquares100()
+    </script>
+
+</body>
+
+</html>

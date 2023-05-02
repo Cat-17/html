@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            
+            /* 1；设置一个盒子的宽高背景色 */
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+            /* 问题；现在背景盒子宽度是200px 想要鼠标悬停的时候宽度显示600px 花费一秒钟的时间 */
+            
+            /* 3；注意，谁想要过渡就在谁的下面添加过渡属性
+            这里告诉浏览器，是谁要变 比如宽度， 颜色 高度 展示效果多长时间 ，隔开 */
+            /* transition: width 1s, background-color 2s  ; */
+
+            /* 工作中，如果设置的属性比较多 直接写all 表示所有 */
+            transition: all 1s;
+        }
+        /* 2；过渡配合hover 鼠标悬停效果
+        这里写具体要变多少 变成什么颜色 */
+        .box:hover {
+            width: 600px;
+            /*4；比如我想要背景颜色变成红色怎么办？ */
+            background-color: red;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+    
+</body>
+</html>

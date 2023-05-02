@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .box {
+            /* 父级的高度 */
+            /*弹性写法 给父级添加display: flex; 下面的子级盒子在一行排 自适应 
+            默认是沿着主轴方向排列的 主轴就是水平左右方向  */
+            display: flex;
+            /* 让父级里面的内容 居中效果 */
+            justify-content: center;
+
+            justify-content: space-between;
+            /* space-between 间距 在弹性盒子（子级）之间 */
+
+            /* 所有的间距都相等 */
+            justify-content: space-around;
+
+            /* 间距加在子级的两侧 实现的视觉效果 子级之间的距离是父级俩头距离的2倍 */
+            justify-content: space-evenly;
+            
+            height: 200px;
+            border:  1px solid #000;
+        }
+        .box div {
+            /* 俩个弹性盒子 */
+            width: 100px;
+            height: 100px;
+           background-color: pink;
+        }
+    </style>
+</head>
+<body>
+    <!-- 准备的父子级的标签 -->
+    <div class="box">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./H2/bootstrap/css/bootstrap.min.css">
+    <title>Document</title>
+   <style>
+     .row div {
+        background-color: powderblue;
+        height: 50px;
+     }
+   </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <!-- 不满12等份 会有空白 现在只占了8分 还有4分空白 这时候可以使用的我们列偏移类 -->
+            <div class="col-md-4">左侧</div>
+            <!-- 偏移的分数 就是12分数减去俩个盒子的分数 -->
+            <div class="col-md-4 col-md-offset-4">右侧</div>
+        </div>
+        <!-- 想让盒子居中对齐 -->
+        <div class="row">
+            <!-- 如果只有一个盒子 那么就偏移12-8/2 -->
+            <div class="col-md-8 col-md-offset-2">中间盒子</div>
+        </div>
+    </div>
+    
+</body>
+</html>

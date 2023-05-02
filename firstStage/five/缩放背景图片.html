@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>背景图片的缩放</title>
+    <style>
+        div {
+            width: 500px;
+            height: 500px;
+            border: 2px solid red;
+           background: url(../one/day08/img.html/1.jpg) no-repeat;
+
+           /*  background-size: 图片的宽度 图片的宽度 ; */
+           /* 1；背景图片的缩放 后面数值 图片的高宽  如果是只写一个值，另外一个值等比例缩放 */
+           background-size: 500px ;
+           /*2； 里面的参数也可以写百分比 相对于父盒子的宽高 */
+           background-size: 50%;
+           /* 覆盖cover 等比例拉伸把父盒子要完全盖住 可能有部分背景图片显示不全 */
+           background-size: cover;
+           /*contain 把背景图片放到最大值，高度跟宽度等比例拉伸 ，当宽度一个值到了以后，另外一个高度就不在拉伸了  这个会导致有部分空白区域   */
+           background-size: contain;
+
+
+        }
+    </style>
+</head>
+<body>
+   <div></div>
+    
+</body>
+</html>

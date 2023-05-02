@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>浮动案例</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .box {
+            width: 1200px;
+            height: 460px;
+            background-color: pink;
+            margin: 30px auto;
+        }
+
+        .box1 {
+            float: left;
+            width: 230px;
+            height: 460px;
+            background-color: forestgreen;
+            /* 内减 */
+            box-sizing: border-box;
+
+        }
+
+        .box1 li {
+        
+            padding: 10px 15px 10px 20px;
+        }
+
+        .box1 li a {
+            
+            width: 130px;
+            height: 20px;
+            color: #fff;
+            font-size: 18px;
+        }
+        .box1 li:hover a {
+            background-color: salmon;
+        }
+
+
+        .box2 {
+            float: right;
+            width: 970px;
+            height: 460px;
+            background-color: firebrick;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <div class="box1">
+            <ul>
+                <li><a href="#">手机 电话卡</a></li>
+                <li><a href="#">手机 电话卡</a></li>
+                <li><a href="#">手机 电话卡</a></li>
+                <li><a href="#">手机 电话卡</a></li>
+                <li><a href="#">手机 电话卡</a></li>
+                <li><a href="#">手机 电话卡</a></li>
+                <li><a href="#">手机 电话卡</a></li>
+                <li><a href="#">手机 电话卡</a></li>
+                <li><a href="#">手机 电话卡</a></li>
+                <li><a href="#">手机 电话卡</a></li>
+
+            </ul>
+        </div>
+        <div class="box2"></div>
+    </div>
+
+</body>
+
+</html>

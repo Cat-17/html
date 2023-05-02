@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>动画属性</title>
+<!-- animation-name:定义的名字 ; animation-duration:花费时间 ;  animation-timing-function:运动曲线 ;-->
+<!--  animation-delay:规定何时开始 ; animation-iteration-count:重复次数 无限循环infinite ;  -->
+<!--  animation-direction: alternate;反方向播放走马灯效果  animation-fill-mode: backwards;结束回到初始状态 -->
+<!--  animation-fill-mode: forwards;状态在结束位置   animation-play-state:paused ; running属性是默认 配合鼠标经过的时候暂停动画-->
+
+    <style>
+        @keyframes inhg {
+            to {
+                transform: translateX(1000px);
+               
+            }
+        }
+        div {
+            width: 100px;
+            height: 100px;
+            background-color: plum;
+            animation: inhg 5s ;
+            
+        }
+        /* 鼠标经过div就让这个div暂停 */
+        div:hover {
+            
+            animation-play-state:paused;
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+    
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>剖析jsonp实现原理</title>
+</head>
+
+<body>
+    <!-- 因此JSONP的实现原理，就是通过<script>标签的src属性，请求跨域的数据接口，
+        并通过函数调用的形式，接收跨域接口响应回来的数据  -->
+    <script>
+        // 第一个script标签 定义了一个函数
+        function success(data) {
+            console.log('拿到了数据:')
+            // 数据就是data
+            console.log(data)
+        }
+    </script>
+    <!-- 使用查询字符串的方式 告诉服务器应该调用什么样的函数  -->
+    <!-- 现在这个js文件是存在本地 那要是在一台服务上面怎么办？ -->
+    <!-- 通过src 指定告诉服务器应该调用谁 -->
+    <!-- callback回调 -->
+    <script src ="./js/getdata.js?callback=success"></script>
+
+     <!-- // 页面中不管有多少个script标签 ，里面的内容都是共享的
+     // 在第二个script中调用
+     // 调用函数
+     // success({ name: 'zs', age: 20 })
+
+     // 把 success({ name: 'zs', age: 20 })调用放到一个js文件里面 在进行引入 -->
+
+    
+       
+
+
+</body>
+
+</html>

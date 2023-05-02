@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>盒子的内边距</title>
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+            border: 2px solid #000;
+            padding-left: 10px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            padding-right: 10px;
+            /* 复合写法  1个值就是上下左右都有  2个值代表上下10像素 左右10像素  3个值上 左 下 内边距值
+              4个值 代表 上 右  下 左  顺时针*/
+            padding: 10px;
+            padding: 5px 10px;
+            padding: 10px 15px 20px;
+            padding: 10px 20px 30px 40px;
+        }
+        /* 内边距也会影响盒子的实际大小 */
+        /* 把撑大的尺寸宽高减去   内边距+宽高实际=尺寸 */
+    </style>
+</head>
+
+<body>
+    <div>
+        <p>我是被编剧</p>
+    </div>
+
+</body>
+
+</html>

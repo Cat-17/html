@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>转换原点</title>
+    <style>
+        img {
+            width: 250px;
+            border: 1px solid #000;
+            /* 过渡效果，配合鼠标悬停使用 */
+            transition: all 2s;
+            /* 改变原点属性  默认图片的中心点去旋转 想要改变原点的位置添加*/
+            /* transform-origin属于复合 后面可以添加方位词 left top right bottom center */
+            transform-origin: right bottom;
+            transform-origin: left bottom;
+
+        }
+
+        img:hover {
+            /* 旋转属性 deg是度数，旋转多少度 */
+            transform: rotate(360deg);
+        }
+    </style>
+</head>
+<body>
+    <!-- 默认圆点是盒子的中心点 -->
+   <img src="../images/rotate.png" alt="">
+    
+</body>
+</html>

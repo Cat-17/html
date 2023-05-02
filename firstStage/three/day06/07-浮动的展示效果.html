@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>盒子的展示效果</title>
+    <!-- 所有浮动的盒子都会在一行排 显示顶对齐  -->
+    <style>
+        div {
+           
+            width: 200px;
+            height: 200px;
+            
+        }
+        .top {
+            float: left;
+            background-color: gold;
+        }
+        .bottom {
+            float: left;
+            background-color: red;
+        }
+        .left {
+            float: left;
+            background-color: yellowgreen;
+        }
+        .right {
+            float: left;
+            background-color: darkkhaki;
+        }
+        /* 浮动的元素是相互紧贴在一起，不会有缝隙 如果父级的宽度不够 就会另起一行显示 */
+        
+
+    </style>
+</head>
+<body>
+    
+        <div class="top">1</div>
+        <div class="bottom">2</div>
+        <div class="left">3</div>
+        <div class="right">4</div>
+   
+    
+</body>
+</html>

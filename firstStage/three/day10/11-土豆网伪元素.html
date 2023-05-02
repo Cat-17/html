@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>土豆网伪元素</title>
+    <style>
+        .tudou {
+            position: relative;
+            width: 300px;
+            height: 150px;
+            margin: 20px auto;
+        }
+        .tudou img {
+            width: 300px;
+            height: 150px;
+        }
+        .tudou::before{
+            content: '';
+            display: none;
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 300px;
+            height: 150px;
+            background: rgba(0, 0,0,.3) url(./images/arr.png) no-repeat center;
+        }
+        /* 当鼠标经过土豆盒子的时候，里面的before的遮罩层显示出来 */
+        .tudou:hover::before {
+            display: block;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="tudou">
+        <img src="./images/tudou.jpg" alt="">
+    </div>
+    <div class="tudou">
+        <img src="./images/tudou.jpg" alt="">
+    </div>
+    <div class="tudou">
+        <img src="./images/tudou.jpg" alt="">
+    </div>
+    <div class="tudou">
+        <img src="./images/tudou.jpg" alt="">
+    </div>
+
+
+</body>
+
+</html>

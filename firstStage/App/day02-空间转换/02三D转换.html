@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        body {
+            /* 透视属性 取值在800~12000 */
+            perspective: 1000px;
+        }
+        .box {
+            width: 200px;
+            height: 300px;
+            margin: 100px auto;
+            background-color: pink;
+            /* 过渡属性 配合鼠标悬停 */
+            transition: all 0.8;
+        }
+        /* 三d效果； */
+        .box:hover {
+            /* 目前是没有效果，加一个透视属性 给自己的父级加 */
+            /* 正数是靠近自己的近大 负值就是远小 */
+           transform: translateZ(200px);
+           transform: translateZ(-200px);
+
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+    
+</body>
+</html>

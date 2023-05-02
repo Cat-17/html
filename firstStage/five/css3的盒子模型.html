@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 传统盒子模型 宽+内边距+边框 边框跟内边距都会撑大 */
+        div:nth-child(1) {
+            width: 200px;
+            height: 200px;
+            background-color: paleturquoise;
+            padding: 10px;
+            border: 10px solid red;
+        }
+        div:nth-child(2) {
+            /* 有了这句话就让我们的盒子变成css3盒子模型 不用担心加边距跟别编剧会撑大盒子 */
+            /* 内减模式 */
+            box-sizing: border-box;
+            width: 200px;
+            height: 200px;
+            background-color:pink;
+            padding: 10px;
+            border: 10px solid red;
+        }
+        
+
+    </style>
+</head>
+<body>
+    <div></div>
+    <div></div>
+    
+</body>
+</html>

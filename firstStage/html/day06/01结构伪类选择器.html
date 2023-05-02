@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 伪类选择器 4种写法 */
+        
+        /* 选择第一个标签  */
+        li:first-child {
+            background-color: green;
+        }
+        /* 最后一个标签 */
+        li:last-child {
+            border-color: #000;
+        }
+        /* 任意一个标签 (1)小括号里面填数字 */
+        li:nth-child(1) {
+            background-color: #cd3636;
+        }
+        /*  标签倒数第几个 */
+        li:nth-last-child(1) {
+            background-color: #200303;
+
+        }
+
+
+    </style>
+</head>
+<body>
+    <!-- ul>li{这是第$个li} *8-->
+    <ul>
+        <li>这是第1ge个li</li>
+        <li>这是第2ge个li</li>
+        <li>这是第3ge个li</li>
+        <li>这是第4ge个li</li>
+        <li>这是第5ge个li</li>
+        <li>这是第6ge个li</li>
+        <li>这是第7ge个li</li>
+        <li>这是第8ge个li</li>
+    </ul>
+    
+</body>
+</html>

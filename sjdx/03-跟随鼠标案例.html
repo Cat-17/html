@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>跟随鼠标移动</title>
+    <style>
+        img {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+    </style>
+</head>
+<body>
+    <img src="./images/tianshi.gif" alt="">
+    <script>
+        // 获取图片
+        let img = document.querySelector('img')
+        document.addEventListener('mousemove',function(e){
+            // 不断得到当前鼠标坐标 pagex不受到可视窗口的影响
+            // console.log(e.pageX)
+            // console.log(e.pageY)
+            // 把事件坐标给图片
+            // img.style.left = '100px'
+            img.style.left = e.pageX + 'px'
+            img.style.top = e.pageY + 'px'
+
+        })
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>媒体查询案例</title>
+   
+   
+   
+    <style>
+        /* 媒体查询一般按照从小到大或者是从大到小的顺序来写 */
+        /* 一般书写顺序喜欢从小到大去写 这样写代码会更简洁 */
+        /* screen and 这俩个属性是不能省略的 数字后面必须带像素 px */
+
+        /*  <!-- 要求；当屏幕小于540像素 背景颜色变成蓝色 --> */
+        @media screen and (max-width:539px) {
+            body {
+                background-color: blue;
+            }
+
+        }
+        /* <!-- 要求；当屏幕大于等于540像素并且小于等于969像素的时候 背景颜色变成蓝色 --> */
+        /* @media screen and (min-width:540px) and(max-width:969px) {
+
+            body {
+                background-color: skyblue;
+            }
+        } */
+        /*简写代码 利用我们的层级 下面的会层叠上面的 只写一个值就可以实现一样的效果 */
+        @media screen and(min-width:540px) {
+            body {
+                background-color: green;
+            }
+            
+        }
+
+
+        /*  <!-- 要求；当屏幕大于970像素 背景颜色变成红色 --> */
+
+        @media screen and (min-width:970px) {
+            body {
+                background-color: red;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+
+</body>
+
+</html>

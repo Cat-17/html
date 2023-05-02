@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0-100起始案例</title>
+</head>
+<body>
+    <!-- 循环三要求 -->
+    <!-- 1；变量起始值 -->
+    
+   
+    <script>
+        // 需求 页面输出1-100
+        let i = 1
+        // 2;判断起始值 循环
+        while (i <= 100) {
+            // 可以添加 换行 使用<br> 或者放段落p自动换行
+            document.write(`<p>数字是${i}</p>`)
+            //3；终止变量变化
+            i++
+        }
+        // 需求 计算1-100的累加和 1+2+3
+        // 1；变量起始值
+        let j = 1
+        // 相当于是累计和的一个容器
+        let sum = 0
+        while (j <= 100) {
+            // sum+j 有结果但是没有人接收 赋值给谁 sum 赋值比运算符优先级低 每次先看sum+j
+            // sum = sum + j 
+            sum =+ j
+            // 终止变量值 每次循环一次 加1 执行条件1+2+3+4+5 一直循环 直至不满条件
+            j++
+        }
+        console.log(sum)
+
+
+        // 需求 计算1-100之间的偶数累加和
+        // 变量的起始值
+        let i1 = 1
+//   需要一个变量存储最后计算的结果
+        let sum1 = 0
+
+        while ( i1 <= 100) {
+            // 首先利用if语句赛选 里面的偶数 选择满足条件的执行
+            // if ( i1 % 2 !== 0) 选择里面的奇数 满足条件的执行
+            if ( i1 % 2 === 0) {
+            //  此时i一定时偶数
+               sum1  = sum1 + i1
+            }
+        //    终止条件
+            i1++
+        }
+
+        console.log(sum1)
+
+
+
+    </script>
+    
+</body>
+</html>

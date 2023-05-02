@@ -1,0 +1,340 @@
+body {
+
+    /* 为了防止过度的拉伸导致内容变形，确定一个盒子的最大值跟最小值 */
+    max-width: 540px;
+    min-width: 320px;
+    /* 让盒子不管是在什么情况下都是居中显示 */
+    margin: 0 auto;
+    /* 指定字号 */
+    font-size: 14px;
+    line-height: 1.5;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background: #f2f2f2;
+    color: #000;
+    overflow-x: hidden;
+    -webkit-tap-highlight-color: transparent;
+    height: 2000px;
+
+
+}
+
+a {
+    text-decoration: none;
+
+}
+
+div {
+    /* 内减 */
+    box-sizing: border-box;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+a {
+    color: #222;
+    font-size: 12px;
+}
+img {
+    vertical-align: middle;
+}
+
+
+/*搜索栏 */
+.select-index {
+
+    display: flex;
+    /* 注意注意 固定定位的盒子要有宽度，因为他是没有父级的，随着浏览的大小 */
+    position: fixed;
+    /* 1；让一个定位的盒子显示水平居中对齐 通过调整left值先走父盒子的50% */
+    /* 宽度不确定的时候，  transform: translateX(-50%); 自身宽度的一半 不管你宽度是多少 */
+    /* 2；如果是不给left值的话，盒子也是会显示在中间位置京东做法 */
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    /* 宽度100% 随着设备的大小 */
+    width: 100%;
+    /* 固定定位跟父级没有关系 随浏览器的大小变化 这里要再给一个最大值最小值 */
+    max-width: 540px;
+    min-width: 320px;
+    height: 44px;
+    background-color: #f6f6f6;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+
+}
+
+/* flex布局右边一个一个固定定位的盒子 剩下都自适应 */
+.user {
+    width: 44px;
+    height: 44px;
+    font-size: 12px;
+    text-align: center;
+
+}
+
+/* 使用到伪元素配合精灵图使用 */
+.user::before {
+    content: "";
+    display: block;
+    width: 24px;
+    height: 26px;
+    /* 2倍精灵图做法 首先先缩放 在确定位置 */
+    background: url(../imgs/tabbar.png);
+    background-position: 0 -258px;
+    background-size: 32px auto;
+    margin-left: 5px;
+
+}
+
+.select {
+    position: relative;
+    flex: 1;
+    height: 26px;
+    margin: 6px 10px;
+    border: 1px solid blue;
+    border-radius: 5px;
+    line-height: 24px;
+    padding-left: 50px;
+    /* 边框阴影 */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, .2);
+}
+
+.iconfont {
+    position: absolute;
+    top: 0;
+    left: 10px;
+    width: 20px;
+    height: 26px;
+    font-size: 20px;
+    margin: 0 10px;
+
+}
+
+/*焦点图制作 */
+/* 因为上面用的是固定定位 滚动的时候会盖住下面的图片 这时候把图片的上放留出
+跟上面高度一样的尺寸就可以了 */
+.foucos {
+    padding-top: 44px;
+}
+
+.foucos img {
+    width: 100%;
+
+
+}
+
+/* flex布局 整体的父盒子只给高度 里面在放5个li平均分配1等份 */
+
+.logt-nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 64px;
+    background-color: #fff;
+    border-radius: 8px;
+    margin: 3px 4px;
+}
+
+.logt-nav ul {
+    width: 100%;
+    display: flex;
+
+}
+
+.logt-nav ul li {
+    flex: 1;
+
+}
+
+.logt-nav a {
+    margin-top: 8px;
+    display: flex;
+    /* 设置为y轴方向排列 */
+    flex-direction: column;
+    /* 在设置侧轴对齐 */
+    align-items: center;
+
+}
+
+.logt-nav-icon {
+    width: 28px;
+    height: 28px;
+    background: url(../upload/hotel.png) no-repeat;
+    background-size: 28px 28px;
+}
+
+
+/*主体导航栏 */
+.nav {
+    /* 为什么圆角没有出来，圆角给的nav div没有，把多出父级的隐藏掉就可以了 */
+    border-radius: 8px;
+    margin: 0 4px 3px;
+    overflow: hidden;
+}
+
+.nav .nav-common {
+    display: flex;
+    height: 88px;
+    background-color: skyblue;
+
+}
+
+/* 线形背景图渐变  一定要加浏览器私有前缀 加方位名词 */
+.nav .nav-common:nth-child(1) {
+    background: -webkit-linear-gradient(left, #fa5a55, #fa994d);
+}
+
+.nav .nav-common:nth-child(2) {
+    background: -webkit-linear-gradient(left, #4b90ed, #53bced);
+}
+
+.nav .nav-common:nth-child(3) {
+    background: -webkit-linear-gradient(left, #34c2a9, #6cd559);
+}
+
+
+.nav .nav-common:nth-child(2) {
+    margin: 3px 0;
+
+}
+
+.nav .nav-common .nav-itlem {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+
+
+}
+
+.nav .nav-common .nav-itlem a {
+    flex: 1;
+    text-align: center;
+    line-height: 44px;
+    color: #fff;
+    font-size: 14px;
+    /* 文字阴影 */
+    text-shadow: 1px 1px rgba(0, 0, 0, .2);
+}
+
+.nav .nav-common .nav-itlem a:nth-child(1) {
+    border-bottom: 1px solid #fff;
+}
+
+/* 选中大盒子的第一列里面的a */
+.nav-common .nav-itlem:nth-child(1) a {
+    border: 0;
+    background: url(../upload/hotel.png) no-repeat bottom center;
+    background-size: 60px auto;
+
+
+}
+
+/*-n+2 选中前面俩个元素 */
+.nav .nav-common .nav-itlem:nth-child(-n+2) {
+    border-right: 1px solid #fff;
+
+}
+
+/* 测导航栏 */
+.shongl {
+    border-radius: 8px;
+    display: flex;
+    /* 换行 */
+    flex-wrap: wrap;
+    margin: 0 4px;
+    padding: 5px 0;
+    border: 1px solid #ccc;
+    background-color: #fff;
+
+
+}
+
+.shongl li {
+    /* flex里面也可以写百分比 想对比父级来说 */
+    /* 里面的xiaoli */
+    flex: 20%;
+  
+
+}
+
+/* flex布局 */
+.shongl a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.shongl-car {
+    width: 28px;
+    height: 28px;
+    background: url(../upload/car.png) no-repeat;
+    background-size: 28px 28px;
+}
+
+
+/*销售模块 */
+.shou-box {
+    position: relative;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    margin: 4px;
+
+}
+.shou-hd {
+    height: 44px;
+    border-bottom: 1px solid #ccc;
+}
+.shou-hd h2 {
+    position: relative;
+    text-indent: -999px;
+    overflow: hidden;
+}
+.shou-hd h2::after {
+    position: absolute;
+    top:8px ;
+    left: 20px;
+    content: "";
+    width: 79px;
+    height: 15px;
+    background-color: plum;
+}
+.move {
+    position: absolute;
+    top: 20px;
+    right: 5px;
+    /* 线性背景渐变颜色 */
+    background: -webkit-linear-gradient(left,#ff506c,#ff6bc6);
+    border-radius: 15px;
+    padding: 3px 20px 3px 10px;
+    color: #fff;
+    font-size: 12px;
+}
+.move::after {
+    content: "";
+    position: absolute;
+    top: 7px;
+    right: 9px;
+    width: 7px;
+    height: 7px;
+    border-top: 2px solid #fff;
+    border-right: 2px solid #fff;
+    transform: rotate(45deg);
+
+}
+.row {
+    display: flex;
+}
+.row a {
+    flex: 1;
+    border-bottom: 1px solid #ccc;
+
+}
+.row a img {
+    width: 100%;
+}
+
+

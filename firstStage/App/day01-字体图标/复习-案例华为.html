@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./day01-字体图标/iconfont/iconfont.css">
+    <style>
+         *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background-color: #f8f8f8;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+        }
+        img {
+            /* 宽度跟父级一样 */
+            width: 100%;
+            vertical-align: middle;
+        }
+        .werd {
+            width: 1110px;
+            height: 247px;
+            margin: 20px auto;
+           
+            
+        }
+        .werd li{
+            float: left;
+            position: relative;
+            width: 350px;
+            height: 247px;
+            overflow: hidden;
+            margin-right: 20px;
+        }
+        /* .werd li:last-child{
+            margin-right:  0;
+        } */
+
+        .werd h4 {
+            margin-bottom: 20px;
+            font-weight: 400;
+            padding-left: 30px;
+        }
+        .werd h5 {
+            padding-left: 20px;
+            margin-bottom: 20px;
+        }
+        .werd span{
+            margin-left:20px ;
+        }
+        .werd .piv {
+            position: relative;
+            /* 过渡效效果 配合鼠标悬停使用 */
+            transition: all 2s;
+        }
+        .werd .txt {
+            color: #fff;
+            width: 342px;
+            height: 100px;
+            position: absolute;
+            left: 0;
+            top: 50%;
+        }
+        /* 加字体图标  引用文件夹*/
+        .icon-arrow-right {
+            color: red;
+            font-weight: 700;
+        }
+        
+        /* 添加背景渐变效果 */
+       .werd li a::after {
+            position: absolute;
+            left: 0;
+            top: 0;
+            content:'';
+            width: 350px;
+            height: 247px;
+            /* 渐变背景色 */
+            background-image: linear-gradient(
+                transparent,
+                rgba(0,0,0,.6)
+            );
+            /* 默认状态透明度 看不到 */
+            opacity: 0;
+            /* 过渡 */
+            transition: all  .5s;
+        }
+        .werd:hover a::after {
+            opacity: 1;
+        }
+
+        /* 缩放 */
+        .werd:hover .piv {
+            transform: scale(1.4);
+        }
+
+        
+
+        
+
+       
+        
+       
+    </style>
+</head>
+<body>
+    <div class="werd">
+        <ul>
+            <li><a href="#">
+               <div class="piv">
+                <img src="./day01-字体图标/images/huawei1.jpeg" alt="">
+               </div>
+                <div class="txt">
+                    <h4>产品</h4>
+                    <h5>OceanStor Pacific 海量存储斩获2021 Interop金奖</h5>
+                    <p>
+                        <span>了解更多</span>
+                        <i class="iconfont icon-arrow-right"></i>
+                    </p>
+                </div>
+                </a>   
+            </li>
+            <li><a href="#">
+                <div class="piv">
+                 <img src="./day01-字体图标/images/product.jpeg" alt="">
+                </div>
+                 <div class="txt">
+                     <h4>产品</h4>
+                     <h5>OceanStor Pacific 海量存储斩获2021 Interop金奖</h5>
+                     <p>
+                         <span>了解更多</span>
+                         <i class="iconfont icon-arrow-right"></i>
+                     </p>
+                 </div>
+                 </a>   
+             </li>
+             <li><a href="#">
+                <div class="piv">
+                 <img src="./day01-字体图标/images/huawei2.jpeg" alt="">
+                </div>
+                 <div class="txt">
+                     <h4>产品</h4>
+                     <h5>OceanStor Pacific 海量存储斩获2021 Interop金奖</h5>
+                     <p>
+                         <span>了解更多</span>
+                         <i class="iconfont icon-arrow-right"></i>
+                     </p>
+                 </div>
+                 </a>   
+             </li>
+        </ul>
+    </div>
+    
+</body>
+</html>

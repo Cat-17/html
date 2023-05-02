@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>动画属性简写</title>
+    <style>
+        @keyframes uhng {
+            to {
+                transform: translateX(1000px);
+            }
+        }
+        div{
+            width: 100px;
+            height: 100px;
+            background-color: plum;
+            /* 前面俩个属性必须写 alternate 反方向回来 结束在结束的位置forwards  */
+            animation: uhng 2s alternate forwards   ;
+            
+        }
+
+    </style>
+</head>
+<body>
+    <div></div>
+    
+</body>
+</html>

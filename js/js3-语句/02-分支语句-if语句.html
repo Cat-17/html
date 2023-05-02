@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>分支语句</title>
+    <!-- 写出具有思考性的代码 -->
+    <!-- 程序三大流程控制语句 -->
+    <!-- 顺序结构 从上到下执行 写几句就从上往下执行几句 -->
+    <!-- 分支结构 有的时候要根据条件选择执行代码 这种就是分支结构 满足条件执行 不满足条件 不执行 -->
+    <!-- 循环结构 某段代码被重复执行，就叫循环结构 多次执行 -->
+
+
+    
+    <!-- 分支语句 可以让我们有选择性的执行想要的代码 -->
+    
+
+
+</head>
+<body>
+    <script>
+        // if语句有三种使用 单分支 双分支 多分支
+        // 
+        // if (条件 里面的内容为true 进入大括号里面执行代码) {
+        //     满足条件要执行的代码
+
+        // }
+
+        // 小括号内的结果若不是布尔类型时，会发生隐私转换为布尔类型
+    //    if (false) {
+    //       alert(11)
+
+    //    }
+    // 小括号里面的内容必须是真的才会执行  里面可以是运算符 字符型
+    if (3>5) {
+
+        alert(11)
+
+    }
+    // if 里面的小括号都会给我们转换为布尔型 
+    // false 0 '' undefinen null 五种假的情况不执行
+    // 小括号里面的内容真的才会执行
+    if ('pink') {
+        console.log('真的')
+    }
+    // 小括号里面的内容是假的 不执行
+    if (0) {
+        console.log(真的)
+    }
+
+    // 案例 用户输入高考成绩 如果分数大于700 则提示恭喜考入黑马程序员
+    // 第一步 弹出对话框 
+    let achievement = prompt('输入您的高考成绩')
+    // 第二步 选择执行
+    if (achievement  > 700) {
+        alert('恭喜考入黑马程序员')
+
+    }
+
+    
+
+
+
+
+
+    </script>
+</body>
+</html>

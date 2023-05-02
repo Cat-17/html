@@ -1,0 +1,350 @@
+步骤：
+1.跟做视屏，并理解。
+2.复习ppt和案例(第二天也复习一遍)。
+3.根据前面面的案例做作业。
+fontIcon作为共用的 可以不用放day01或者02下,放在外面就行了
+但是其他的怎么能放在fontIcon里面呢
+后面的内容又不全是字体图标
+
+遇到问题解决方案：
+1.独块之间错位：
+    右键检查,看看具体哪两个块错位,就是哪两个div层级写错了,层级关系写成了包含关系
+
+2.样式属性不生效
+    右键检查，选中自身标签,先看不生效的属性有没有出现，如果没有出现就说明属性加错位置了(可能特殊属性不继承父类,比如a标签的颜色)
+            如果出现了,但是被划掉了,那就是属性用错了
+            如果出现了,也正常显示,就是生效了但是不明显,值改大一点,比如字体粗细400  和 700(加粗)
+
+3.居中不生效
+    text-align: center;
+    margin: auto;
+    先右键检查,看看要让小鸣居中,就给小鸣的父级添加剧中属性(也可能是自身多试试),页面上调试两个都试试,看那个生效用哪个
+
+4.div之间不并排
+    (常错)先检查层级关系是不是写错了,并排的弄错成包含或者包含弄成并排了
+    检查属性是不是加错位置了,想让哪两个div并排,就给哪两个div添加 display: inline;
+    或者浮动不换行，也有可能是父级宽度不够排不下
+
+
+    
+课程学到的一些重要知识点这里也记一下,不要记得太复杂简略点,详细内容还是记在练习里。比如：
+
+    字体粗细 font-weight: 400;代表<h1></h1>等标题类的字体变细,700代表普通字体的加粗。
+
+    下划线消失 text-decoration: none;
+
+5.关于定位跟浮动怎么用？
+    让盒子层叠用定位，让文字一行排用浮动
+
+6.（关于定位的知识点 位移居中）
+
+ 标签里面加了绝对定位还想要居中，我们加一个试试
+ position: absolute;
+ 如果是水平居中 取百分比%  因为没有父级 就参考占比浏览器窗口
+ 如果有父级就参考父级的宽的一半
+ left: 50%;,整个盒子移动到浏览器中间偏右的位置  
+
+7.如果盒子是在靠下的位置？
+  top: 50%;
+        
+8.想把盒子往上移动，负值取盒子的一半 
+  margin-top: -150px;
+
+9.如果出现宽高不是整数，不好用取值 又想居中怎么办？
+transform: translate(-50%,-50%);
+如果宽高发生变化，设置好位移属性，css会自动取值居中
+
+10.
+背景图片负责俩件事；改变箭头在盒子里面的位置；改变精灵图的位置
+导致在精灵图中测量的尺寸不准确 
+解决方案2种；
+1；书写背景图的位置的属性，借助谷歌调试工具，右键检查，找到这个标签，直接在上面选中滚动鼠标，找到合适的位置
+2；书写标签的时候。a负责盒子的，里面再添加一个span负责箭头 
+
+11.想控制 placeholder里面的文字 
+::placeholder {
+    font-size: 14px;
+    color: #bfbfbf;
+}
+12.想要图片在一行排，加浮动 浮动怎么加，加给他的上级跟自己
+
+13.如果加了浮动还不上去，检查父级的尺寸
+
+14.如果出现图跟文字是拧巴的，这时候怎么办？
+给图片加  vertical-align: middle;
+
+15.发现图片走不动，啥时候会遇到这种情况，上面盒子如果加了浮动没有给高，就会下面的盒子脱标 影响底下盒子的位置
+找到他的上级在类目里面加 clearfix
+
+16. 行内跟行内块 专治垂直方向对不齐
+vertical-align: middle;
+
+17./* 行内块和行内文字无法通过 vertical-align: middle;或行高对齐，用定位 */
+
+
+
+<!--  transform -->
+transform;是复合属性注意书写代码的时候 注意层叠性，出现俩个 transform 方便的时候就在后面空格
+加另外一个
+
+<!-- 以后工作中需要用到什么属性 考虑兼容性的问题 可以到 can I use 里面查询 浏览器能不能兼容 -->
+<!--  -->
+
+  <!-- 一般精灵的标签都是用行内标签，sapn ，b，alt="" -->
+
+  <!-- /* 加盒子的阴影部分，默认是盒子的外面加阴影 */
+  /*box-shadow盒子阴影； 水平 垂直 模糊度 阴影扩大 阴影颜色 内阴影  */
+  /* 注意；外阴影不能添加outset ，添加了会导致属性报错 */
+  box-shadow: 5px 10px 20px 10px green inset ; -->
+
+  <!-- background-image: url(../day09/img.html/1.jpg ) ;
+  /* 2;背景的尺寸比较大，图片刚上去显示很多，只显示一个，就不平铺 */
+  background-repeat: no-repeat; -->
+
+  <!-- /*边框圆角 border-radius，一个值；表示4个角是相同的  */
+  /* border-radius: 10px; */
+  /* 如果是跟了四个角，顺时针设置 左上 右下 右下 左下 顺时针转一圈 */
+  /* border-radius: 10px 20px 30px 50px ;
+   */
+   /* z遵循顺时针 先左上 右下 右下 左下没有值看对面 */
+   border-radius: 10px 30px 40px; -->
+
+   <!-- /*隐藏溢出部分   */
+   /* overflow: hidden; */ -->
+
+<!-- 
+
+   /* 伪类选择器 4种写法 */
+        
+   /* 选择第一个标签  */
+   li:first-child {
+       background-color: green;
+   }
+   /* 最后一个标签 */
+   li:last-child {
+       border-color: #000;
+   }
+   /* 任意一个标签 (1)小括号里面填数字 */
+   li:nth-child(1) {
+       background-color: #cd3636;
+   }
+   /*  标签倒数第几个 */
+   li:nth-last-child(1) {
+       background-color: #200303;
+
+   } -->
+
+   <!-- /* 偶数 2468 */
+   /* li:nth-child(2n){
+       background-color: #be7070;
+   } */
+   /* 奇数 1357 */
+   /* li:nth-child(2n+1) {
+       background-color: pink;
+   } */
+   /* li:nth-child(-n+3){
+       background-color: green;
+   } */
+   /*倍数 几的倍数就写几  */
+   li:nth-child(2n) {
+       background-color: green;
+
+   } -->
+   <!-- 文本框:<input type="text">
+   <br>
+   <br>
+   密码框:<input type="password">
+   <br>
+   <br>
+   单选框:<input type="radio">
+   <br>
+   <br>
+   上传文件:<input type="file">
+   <br>
+   <br>
+   提交按钮:<input type="submit"> -->
+   <!-- 文本域标签  宽高 数字
+ <textarea cols="30" rows="10"></textarea> -->
+ <!-- 
+    下拉式按钮； <select >
+        <option >安徽</option>
+        <option >上海</option>
+        <option >合肥</option>
+        <option >深圳</option>
+        <option  selected>广东</option>
+
+    </select>
+
+    <button>我是按钮</button>
+    <button type="submit">提交按钮</button>
+    <button type="reset">重置按钮</button>
+    <button type="button">普通按钮</button>
+    默认选中 checked
+    单选框
+    <input type="checkbox">
+    <input type="checkbox" checked>
+     -->
+
+     <!-- ellipsis-2 溢出文字显示省略号 -->
+     <!-- // 决绝图文 拧巴的问题
+     vertical-align: middle; -->
+
+     <!-- /* 层级关系；默认情况下，都添加了定位的盒子，显示后来这居上 */
+     /* 如果不想修改书写顺序，想让谁在上面
+     z-index:整数；取值越大，显示顺序越靠上 z-index:的默认值是0 谁的数值大就显示谁
+     注意；z-index:是配合定位使用 position: absolute; 没有定位不生效 */ -->
+
+     <!-- 布局思路  -->
+     <!-- 头部布局 header   内容section  上下左右布局  -->
+     <!-- // 弹性盒子内容换行 找到父级添加
+        flex-wrap: wrap; -->
+
+        <!-- 栅格系统 默认将网页分成12等份 -->
+        <!--分成 4种不同的视口  -->
+        <!-- 小于768px 最小屏幕 对应的类前缀 col-xs*-->
+        <!-- 大于等于768px 小屏幕 对应的类前缀col-sm* -->
+         <!-- 大于等于992px 中等屏幕屏幕 对应的类前缀col-md* -->
+          <!-- 大于等于1200px 大屏幕 对应的类前缀col-lg* -->
+          /* !important可以指定最高级，但是不要给继承的添加，自己有样式无法继承父级样式  */
+
+
+          <!--什么是网页? -->
+          1;网站，平常上网的打开的网站 网页集合
+          2；网页是浏览器的一页 ，通常是html格式的文件，她是通过浏览器来阅读
+          总结；网页是构成网站的基本元素 通过图片 连接文字 声音 视频等元素组成 ，通常看到的网页常见于.htm 或.html后缀结尾的文件，舒城html文件组成
+          <!-- 什么是html -->
+          html指的是超文本标记语言（1她可以加入图片 声音动画 媒体等内容，还可以通过超链接跳转到另外一个网页）
+           ，用来描述网页的一种语言 html是标记语言 不是编程语言  标记语言是一套标记标签
+           <!-- 常用的浏览器 -->
+           IE ，火狐 谷歌 safari opera 5大浏览器 主要用谷歌浏览器 国际通用
+           <!-- 浏览器的内核 -->
+           负责读取网页内容，整理讯息。计算网页的显示方式并显示页面 采用
+           <!-- web 标准 -->
+           web标准是由w3c制定的 
+           <!-- 为什么需要web标准 -->
+            浏览器不同，显示页面或者排版就些许差异
+            使用感
+            <!-- web标准的构成 -->
+            结构 表现 行为
+            结构标签；html标签 指的就是html
+            表现；css修饰 大小 颜色 css
+            行为 ；js可以动起来 交互
+            总结；结构写到html文件中，表现写到css文件中，行为写到javascript文件中
+
+
+
+
+            <!-- 快速更换背景图片，用属性选择器 指定相同的class类名 前面的内容一致 后面的区分开，设置一样的属性
+            在单独选中设置不同的背景图片 位置 -->
+            <li>
+                <!-- title="鼠标悬停显示文字" -->
+             <a href="#" title="景点.玩乐">
+                <span class="logt-nav-icon-icon1"></span>
+                <span>景点.玩乐</span>
+             </a>
+            </li>
+            <li>
+                <!-- title="鼠标悬停显示文字" -->
+             <a href="#" title="景点.玩乐">
+                <span class="logt-nav-icon-icon2"></span>
+                <span>景点.玩乐</span>
+             </a>
+            </li>
+            <!-- 有5个li 前缀名都是一样的logt-nav-icon -->
+            .logt-nav li [class=^"logt-nav-icon-icon1"] {
+                width: 28px;
+                height: 28px;
+              background: url(../upload/hotel.png) no-repeat;
+              background-size:28px 28px ;
+            }
+            .logt-nav li .logt-nav-icon-icon2 {
+                <!-- 在设置不同的位置就可以了 -->
+                background-repeat:0 0 
+            }
+
+
+            <!-- 如果让一个定位的盒子居中对齐 -->
+            .select-index {
+
+                display: flex;
+                /* 注意注意 固定定位的盒子要有宽度，因为他是没有父级的，随着浏览的大小 */
+                position: fixed;
+                /* 1；让一个定位的盒子显示水平居中对齐 通过调整left值先走父盒子的50% */
+                /* 宽度不确定的时候，  transform: translateX(-50%); 自身宽度的一半 不管你宽度是多少 */
+                /* 2；如果是不给left值的话，盒子也是会显示在中间位置京东做法 */
+                top: 0;
+                left: 50%;
+                transform: translateX(-50%);
+                /* 宽度100% 随着设备的大小 */
+                width: 100%;
+                /* 固定定位跟父级没有关系 随浏览器的大小变化 这里要再给一个最大值最小值 */
+                max-width: 540px;
+                min-width: 320px;
+                height: 44px;
+                background-color: #f6f6f6;
+                border-top: 1px solid #ccc;
+                border-bottom: 1px solid #ccc;
+            
+            }
+
+            <!-- 如果遇到 上面一个图片下面一个文字的案例 -->
+            <!-- 使用flex布局 只要改变主轴的排列方式 -->
+            <!-- 默认x轴 给父级设置 -->
+            <!-- y轴排列方式 -->
+            flex-direction: column;
+            <!-- 侧轴居中对齐 -->
+            align-items: center;
+
+
+
+            <!-- logo标题 提高搜索引擎排名的做法 -->
+            <div class="shou-box">
+                <div class="shou-hd">
+                   
+                    <h2>特价酒店</h2>
+                    <a href="#">获取更多福利</a>
+        
+                </div>
+        
+            </div>
+            <!-- css写法 -->
+            .shou-hd h2 {
+                <!-- 向左移动 取负值 超出父级在隐藏掉 -->
+                text-indent: -999px;
+                overflow: hidden;
+            }
+
+
+            <!-- 三角做法 -->
+            .move::after {
+                content: "";
+                position: absolute;
+                top: 7px;
+                right: 9px;
+                width: 7px;
+                height: 7px;
+                border-top: 2px solid #fff;
+                border-right: 2px solid #fff;
+                transform: rotate(45deg);
+            
+            }
+            <!-- 先定位 确定宽高 但是给边框 在旋转 在调整位置 -->
+
+
+
+            /* 线性背景渐变颜色 */
+            background: -webkit-linear-gradient(left,#ff506c,#ff6bc6);
+            <!-- 清除图片下面默认的空白间隙 -->
+            img {
+                vertical-align: middle;
+            }
+
+
+        
+          
+
+
+     
+
+
+    

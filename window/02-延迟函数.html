@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>延迟函数</title>
+    <!-- 一个让代码延迟执行的函数 -->
+
+</head>
+<body>
+    <button>解除定时器</button>
+    <script>
+        // 延迟函数语法 仅仅只执行一次所以可以理解为就是把一段代码延迟执行平时省略window
+        // let timer = setTimeout('回调函数',等待的毫秒数)
+        // 清除延迟函数
+        // clearTimeout(timer)
+      let timer = setTimeout(function(){
+            console.log(111)
+        },3000)
+        // 仅仅执行一次
+        // 获取按钮
+        let btn = document.querySelector('button')
+        // 解除事件
+        btn.addEventListener('click',function(){
+            // 点击清除延迟函数
+            clearTimeout(timer)
+
+        })
+    
+
+    </script>
+    
+</body>
+</html>

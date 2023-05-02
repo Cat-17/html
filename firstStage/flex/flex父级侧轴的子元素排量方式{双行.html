@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>侧轴的子元素配列方式多行配列</title>
+    <style>
+        div{
+            display: flex;
+            width: 600px;
+            height: 400px;
+            background-color: papayawhip;
+            /*换行 */
+            flex-wrap: wrap;
+            /* 有了换行属性我们的侧轴里面的子元素配列方式才会生效 align-content */
+             /* 让侧轴的子元素沿着下面排列 */
+            align-content:flex-end ;
+              /* 让侧轴的子元素沿着上面排列 */
+            align-content: flex-start;
+             /* 让侧轴的子元素沿着居中排列 */
+            align-content: center;
+            /* 平均分配 */
+            align-content: space-around;
+            /* 先贴边 剩下的在平均分配 */
+            align-content: space-between;
+
+
+            /*总结；侧轴的子元素排列方式 单行找  align-items: ; 多行 换行 找 align-content  设置侧轴排列方式*/
+          
+           
+           
+        
+        }
+        div span {
+            width: 150px;
+            height: 100px;
+            background-color: skyblue;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <span>1</span>
+        <span>2</span>
+        <span>3</span>
+        <span>4</span>
+        <span>5</span>
+        <span>6</span>
+        <span>7</span>
+        <span>8</span>
+        <span>9</span>
+       
+    </div>
+    
+</body>
+</html>

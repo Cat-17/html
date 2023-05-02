@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>并集选择器</title>
+    <style>
+        /* 用，隔开 */
+        /* 问题1；选择熊大和光头强变成粉色 */
+        span,
+        div {
+            color: aqua;
+        }
+
+        /* 要求2 熊大熊二 跟猪宜家 */
+        div,
+        p,
+        .pin li {
+
+            color: pink;
+
+        }
+
+        /* 语法规范，横着写 以，号隔开  多组标签 ，一样的样式 统一设置 把标签选出来统一更改 */
+        /* 最后一个标签不要加，号 不然会报错 */
+    </style>
+</head>
+
+<body>
+    <div>熊大</div>
+    <p>熊二</p>
+    <span>光头强</span>
+    <ul class="pin">
+        <li>小猪佩尼</li>
+        <li>小猪佩奇麻麻</li>
+        <li>小猪佩奇爸爸</li>
+    </ul>
+
+
+
+</body>
+
+</html>

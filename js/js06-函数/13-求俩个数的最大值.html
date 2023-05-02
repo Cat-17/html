@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 需求 俩个数的最大值 -->
+    <script>
+        // 用户弹出俩个数字 比较最大值返回
+        // 记得数字比较一定要加+号
+        let num1 = +prompt('请输入第一个数')
+        let num2 = +prompt('请输入第二个数')
+        // 比较函数 最大值
+        function getSqunare(x , y) {
+            // 如果x大于y则返回x 
+            // if (x > y) {
+            //     return x
+            //     // 不然则返回 y
+            // } else {
+            //     return y
+            // }
+            // 三元表达式写法这个会不会
+            // 这里会报错，为什么 因为 return 只能写一个 解决方法
+             return  x > y ?  x :  y
+            //let num = 1+1 == 2 ? 5 :6//这个整体可以给容器赋值 相当于num等于5，也可以作为条件
+
+            //问号后面可以写数字字符串truefalse都可以 
+            // if(1+1 == 2 ? true : false){
+            //     document.write("1+1 == 2")
+            // }else{
+            //     document.write("1+1 != 2")
+            // }
+          //读这一行代码，就是 x大于y吗，大于取左边，不大于取右边
+            
+            // 这俩个返回值最终只会执行一个 
+        }
+        let max = getSqunare(num1,num2)
+        document.write(max)
+
+    </script>
+
+</body>
+
+</html>

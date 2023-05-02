@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>布局技巧</title>
+    <style>
+        ul li {
+            float: left;
+            /* 清除圆点 */
+            list-style: none;
+            width: 200px;
+            height: 300px;
+            background-color: khaki;
+            border: 1px solid #000;
+            margin-left: -1px;
+
+        }
+        ul li:hover {
+            /* 2;如果li都有定位，则利用  z-index: 1提高权重层级*/
+            z-index: 1;
+            /* 1;如果盒子没有定位，则鼠标经过添加相对定位即可 */
+            position: relative;
+            /*淘宝的效果鼠标一经过边框变颜色 现在颜色是变了，但是因为上面左边的边框被另外一个盒子压住了
+            这时候可以采用相对定位，或者是提高权重层级   */
+            border: 1px solid rgb(22, 218, 28);
+            
+        }
+    </style>
+</head>
+<body>
+    <!-- 盒子都有边框 俩个盒子加了浮动 紧贴在一起，
+        俩个边框线加载一起就是俩条边框线并在一起，
+        加粗了，这时候用外边距取负值1px 压在盒子上面，就会只出现一条边框线
+     -->
+     <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+     </ul>
+    
+</body>
+</html>

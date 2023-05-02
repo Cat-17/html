@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .erweima {
+            position: relative;
+            width: 160px;
+            height: 160px;
+            margin: 100px auto;
+            border: 1px solid #ccc;
+           
+        }
+
+        .erweima i {
+            position: absolute;
+            left: -13px;
+            top: 0;
+            width: 10px;
+            height: 10px;
+            border: 1px solid #ccc;
+            font-size: 12px;
+            line-height: 10px;
+            color: #ccc;
+            font-style: normal;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="erweima">
+        <img src ="./images/code.png" alt="">
+        <i class="close_btn">x</i>
+    </div>
+    <script>
+        // 事件源；那个dom元素被事件触发了，要获取dom元素
+        // 事件；用什么方式触发，比如鼠标单击click 鼠标经过mouseover等
+        // 事件调用的函数；要做什么事
+        // 点击的是关闭按钮 事件源
+        // 关闭的是父盒子 事件调用的函数；要做什么事
+        // 核心；利用样式的显示和隐藏完成，
+        // 获取元素  i是事件源 关闭是img
+        let close_btn = document.querySelector('.close_btn')
+        let erweima = document.querySelector('.erweima') 
+
+        // 事件监听 close_btn 事件源 点击
+        close_btn.addEventListener('click',function(){
+            // 是隐藏的 erweima  display: none; 是css样式需要加style
+            erweima.style.display = 'none'
+        })
+
+
+    </script>
+</body>
+
+</html>

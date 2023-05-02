@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>立即执行函数</title>
+    <!-- 场景结束；避免全局变量之间的污染 -->
+    <!-- 语法； -->
+</head>
+
+<body>
+    <!-- // 不需要调用，立即执行 -->
+    <!-- 方式1 -->
+    <script>
+        // let num = 10
+        // // 第一个小括号放的是形参 第一个小括号放的实参
+        // (function(){
+        //     let num = 20
+        //     // 在立即执行函数内 写的代码谁都不影响 
+
+        // })()
+        //   方式2 有名字跟没名字，都不影响他立即执行
+        (function fn() {
+
+            console.log(11)
+        }());
+            ;(function fn() {
+
+                console.log(22)
+            }());
+            // 注意事项 如果出现多个立即执行函数 用分号;噶开 一定要有结尾
+
+
+
+    </script>
+
+</body>
+
+</html>

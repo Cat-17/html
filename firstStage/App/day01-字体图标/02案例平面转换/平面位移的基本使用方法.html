@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>位移-基本使用方法</title>
+    <style>
+        .father {
+            position: relative;
+
+            width: 500px;
+            height: 300px;
+            margin: 100px auto;
+            border: 1px solid #000;
+        }
+        .son {
+             /* 绝对定位 子绝父相 */
+             position: absolute;
+             /* 现在位置是靠右偏下的位置， */
+             left: 50%;
+             top: 50%;
+
+             /*想要居中 取负值 
+             自身的宽的一半 高的一半 */
+             /* 改变盒子的位置 */
+             /* margin-left: -100px;
+             margin-top: -50px; */
+
+             /* 位移水平的写法 */
+             /* 取值百分比参考自身尺寸的计算结果 */
+             transform: translate(-50%,-50%);
+             
+
+
+            width: 200px;
+            height: 100px;
+            background-color: pink;
+            /* 过渡属性 */
+            /* transition: all 0  .5s; */
+        }
+
+        /* 鼠标移入到盒子，son改变位置 */
+        .father:hover .son {
+           
+            
+            /* 平面位移属性transform: translate
+             水平位置（左右 垂直上下 */
+            transform: translate(50px,100px);
+            /* 平面位置负值 就是向上 向右移动 */
+            transform: translate(-50px,-100px);
+            /* 百分比；参考自身尺寸计算结果 */
+            transform: translate(-50%,-100%);
+
+
+             /* 比如是上下移动，或者左右移动 加x 加Y */
+             /* Y轴是水平上下 */
+             transform: translateY(50px);
+             /* x轴是垂直左右 */
+             transform: translateX(50px);
+
+        }
+
+       
+       
+
+
+
+
+    </style>
+</head>
+<body>
+    <div class="father">
+        <div class="son"></div>
+    </div>
+    
+</body>
+</html>

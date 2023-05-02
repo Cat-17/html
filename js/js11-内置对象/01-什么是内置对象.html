@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>内置对象是什么</title>
+    <!-- 内置对象 js 内部提供的对象，包含各种属性和方法给开打折调用 -->
+    <!-- 思考，我们之间用工内置对象嘛    console.log();  document.write()-->
+</head>
+<body>
+    <script>
+        console.log(Math.PI)   // Math.PI   圆周率
+        console.log(Math.random())   // 随机数  随机数 随机点名 返回是小数但是能得到0 得不到1
+
+        console.log(Math.ceil(1.1))  //向上取整 返回的是整数 结果2
+        console.log(Math.ceil(1.9))  //2
+        console.log(Math.ceil(1.5))   //2
+        
+        console.log(Math.floor(1.9)); //向下取整 返回四整数 结果是1
+
+        console.log(Math.round(1.1)) // 就近取整 1
+        console.log(Math.round(1.9))  //  返回结果2
+        console.log(Math.round(1.5))   //  2
+        // 如果是负数的时候 .5 往大取整 返回的是整数
+        console.log(Math.round(-1.2))  //-1
+        console.log(Math.round(-1.5)) // -1
+        console.log(Math.round(-1.9)) //-2
+
+
+        // 最大值，最小值
+        console.log(Math.max(1,2,3,6,99));
+        console.log(Math.min(1,2,3,6,99));
+
+
+
+        // 
+
+
+      
+      
+    </script>
+    
+</body>
+</html>

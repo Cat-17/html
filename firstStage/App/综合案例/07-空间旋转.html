@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 300px;
+            margin: 100px auto;
+        }
+        .box img {
+            width: 300px;
+            /* 过渡 */
+            transition: all 2s;
+        }
+
+        .box img:hover {
+            transform: rotate(360deg);
+            /* 单独控制某个反向的  */
+            /* 水平方向取值x */
+            transform: rotateX(90deg);
+            transform: rotateY(180deg);
+            transform: rotateZ(-360deg);
+        }
+
+    </style>
+</head>
+<body>
+    <div class="box">
+        <img src="../day01-字体图标/images/hero.jpeg" alt="">
+    </div>
+    
+</body>
+</html>

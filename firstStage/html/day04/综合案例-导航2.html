@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        a {
+            text-decoration: none;
+            width: 120px;
+            height: 58px;
+            background-color: pink;
+            /* /*  a是快标签，设置的宽高不生效，转成 行内块  display: inline-block */ 
+            display: inline-block;
+            /* 文字居中 */
+            text-align: center;
+            /* /* 文字垂直行高 */ 
+            line-height: 50px;
+            /* 文字颜色 */
+            color: #fff;
+        }
+        
+        /* 每个a的背景图不同，单独找到每个a，设置不同的背景图片 */
+        /* 背景图快捷键bgi  */
+        /* 注意；背景色和背景图片只显示在背景尺寸内 */ 
+       .one{
+        background-image: url(./bg1.png);
+
+        }
+       .two{
+        background-image: url(./bg2.png);
+       }
+
+       .three{
+        background-image: url(./bg3.png);
+       }
+
+       .fuor{
+        background-image: url(./bg4.png);
+       }
+
+       .one:hover{
+        background-image: url(./bg5.png);
+
+        }
+       .two:hover{
+        background-image: url(./bg6.png);
+       }
+
+       .three:hover{
+        background-image: url(./bg7.png);
+       }
+       
+       .fuor:hover{
+        background-image: url(./bg8.png);
+       }
+
+
+    </style>
+</head>
+<body>
+
+    <div >
+        <a href="#" class="one">五彩导航</a>
+        <a href="#" class="two">五彩导航</a>
+        <a href="#" class="three">五彩导航</a>
+        <a href="#" class="fuor">五彩导航</a>
+</div>
+ 
+
+    
+
+
+</body>
+</html>
+
+

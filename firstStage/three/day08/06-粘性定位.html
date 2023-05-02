@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>粘性定位</title>
+    <!-- 可以被认为是相对定位和固定定位的结合体-->
+    <!-- 特点1；以浏览器的可视窗口为参照物移动元素 （固定定位特点） -->
+    <!-- 特点2；粘性定位占有原来位置 （相对定位特点） -->
+    <!-- 特点3；必须要添加一个方向配合，不然就变成固定定位 -->
+    <!-- 缺点；兼容性比较差，不支持ie 不常使用 -->
+    <style>
+        .top {
+            position: sticky;
+            top: 10px;
+            width: 100px;
+            height: 100px;
+            background-color: seagreen;
+            margin: 20px auto;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="top">
+        我是粘性定位
+    </div>
+    
+    
+</body>
+</html>

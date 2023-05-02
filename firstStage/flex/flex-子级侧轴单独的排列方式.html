@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>子级侧轴单独设置样式</title>
+    <style>
+         section {
+            display: flex;
+            width: 60%;
+            height: 150px;
+            background-color: pink;
+            margin: 0 auto;
+            /* 想要让子元素侧轴排列 */
+            /* 沿着侧轴的下面对齐 */
+           /* align-items: flex-end; */
+           /* 但是给父级添加，所有的子元素都会下来，只想要让第三个div下来 那就单独设置 */
+        }
+        section div {
+            flex: 1;
+            background-color: plum;
+        }
+        section div:nth-child(3) {
+            /* 但是设置子元素的侧轴排列方式 */
+            align-self: flex-end;
+
+
+        }
+        section div:nth-child(2) {
+            /* 改变子元素的显示位置  数值越小越靠前 默认是0 */
+            /* 默认是0 -1比0小所以靠前 */
+            /* 注意 和  z-index: ;不一样 */
+            order: -1;
+          
+        }
+
+    </style>
+</head>
+<body>
+    <section> 
+        <div>3</div>
+        <div>2</div>
+        <div>1</div>
+    </section>
+    
+</body>
+</html>

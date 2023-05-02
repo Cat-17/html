@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    .father {
+
+        width: 500px;
+        height: 500px;
+       background-color: pink;
+       /* padding-top: 50px;
+       /* 将来设计稿不加border，就不能解决这个方法 */
+       /* border-top: 50px;  */
+       overflow: hidden;
+    }
+    .son {
+
+        width: 100px;
+        height: 100px;
+       background-color: red;
+       /* 问题 我现在想给son添加外边距，但是被father继承了，
+       解决方式有几种，单独给 父级加padding-top px能解决 
+       加 border-top:px 
+        或者想在加 margin-top: 50px;的情况下给父级标签 +overflow: hidden;
+
+                         */
+       margin-top: 50px;
+
+    }
+        
+        
+        
+        
+    </style>
+</head>
+<body>
+
+    <div class="father">
+        <div class="son">son</div>
+    </div>
+    
+
+    
+</body>
+</html>

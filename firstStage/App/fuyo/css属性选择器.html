@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>属性选择器</title>
+    <style>
+        button {
+            /* 鼠标点到变成小手 */
+            cursor: pointer;
+        }
+
+        /* 属性选择器使用方法 元素+【】谁要发生变化 */
+        /* 属性选择器要高于标签选择器 属性选择器权重10 标签选择器是1 */
+        /*  */
+        button[disabled] {
+            /* 默认鼠标箭头的 */
+            cursor: default;
+        }
+
+        /* 通过属性的值的不同选择 */
+        input[type="text"] {
+            color: sandybrown;
+        }
+        input[type="search"] {
+            color: seagreen;
+        }
+        /* 选择前面值相同的部分  */
+        div[class^="icon"] {
+            color: aquamarine;
+
+        }
+        /* 选择后面相同的部分 */
+      div[class$="icon"] {
+        color: pink;
+      }
+      /* 全部 */
+      div[class*="icon"] {
+        color: pink;
+      }
+
+
+        
+
+
+    </style>
+</head>
+
+<body>
+    <!-- disabled="disabled" 是禁用我们的按钮 -->
+    <button></button>
+    <button></button>
+    <button disabled="disabled"></button>
+    <button disabled="disabled"></button>
+
+
+    <input type="text" name="" id="" value="文本框">
+    <input type="text" name="" id="" value="文本框">
+    <input type="text" name="" id="" value="文本框">
+    
+    <input type="search" name="" id="" value="搜索框">
+    <input type="search" name="" id="" value="搜索框">
+    <input type="search" name="" id="" value="搜索框">
+
+
+    <div class="icon1">1</div>
+    <div class="icon2">1</div>
+    <div class="icon3">1</div>
+
+    <div class="gbficon">2</div>
+    <div class="gbficon">2</div>
+    <div class="gbficon">2</div>
+
+    <div class=""></div>
+
+
+
+   
+
+    
+   
+
+</body>
+
+</html>

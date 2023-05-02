@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        div{
+            width: 300px;
+            height: 50px;
+            background-color: palegoldenrod;
+            text-align: center;
+            line-height: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+    <!-- 需求将当前时间以 -->
+    <script>
+        let arr = ['星期日','星期一','星期二','星期三','星期四','星期五','星期六']
+        let div = document.querySelector('div')
+        // 先调用，就省去了一秒的空白期
+        getTime ()
+        // 让时间自动化
+       setInterval(getTime,1000)
+    //    解决 空白间隔
+       function getTime (){
+         // 先把时间实例化 一定要写在定时器里面才可以
+         let date = new Date() 
+        let year = date.getFullYear()
+        let month = date.getMonth() + 1
+        let data1 = date.getDate()
+        let hour = date.getHours()
+        let min = date.getMinutes()
+        let sec = date.getSeconds()
+        let day = date.getDay()
+        // 要把时间写在div里面，先把div获取过来
+        div.innerHTML = `今天是: ${year}年${month}月${data1}日 ${hour}:${min}:${sec} ${arr[day]}`
+       }
+
+    </script>
+    
+</body>
+</html>

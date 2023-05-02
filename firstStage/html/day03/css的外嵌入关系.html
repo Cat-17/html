@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!--  在html文件中添加 link标签，告诉他我们是什么关系 。stylesheet 样式表  href 是路径选择 ./css文件-->
+    <!--href 查找路径 这个作用和超链接类似，就是作为引用，把外面的文件引进来。超链接也是根据地址区跳转，区别就是这个不跳转，但也是根据地址去找样式 -->
+    <link rel="stylesheet" href="./外嵌入.css">
+</head>
+<body>
+    <!--有一个标签，等下写css，到底写在哪里 -->
+    <p style="color: bisque; font-size: 30px;">这是一个p标签</p>
+    <!-- css的行内市写法，添加style标签，固定color样式修改颜色，需要添加新的属性，比如文字变大，在；后面空格打标签 -->
+    <div style="color: bisque; font-size: 30px;" >这是一个div标签</div>
+    <!-- 如果一个标签，同时用了三种样式，生效顺序近到远，显示本体的，再试表头上的，最后才是引入的.有近的，远的就不会生效 -->
+    <!-- 比如好几个p标签，大部分都是黄色，其中一个想要绿色，就可以直接写标签里 -->
+
+    <p>aaaaa</p>
+    <p>bbbbbb</p>
+</body>
+</html>

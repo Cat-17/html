@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>对象中的方法</title>
+    <!-- 数据行为性的信念称为方法。如跑步 唱歌 一般是动词性 其本质是函数 -->
+</head>
+
+<body>
+    <script>
+        let param = {
+            uname: '刘德华',
+            age: '18',
+            name: 'andy',
+            // 对象由 属性名静态+方法动态
+            // 方式使用方式 方法名和函数俩部分组成 
+            sayHi: function () {
+                document.write('hi~~')
+            },
+            // 对象方法可以传递参数 跟函数使用方法基本一致
+            mtv: function (s) {
+                // 注意，千万别忘了给方法名后面加小括号
+                // 声明对象 (s)并添加了若干方法后，
+                // 可以使用.调用对象中函数，我称之为方法调用
+                document.write(s)
+
+
+            }
+
+        }
+        //调用方法 对象.方法名
+        param.sayHi()
+        param.mtv('无间道')
+
+
+        // 方法是有方法名和函数俩部分构成，他们之间使用:分割
+        // 多个属性之间使用英文,分割
+        // 方法是依附在对象中的函数
+        // 方法名可以使用''或' 一般情况下省略，除非遇到名称遇到特殊符号如空格，中横线等
+    </script>
+
+</body>
+
+</html>

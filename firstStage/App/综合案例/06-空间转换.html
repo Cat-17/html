@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+           
+            width: 300px;
+            margin: 100px auto;
+            perspective: 800px;
+            /* 过渡 */
+            transition: all s;
+        
+        }
+        .box img {
+            width: 300px;
+            height: 200px;
+         
+        }
+        .box img:hover {
+            /* 空间转换 位移 */
+            /* transform: translate(100px); */
+            /* 单独控制方向 垂直方向 */
+            /* transform: translateY(100px); */
+
+
+
+            /* 3D效果  给父级加 取值是Z值 视觉效果近大远小*/
+            /*  /* 透视属性 取值在800~12000 */
+            /* perspective: 1000px;  */
+             transform: translateZ(100px);
+            transform: translateZ(-100px);
+
+
+
+
+
+        }
+
+    </style>
+</head>
+<body>
+    <div class="box">
+        <img src="../day01-字体图标/images/hero.jpeg" alt="">
+    </div>
+    
+</body>
+</html>

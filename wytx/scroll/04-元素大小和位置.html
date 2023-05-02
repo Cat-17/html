@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>scroll家族 滚动家族</title>
+    <!--使用场景：我们想要页面滚动一段距离 比如100px 就让某些元素显示隐藏那我们怎么知道页面滚动了100像素呢 -->
+    <!-- 可以使用scroll来检测页面滚动的距离 -->
+    <style>
+        div{
+            width: 150px;
+            height: 150px;
+            background-color: pink;
+            overflow: auto;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        我里面可以放很多文字
+        我里面可以放很多文字
+        我里面可以放很多文字
+        我里面可以放很多文字
+        我里面可以放很多文字
+        我里面可以放很多文字
+        我里面可以放很多文字
+        我里面可以放很多文字
+        我里面可以放很多文字
+        我里面可以放很多文字
+        我里面可以放很多文字
+        我里面可以放很多文字
+        我里面可以放很多文字
+        我里面可以放很多文字
+        我里面可以放很多文字
+        我里面可以放很多文字
+        我里面可以放很多文字
+        我里面可以放很多文字
+        我里面可以放很多文字
+    </div>
+    <script>
+        // scrollWidths crollHeight 是根据内容的宽高来显示
+        let div = document.querySelector('div')
+        console.log(div.scrollWidth) //150 返回的值 不带单位
+        console.log(div.scrollHeight)  // 458 不带单位 
+
+        // // 2; 被卷去的头部和左侧
+        // div.addEventListener('scroll',function(){
+        //     // console.log(this.scrollTop)
+        // })
+
+        // 页面滚动多少
+        window.addEventListener('scroll',function(){
+            
+
+        })
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            top: 0;
+            box-sizing: border-box;
+
+        }
+        li {
+            list-style: none;
+        }
+        .boxty {
+            width: 288px;
+            height: 465px;
+            padding: 0 10px;
+            border: 1px solid seagreen;
+            margin: 20px auto;
+        }
+        .boxty img {
+            width: 270px;
+            height: 290px;
+        }
+        .boxty ul {
+            padding-left: 0;
+            padding: 10px;
+        }
+        .boxty li:nth-child(1) {
+            width: 250px;
+            height: 30px;
+            font-size: 14px;
+            margin: 10px 0;
+           
+        }
+        .boxty li:nth-child(2){
+            font-size: 20px;
+            color: red;
+          
+        }
+        .boxty li del {
+            color: #000;
+            font-size: 14px;
+            padding-left: 20px;
+            text-decoration-line: line-through;
+            margin-bottom: 10px;
+            
+        }
+        .box {
+            
+            width: 60px;
+            height: 10px;
+            border: 1px solid red;
+            border-radius: 15px;
+           
+        }
+        .box .box1 {
+            width: 50%;
+            height: 10px;
+            background-color: red;
+            border-radius: 5px;
+            transition: all 2s;
+        }
+        .box:hover .box1 {
+            width: 100%;
+           
+        }
+        .boxty .nav {
+            
+            width: 288px;
+            height: 20px;
+            line-height: 20px;
+            margin-top: 10px;
+           
+        }
+        .boxty ul li:nth-child(3) {
+          
+            width: 200px;
+            height: 20px;
+            font-size: 14px;
+
+        }
+        .boxty .nav  span {
+            color: red;
+
+        }
+       
+        .boxty .nav .box {
+            float: left;
+        } 
+        .boxty .nav2 {
+            float: left;
+            display: block;
+            text-decoration: none;
+            width: 200px ;
+            height: 50px;
+            background-color: red;
+            text-align: center;
+            line-height: 50px;
+            font-size: 20px;
+            color: #fff;
+        }
+      
+
+      
+
+        
+
+
+
+
+
+    </style>
+</head>
+<body>
+    <div class="boxty">
+        <img src="./images/images/mobile.jpg" alt="">
+        <ul>
+            <li>Apple苹果iPhone 6s Plus（A1699）32G 金色 移动联通电信4G手机</li>
+            <li>$6088  <del>$6899</del></li>
+            <li class="nav">
+                已售 <span>87%</span>
+                <div class="box">
+                    <div class="box1"></div>
+                </div>
+                剩余<span>29</span>件
+              
+            </li>
+            <li>
+                <a href="#" class="nav2">立即抢购</a>
+               
+            </li>
+           
+        </ul>
+       
+    
+    </div>
+    
+    
+</body>
+</html>

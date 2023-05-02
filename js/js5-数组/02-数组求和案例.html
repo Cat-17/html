@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>数组求和案例</title>
+</head>
+
+<body>
+    <!-- 需求 求数组[2,6,1,7,4]里面的所有元素的和以及平均值 -->
+    <script>
+        // 第一步数组
+        let arr = [2, 6, 1, 7, 4]
+        // 求和变量
+        let sum = 0
+        // 求平均值
+        let average = 0
+        // 遍历数组 取出里面的每一个元素 然后累加
+        // 从0开始 5个数 0~4 01234 5个数 不包含5 所以是小于号
+        for (let i = 0; i < arr.length; i++) {
+            // 最容易迷惑的地方
+            // i打印出来的是结果是索引号 下标 
+            // console.log(i);
+
+            // arr[i] 输出打印的结果是数组元素 就是26174
+            // console.log(arr[i]);
+            // 我需要是数组的数据加在一起 需要是arr[i]
+            // arr[i] 数组里面所有的数据 赋值给sum 求和的变量
+            sum += arr[i]
+        }
+        // 求平均值
+        average = sum / arr.length
+        document.write(`这个同学的总分是:${sum},平均分是:${average}`)
+    </script>
+
+</body>
+
+</html>

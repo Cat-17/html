@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>工作区中文件的4种状态</title>
+</head>
+<body>
+    <!-- 未跟踪 不被git所管理的文件  -->
+    <!-- 已被git管理  未修改（工作区中文件的内容和git仓库中文件的内容保持一致）
+         已修改（工作区中文件的内容和git仓库中文件的内容保持不一致）
+        已暂存（工作区中被修改的文件已被放到暂存区，准备将修改后的文件保存到git仓库 -->
+        <!-- git操作的终极结果：让工作区中的文件都处于 “未修改”的状态 -->
+
+
+        <!-- 检测文件的状态 -->
+        <!-- 可以使用git status命令查看文件处于什么状态 -->
+        <!-- 在状态报告中，可以看到新建的index.html 文件出现在untracked files（未跟踪的文件）下面-->
+        <!-- 未跟踪的文件意味着git在之前的快照（提交）中没意这些文件，git不会自动将之纳入跟着范围，除非明确
+        的告诉他，我需要使用git跟踪管理该文件 -->
+
+        <!-- 以精简的方式显示文件状态 
+        一下两种完全等价的命令 -->
+        <!-- git status -s  是-short的简写-->
+        <!-- git status -short --> 
+        <!-- 未跟踪文件前面有红色？？标记 -->
+    
+</body>
+</html>

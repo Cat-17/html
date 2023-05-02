@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div></div>
+    <script>
+        // 获取div
+        let div = document.querySelector('div')
+        function fn(){
+            // div获得当前时间
+            div.innerHTML = new Date().toLocaleString()
+            // 利用递归实现开始定时器的做法 递归函数自己调用自己
+            // 一秒钟调用一下函数获得当前时间 
+            setTimeout(fn,1000)
+        }
+        fn()
+    </script>
+    
+</body>
+</html>

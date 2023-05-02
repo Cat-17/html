@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>清除内外边距</title>
+    <!-- 很多元素都会自带边距  直接全选 设置内外边距为0-->
+    <style>
+        /* 这也是我们css第一行的代码 */
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        /* 行内元素为了兼容性，只设置左右的内外边距 设置了上下也不起效果 ，如果一定要上下边距 ，可以转块级或者行内块 ，就可以随意设置内外边距 */
+        span {
+            margin: 20px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="rfvbg">
+        <ul>
+            <li>全张先生</li>
+        </ul>
+    </div>
+    <span>行内元素尽量设置左右的内外边距</span>
+    
+</body>
+</html>

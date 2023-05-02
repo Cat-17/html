@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>什么是bom</title>
+    <!-- 浏览器对象模型  -->
+    <style>
+        body{
+            height: 1000px;
+        }
+    </style>
+</head>
+<body>
+   <script>
+    // window是浏览器内置中的全局对象，我们所学习的所有webAPis的知识内容都是window对象实现的
+    // window 对象包含了以下5个属性 即所谓的bom（浏览器对象模型  
+    // window.navigator
+    // window.location
+    // window.document  是实现dom的基础 他其实是依附于window的属性
+    // window.history
+    // window.screen   
+
+
+// 使用时 window可以省略 
+    addEventListener('scroll',function(){
+        console.log(111);
+    })
+   </script>
+    
+</body>
+</html>

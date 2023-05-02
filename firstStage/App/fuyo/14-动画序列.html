@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>动画序列</title>
+    <style>
+        /* 动画序列  可以完成多个状态的变化 keyframes 关键帧动画*/
+        /* 里面的百分比要是整数 百分比就是总的时间（我们这个案例10s）的划分 */
+        @keyframes paliu {
+            0% {
+                transform: translate(0,0);
+            }
+            25% {
+                transform: translate(1000px,0);
+            }
+            50% {
+                transform: translate(1000px,500px);
+            }
+            75% {
+                transform: translate(0 ,500px);
+            }
+            100% {
+                transform: translate(0,0);
+            }
+        }
+        /* 第一步 定义动画 */
+        /* @keyframes paliu {
+            from {
+                transform: translate(0, 0);
+            }
+            to {
+                transform: translate(1000px, 0);
+            }
+        } */
+
+        div {
+            width: 100px;
+            height: 100px;
+            background-color: palevioletred;
+            /* 调用动画 定义的名字 加持续的时间，花费的时间 */
+            animation:paliu  10s;
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+    
+</body>
+</html>

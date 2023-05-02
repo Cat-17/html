@@ -1,0 +1,16 @@
+.header {
+  width: 200px;
+  height: 200px;
+  background-color: plum;
+}
+.header a {
+  width: 100px;
+  height: 100px;
+  background-color: palegoldenrod;
+}
+.header a:hover {
+  background-color: slateblue;
+}
+.nav .logo {
+  color: salmon;
+}

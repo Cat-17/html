@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 300px;
+            height: 300px;
+            background-color: palegoldenrod;
+        }
+
+        /* 如果修改的样式比较多，起一个类  */
+        .active {
+            width: 500px;
+            height: 500px;
+            background-color: pink;
+            margin-left: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="one"></div>
+  
+    <!-- 第一步 先获取元素对象 -->
+    <script>
+      
+        let num = document.querySelector('div')
+        // add是方法 追加  一个新的 不会影响之前的类名
+        num.classList.add('active')
+        num.classList.add('active')
+        // 删除一个类 移除  类
+        num.classList.remove('one')
+        num.classList.remove('one')
+        // 切换  类 原本有的话 就删掉  没有就添加上
+        num,classList.toggle('one')
+        num.classList.toggle('one')
+       
+
+
+        
+
+
+
+
+    </script>
+</body>
+</html>

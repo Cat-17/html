@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>将属性模糊或颜色偏移</title>
+    <!-- 想要让图片边模糊 -->
+    <!-- css的滤镜 模糊属性 -->
+    <style>
+        /* blur是一个函数，小括号里面的数值越大，图片越模糊，注意数值要加px单位 */
+        img {
+            filter: blur(5px);
+        }
+        /* 想要鼠标经过的时候不模糊，把数值调整为0 */
+        img:hover {
+            filter: blur(0);
+
+
+        }
+    </style>
+</head>
+<body>
+    <img src="./images/pink.jpg" alt="">
+    
+</body>
+</html>

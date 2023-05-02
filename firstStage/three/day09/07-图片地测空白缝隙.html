@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>解决图片底册留白空隙的问题</title>
+    <style>
+        /* 为什么图片底册会有一个空白缝隙，原因是行内块元素和文字的默认基线对齐 */
+        div {
+            border: 1px solid seagreen;
+        }
+        /* 解决方案1； */
+        img {
+            /* 选择这3种对齐方式 就可以解决了 */
+            /* vertical-align: bottom;
+            vertical-align: top;
+            vertical-align: middle; */
+            display: block;
+        }
+        /* 解决方案2.转一下行内元素 */
+    </style>
+</head>
+<body>
+   <div>
+    <img src="./images/ldh.jpg" alt="">
+   </div>
+    
+</body>
+</html>

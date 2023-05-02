@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul class="nav">
+        <li>我的首页</li>
+        <li>产品介绍</li>
+        <li>联系方式</li>
+    </ul>
+    <!-- 需求 请控制台依次次输出3个li的DOM对象  -->
+    <script>
+        // 第一步 先获取li
+        // document.querySelector 只能获取第一个小li
+        let nav1 = document.querySelector('.nav li')
+        console.log(nav1)
+        // 获得全部小li
+        let nav2 = document.querySelectorAll('.nav li')
+        // 但是 获得是数组形式的小li 不能单独设置样式属性
+        // 需要通过for循环 把li独立获取出来
+        for(let i = 0 ; i < nav2.length;i++) {
+            console.log(nav2[i])
+           
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        // 选择 第一个小li
+    //   let nav   = document.querySelector('.nav li')
+    //   console.log(nav)
+    // //   获取全部的小li 但是不能进行修改 需要通过遍历得到3个xiaoli进行更改
+    // let nax   = document.querySelectorAll('.nav li')
+    //  console.log(nax)
+    // //  for循环 输出小丽
+    // for(let i = 0; i< nax.length;i++){
+    //     console.log(nax[i])
+    // }
+    </script>
+    
+</body>
+</html>

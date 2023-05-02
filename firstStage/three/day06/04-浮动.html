@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>盒子浮动</title>
+    <!-- 网页布局 使用css 摆盒子 盒子到底怎么排列顺序 -->
+    <!-- 第一种；标准流  所谓的标准流；就是标签按照规定好默认的方式排列 -->
+    <!-- 常用元素；div hr p h1~h6 ul ol dl form  -->
+    <!-- 行内元素都有自己的排列方式 比如独占一行 一行可以排很多 默认规定好的进行排列 -->
+    <!-- 网页页面的构成一共有三大元素 标准流 浮动 定位 配合使用，实现网页的布局 -->
+    <!-- 块级元素；都是独占一行，但是就想让盒子一行排 -->
+    <style>
+        /*浮动可以改变元素标签默认的排列方式 */
+        div {
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+            /* 多个块级元素纵向排列找标准流 ，多个块级元素横向排列找浮动 让盒子在一行排找浮动  */
+            float: left;
+            /* float可以分为左浮动 跟右浮动 */
+        }
+    </style>
+</head>
+<body>
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    
+</body>
+</html>

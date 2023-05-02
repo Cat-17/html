@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 需求1 求任意数组中的最大值并返回这个最大值 -->
+    <script>
+        // 声明函数
+        function max(arr) {
+            // 声明一个最大值
+            // 把数值第一个值给max
+            let sum = arr[0]
+            // 遍历数组
+            for (let i = 1 ; i < arr.length; i++ ) {
+                if (sum < arr[i]) {
+                    sum = arr[i]
+                    
+
+                   
+
+
+                }
+
+            }
+            // 返回这个最大值
+            return sum
+          
+        }
+        // 调用函数
+       let sumplus = ( max ([2,4,5,6,7,8,99]))
+       document.write(`数组中最大值是:${sumplus}`)
+
+
+     
+       
+    </script>
+</body>
+</html>

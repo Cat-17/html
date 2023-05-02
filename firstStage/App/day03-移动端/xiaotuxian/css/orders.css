@@ -1,0 +1,236 @@
+/* 主体内容 */
+/* 设置底色 */
+body{
+    background-color: #f7f7f8;
+}
+/* 公共样式 */
+/* 公共样式 以后写代码的时候 页面上多个重新的内容 单独设置
+一个类名，以后谁要用 就直接调用 谁要用就给谁添加这个类名 */
+.red {
+    color: #cf4444;
+}
+.pannel {
+    /* 外边距 下面的 */
+    margin-bottom: 10px;
+    /* 背景颜色 */
+    background-color: #fff;
+    /* 边框圆角 */
+    border-radius: 5px;
+
+}
+/* 公共样式 */
+.main {
+    /* 80px 为了内容不被底部区域盖住 */
+    padding: 12px 11px 80px;
+}
+
+/* 用户信息区域 */
+.user_msg {
+    /* 上右下左 */
+    padding:15px 0 15px 11px ;
+    /* 让内容一行排 找到内容的亲爹添加 */
+    display: flex;
+    align-items: center;
+} 
+.user_msg .location {
+    width: 30px;
+    height: 30px;
+    /* 图标跟文字之间间距 */
+    margin-right: 10px;
+    background-image:linear-gradient(90deg,
+    #6fc2aa 5%,
+    #54b196 100%);
+    border-radius:50%;
+    /* 水平 垂直居中 */
+    text-align: center;
+    line-height: 30px;
+    color: #fff;
+}
+.user_msg .user {
+    flex: 1;
+} 
+
+.user_msg .user .top {
+    display: flex;
+}
+.user_msg .user h5 {
+    width: 55px;
+}
+.user_msg .user .bottom {
+    margin-top: 5px;
+    font-size: 12px;
+}
+
+.user_msg .more {
+    width: 44px;
+    height: 44px;
+   
+    text-align: center;
+    line-height: 44px;
+    color: #808080;
+}
+/* 用户信息区域 */
+/* 商品区域 */
+.googs {
+    display: flex;
+    padding: 11px 0 11px 11px ;
+}
+.googs .pic {
+    width: 85px;
+    height: 85px;
+    margin-right: 10px;
+}
+.googs .info{
+    flex: 1;
+}
+.googs .info h5 {
+    font-size: 13px;
+    font-weight: 400;
+    color: #262626;
+}
+.googs .info p {
+    width: 95px;
+    height: 20px;
+    background-color: #f7f7f8;
+    font-size: 12px;
+    
+}
+.googs .info p span:first-child{
+    margin-right: 5px;
+}
+.googs .info .price {
+
+    font-size: 12px;
+
+}
+.googs .info .price i {
+
+    font-size: 16px;
+}
+.googs .info .price span:last-child {
+    margin-left: 5px;
+    color: #999;
+    /* 删除线 */
+    text-decoration-line: line-through;
+}
+/* 数量x1 */
+.googs .count {
+    width: 44px;
+    height: 44px;
+    text-align: center;
+    line-height: 44px;
+}
+
+
+/* 其他信息 */
+.rest {
+    padding: 15px;
+}
+.rest div {
+    display: flex;
+}
+/*第二行标题和p之间的距离 */
+.rest div:nth-child(2) h5{
+    margin-right: 20px;
+}
+
+/* 两种写法  一个选择并集选择器 ，隔开 或者单独写一行
+选择p标签  */
+.rest div h5,
+.rest div p{
+   font-size: 13px;
+   color: #262626;
+   font-weight: 400;
+}
+/* .rest div p{
+    font-size: 13px;
+    color: #262626;
+} */
+.rest div:nth-child(2) p{
+    font-size: 12px;
+    color:#898989 ;
+}
+/* 选中div添加 外边距下面30px */
+.rest div{
+    margin-bottom: 30px;
+}
+/* 最后一个diiv 没有间距 单独选中 */
+.rest div:last-child {
+    margin-bottom: 0;
+}
+
+
+
+
+
+/* 找到第一个和第3个要主轴对齐方式 */
+.rest div:nth-child(2n+1){
+    /*  间距 （子级）之间 */
+   justify-content: space-between;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 主体内容 */
+/* 底部支付 */
+.pay {
+    /* 固定定位 到最下面的区域 */
+    position: fixed;
+    /*  主轴对齐方式水平方向 间距 在弹性盒子（子级）之间 */
+    justify-content: space-between;
+    /* 侧边对齐垂直方向 居中 */
+    align-items: center;
+
+    left: 0;
+    bottom: 0;
+
+    /* 想要让盒子在一行排 用到 flex属性 */
+    display: flex;
+    height: 80px;
+    width: 100%;
+    /* 内容的内间距0 左右间距11px */
+    padding: 0 11px;
+   
+    border-top: 1px solid #ededed;
+}
+.pay .lert {
+    font-size: 12px;
+}
+.pay .lert i{
+    font-size: 20px;
+    background-color: #cf4444;
+
+}
+.pay .right a {
+    /* 发现宽高不生效 */
+    display: block;
+    width: 90px;
+    height: 35px;
+      /* 渐变背景色 */
+    background-image:linear-gradient(90deg,
+    #6fc2aa 5%,
+    #54b196 100%);
+    /* 边框圆角 */
+    border-radius: 3px;
+    /* 文字水平居中 */
+    text-align: center;
+    /* 文字垂直居中 取值为高度的数值 */
+    line-height: 35px;
+    font-size: 13px;
+    color: #fff;
+
+}
+/* 底部支付 */

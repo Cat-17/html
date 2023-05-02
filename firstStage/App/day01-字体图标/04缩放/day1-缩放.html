@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>缩放</title>
+    <style>
+       
+        .box {
+            width:300px ;
+            height: 210px;
+            margin: 100px auto;
+            background-color: pink;
+        }
+        .box img {
+            width: 100%;
+            /* 过渡效果 配合鼠标悬停使用 */
+            transition: all 0.5s;
+        }
+        .box img:hover {
+            /* 图片的缩放效果 */
+            transform: scale(2);
+            /*  括号里面的数值 小于1就是缩小 */ 
+            /* transform: scale(0.8); */
+
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <img src="../images/product.jpg" alt="">
+    </div>
+    
+</body>
+</html>

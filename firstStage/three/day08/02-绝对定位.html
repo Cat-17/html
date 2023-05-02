@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>绝对定位</title>
+    <!-- 绝对定位；特点；1；没有父级的情况下；默认随着浏览器的左侧 ，配合方位进行移动 -->
+    <!-- 特点2；有父级的情况；父级没有定位的情况下 还是以浏览器为准 -->
+    <!-- 特点；加了绝对定位，不占有原有的位置 脱离标准流的 不在占有位置-->
+    <style>
+        .yey {
+            /* 4；绝对定位；以最近一级有定位的父元素为参考移动移动位置  */
+            position: relative;
+            width: 700px;
+            height: 500px;
+            background-color: slateblue;
+        }
+
+        /* 2；有父级但是父级没有加定位，还是跟着浏览器的情况下移动 */
+        .fssy {
+            /* 3；父亲有定位的情况下 ，是会跟着父级的盒子范围内移动 */
+            position: relative;
+            width: 400px;
+            height: 400px;
+            background-color: seagreen;
+        }
+
+        .son {
+            /* 1；没有父级的情况下 以浏览的为准 进行移动 */
+            position: absolute;
+            right: 50px;
+            bottom: 20px;
+            width: 200px;
+            height: 200px;
+            background-color: salmon;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="yey">
+        <div class="fssy">
+            <div class="son">1</div>
+        </div>
+    </div>
+
+</body>
+
+</html>

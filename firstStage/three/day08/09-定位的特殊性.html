@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>定位的特殊性</title>
+    <style>
+        /* span{ */
+            /* 1；给行内元素加了定位 宽高生效 */
+            /* position: absolute;
+            left: 0;
+            top: 0;
+            width: 200px;
+            height: 200px;
+            background-color: green;
+        } */
+          /* 2；如果是给块级元素加了定位，不加宽高，是随着内容的大小撑大 */
+        /* div {
+            position: absolute;
+            left: 0;
+            top: 0;
+            background-color: silver;
+        } */
+        /* 浮动跟定位，脱标 没有外边距塌陷的问题 */
+
+        /* 3; */
+        .box {
+            /*3浮动的元素不会压住下面标准流的文字，
+            最开始，浮动的目的 环绕文字的效果  */
+            /* float: left; */
+            /* 绝对定位，会压住下面标准流的文字 */
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            background-color: salmon;
+        }
+
+      
+    </style>
+</head>
+<body>
+    <!-- 1；行内元素 设置宽高不生效 大小随着内容撑开 -->
+    <!-- <span>123</span> -->
+    <!-- 2；块级元素 独占一行，宽高生效 -->
+    <!-- <div>456</div> -->
+    <!-- 3； -->
+    <div class="box">
+        
+    </div>
+    <p>shuijksbguhsjalghgiusjdi</p>
+    
+</body>
+</html>

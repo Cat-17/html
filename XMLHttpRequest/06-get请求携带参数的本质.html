@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>get请求携带参数的本质</title>
+    <script src="../Ajax/lib/jquery.js"></script>
+    <!-- 无论使用$.ajax()，还是使用$.get()又或者直接使用xhr对象发起get请求 当需要携带参数的时候，本质上
+    都是直接将参数以查询字符串的形式，追加到url地址的后面，发送到服务器的 -->
+</head>
+<body>
+    <script>
+        $.get('http://www.liulongbin.top:3006/api/getbooks',{name:'zs',age:20},function(){})
+        // 等价于
+        $.get('http://www.liulongbin.top:3006/api/getbooks?name-zs&age=20',function(){})
+
+
+        $.ajax({method:'GET',url:'http://www.liulongbin.top:3006/api/getbooks',data:{name:'zs',age:20},success:function(){}})
+        // 等价于
+        $.ajax({method:'GET',url:'http://www.liulongbin.top:3006/api/getbooks?name=zs&age=20',success:function(){}})
+    </script>
+    
+</body>
+</html>

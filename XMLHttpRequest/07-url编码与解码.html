@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>url编码和解码</title>
+    <!-- 什么是url编码 -->
+    <!-- url地址 只允许出现英文相关的字母 标点符号，数字，因此。在url中不允许出现中文字符-->
+    <!-- 如果url中需要包含中文这样的字符 则必须对中文字符进行编码（转义 -->
+    <!-- url编码的原则，使用安全的字符（没有特殊用途或者特殊意义的可打印字符）去表示那些不安全的字符 -->
+    <!-- url编码原则通俗理解：使用英文字符去表示非英文字符 -->
+</head>
+
+<body>
+    <!--  http://www.liulongbin.top:3006/api/getbooks?id=1&bookname=西游记  -->
+    <!-- 经过url编码之后 url地址变成了如下格式 -->
+    <!--  http://www.liulongbin.top:3006/api/getbooks?id=1&bookname= -->
+    <!-- 浏览器提供了url编码与解码的apl。分别是 -->
+    <script>
+        var srt = '河马程序员'
+        var srt1 = encodeURI(srt)
+        console.log(srt1)
+        // encodeURI(srt) 编码之后得到的值 %E6%B2%B3%E9%A9%AC%E7%A8%8B%E5%BA%8F%E5%91%98
+        // 解码
+        var srt2 = decodeURI('%E6%B2%B3%E9%A9%AC')
+        console.log(srt2)
+        // 得到结果河马 得到编码的结果 进行前俩个解码 每三个百分号为一组
+
+
+        // url编码的注意事项 由于浏览器会自动对url地址进行编码的操作，因此大多数情况下，程序员不需要关心url地址的编码和解码
+    </script>
+
+</body>
+
+</html>

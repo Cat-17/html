@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .cuer {
+            position: relative;
+            width: 200px;
+            height: 200px;
+            margin: 100px auto;
+            background-color: pink;
+            /* 过渡 */
+            transition: all 2s;
+            /* 3d效果 */
+            transform-style: preserve-3d;
+        }
+
+        .cuer div {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 200px;
+            height: 200px;
+        }
+        .cuer .top {
+            background-color: gold;
+            transform: translateZ(200px);
+        }
+        .cuer .bottom {
+            background-color: greenyellow;
+        }
+        .cuer:hover {
+            transform: rotateY(100deg);
+        }
+
+    </style>
+    
+</head>
+<body>
+   <div class="cuer">
+    <div class="top">1</div>
+    <div class="bottom">2</div>
+   </div>
+    
+</body>
+</html>

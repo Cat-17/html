@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>伪元素清除浮动</title>
+    <!-- 额外标签法也称为隔墙法 是w3c推荐的做法 -->
+    <!-- 在标签的结束的地方加一个空标签，空标签必须是块级元素 -->
+    <!--  -->
+    <style>
+        /* 在盒子的后面添加一个伪元素，代替空标签，伪元素必须要写 content: ''; 
+        添加的空标签必须是块级标签， display: block; 但是我们又不要看见这个元素 height: 0;  核心代码清除浮动clear: both;
+         visibility: hidden; 隐藏不要看见这个元素  */
+        .box::after {
+            content: '';
+            display: block;
+            height: 0;
+            clear: both;
+            visibility: hidden;
+        }
+        /* 双伪元素清除浮动法 */
+        .box::before,
+        .box::after {
+            content: '';
+            display: table;
+        }
+        .box::after {
+            clear: both;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <div class="box1"></div>
+        <div class="box2"></div>
+    </div>
+
+</body>
+
+</html>

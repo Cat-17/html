@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>变量的作用域</title>
+    <!-- 在js中 根据作用域的不同 变量可以分为 全部变量 局部变量 块级变量 -->
+    <!-- 全部变量；函数外部 let的变量  全部变量在任何区域都可以访问和修改 -->
+    <!-- 布局变量；函数内部let的变量 局部变量只能在当前函数内部访问和修改 -->
+    <!-- 块级变量 ；{} 里面的let变量 let定义的变量，只能在块作用域里访问，不能跨块访问，也不能跨函数访问-->
+</head>
+
+<body>
+    <script> //全部作用域
+        // let num = 10 //全局变量 谁都可以访问
+        // console.log(num)
+        // function fn() {
+        //     console.log(num);
+        // }
+        // // 调用打印
+        // fn() 
+        // function name() { 
+        //     let num = 10  //局部作用域 只在函数内的区域可以访问
+        //     console.log(num)
+        //     function name1() {
+        //         console.log(num);
+        //         let num2 = 20  //函数内的变量 只能给内部使用，函数外面不能使用
+
+        //     }
+        //     name1()
+        //     // console.log(num2); num2 is not defined
+
+
+
+        // }
+        // name()
+        // 只能在函数内访问，超出就不能访问 报错
+        // console.log(num); num is not defined
+
+
+        // if(true) {
+        //     let num = 10  // 块级变量 只在大括号里面访问 超出就不可以使用了
+        // }
+        // // console.log(num);  num is not defined
+
+        // 变量有一个坑，特殊情况 
+        // 如果函数内部或者块级作用域内部，变量没有声明，直接赋值，也当全部变量看，但是强烈不推荐
+        // function fn() {
+        //     // let num = 10
+        //     num = 10
+        // }
+        // fn()
+        // console.log(num);
+        // if (true) {
+        //     num = 10
+        // }
+        // console.log(num);
+    //    函数里面的形参当局部变量看 
+        function fu(x, y) {
+            document.write(x + Y)
+
+        }
+        fn(1,2)
+        // x，y布局变量只在函数内有效 出了函数 就无效
+        // console.log(x);
+
+        // 可以通过断点查看是那种变量是局部 还是全局 块级变量
+
+
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js的执行机制</title>
+</head>
+<body>
+    <!-- js是单线程 同一个时间只能做一件事  -->
+    <!-- 单线程就意味着所有的任务需要排队，前一个任务结束，才会执行后一个任务 -->
+    <!-- 缺点就是 如果js执行时间过长，这样就会造成页面的渲染不连贯，导致页面渲染加载阻塞的感觉 -->
+    <!-- 为了解决这个问题，利用多核cpu的计算能力 html5提出 web worker标准，允许js脚本创建多个线程 于是js中有了同步和异步-->
+    <!-- 同步 前一个任务结束再去执行后一个任务 一个任务接一个任务 程序的执行和任务的排列顺序是一致的 -->
+    <!-- 异步 你在做一件事情时，因为这件事情会花费很长时间，在做这件事的同事，你还可以去处理其他事情 -->
+    <script>
+        //  console.log(1111)   console.log(3333) 会被放到执行栈 同步任务
+        //   setTimeout(function(){
+        //     console.log(2222)
+        // },1000)  有回调函数 放到异步任务队列中 
+        //  一旦执行栈中的任务执行完毕 系统会依次执行任务队列中异步任务 于是内读取的异步任务结束等待状态，进入执行栈 开始执行
+        console.log(1111)
+        setTimeout(function(){
+            console.log(2222)
+        },1000)
+        console.log(3333)
+        // 执行机制 1111 3333 2222
+        console.log(1111)
+        setTimeout(function(){
+            console.log(2222)
+        },0)
+        console.log(3333)
+         // 执行机制 1111 3333 2222
+
+        //  我们会把代码分成俩种类型一个是异步一个是同步 同步的log打印 会放在执行栈中 异步任务比如点击事件 定时器带回调函数的
+        // 异步任务完毕后推入任务队列 先执行执行栈中的，执行完了再去任务队列中拿到异步任务进行渲染，一直循环这个过程
+        // 由于  
+    </script>
+    
+</body>
+</html>

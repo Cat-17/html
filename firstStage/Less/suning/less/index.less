@@ -1,0 +1,125 @@
+// 首页的样式 less文件
+// 将刚才设置好的common文件，导入进来
+// 导入 可以把一个样式文件导入到另外一个样式文件
+// link是把一个样式文件引入html页面里面
+@import "common";
+
+
+
+// 设置body的样式
+body {
+    min-width: 320px;
+    // 这个宽度的算法就是 屏幕的宽度/html的字号大小得到我们宽度的rem15
+    width: 15rem;
+    margin: 0 auto;
+    background: #f2f2f2;
+   font-family: Arial, Helvetica, sans-serif;
+   line-height: 1.5;
+}
+@baseFont:50;
+// 顶部搜索框
+// 页面元素rem计算公式，页面元素的px/html字号大小
+.search-contn {
+ overflow: hidden;
+    display: flex;
+    // 固定定位的必定要有宽度
+    position: fixed;
+    top: 0;
+    // 让盒子居中对齐 
+    left: 50%;
+    transform: translateX(-50%);
+    width: 15rem;
+    height: ( 88rem / @baseFont );
+    background-color: #ffc001;
+
+    .classify {
+        width:( 44rem / @baseFont);
+        height: (77rem / @baseFont);
+        margin: (11rem / @baseFont) (25rem / @baseFont) (7rem / @baseFont) (24rem / @baseFont);
+      background: url() no-repeat;
+        // 背景缩放
+        background-size: ( 44rem / @baseFont)  (77rem / @baseFont);
+    }
+    .search {
+        flex: 1;
+
+       input {
+        // 没有蓝色边框
+        outline: none;
+        width: 100%;
+        border: 0;
+        height: (66rem / @baseFont);
+        border-radius:( 33rem / @baseFont);
+        background-color: #fff2cc;
+        margin-top:( 12rem / @baseFont);
+        font-size: (25rem / @baseFont);
+        padding-left: (55rem / @baseFont);
+        color: #757575;
+       
+       }
+    }
+    .login {
+        width:( 75rem / @baseFont);
+        height: (70rem / @baseFont);
+        line-height: (70rem / @baseFont);
+        margin: (10rem / @baseFont);
+        font-size: (25rem / @baseFont);
+        text-align: center;
+        color: #fff;
+    }
+
+}
+
+// banner 部分
+// .banber {
+//     width: (567rem / @baseFont);
+//     height: (890rem / @baseFont);
+//     img {
+//         width: 100%;
+//         height: 100%;
+//     }
+
+//     // 广告部分
+//     .ad {
+//         display: flex;
+//         a {
+//             flex: 1;
+//             img {
+//                 width: 100%;
+//             }
+//         }
+//     }
+// }
+
+
+// nav 模板
+nav {
+    width: (750rem / @baseFont);
+    background-color: palegreen;
+    a {
+       display: flex;
+       float: left;
+       flex-direction: column;
+        width: (150rem / @baseFont);
+        height: (140rem / @baseFont);
+        text-align: center;
+        img {
+           display: block;
+            width: (42rem / @baseFont);
+            height: (42rem / @baseFont);
+            margin:( 20rem / @baseFont) auto 0;
+           
+           
+        }
+        span {
+            color: #333;
+            font-size: (25rem / @baseFont);
+
+        }
+    }
+
+}
+
+
+
+

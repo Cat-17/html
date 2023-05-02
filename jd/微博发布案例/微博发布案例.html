@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>微博发布</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    .w {
+      width: 900px;
+      margin: 0 auto;
+    }
+
+    .controls textarea {
+      width: 878px;
+      height: 100px;
+      resize: none;
+      border-radius: 10px;
+      outline: none;
+      padding-left: 20px;
+      padding-top: 10px;
+      font-size: 18px;
+    }
+
+    .controls {
+      overflow: hidden;
+    }
+
+    .controls div {
+      float: right;
+    }
+
+    .controls div span {
+      color: #666;
+    }
+
+    .controls div .useCount {
+      color: red;
+    }
+
+    .controls div button {
+      width: 100px;
+      outline: none;
+      border: none;
+      background: rgb(0, 132, 255);
+      height: 30px;
+      cursor: pointer;
+      color: #fff;
+      font: bold 14px '宋体';
+      transition: all 0.5s;
+    }
+
+    .controls div button:hover {
+      background: rgb(0, 225, 255);
+    }
+
+    .controls div button:disabled {
+      background: rgba(0, 225, 255, 0.5);
+    }
+
+    .contentList {
+      margin-top: 50px;
+    }
+
+    .contentList li {
+      padding: 20px 0;
+      border-bottom: 1px dashed #ccc;
+      position: relative;
+    }
+
+    .contentList li .info {
+      position: relative;
+    }
+
+    .contentList li .info span {
+      position: absolute;
+      top: 15px;
+      left: 100px;
+      font: bold 16px '宋体';
+    }
+
+    .contentList li .info p {
+      position: absolute;
+      top: 40px;
+      left: 100px;
+      color: #aaa;
+      font-size: 12px;
+    }
+
+    .contentList img {
+      width: 80px;
+      border-radius: 50%;
+    }
+
+    .contentList li .content {
+      padding-left: 100px;
+      color: #666;
+      word-break: break-all;
+    }
+
+    .contentList li .the_del {
+      position: absolute;
+      right: 0;
+      top: 0;
+      font-size: 28px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="w">
+    <!-- 操作的界面 -->
+    <div class="controls">
+      <img src="./images/9.6/tip.png" alt="" /><br />
+      <!-- maxlength 可以用来限制表单输入的内容长度 -->
+      <textarea placeholder="说点什么吧..." id="area" cols="30" rows="10" maxlength="200"></textarea>
+      <div>
+        <span class="useCount" id="useCount">0</span>
+        <span>/</span>
+        <span>200</span>
+        <button id="send">发布</button>
+      </div>
+    </div>
+    <!-- 微博内容列表 -->
+    <div class="contentList">
+      <ul id="list"></ul>
+    </div>
+  </div>
+
+  <!-- 添加了hidden属性元素会直接隐藏掉 -->
+  <li hidden>
+
+  </li>
+
+  <script>
+    // maxlength 是一个表单属性, 作用是给表单设置一个最大长度
+
+    // 模拟数据
+    let dataArr = [
+      { uname: '司马懿', imgSrc: './images/9.5/01.jpg' },
+      { uname: '女娲', imgSrc: './images/9.5/02.jpg' },
+      { uname: '百里守约', imgSrc: './images/9.5/03.jpg' },
+      { uname: '亚瑟', imgSrc: './images/9.5/04.jpg' },
+      { uname: '虞姬', imgSrc: './images/9.5/05.jpg' },
+      { uname: '张良', imgSrc: './images/9.5/06.jpg' },
+      { uname: '安其拉', imgSrc: './images/9.5/07.jpg' },
+      { uname: '李白', imgSrc: './images/9.5/08.jpg' },
+      { uname: '阿珂', imgSrc: './images/9.5/09.jpg' },
+      { uname: '墨子', imgSrc: './images/9.5/10.jpg' },
+      { uname: '鲁班', imgSrc: './images/9.5/11.jpg' },
+      { uname: '嬴政', imgSrc: './images/9.5/12.jpg' },
+      { uname: '孙膑', imgSrc: './images/9.5/13.jpg' },
+      { uname: '周瑜', imgSrc: './images/9.5/14.jpg' },
+      { uname: '老夫子', imgSrc: './images/9.5/15.jpg' },
+      { uname: '狄仁杰', imgSrc: './images/9.5/16.jpg' },
+      { uname: '扁鹊', imgSrc: './images/9.5/17.jpg' },
+      { uname: '马可波罗', imgSrc: './images/9.5/18.jpg' },
+      { uname: '露娜', imgSrc: './images/9.5/19.jpg' },
+      { uname: '孙悟空', imgSrc: './images/9.5/20.jpg' },
+      { uname: '黄忠', imgSrc: './images/9.5/21.jpg' },
+      { uname: '百里玄策', imgSrc: './images/9.5/22.jpg' },
+    ]
+    //需求1 检测用户输入字数
+    // 注册事件
+    // 获取 input 跟字数
+    let textarea = document.querySelector('textarea')
+    let useCount = document.querySelector('.useCount')
+    // 发布按钮
+    let send = document.querySelector('#send')
+    // 获取ul
+    let ul = document.querySelector('#list')
+    // 文本框注册事件
+    textarea.addEventListener('input', function () {
+      // 拿到用户输入的长度
+      //  console.log(this.value.length)
+      // 把当前的长度添加给 数字那里
+      useCount.innerHTML = this.value.length
+
+    })
+    // 需求2 内容不能为空
+    // 点击发布按钮判断
+    send.addEventListener('click', function () {
+      // 防止输入无意义的空格，使用字符串.trim()去掉首尾空格
+      if (textarea.value.trim() === '') {
+        // 并将表单的value值设置为空字符
+        textarea.value = ''
+        // 同时下面红色设置为0
+        useCount.innerHTML = 0
+        return alert('您输入的内容不能为空')
+      }
+      //随机函数
+      function name(min, max) {
+
+        return Math.floor(Math.random() * (max - min + 1)) + min
+
+
+      }
+      // 生成一个随机数
+      let random = name(0, dataArr.length - 1)
+
+      // 需求3 生成新标签 新增留言 写到send 的里面
+      //  创建一个li 然后里面通过innerHTML  最追加数据给 ul  ul.insertBefore(li,ul.children[0])
+      let li = document.createElement('li')
+      li.innerHTML = `
+
+      <div class="info">
+      <img class="userpic" src=${dataArr[random].imgSrc} >
+      <span class="username">${dataArr[random].uname}</span>
+      <p class="send-time">${new Date().toLocaleString()}</p>
+      </div>
+      <div class="content">${textarea.value}</div>
+      <span class="the_del">X</span>
+      
+      `
+
+      // 4： //删除模块 放到追加的前面
+      //事件处理函数里面获取点击按钮，注册点击事件
+      // 易错点：必须在事件里面获取，外面获取不到
+      // 删除对应的元素（this获取对应的那条需要删除的元素）
+      // 教你一招：放在追加ul的前面 这样创建元素的挺尸顺便绑定了事件，赞 
+      //  使用li.querySelector（）li里面的.the_del
+      let del = li.querySelector('.the_del')
+      del.addEventListener('click', function () {
+        //删除操作，点击的是x 删除的是li 父元素.removeChild（子元素）
+        // 删除对应的元素（this获取对应的那条需要删除的元素）
+        ul.removeChild(li)
+
+      })
+      // new Date().toLocaleString()生成本地的时间
+      // 追加给 ul 用 父元素.insertBefor(子元素，那个元素的前面)
+      ul.insertBefore(li, ul.children[0])
+
+      // 需求5
+      // 将表单域内容重置为空
+      // 将useCount里面的内容重置为0
+      textarea.value = ''
+      // 同时下面红色设置为0
+      useCount.innerHTML = 0
+
+
+
+
+    })
+
+    // 按下回车可以生成留言信息
+    // 事件监听在input是事件源  keydown按下按键 keyup 按键弹起清空
+    textarea.addEventListener('keyup', function (e) {
+      //  我们怎么知道用户按下了回车键呢  只要e.key === ' Enter'
+      // console.log(e.key)
+      if (e.key === 'Enter') {
+        // 发布新闻 自动触发发布按钮
+        send.click()
+      //    // 将useCount里面的内容重置为0
+      //  textarea.value = ''
+      //   // 同时下面红色设置为0
+      //   useCount.innerHTML = 0
+       
+       }
+      
+
+    })
+
+
+
+
+
+
+
+  </script>
+</body>
+
+</html>

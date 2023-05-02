@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>什么是时间监听</title>
+    <!-- 事件是在编程时系统内发生的动作或者发生的事情 比如用户在网页上单击一个按钮 拖拽鼠标 -->
+    <!-- 事件监听 就是让程序员检测是否有事件发生，一旦有事件触发，就立即调用一个函数做出响应，也称为注册事件 -->
+</head>
+<body>
+    <button class="btn1">点击我</button>
+    <button class="btn">按钮</button>
+    <!-- 时间监听 语法 -->
+   <script>
+    // 元素.addEventListener('事件',要执行的函数)
+    // 事件监听三要素
+    // 事件源；那个dom元素被事件触发了，要获取dom元素
+    // 事件；用什么方式触发，比如鼠标单击click 鼠标经过mouseover等
+    // 事件调用的函数；要做什么事
+    // 获取元素
+    let btn = document.querySelector('.btn')
+    // 事件监听
+    btn.addEventListener('click',function(){
+        // 事件类型要加引号 必须是个字符串
+        alert('被点击了')
+    })
+    // 函数是点击之后再去执行，每次点击都会执行一次
+
+
+    // 获取按钮元素
+    let btn1 = document.querySelector('.btn1')
+    // j事件监听 元素. 按钮 被单击了弹出一个框
+    btn1.addEventListener('click',function(){
+        // 
+        alert('您好')
+    })
+
+
+ 
+   </script>
+    
+</body>
+</html>

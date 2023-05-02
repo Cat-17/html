@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+/* 去除常见标签默认的 margin 和 padding */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+li,
+dl,
+dt,
+dd,
+input {
+  margin: 0;
+  padding: 0;
+}
+
+/* 內减模式 */
+* {
+    box-sizing: border-box;
+}
+
+/* 设置网页统一的字体大小、行高、字体系列相关属性 */
+body {
+  font: 16px/1.5 "Helvetica Neue", Helvetica, Arial, "Microsoft Yahei",
+    "Hiragino Sans GB", "Heiti SC", "WenQuanYi Micro Hei", sans-serif;
+  color: #333;
+}
+
+/* 去除列表默认样式 */
+ul,
+ol {
+  list-style: none;
+}
+
+/* 去除默认的倾斜效果 */
+em,
+i {
+  font-style: normal;
+}
+
+/* 去除a标签默认下划线，并设置默认文字颜色 */
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+/* 设置img的垂直对齐方式为居中对齐，去除img默认下间隙 */
+img {
+  vertical-align: middle;
+}
+
+/* 去除input默认样式 */
+input {
+  border: none;
+  outline: none;
+  color: #333;
+}
+
+/* 左浮动 */
+.fl {
+  float: left;
+}
+
+/* 右浮动 */
+.fr {
+  float: right;
+}
+
+/* 双伪元素清除法 */
+.clearfix::before,
+.clearfix::after {
+  content: "";
+  display: table;
+}
+.clearfix::after {
+  clear: both;
+}
+.wrapper {
+    width: 850px;
+    margin: 0 auto;
+}
+.shortcut .logo {
+  height: 22px;
+  background-color: rgb(43, 48, 59);
+}
+.shortcut .logo h1  {
+  float: left;
+  
+  height: 22px;
+}
+.shortcut .logo h1 img {
+  float: left;
+}
+.shortcut .logo ul li a {
+  display: inline;
+  float: right;
+  font-size:4px ;
+  color: #fff;
+  padding-right: 27px;
+}
+.panan {
+ position: relative;
+  height: 241px;
+  background-color:rgb(24, 28, 40);
+}
+
+.panan .ertgb ul a {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  font-size: 10px;
+  margin-left: 119px;
+  background-color: rgb(27, 42, 63);
+  color: #fff;
+
+}
+.panan .ertgb img {
+  position: relative;
+  width: 843px;
+  height: 241px;
+  
+}
+.wsxcdfi h1{
+  font-size: 18px;
+  font-weight: 400;
+ margin-left: 330px;
+ margin-top: 30px;
+}
+.wsxcdfi p {
+  font-weight: 400;
+  font-size: 12px;
+  margin-left: 330px;
+  margin-top: 20px;
+  margin-bottom:50px ;
+
+}
+.azxcvbn {
+  width: 601px;
+  height: 300px;
+  border: 1px solid #333;
+  
+}
+.azxcvbn h2 {
+  font-weight: 700;
+  border-bottom: 1px solid #333;
+  margin-top: 20px;
+  width: 56px;
+  font-size: 14px;
+}
+.azxcvbn .rfbgh {
+  float: left;
+  font-size: 2px;
+  width:250px ;
+  height: 230px;
+  margin-left: 25px;
+}
+.rfbgh a {
+  float: left;
+  width: 80px;
+  height: 24px;
+  border: 2px solid  orange;
+  display: inline-block;
+  margin-top: 10px;
+  padding: 2px 13px ;
+ 
+}
+ .cvfbg img {
+  float:right;
+  width: 290px;
+  height: 173px;
+  margin-top: 40px;
+  margin-left: 0px ;
+  padding: 23px;
+}
+.vbnmjhg {
+  height: 201px;
+  background-color: rgb(46, 48, 51);
+
+}
+.sdfghyu ul {
+  float: left;
+  color: #fff;
+  padding: 18px;
+  
+}
+.sdfghyu ul li span {
+  font-weight: 400;
+  font-size: 15px;
+ padding-bottom: 5px;
+  
+}  
+.sdfghyu ul li {
+  font-size: 10px;
+  font-weight: 400;
+  margin-right: 20px;
+}
+.sdfghyu ul li:last-child  {
+  margin-right: 0px ;
+}
+
+
+
+
+
+
+
+
+
+    
+      
+
+        
+    </style>
+</head>
+<body> 
+    <div class="shortcut wrapper ">
+        <div class="logo">
+            <h1><a href="#"><img src="../day08/tengxun云.html/logo.png" alt=""></a></h1>
+              <ul>
+                  <li><a href="#">最新活动</a></li>
+                  <li><a href="#">产品</a></li>
+                  <li><a href="#">定价</a></li>
+                  <li><a href="#">文档</a></li>
+                  <li><a href="#">云市场</a></li>
+                  <li><a href="#">开发者支持</a></li>
+                  <li><a href="#">合作与生态</a></li>
+                  <li><a href="#">企业中心</a></li>
+                  <li><a href="#">客户</a></li>
+              </ul>
+        </div>
+        <div class="panan wrapper">
+          <div class="ertgb wrapper ">
+            <a href="#"><img src="../day08/tengxun云.html/banner.png" alt=""></a>
+            <ul>
+              <li><a href="#">云服务器</a></li>
+              <li><a href="#">云服务器</a></li>
+              <li><a href="#">云服务器</a></li>
+              <li><a href="#">云服务器</a></li>
+              <li><a href="#">云服务器</a></li>
+              <li><a href="#">云服务器</a></li>
+              <li><a href="#">云服务器</a></li>
+              <li><a href="#">云服务器</a></li>
+              <li><a href="#">云服务器</a></li>
+              <li><a href="#">云服务器</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="wsxcdfi wrapper">
+          <h1>云从业者培训及认证</h1>
+        <p>好好学习  天天向上</p></div>
+        <div class="azxcvbn wrapper">
+          <div class="rfbgh" >
+            <h2>在线课程</h2>
+            <p> 本课程专为云计算初学者、学生、个人开发者打造，购买云+校园任意套餐可免费观看课程视频本课程专为云计算初学者、学生、个人开发者打造，购买云+校园任意套餐可免费观看课程视频本课程专为云计算初学者、学生、个人开发者打造，购买云+校园任意套餐可免费观看课程视频本课程专为云计算初学者、学生、个人开发者打造，购买云+校园任意套餐可免费观看课程视频本课程专为云计算初学者、学生、个人开发者打造，购买云+校园任意套餐可免费观看课程视频</p>
+            <a href="#">开始学习</a>
+          </div>
+          <div class="cvfbg">
+            <img src="../day08/tengxun云.html/right.png" alt="">
+          </div>
+
+
+        </div>
+        <div class="vbnmjhg wrapper">
+          <div class="sdfghyu">
+            <ul>
+              <li><span>腾讯云计算</span></li>
+              <li>产品</li>
+              <li>云市场</li>
+              <li>客户案例</li>
+              <li>产品发布台</li>
+              <li>产品</li>
+              <li>网站备案</li>
+              <li>认证信息</li>
+              <li>许可证说明</li>
+              <li>隐私声明</li>
+              <li>关于我们</li>
+            </ul>
+            <ul>
+              <li><span>腾讯云计算</span></li>
+              <li>产品</li>
+              <li>云市场</li>
+              <li>客户案例</li>
+              <li>产品发布台</li>
+              <li>产品</li>
+              <li>网站备案</li>
+              <li>认证信息</li>
+              <li>许可证说明</li>
+              <li>隐私声明</li>
+              <li>关于我们</li>
+            </ul>
+            <ul>
+              <li><span>腾讯云计算</span></li>
+              <li>产品</li>
+              <li>云市场</li>
+              <li>客户案例</li>
+              <li>产品发布台</li>
+              <li>产品</li>
+              <li>网站备案</li>
+              <li>认证信息</li>
+              <li>许可证说明</li>
+              <li>隐私声明</li>
+              <li>关于我们</li>
+            </ul>
+            <ul>
+              <li><span>腾讯云计算</span></li>
+              <li>产品</li>
+              <li>云市场</li>
+              <li>客户案例</li>
+              <li>产品发布台</li>
+              <li>产品</li>
+              <li>网站备案</li>
+              <li>认证信息</li>
+              <li>许可证说明</li>
+              <li>隐私声明</li>
+              <li>关于我们</li>
+            </ul>
+            <ul>
+              <li><span>腾讯云计算</span></li>
+              <li>产品</li>
+              <li>云市场</li>
+              <li>客户案例</li>
+              <li>产品发布台</li>
+              <li>产品</li>
+              <li>网站备案</li>
+              <li>认证信息</li>
+              <li>许可证说明</li>
+              <li>隐私声明</li>
+              <li>关于我们</li>
+            </ul>
+            <ul>
+              <li>Copyright © 2013 - 2020</li>
+              <li>Tencent Cloud. All Rights Reserved.</li>
+              <li> 腾讯云 版权所有</li>
+              <li> 购买咨询</li>
+             
+            </ul>
+          </div>
+        </div>
+
+
+    </div>
+
+
+    
+</body>
+</html>

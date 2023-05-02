@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>浮动搭配</title>
+    <style>
+        /* 为了约束浮动元素位置，我们网页布局一般采用的策略是；
+        先用一个标准流的父元素排列上下位置，之后内部子元素才去浮动排列左右的位置，符合网页布局第一准则 */
+        .box1 {
+            width: 200px;
+            height: 200px;
+            background-color: hotpink;
+        }
+        .b2 {
+            float: left;
+            width: 20px;
+            height: 20px;
+            background-color: chocolate;
+        }
+        .b3 {
+            float: right;
+            width: 30px;
+            height: 30px;
+            background-color: goldenrod;
+        }
+    </style>
+</head>
+<body>
+    <div class="box1">
+        <div class="b2">1</div>
+        <div class="b3">2</div>
+
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>练习 - 网页时钟</title>
+  <style>
+    body {
+      padding: 40px;
+    }
+
+    ul {
+      padding: 0;
+      list-style: none;
+    }
+
+    li {
+      margin: 10px 0;
+      line-height: 26px;
+      display: flex;
+    }
+
+    input,
+    button {
+      padding: 0;
+      margin-left: 10px;
+      display: block;
+    }
+
+    input {
+      width: 190px;
+      outline: none;
+    }
+
+    button {
+      width: 120px;
+    }
+
+    .verify {
+      width: 60px;
+    }
+  </style>
+</head>
+
+<body>
+  <ul>
+    <li>
+      手机号:
+      <input type="text">
+    </li>
+    <li>
+      验证码:
+      <input type="text" class="verify">
+      <button id="btn">获取验证码</button>
+    </li>
+  </ul>
+
+  <script>
+    // 1. 获取元素 按钮
+    let btn = document.querySelector('button')
+
+    // 2. 给按钮注册点击事件
+    btn.addEventListener('click', function () {
+      // 3. 点击之后，禁用按钮，同时开启倒计时
+      this.disabled = true
+      //  先声明一个变量计时器 
+      // 控制显示数字的
+      let i = 5
+      btn.innerHTML = `${i}秒之后重新获取`
+      //  开启定时器
+
+   let timer  = setInterval(function () {
+        i--
+        // 获取定时器
+        // 在定时器里面不能用this，this执行的window
+        btn.innerHTML = `${i}秒之后重新获取`
+
+        // 4. 如果时间为0，则清除定时器，并且更改文字
+        if (i < 0) {
+          // 当i小于0的时候清除定时器
+          clearInterval(timer)
+          // 更改文字
+          btn.innerHTML = '获取验证码'
+          // 复活按钮 定时器里面不可以用this this执行的是window
+          btn.disabled = false
+
+
+        }
+      }, 1000)
+
+
+    })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>change事件</title>
+    <style>
+        /* /根据属性选择标签 在不想加类名的时候 */
+        input[type=text]{
+            background-color: palegreen;
+        }
+    </style>
+</head>
+<body>
+    <input type="text">
+    <input type="password">
+    <script>
+        let input = document.querySelector('input')
+        // change 当表单里面的值发生变化的时候触发 ，和 blur 不一样 
+        // input事件 只要输入就会触发
+        // change 事件 是离开表单的时候才触发  离开   并且值发生了变化才触发
+        input.addEventListener('change',function(){
+            console.log(111)
+
+        })
+    </script>
+</body>
+</html>

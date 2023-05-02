@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>伪元素选择器</title>
+    <!-- 重点；可以帮助我们利用css创建新标签元素，而不需要html标签，从而简化html结构 -->
+    <!-- before和after 必须有centen'' -->
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            background-color: salmon;
+        }
+
+        div::before {
+            /* 在盒子的前面添加
+            content 必须加   */
+            content: "我";
+        }
+
+        div::after {
+            /* 在盒子的后面添加
+            属于行内元素，不能设置大小 转换模式行内块元素 或者加浮动加定位就可以设置宽高 */
+            content: '小宝';
+            display: inline-block;
+            width: 50px;
+            background-color: slateblue;
+        }
+    </style>
+</head>
+
+<body>
+    <div>是</div>
+
+
+
+</body>
+
+</html>

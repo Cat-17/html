@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- table表格的整体 border是单表格 width宽度 height高度= 搭框架  -->
+    <table border="1" width="500" height="400"  >
+
+        <!-- caption 一般用在表格的表头 添加标题属性-->
+        <caption>
+            <h3>优秀学生信息表格</h3>
+        </caption> 
+        
+        <tr>
+            <!--tr是代表一行 th是开头的第一行的小表格  -->
+            <th>年级</th>
+            <th>姓名</th>
+            <th>学号</th>
+            <th>班级</th>
+        </tr>
+
+        <tr>
+            <!-- tr是代表一行 td是表格当中的内容 -->
+            <td>高三</td>
+            <td>张三</td>
+            <!-- 需要对表格中相同的部分合并 选中标签内容开始的地方添加属性 纵向合并rowspan=冒号里面填写需要合并几个填写数字就可以 纵向是选上面一行合并，下面一行内容删掉 -->
+            <td rowspan="2">110</td>
+            <td>三年二班</td>
+        </tr>
+
+        <tr>
+            <!-- tr是代表一行 td是表格当中的内容 -->
+            <td>高三</td>
+            <td>李四</td>  
+            <td>三年二班</td>
+        </tr>
+
+        <tr>
+            <td>评语</td>
+            <!-- 需要对表格中相同的部分合并 选总标签内容开始的地方添加属性 横向向合并colspan=冒号里面填写需要合并几个填写数字就可以 横向是选左边第一行合并，下面一行内容删掉  -->
+
+            <td colspan="3">你们都很优秀</td>
+            
+        </tr>
+        <!-- 把相同的表格合并 代码写法需要加入合并 
+        横向向合并colspan=冒号里面填写需要合并几个填写数字就可以
+    纵向合并rowspan=冒号里面填写需要合并几个填写数字就可以 -->
+
+
+
+    </table>
+    
+</body>
+</html>

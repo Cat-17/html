@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>元素的显示跟隐藏</title>
+    <!-- 本质；让一个元素在页面中隐藏或者显示出来 -->
+    <style>
+        .box1 {
+            /* 元素隐藏  不在占有位置*/
+            /* display: none;
+        /* 显示元素 */
+            /* display: block; */
+            /* 后面搭配js使用 */
+
+            /* visibility: visible;
+             visibility: hidden; */
+            /* 隐藏元素 并且占有位置 */
+
+            /* 溢出元素隐藏 超出父级的元素隐藏 父级内的不会隐藏 */
+            /* 隐藏溢出的内容 */
+            /* 如果有定位的盒子，慎用 overflow: hidden; 会把多出来的部分隐藏 */
+            overflow: hidden;
+            /* 默认显示超出的内容 */
+            overflow: visible;
+            /* 添加滚动条 */
+           overflow: scroll;
+           /* 根据内容的超出显示滚动条 不溢出的时候不显示滚动条 */
+           overflow: auto;
+
+
+            width: 200px;
+            height: 200px;
+            background-color: sandybrown;
+        }
+
+        .box2 {
+
+            width: 200px;
+            height: 200px;
+            background-color: forestgreen;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="box1"></div>
+    <div class="box2"></div>
+
+
+</body>
+
+</html>

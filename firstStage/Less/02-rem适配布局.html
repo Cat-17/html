@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>rem单位适配布局</title>
+    <style>
+        html {
+            font-size: 12px;
+        }
+        div{
+            font-size: 12px;
+            width: 12rem;
+            height: 12rem;
+            background-color: skyblue;
+        }
+        p {
+            /* em单位 是相对于父级的字体大小来说的 10*12=120宽高的盒子 */
+            /* width: 10em;
+            height: 10em; */
+            /* rem是相对于html元素，根剧字体大小来说的 */
+            width: 10rem;
+            height: 10rem;
+            background-color: sandybrown;
+
+            /* rem的优点，可以通过修改html的文字大小来控制页面里面元素的大小，可以整体控制 */
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <p></p>
+    </div>
+    
+</body>
+</html>

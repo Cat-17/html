@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>和平精英缩放</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        li {
+            /* 清除圆点 */
+            list-style: none;
+        }
+        img {
+            width: 100%;
+        }
+        a {
+            /* 清除下划线 */
+            text-decoration: none;
+        }
+        /* 缩放 先要有一个盒子 宽高尺寸跟图片一样 */
+        .box {
+            width: 249px;
+            height: 210px;
+            margin: 50px auto;
+            /* 超出父级范围内的内容要隐藏掉 */
+            overflow: hidden;
+        }
+        .box p {
+            color: #b3b3b3;
+            /*文字内边距 左右上下 */
+            padding: 10px 10px 0 10px;
+        }
+        .box .pic {
+            position: relative;
+        }
+
+
+
+        /* 1；播放按钮盒子，压在图片上面 */
+        /* 2；hover的时候缩放效果
+        默认效果是看不见，特别大的
+        hover；看得见；小的 58 */
+
+        .box .pic::after {
+            /* 因为伪元素是行内 添加宽高不生效 这里使用子绝父相 定位 到图片上面 
+            找到父级添加相应对位*/
+            position: absolute;
+            /* 要定位到父级的中间 */
+            /* 有俩种写法 */
+            left: 50%;
+            top: 50%;
+            /* margin-left: -29px;
+            margin-top: -29px; */
+            /* 取值宽高的一半 */
+            /* 百分比这个写法是是中间偏下的位置 */
+            /* 位移的方法 */
+            /* 使用位移  transform 写完以后发现没用，就要想到 transform是复合属性有层叠性，有书写顺序。直接在一个里面写 后面空格再添加一个属性 */
+            /* transform: translate(-50% -50%); */
+            content: '';
+            /* 使用伪元素 添加背景图片 背景图片的宽高尺寸 */
+            width: 58px;
+            height: 58px;
+            background-image: url(../images/play.png);
+            /* 缩放效果 取值大于1就是放大 取值小于1就是缩小 */
+            transform:translate(-50%,-50%) scale(5);
+            /* 透明度 可以看见变化的过程 */
+            opacity: 0;
+
+            /* 在添加一个过渡 */
+            transition: all .5s;
+
+        }
+
+        /* 鼠标移入li，让有after变化 */
+        .box li:hover .pic::after {
+            /* 添加可以看到变化的 透明度 */
+            opacity: 1;
+            /* 缩放图片 */
+            /* 俩个 transform 会有层叠性，上炒上一份相同的就可以了 */
+            transform:translate(-50%,-50%) scale(1);
+
+
+        }
+
+    
+
+
+    </style>
+</head>
+<body>
+    <div class="box">
+        <ul>
+            <li>
+                <div class="pic">
+                    <img src="../images/party.jpeg" alt="">
+                    <!-- 伪元素添加播放按钮 -->
+                </div>
+                <p>
+                    【和平精英】“初火”音乐概念片：四圣觉醒......
+                </p>
+            </li>
+        </ul>
+    </div>
+    
+</body>
+</html>

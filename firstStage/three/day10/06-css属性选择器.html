@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css特属性选择器</title>
+    <style>
+        /* 俩个虽然都是input 但是还要满足有value这个属性才会生效， */
+        /* input[value] {
+            color: salmon;
+        } */
+        
+        /* input[type=password] {
+            color: blueviolet;
+        } */
+        /* div[class^=icon] {
+            color: darkorange;
+        } */
+        /* section[class$=data] {
+            color: red;
+        } */
+
+        /* 类选择器 属性选择 伪类选择器 权重都是10 */
+        .icon1 {
+            color: aqua;
+            z-index: 1;
+           
+
+        }
+
+
+
+
+
+    </style>
+</head>
+<body>
+    <!-- 1；利用属性选择器就可以不用借助于类或者id选择器 -->
+    <!-- <input type="text" value="请输入用户名">
+    <input type="text"> -->
+
+    <!-- 2；属性选择器还可以选择属性=值的某些元素，重点无比掌握 -->
+    <!-- <input type="text" name="" id="">
+    <input type="password" name="" id=""> -->
+
+    <!-- 3.属性选择器还可以选择属性值开头的某些元素 -->
+    <div class="icon1" >图标1</div>
+    <div class="icon2">图标</div>
+    <div class="icon3">图标</div>
+    <div class="icon4">图标</div>
+
+   <!-- 3.属性选择器还可以选择属性值结尾的某些元素 -->
+   <section class="icon-data">小宝</section>
+   <section class="icon-data">17</section>
+   <section class="icon3-ico">我</section>
+  
+
+    
+</body>
+</html>

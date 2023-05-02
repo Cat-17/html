@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>遍历对象</title>
+
+</head>
+
+<body>
+    <!-- 能够遍历输出对象里面的元素 -->
+    <script>
+        // let obj = {
+        //     uname: '小明',
+        //     age: 18,
+        //     sex:'男'
+        // }
+        // // 如果用for循环把对象的内容取出来
+        // // 语法
+        // // for (let k in 对象)
+        // //❥(^_-) k 是变量 名字可以随时定义  开发中常用 k 或者 key value
+        // for(let k in obj ) {
+        //     // console.log(k)  // ❥(^_-)k 是属性名 uname   age sex  
+        //     // console.log(obj.k) // obj.k 意思是obj里面的k属性  但是obj里面没有k 所以返回结果为undefined
+        //     // 不加''' 加了引号找的还是obj.k  obj里面没有k返回结果还是undefined
+        //     // 
+        //     console.log(obj[k]) //❥(^_-)得到属性值 obj[k] 不加引号
+
+
+        // ❥(^_-)为什么这么写 
+        //  k 是变量 得到是 是属性名 uname   age sex  颜色是黑色 相当于字符串 字符串加引号
+        //  k === 'uname' ===  'age' === 'sex ' k得到是加了'的属性名'
+        // 代入法 obj['uname']
+
+
+        // s定义一个 对象
+        let obj1 = {
+            uname: '小宝',
+            age: 20,
+            sex: '男'
+        }
+
+        // 请输入出 对象的名字  小宝 有俩种访问方式  单独取对象的某一个值 
+        // console.log(obj1.uname)
+        // console.log(obj1['uname'])
+        // 遍历对象 循环对象  写法 for （let k in obj）{}
+        for (let k in obj1) {
+            // k是得到是'属性名'
+            document.write(k)
+            // obj1[k] 得到是属性值 其实获得就是带''属性名
+            //  符合第二种的访问方式console.log(obj1['uname'])
+            // document.write(obj1[k])
+            document.write(obj1[k])
+
+        }
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>

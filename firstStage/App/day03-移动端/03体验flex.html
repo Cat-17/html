@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .box {
+            /*  display: flex;
+            justify-content: space-around;
+            用来布局 跟设置浮动外边距的效果一样 但是没有脱标的后遗症 */
+            display: flex;
+            /* 弹性盒子之间所有的间距都相等 */
+            justify-content: space-around;
+            /* height: 200px; */
+            border: 1px solid #000;
+        }
+        .box div {
+            /* 让盒子一行排 加float 浮动 */
+            /* 加了浮动 如果父级没有设置高度就会出现脱标的情况 导致下面盒子内容的变化  */
+            /* float: left; */
+            /* 盒子的外边距 */
+            margin: 10px;
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    </div>
+</body>
+</html>

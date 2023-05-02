@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>绝对定位居中</title>
+    <style>
+        .box {
+            /* 绝对定位的盒子 怎么水平居中 先走盒子的50% 在配合盒子宽度一半 取负值 margin-left: -100px; */
+            /* position: absolute;
+            left: 50%;
+            margin-left: -100px; */
+
+            /* 垂直居中写法 */
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            margin-top: -100px;
+            width: 200px;
+            height: 200px;
+            background-color: salmon;
+        }
+
+        /* 绝对定位特性， */
+    </style>
+</head>
+<body>
+    <div class="box">1</div>
+    
+</body>
+</html>

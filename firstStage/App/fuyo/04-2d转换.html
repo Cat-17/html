@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2d转换</title>
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+            background-color: salmon;
+            transition: all 1s;
+            /* x,y轴 x轴是左右 y轴是上下  */
+            /* transform: translate(x,y); */
+            /* transform: translate(100px,100px); */
+            /* transform: translate(100px,0); */
+            /* transform: translate(0,100px); */
+            /* transform: translateX(100px); */
+            /* transform: translateY(100px); */
+        }
+        div:first-child:hover {
+            /* 2d效果translate；最大的特点是；水平垂直移动的时候，不会影响其他盒子 */
+            /* transform: translate(30px,30px); */
+            transform: translate(50%,50%);
+        }
+        div:last-child {
+            background-color: seagreen;
+
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+    <div></div>
+    
+</body>
+</html>

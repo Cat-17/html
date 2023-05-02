@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>结构伪类选择器</title>
+    <style>
+        /* 选择第一个 */
+        ul li:first-child {
+            background-color: pink;
+        }
+        /* 选中最后一个 */
+        ul li:last-child {
+            background-color: pink;
+        }
+        /* 任意选中第几个 小括号里面写数值 */
+        ul li:nth-child(7) {
+            background-color: skyblue;
+        }
+        /* 选中前5个 包括5 */
+        ul li:nth-child(-n+5) {
+            background-color: slateblue;
+        }
+        /* 选中5后面的包括5  */
+        ul li:nth-child(n+5) {
+            background-color: rgb(17, 158, 26);
+        }
+        /* 选中是偶数 24681012 */
+        ul li:nth-child(2n) {
+            background-color: rgb(17, 158, 26);
+        }
+        /* 选中的是奇数 3579 11 */
+        ul li:nth-child(2n+1) {
+            background-color: rgb(17, 158, 26);
+        }
+        /* 选中5的倍数 */
+        ul li:nth-child(5n) {
+            background-color: rgb(17, 158, 26);
+        }
+
+    </style>
+</head>
+<body>
+   <ul>
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+    <li>5</li>
+    <li>6</li>
+    <li>7</li>
+    <li>8</li>
+    <li>9</li>
+    <li>01</li>
+    <li>12</li>
+   </ul>
+    
+</body>
+</html>

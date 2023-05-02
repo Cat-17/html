@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+           
+            width: 200px;
+            height: 200px;
+          
+        }
+        .one {
+            position: absolute;
+            left: 20px;
+            top: 50px;
+
+            z-index: 1;
+            
+            background-color: blue;
+        }
+        .two {
+            position: absolute;
+            left: 50px;
+            top: 100px;
+            background-color: aquamarine;
+        }
+        /* 层级关系；默认情况下，都添加了定位的盒子，显示后来这居上 */
+        /* 如果不想修改书写顺序，想让谁在上面
+        z-index:整数；取值越大，显示顺序越靠上 z-index:的默认值是0 谁的数值大就显示谁
+        注意；z-index:是配合定位使用 position: absolute; 没有定位不生效 */
+    </style>
+</head>
+<body>
+    <div class="one">one</div>
+    <div class="two">two</div>
+    
+</body>
+</html>

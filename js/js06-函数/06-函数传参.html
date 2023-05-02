@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>函数传参</title>
+    <!-- 为什么要有参数的函数 -->
+    <!-- 这样的函数只能求10+30，这个函数的功能局限非常大 -->
+    <!-- 解决方法；把要计算的数字传到函数内 -->
+    <!-- 结论 若函数完成功能需要调用者传入数据，那么就需要用有参数的函数 -->
+    <!-- 这样可以极大提高函数的灵活性 -->
+</head>
+<body>
+    <!-- 有参数的函数声明和调用 -->
+    <!-- 参数列表 传入数据列表 声明这个函数需要传入几个数据 ，多个数据用逗号隔开 -->
+    <script>
+        // function name函数名(params参数列表) {
+        //     函数体
+            
+        // }
+        // function getSqunare(num1) {
+        //     document.write(num1 * num1)
+        // }
+        // // 声明多个数据 用逗号隔开
+        // function getSqunare(num1 , num2) {
+        //     document.write(num1 * num2)
+        // }
+
+        // // 前面 只是声明函数 带参数的函数调用语法如下 需要传入几个数据就写几个 ，用逗号隔开
+        // // 函数名 (传递的参数列表)
+        // getSqunare(20 , 30)
+
+
+        // ❥求1~10之间的和
+        // ❥ 形参 (start ,end) 声明函数时写在函数名右边小括号里面的叫形参（形式的参数）
+        // ❥形参可以理解为是在这个函数内声明的变量（比如start=2）实参可以理解为是给这个变量赋值
+        // 开发中尽量保持形参和实参个数一致
+        // 我们曾经使用过得alert（'打印'）  parseInt('11')  Number('11')本质上都是函数调用的传参
+        function addSquares100(start ,end) {
+            let sum = 0
+            // 从star开始 end的结束 之间的和 那么就是 sum += i
+            for (let i = start; i <= end; i++) {
+                sum += i
+            }
+            document.write(sum)
+           
+        }
+        // ❥ 实参(2 , 10) 调用时函数名右边小括号里面的数据就叫实参 实际运行的参数
+        addSquares100(2 , 10)
+        //   // 求1~100之间的和 
+        // 调用不同的数据
+        addSquares100(2 , 100)
+
+    
+
+    </script>
+    
+</body>
+</html>

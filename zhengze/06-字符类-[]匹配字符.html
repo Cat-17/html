@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[]匹配字符集合</title>
+</head>
+<body>
+    <script>
+        // //字符类[] 后面字符串只要包含abc中任意一个字符 都返回true
+        // console.log(/[adc]/.test('andy'))
+        // console.log(/[adc]/.test('bndy'))
+        // console.log(/[adc]/.test('crndy'))
+        // console.log(/[adc]/.test('bie'))
+        console.log(/[abc]/.test('a'))
+
+
+        // 连字符[-] 表示一个范围
+        // // 有开头有结尾 直选其中一个 精确匹配
+        // console.log(/^[abc]$/.test('abc')) //false
+        // console.log(/^[abc]$/.test('a'))  //true
+        // console.log(/^[abc]$/.test('b'))  //true
+        // console.log(/^[abc]$/.test('cc'))   //true
+
+        // 26个英文字母选其中一个
+        // 大小写不区分[a-zA-Z] 
+        console.log(/^[a-zA-Z]$/.test('c'))   //true
+        console.log(/^[a-zA-Z]$/.test('A'))   //true
+        console.log(/^[a-zA-Z]$/.test('cC'))   //true
+        // 可以出现大小写数字
+        console.log(/^[a-zA-Z0-9]$/.test('9'))   //true
+         // 可以出现大小写数字 横线 下横线
+        console.log(/^[a-zA-Z0-9- —_]$/.test('9'))   //true
+        console.log(/^[a-zA-Z0-9-_]$/.test('9'));
+
+
+        // []里面加上^取反符号
+        // 比如
+        // [^a-z] 意思就是除了小写字母以外的字符
+        // 注意要写到[]里面
+
+        // .匹配换行符之外的任何单个字符
+
+
+
+
+    </script>
+    
+</body>
+</html>

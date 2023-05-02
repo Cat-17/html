@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>结构伪类选择器</title>
+    <style>
+        ul li:first-child {
+            /* 选择第一个孩子 ul li d第一个 */
+            color: salmon;
+        }
+        ul li:last-child {
+            /* 选择ul li最后一个 */
+            color: aquamarine;
+        }
+        ul li:nth-child(3) {
+            /* 选择任意一个孩子 小款号里面写选择的第几个 */
+            color: red;
+        }
+        /* 倍数 偶数 选择的是偶数2468 */
+        ul li:nth-child(2n) {
+           background-color: darkorange;
+        }
+        /* 奇数 选择是奇数 1357 */
+        ul li:nth-child(2n+1) {
+            background-color: forestgreen;
+        }
+
+
+
+
+        /* 公式  */
+        /* 从第三个开始（包含第三个）到最后选中 */
+
+        /* ol li:nth-child(n+3) {
+            background-color: skyblue;
+        } */
+        /* 前3个（包含第三个）负n前面的 */
+        ol li:nth-child(-n+3) {
+            background-color: skyblue;
+        }
+
+    </style>
+</head>
+<body>
+  <ul>
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+    <li>5</li>
+    <li>6</li>
+    <li>7</li>
+    <li>8</li>
+
+  </ul>
+
+  <ol>
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+    <li>5</li>
+    <li>6</li>
+    <li>7</li>
+    <li>8</li>
+    <li>9</li>
+    <li>10</li>
+
+  </ol>
+    
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 因为默认就有冒泡模式的存在，所以容易导致事件影响到父级元素 -->
+    <!-- 若想把事件就限制在当前元素内，就需要阻止事件流动 -->
+    <style>
+        .faset {
+            width: 500px;
+            height: 500px;
+            background-color: palegoldenrod;
+        }
+        .son{
+            width: 200px;
+            height: 200px;
+            background-color: sandybrown;
+        }
+    </style>
+</head>
+<body>
+    <div class="faset">
+        <div class="son"></div>
+    </div>
+    <script>
+        // 阻止事件流动必须要有事件发生
+        
+        let fa = document.querySelector('.faset')
+        let son = document.querySelector('.son')
+        fa.addEventListener('click',function(e){
+            alert('我是爸爸')
+            e.stopPropagation()
+        })
+        son.addEventListener('click',function(e){
+            alert('我是儿子')
+            // 阻止流动
+            e.stopPropagation()
+
+        })
+        // 以上都是属于冒泡事件 当一个元素的时间被触发时，同样的时间将会在钙元素的所有祖先元素中依次被触发
+        // 这一过程为事件冒泡 当一个元素触发事件后，会依次向上调用所有父级元素的同名事件 事件冒泡是默认存在的
+        document.addEventListener('click',function(e){
+            alert('我是爷爷')
+            // 阻止事件流动
+            e.stopPropagation()
+           
+        })
+
+        // 鼠标经过事件：
+        //  mouseover 和mouseout 会有冒泡效果
+        // mouseenter和mouseleave 没有冒泡效果（推荐
+        
+    </script>
+</body>
+</html>

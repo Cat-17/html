@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 需求 数组求最大值和最小值 -->
+    <script>
+        // 数组里面谁大
+        let arr = [2, 6, 1, 77, 52, 25, 7]
+        // 先声明一个保存最大元素的max
+        // 默认最大值可以是去数组汇总的第一个元素
+        // 得到数组元素的写法 数组名[索引号]
+        let max = arr[0]
+
+        // 遍历这个数组，把里面的每个数组元素和max相比较
+        //  i > arr.length 这个意思就是 循环的次数 小于数组的长度 数据里面有几个元素就循环几次
+        for (let i = 1; i < arr.length ; i++) {
+            // i  序号 123456 顺序 本身是我们计数的小数字
+            // 只不过i序号，正好和数组的索引号对应
+            // i可以看做是数组的索引号 
+            // 得到数组元素的方法 数组名[索引号] 
+            // 所以这里得到是 arr[i]
+
+
+            // 选择性代码 满足条件 执行 不满足不执行
+            if(max < arr[i] ) {
+                // 对比得到的值 在给到左边 右边给左边
+                max = arr[i]
+            }
+            
+
+
+
+            
+        }
+        console.log(max);
+    </script>
+
+</body>
+
+</html>

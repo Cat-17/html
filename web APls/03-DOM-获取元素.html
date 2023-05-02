@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>获取DOM对象</title>
+</head>
+
+<body>
+    <div>我是一个盒子</div>
+    <div>我是一个盒子</div>
+    <div class="three">我是一个盒子</div>
+    <!-- 选择匹配的第一个元素 -->
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+    </ul>
+    <span>就一个</span>
+    <script>
+        // //❥(^_-)  只能得到第一个对象
+        // document.querySelector('css选择器')
+        // // 存起来  用变量
+        // let div = document.querySelector('div')
+        // // 参数：包含一个或多个有效的css选择器 字符串 
+        // // css选择器匹配的第一个元素，一个htmlelement对象
+        // // 我就像拿到第三个 css选择器写法 类选择器
+        // let div1 = document.querySelector('.three')
+        // console.log(div)
+        // console.log(div1)
+
+        // // 选择第三个小丽 ul里面的小li选择最后一个
+        // let li = document.querySelector('ul li:last-child')
+        // console.log(li)
+
+        // ❥(^_-)获取多个匹配多个元素 All 全部的 返回值 NodeList 数组字面量
+        // document.querySelectorAll('css选择器')
+        // ❥(^_-)得到是一个伪数组
+        // 有长度有索引号的数组  但是没有pop()push()等数组方法
+        let li = document.querySelectorAll('ul li')
+        console.log(li)
+        // document.querySelector 可以修改  只能得到一个元素 直接修改就可以了
+        // document.querySelectorAll 不可以修改  
+        // 因为返回值是数组 想把里面的值一下子取出来 只能通过遍历（for）的方式一次给里面的元素做修改
+        for (let i = 0; i < li.length; i++) {
+            // 
+            console.log(li[i])
+        }
+    //   哪怕只有一个元素，通过document.querySelectorAll获取过来的也是一个伪数组 里面只有一个元素而已
+        let span = document.querySelectorAll('span')
+        console.log(span)
+
+
+
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>

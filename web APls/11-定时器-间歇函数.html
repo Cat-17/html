@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>定时器-间歇函数</title>
+    <!--网页中经常会需要一种功能，每隔一段时间需要自动执行一段代码，不需要我们手动触发  -->
+    <!-- 列如 网页中的倒计时 -->
+    <!-- 如果需要实现这种需求，需要用到定时函数， -->
+    <!-- 定时函数有俩种 今天先学间歇函数 -->
+</head>
+
+<body>
+    <!-- 定时函数可以开启个关闭定时器 -->
+
+    <script>
+        //    <!-- 1 开始定时器 -->
+        // 作用；每隔一段时间调用这个函数 c重复执行
+        // 间隔时间单位是毫秒  1000毫秒= 1秒
+        // setInterval(函数,间隔时间)
+        // 声明一个函数
+        function name() {
+            console.log('大头大头下雨不愁')
+
+        }
+        // 调用 执行定时
+        // 注意 函数名字不需要加括号
+        let timer2 = setInterval(name, 1000)
+        let timer = setInterval(name, 1000)
+        //   // 定时器返回的是id数字
+        console.log(timer)
+
+
+        setInterval(function () {
+
+            console.log('高新就业')
+
+        }, 1000)
+
+        let val = setInterval(function () {
+            console.log('高新就业')
+        }, 1000)
+
+        //清除定时器 
+        clearInterval(val)
+
+
+        // 清除定时器   clearInterval
+
+        let timer1 = setInterval(name, 1000)
+        clearInterval(timer1)
+
+
+
+
+    </script>
+
+</body>
+
+</html>

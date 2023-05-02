@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>表单元素属性</title>
+</head>
+<body>
+    <input type="text" value="请输入" >
+    <!-- 禁用状态 disabled -->
+    <button disabled>按钮</button>
+   <!-- 复选框 -->
+    <input type="checkbox" name="" id="" class="agree">
+    <!--1， 获取 用户输入的内容 -->
+    <script>
+        let input2 = document.querySelector('input')
+        let input = document.querySelector('input')
+        // 取值或者设置值
+        // console.log(input.value)
+        // 得到input里面的值可以用value
+        input2.value = ''
+        input.value = '小米手机'
+        input2.type = 'password'
+        input.type = 'password'
+        // 按钮不可用 通过js让他可以yong
+
+
+        // 2；获取元素 启用按钮
+        let btn = document.querySelector('button')
+        //  disabled是不可用  disabled = false 可用 负负得正 启用按钮  
+        byn.disabled = false
+        btn.disabled = false
+        // 关闭按钮  disabled = true 不可用 是真的 就是不可用
+        btn.disabled = true
+        btn.disabled = true
+
+
+        // 3勾选 全选复选框 布尔值的形式  选择 false true
+        let checkbox1 = document.querySelector('.agree')
+        let checkbox = document.querySelector('.agree')
+        // checked 勾选  = true 勾选
+        checkbox1.checked = true
+        checkbox.checked  = true
+
+
+
+    </script>
+
+
+    
+</body>
+</html>

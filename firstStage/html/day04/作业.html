@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .two {
+            /*  块标签显示 特点独占一行 宽度默认是父级(boby)的100%，添加宽高都生效*/
+
+            display: block;
+            width: 67px;
+            height: 31px;
+            background-color: pink;
+            background-image: url(./shopcar_01.png);
+
+        }
+
+        .two:hover {
+
+          background-image: url("./shopcar_02.png");
+
+        }
+        /*  */
+        
+        
+       
+    </style>
+</head>
+<body>
+    <!-- a属于是行内标签 特点 不换行；设置宽高不生效，尺寸和内容的大小相同
+    在css对他设置宽高不生效，要转换成块标签  -->
+    <a class="two" href=""></a>
+    
+    
+    
+</body>
+</html>

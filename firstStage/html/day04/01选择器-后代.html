@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 问，想到到div的儿子p设置文字变红色怎么操作 */
+        /* 后代选择器写法，找到父选择器  （空格）加儿子选择器+{} */
+        div p {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <p>这是p标签</p>
+    <div>
+        <p>
+            我要变红
+        </p>
+    </div>
+    
+</body>
+</html>

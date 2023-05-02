@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        li {
+            list-style: none;
+        }
+        .box li {
+
+            /* 修改了主轴的方向 想要居中效果；
+            先确认主轴方向，在选择对应的属性实现主轴或侧轴的对齐方式 */
+            display: flex;
+            /* display: flex;一行排 默认方向是主轴水平方向 想要改变方向 */
+            /* 就是修改主轴的垂直方向 变成一列*/
+            flex-direction: column;
+
+            /* 视觉效果；实现盒子的水平居中 */
+            align-items: center;
+            /*视觉效果；垂直方向居中  */
+            justify-content: center;
+            
+
+
+            
+            width:80px;
+            height:80px ;
+            border: 1px solid #000;
+        }
+        .box img {
+           width: 32px;
+           height: 32px;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <ul>
+            <li>
+                <img src="../images/media.png" alt="">
+                <span>媒体</span>
+            </li>
+        </ul>
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>冒泡排序</title>
+    <!-- 冒泡排序是一种简单的排序算法 -->
+    <!-- 原理 俩俩相比较 小的放前面 -->
+    <!-- 他重复地走访要排序的数列，一次比较俩个元素，如果他们的顺序错误就把他们交换过来 -->
+    <!-- 比如数组[2.3.4.1.5] 经过排序成为了[12345]或者[54321]-->
+</head>
+
+<body>
+    <script>
+
+        let arr = [5, 4, 3, 2, 1]
+
+        // 利用for嵌套 
+        // 1；[5,4,3,2,1] 一个需要的趟数，我们用外层for循环
+        // 5个数据我们一个需要走4趟 长度就是 数组长度减1 arr.length - 1
+        for (let i = 0; i < arr.length - 1; i++) {
+            // 2;每一趟交换次数，我们用里层循环for循环
+            // 第一趟交换4次 第二趟交换3次 第三趟交换2次 第四趟交换1次 长度就是数组长度减去次数
+            // 但是我们次数是从0开始的，所以最终arr.length-i-1
+            // 里层循环 一趟交换几次
+            for (let j = 0; j < arr.length - i - 1; j++) {
+                //3； 交换俩个变量 利用一个新的变量来做
+                // 俩个数组元素进行比较 arr[j]  arr[j+1]
+                // 满足条件才交换
+                if (arr[j] > arr[j + 1]) {
+                    // 交换变量
+                    let temp = arr[j]
+                    arr[j] = arr[j + 1]
+                    arr[j + 1] = temp
+                }
+
+
+            }
+
+        }
+
+        console.log(arr);
+        // 复习变量
+        // let num1 = 10
+        // let num2 = 20
+        // let temp = num1
+        // num1 = num2
+        // num2 = temp
+
+
+        let arr1 = [5, 4, 3, 2, 1]
+        // 外层循环
+        //循环的三大要素 起始变量 判断条件 变量变化结束
+        // 外层循环负责几趟 
+        for (let i = 0; i < arr.length - 1; i++) {
+            //内层循环负责比较 排序 里面的值进行比较 
+            for (let j = 0; j < arr.length - i - 1; j++)
+            // 是俩个循环里面的起始进行比较 选择数组的元素 数组名[索引号]
+            // 相当于是0 跟1 比较
+                if (arr1[j] > arr1[j + 1]) {
+                    // 定义一个新的变量 用于交换
+                    let temp = arr1[j] 
+                    arr1[j ] = arr1[j + 1]
+                    arr1[j + 1] = temp
+
+
+                }
+
+        }
+        console.log(arr1);
+
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>

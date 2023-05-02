@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>预定义字符类</title>
+</head>
+<body>
+    <script>
+        console.log(/\d/.test('123'))  //匹配0-9之间的任一数字 相当于[0-9]
+        console.log(/\D/.test('a'))  //匹配0-9之外的字符 相当于[^0-9]
+        console.log(/\w/.test('123')) //匹配任意的字母 数字和下划线 相当于[A-Za-z0-9_]
+        console.log(/\W/.test('123')) // 除所有字母 数字和下划线以外的字符，相当于[^A-Za-z0-9_]
+        console.log(/\s/.test('123')) //匹配空格（包括换行符 制表符 空格符等）相当于[\t\r\n\v\f]
+        console.log(/\S/.test('123')) //匹配非空格的字符，相当于[^\t\r\n\v\f]
+        console.log(/^\d{4}-\d{1,2}-\d{1,2}/.test('2023-0 4-15'))
+        // 0-9数字 出现4次  0-9 的数字最大1个数 最小2个数都行
+    </script>
+    
+</body>
+</html>

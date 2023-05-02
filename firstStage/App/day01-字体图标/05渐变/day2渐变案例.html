@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            position: relative;
+            /* 背景的宽高 */
+            width: 300px;
+            height: 200px;
+            transition: all 2s;
+        }
+        .box img {
+            /* 背景图的跟大的div一样 */
+
+            width: 300px;
+        }
+        .box .title {
+            /* 使用定位 子绝父相 */
+            position: absolute;
+            left: 15px;
+            bottom: 20px;
+            z-index: 2;
+            width: 260px;
+            color: #fff;
+            font-size: 20px;
+            font-weight: 700;
+        }
+        /* 背景渐变盒子 */
+        .box .mask {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 300px;
+            height: 200px;
+            /* 渐变 */
+            background-image: linear-gradient(
+                transparent,
+                rgba(0,0,0,.8)
+            );
+            /* 默认透明度是看不见的 */
+            opacity: 0;
+
+        }
+        /* 鼠标移入box ，mask发生变化 */
+        .box .mask:hover {
+            opacity: 1;
+           
+        }
+
+    
+
+        /* 渐变背景 
+        1；准备盒子，定位压在图片上面 
+        2；hover效果；显示渐变背景 */
+
+    </style>
+</head>
+<body>
+    <div class="box">
+        <img src="../images/product.jpeg" alt="">
+        <!-- 渐变背景的盒子 -->
+        <!-- mask 表示遮罩层-->
+        <div class="mask"></div>
+        <div class="title"><p>OceanStor Pacific 海量存储斩获2021 Interop金奖</p></div>
+        <!-- 渐变背景的盒子 -->
+    </div>
+    
+</body>
+</html>

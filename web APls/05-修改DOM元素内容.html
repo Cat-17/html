@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>修改DOM内容</title>
+    <style>
+        div{
+           width: 200px;
+           height: 200px;
+           background-color: palevioletred;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        粉红色的回忆
+    </div>
+
+    <script>
+        // document.write()方法
+        // 只能将文本内容追加到</body>前面的位置  文本中包含的标签会被解析
+        // document.write('hello world')
+        // document.write('  <h3>您好，世界！！</h3>')
+
+        // 对象.innerText属性  属性是不加小括号的
+        // 可以将文本内容添加/更新到任意的位置 不会被解析
+
+        // 第一步获取对象标签
+        let boc = document.querySelector('div')
+       
+        // 第二步在修改 box是对象 innerText 属性
+        // 对象.属性 = 值 innerText 不解析标签
+        boc.innerText = '你真好看'
+
+
+        //   // 对象.innerHTML属性 可以解析标签
+       boc.innerHTML = '<i>您好，世界！！</i>'
+
+        // 纠结 可以选择box.innerHTML
+
+
+      
+    
+
+
+    </script>
+
+</body>
+
+</html>

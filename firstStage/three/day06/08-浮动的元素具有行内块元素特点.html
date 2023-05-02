@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>浮动的元素具有行内块元素</title>
+    <style>
+        /* span是行内元素 设置宽高不生效 根据内容大小撑开盒子 */
+        span {
+            float: left;
+            width: 200px;
+            height: 200px;
+            background-color: violet;
+
+        }
+        /* 如果行内元素有了浮动，则不需要转成块元素或行内块 就可以直接设置高度宽度 */
+
+        div {
+            float: left;
+            width: 200px;
+            height: 200px;
+            background-color: violet;
+        }
+        /* p 是块级元素，如果没有设置宽度，默认是父级一样宽，但是添加浮动后，她得大小根据内容来决定 */
+        p {
+            float: right;
+            height: 400px;
+            background-color: teal;
+        }
+    </style>
+</head>
+
+<body>
+    <span>还收不成</span>
+    <span>还收不成2</span>
+    <div>3</div>
+    <p>455555555</p>
+
+</body>
+
+</html>

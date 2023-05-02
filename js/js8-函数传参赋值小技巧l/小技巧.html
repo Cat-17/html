@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // function name(x,y) {
+        //     // 在用户没有传参的时候 这时候利用逻辑中断的原理
+        //     x = x || 0
+        //     y = y || 0
+        //     console.log(x + y );
+        //     // 结果返回值是0  如果不这样写则返回 undefined
+
+
+        // }
+        // // 调用
+        // name()
+
+        // 有一种新的写法
+        // x = 0, y = 0 可以看做是 函数内部的布局变量
+        // 调用的时候会有个内部判断是否有参数传递过来
+        // 没有参数则执行 x = 0, y = 0 
+        // 有参数的时候 则执行实参
+        function name(x = 0, y = 0) {
+
+            console.log(x + y);
+            // 这样打印返回的值是0 
+
+        }
+        name()
+        // 如果赋值了呢
+        name(3,5) //直接返回结果8
+        
+    </script>
+
+
+</body>
+
+</html>

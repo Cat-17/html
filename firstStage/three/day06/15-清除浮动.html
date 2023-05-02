@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>清除浮动</title>
+    <style>
+        /* 前面浮动元素有一个标准流的父元素，他们有一个共同的特点就是都有高度的 */
+        /* 理想状态，随着内容自动撑开 */
+        /* 但是，所有的父盒子都必须要有高度嘛？ 在不方便非高度的时候，子元素设置浮动，不在占有位置，脱标 
+        不不不 有一个产品界面和文章非常的多 不方便给高度 那要是没有高度怎么办呢？ */
+        /* 标准流父级没有给高度 ，就会影响后面标准流盒子 */
+        /* 清除浮动造成来的影响 */
+        /* 4中解决方法；1；额外标签法，也称隔墙法，是w3c推荐的做法
+        2；给父级添加 overflow: hidden;
+        3;给父级添加after伪元素
+        4；父级添加双伪元素*/
+
+
+        /*双伪元素请出发 前面后面都堵上  */
+        .clearfix::before,
+         .clearfix:after {
+            content: "";
+            display: block;
+            display: table;
+        }
+
+        .clearfix:after {
+            clear: both;
+        }
+
+        .clearfix {
+            *zoom: 1;
+        }
+
+
+
+        /*3；清除浮动 伪元素写法 */
+        /* .clearfix::after {
+            content: "";
+            display: block;
+            height: 0;
+            clear: both;
+            visibility: hidden;
+        }
+        .clearfix {
+            *zoom:1;
+        } */
+
+        .box {
+            width: 800px;
+            background-color: pink;
+            /*2 清除浮动 */
+            /* overflow: hidden; */
+        }
+
+        .wdcv {
+            float: left;
+            width: 200px;
+            height: 200px;
+            background-color: green;
+        }
+
+        .wsxz {
+            float: left;
+            width: 150px;
+            height: 150px;
+            background-color: sienna;
+        }
+
+        .footer {
+            width: 500px;
+            height: 500px;
+            background-color: darkkhaki;
+        }
+
+        /*1； 隔墙法 必须是块级元素才能清除浮动 在浮动结束的添加一个空标签 在调用一个类名 */
+        /* .clear {
+            clear: both;
+        } */
+    </style>
+</head>
+
+<body>
+    <div class="box clearfix">
+        <div class="wdcv"></div>
+        <div class="wsxz"></div>
+        <div class="clear"> </div>
+    </div>
+    <div class="footer">1</div>
+
+</body>
+
+</html>

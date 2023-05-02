@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>函数的返回值</title>
+    <!-- 返回值函数的概念 -->
+    <!-- 当调用某个函数，这个函数会返回一个结果出来  这就是返回值的函数-->
+    <!-- 为什么要让函数有返回值 -->
+    <!-- 提问；什么是函数 -->
+    <!-- 函数是被设计为执行特点任务的代码块 -->
+    <!-- 提问 执行完特点任务之后，然后呢 把任务的结果给我们 -->
+    <!-- 缺点，把计算后的结果处理方式写死了，内部处理了 -->
+    <!-- 解决；把处理结果返回给调用者 -->
+</head>
+<body>
+    <script>
+        // 其实我们前面已经接触了很多函数具备返回值
+        // 用户输入的年龄数字 已经返回给result
+        // 只是这些函数是js底层内置的，我们直接就可以使用
+        // 
+        // let result = prompt('输入您的年龄')
+        // let result1 = parseInt('111')
+        // // 当然有些函数，则没有返回值
+        // alert('我是弹框 不需要返回值')
+        // //所以要根据需求 来设定需不需要返回值
+
+        // // 注意事项
+        // function fn() {
+        //     //  return 有着退出函数的作用，后面的代码不在执行
+        //     //   return 后面的数据不要换行写  return后面的就不再执行
+        //     return
+        //     alert('11')
+        // }
+        function fn() {
+            // 有了return 后面跟什么值就返回什么值
+          return 1
+        }
+        // 函数可以没有return 这种情况函数默认返回值为undefined
+        let re = fn()
+        console.log(re);
+
+
+
+        // // 需要返回数据出去是=时，用 return 语法如下 返回谁后面数据就写谁
+        // return 数据
+        // function fn() {
+        //     return 20
+        // }
+        // // fn()
+        //   // return 相当于执行了一句话   fn()  = 20
+        // //   直接打印
+        //   document.write(fn())
+
+        // // 具体 返回值的使用
+        // function gatSum (x ,y) {
+        //    return x + y 
+        // //   return x + y  返回的结果给到我们 gatSum  
+        
+        // }
+        // //有的时候函数名字比较长 
+        // // 工作中 声明一个变量 存储数据  直接打印变量 简写
+        // let num = gatSum(10,30)
+        // document.write(num)
+
+
+
+
+        // 求和函数有返回值 这个函数就只是求和 把结果返回给我们就行了 不需要打印
+        // 声明函数
+    //     function getSum (x,y) {
+    //         x = x || 0
+    //         y = y || 0
+    //         // 先计算x+y 在返回
+    //         return  x + y
+
+    //     }
+    //     // 调用
+    //     // 声明一个变量储存 数据 以后方便 谁调用就直接取值变量名
+    //     let sum  =  getSum (1,2)
+    //    document.write(sum)
+    </script>
+    
+</body>
+</html>

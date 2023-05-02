@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>浮动的注意事项</title>
+    <style>
+        .box {
+            width: 1500px;
+            height: 455px;
+            background-color: hotpink;
+        }
+
+        .box2 {
+            float: left;
+            width: 400px;
+            height: 355px;
+            background-color: darkgreen;
+        }
+
+        .box3 {
+            float: left;
+            width: 300px;
+            height: 255px;
+            background-color: lightcoral;
+        }
+
+        /* 浮动的盒子只会影响浮动盒子后面的标准流，不会影响前面的标准流 */
+
+        .box4 {
+            float: left;
+            width: 200px;
+            height: 155px;
+            background-color: forestgreen;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <div class="box2">2</div>
+        <div class="box3">3</div>
+        <div class="box4">4</div>
+    </div>
+
+
+</body>
+
+</html>

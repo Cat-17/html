@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM对象</title>
+    <!-- 浏览器根据html标签生成的js对象（DOM对象 -->
+    <!--DOM核心是把内容当成对象来处理  -->
+
+</head>
+<body>
+    <!-- 在html里叫标签 -->
+    <button>点击</button>
+    
+
+    <script>
+        // 获取对象
+        let bth = document.querySelector('button')
+        // 对象是有俩部分组成 属性和方法
+        console.dir( bth)
+        // js btn 对象  DOM对象
+        //  DOM对象：浏览器根据html标签生成的js对象
+        // 所有的标签属性都可以在这个对象上面找到
+
+        // 修改这个对象的书写会自动映射到标签身上
+
+        // 核心思想 把网页内容当做对象来处理
+        // DOM 又叫文档对象模型  文档树 最大是  document
+
+        // document 对象
+        // 是DOM 里提供的一个对象
+        // 所以她提供的属性和方法都是用来访问和操作网页内容的
+        // 列 ； document.write()
+        // 网页所有的内容都在 document 里面
+        
+
+    </script>
+</body>
+</html>

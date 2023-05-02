@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>侧轴上子元素排列方式</title>
+    <style>
+        div {
+            display: flex;
+            width: 800px;
+            height: 400px;
+            background-color: paleturquoise;
+            /* 先确认那个方向是主轴，在设置子元素的排列方式 */
+            /* 确认沿着主轴是y轴排列 从上到下 */
+            flex-direction: column;
+            /* 子元素排列方式 居中排列 */
+            justify-content: center;
+            /* 平均分配剩余空间 */
+            justify-content: space-around;
+            /* 先贴边 在平均分配剩余空间 */
+            justify-content: space-between;
+        }
+        div span {
+            width: 150px;
+            height: 100px;
+            background-color: peru;
+
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <span>1</span>
+        <span>2</span>
+        <span>3</span>
+    </div>
+    
+</body>
+</html>

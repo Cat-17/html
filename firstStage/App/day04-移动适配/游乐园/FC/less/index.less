@@ -1,0 +1,180 @@
+//引入文件夹 作用直接转化成css书写
+@import './base';
+@import './normalize';
+body {
+    background-color: #f0f0f0;
+}
+
+//  因为37.5 后面会出现很多次 多以使用变量属性 存储37.5
+// less变量 
+// 方面以后修改数据 直接在变量这里修改 不用一个一个修改
+@footsizs:37.5rem;
+
+// 主体内容
+
+.main {
+    //  (50/37.5rem) rem换算视口适配书写方式
+    // padding-bottom: (50/37.5rem);
+    // 已经存储了37.5这个数值
+    padding-bottom: (50/ @footsizs);
+
+    // less支持嵌套
+    .banner {
+        // 后面考虑到图上面要加小圆点 所以这里要设置一下高度 后面定位的时候不会偏
+        height: (160 / @footsizs);
+    }
+    
+
+    // 活动标题
+    .title {
+        //文字范围的高度
+        height: (40/ @footsizs);
+        // 想让文字垂直居中 上下居中
+        line-height: (40/ @footsizs);
+        padding-left: (15/ @footsizs);
+
+        h4 {
+            font-size: (14/ @footsizs);
+            color: #3c3c3c;
+        }
+
+
+    }
+
+    // 活动内容
+    .item {
+        margin-bottom: (10/ @footsizs);
+
+        // 内容图片 最好把图的高度给到 后面如果在上面加 位置不会跑偏
+        .pic {
+            position: relative;
+            height: (160/ @footsizs);
+
+            // 收藏图标
+            i {
+                // 定位 子绝父相
+                position: absolute;
+                top: (15/ @footsizs);
+                right: (18/ @footsizs);
+                font-size: (24/ @footsizs);
+                color: #fff;
+            }
+
+            // 活动状态
+            .active {
+                position: absolute;
+                left: (14/ @footsizs);
+                top: (-4/ @footsizs);
+                width: (68/ @footsizs);
+                height: (29/ @footsizs);
+                background-image: url(../images/status_active.png);
+                // 图片不完全显示 这里用图片缩放
+                background-size: contain;
+                // 文字大小调一下
+                font-size: (12/ @footsizs);
+                color: #fff;
+                text-align: center;
+                line-height:(25/ @footsizs) ;
+
+
+                // 灰色图片样式
+                // .active .off{} 必须是active类同时应用了off
+                // div .off{} 交集选择器
+                // &当前样式
+                &.off{
+                    background-image: url(../images/status_default.png);
+
+                }
+
+            }
+
+             
+
+        }
+
+        // 内容文字
+        .txt {
+            padding: (10/ @footsizs) (15/ @footsizs);
+            background-color: #fff;
+
+            // 文字
+            .top {
+                // 让文字在一行排
+                display: flex;
+                // 让文字靠近右边  使用主轴对齐方式
+                justify-content: space-between;
+
+                h5{
+                    width: (290/ @footsizs);
+                    font-size: (15/ @footsizs);
+                    color: #3c3c3c;
+                    font-weight: 400;
+                }
+                
+                p {
+                    font-size: (15/ @footsizs);  
+                    color: #feca49;
+                }
+                
+            }
+
+            .bottom {
+                display: flex;
+                margin-top: (10/ @footsizs);
+
+
+                p {
+                    margin-right: (15/ @footsizs);
+                    font-size: (11/ @footsizs);
+                    color: #848484;
+
+                    i{
+                        font-size: (11/ @footsizs);  
+                    }
+                }
+            }
+
+        }
+    }
+
+
+
+
+}
+
+// 主体内容
+//底部工具栏的
+footer {
+    align-items: center;
+    display: flex;
+    // 固定定位
+    // 加了固定定位以后 导致脱标没有宽度
+    // 没有加宽 会跟着文字的大小走
+    position: fixed;
+    justify-content: space-around;
+    left: 0;
+    bottom: 0;
+    // 手动添加一个宽度
+    width: 100%;
+    height: (50 / @footsizs);
+    background-color: #feca49;
+
+    text-align: center;
+    a {
+        color: #d78890;
+        font-size: (11/ @footsizs);
+
+        .iconfont {
+            font-size: (24/ @footsizs);
+           
+        }
+        &.current {
+            color: #fff;
+
+        }
+      
+    }
+
+}
+// 底部工具栏
+

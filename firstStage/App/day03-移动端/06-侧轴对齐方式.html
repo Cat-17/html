@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .box {
+            display: flex;
+            /* 设置侧轴的对齐方式 align-items 垂直上下的位置 */
+            /* 上下位置居中 */
+            /* align-items: center; */
+            /* 拉伸 默认值 现有状态，测试的时候去掉子级的高度
+            默认父级的尺寸 注意是子级没有设置高度 */
+            /* align-items: stretch; */
+            margin: auto;
+            height: 300px;
+            border: 1px solid #000;
+        }
+        .box div {
+            /* 如果宽高都不给 就按照内容的大小撑开 ，如果设置了宽高 就按照设置好的 */
+            /* width: 100px; */
+            /* 如果子级没有设置高  子级的盒子就会默认跟父级的一样 是有拉伸效果的
+              如果设置了单个内容的属性 单个内容按照更改的方式来 */
+            /* height: 100px; */
+            background-color: pink;
+        }
+
+
+        /* 可以单独对某一个盒子进行设置 */
+        /* 使用伪元素 单独选中 旋选中第二个盒子*/
+        .box div:nth-child(2) {
+            /* 取值  align-self: */
+            /* 第二个盒子的居中效果垂直上下居中 */
+            align-self: center;
+        }
+
+        /* 单独设置某个弹性盒子的侧轴对齐方式 */
+        /* flex的组成 要有一个弹性的容器 里面有对应的弹性盒子 所以标签结构都是父子级 容器属性 要找亲爹添加 也就是找子级的父级
+        添加 flex 属性 子级就会继承父级的属性 主要作用是让 */
+        
+    </style>
+
+</head>
+<body>
+    <div class="box">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+    </div>
+    
+</body>
+</html>

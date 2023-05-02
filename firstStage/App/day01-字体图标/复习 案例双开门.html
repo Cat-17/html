@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .box {
+            width: 1366px;
+            height: 600px;
+            margin: 0 auto;
+            background-image: url(./images/bg.jpg);
+             /* 隐藏溢出父级的内容 */
+             overflow: hidden;
+        }
+        /* 使用伪元素定位 */
+        .box::before,
+        .box::after {
+            float: left;
+            content: '';
+            width: 50%;
+            height: 600px;
+            background-image: url(./images/fm.jpg);
+
+            /* 配合过渡效果 */
+            transition: all 2s;
+           
+        }
+        /* 想要右边的图片显示 单独对after的位置控制 */
+        .box::after {
+            /* 控制背景图的位置 */
+            background-position: right 0;
+        }
+
+        /* 添加转换的效果 */
+        /* 鼠标移开 一个向左移动 一个向右移动 */
+        .box:hover:after {
+            transform: translateX(100%);
+        }
+        .box:hover::before {
+            transform: translate(-100%);
+        }
+       
+
+
+
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+    
+</body>
+</html>

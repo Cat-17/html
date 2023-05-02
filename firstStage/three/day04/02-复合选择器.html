@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>复合选择器</title>
+    <!-- 后代选择器 又叫包含选择器 -->
+    <style>
+        /* 要求只要ol里面的xiaoli变成粉色 */
+        /* 父子级 后代选择器  俩个标签以空格隔开  子级是*/
+        /* 一层一层的选择  */
+        ol li {
+            color: pink;
+        }
+
+        ol li a {
+            color: gold;
+        }
+
+        .nav li a {
+            color: green;
+        }
+    </style>
+</head>
+
+<body>
+    <ol>
+        <li>我是ol的孩子</li>
+        <li>我是ol的孩子</li>
+        <li>我是ol的孩子</li>
+        <li>我是ol的孩子</li>
+        <li>我是ol的孩子</li>
+        <li><a href="#">孙子</a></li>
+    </ol>
+    <!--  -->
+    <ul>
+        <li>我是ul的孩子</li>
+        <li>我是ul的孩子</li>
+        <li>我是ul的孩子</li>
+        <li>我是ul的孩子</li>
+        <li>我是ul的孩子</li>
+    </ul>
+    <!-- 出现两种一样的 这时候就选择类 定义一个类名   -->
+
+    <ul class="nav">
+        <li>我是ul的孩子</li>
+        <li>我是ul的孩子</li>
+        <li>我是ul的孩子</li>
+        <li>我是ul的孩子</li>
+        <li>我是ul的孩子</li>
+        <li><a href="#">孙子</a></li>
+        <li><a href="#">孙子</a></li>
+        <li><a href="#">孙子</a></li>
+    </ul>
+
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>图片等比例放大</title>
+    <style>
+        .box {
+            float: left;
+            position: relative;
+            width: 100px;
+            height: 75px;
+            margin: 30px auto;
+            margin-right: 20px;
+            overflow: hidden;
+        }
+        .box img {
+            width: 100px;
+            height: 75px;
+           
+
+        }
+        .box .box2 {
+            float: left;
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100px;
+            height: 75px;
+            background-image: url(./images1/photo01.png);
+            display: none;
+            
+        }
+        .box:hover  .box2{
+            display: block;
+            width: 120px;
+            height: 90px;
+            background-size: contain;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="box2"></div>
+        <img src="./images1/photo01.png" alt="">
+    </div>
+    <div class="box">
+        <div class="box2"></div>
+        <img src="./images1/photo01.png" alt="">
+    </div>
+    <div class="box">
+        <div class="box2"></div>
+        <img src="./images1/photo01.png" alt="">
+    </div>
+    <div class="box">
+        <div class="box2"></div>
+        <img src="./images1/photo01.png" alt="">
+    </div>
+    <div class="box">
+        <div class="box2"></div>
+        <img src="./images1/photo01.png" alt="">
+    </div>
+    <div class="box">
+        <div class="box2"></div>
+        <img src="./images1/photo01.png" alt="">
+    </div>
+    <div class="box">
+        <div class="box2"></div>
+        <img src="./images1/photo01.png" alt="">
+    </div>
+    <div class="box">
+        <div class="box2"></div>
+        <img src="./images1/photo01.png" alt="">
+    </div>
+    <div class="box">
+        <div class="box2"></div>
+        <img src="./images1/photo01.png" alt="">
+    </div>
+    <div class="box">
+        <div class="box2"></div>
+        <img src="./images1/photo01.png" alt="">
+    </div>
+    
+    
+    
+</body>
+</html>

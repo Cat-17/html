@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>时间对象方法</title>
+    <!-- 因为时间对象返回的数据我们不能直接使用，所有需要转换为实际开发中常用的格式 -->
+</head>
+<body>
+    <script>
+         let date = new Date() 
+         console.log(date.getFullYear())  //年份 
+         console.log(date.getMonth() + 1)  // 月份 返回是0~11我们又12月 返回的比我们实际月份少一个月 +1就可以了
+         console.log(date.getDate())  // 几号
+        //  时分秒
+         console.log(date.getHours()) //12时
+         console.log(date.getMinutes()) // 分
+         console.log(date.getSeconds()) //秒
+        //  星期几
+        console.log(date.getDay()) //星期几 返回是0~6 星期日返回是0
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 继承性不生效的代码如下，比如h1标题系统本身就有字号的大小，还有a连接系统本身就有颜色，这种情况下，继承性就会失效 */
+        
+        div {
+            color: aqua;
+            font-size: 20px;
+        }
+
+        /* 问题我就想给a标签的文字设置成红色，单独选择选择标签设置 */  
+        a {
+            color: red;
+        }
+        h1{
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <a href="#">超链接</a>
+        <h1>这是一级标题</h1>
+    </div>
+    
+</body>
+</html>

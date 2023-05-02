@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>定位</title>
+    <!-- 为什么需要定位 -->
+    <!-- 问题1；网页中有些盒子是定位在屏幕上 使用标准流盒子跟浮动没法实现的
+    想要盒子在一行排浮动实现，如果需要固定在某个地 并且压在另外一个盒子的上面方使用定位 -->
+    <!-- 定位；就是把盒子定位到移动盒子 -->
+    <!-- 定位=定位模式+边翩移 -->
+    <!-- 定位通过css的 定位属性来设置  -->
+    <!-- 定位不同的属性 不一样的效果 有固定的 有相应 绝对 静态 配合上下左右的值移动位置 left right bottom top 后面跟像素px -->
+    <!-- 第一种定位 相对定位 特点：1.是相对于他原来的位置移动 2.原来的位置继续占有，后面的盒子在它的下面，不会被占有 -->
+    <style>
+        .box1 {
+            width: 200px;
+            height: 200px;
+            background-color: sandybrown;
+            /* 第一个盒子使用定位，相对于自己的位置进行移动 ，但是还保留原来的位置，跟标准流盒子一样，独占一行 */
+            position: relative;
+            left: 200px;
+        }
+        .box2 {
+            width: 200px;
+            height: 200px;
+            background-color: skyblue;
+        }
+    </style>
+
+    
+</head>
+<body>
+    <div class="box1">1</div>
+    <div class="box2">2</div>
+    
+</body>
+</html>

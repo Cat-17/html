@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>for循环退出</title>
+    <!-- 在一些情况下 需要退出 比如找到一个人的名字就退出 -->
+</head>
+
+<body>
+    <script>
+        for (let i = 1; i < 6; i++) {
+            if (i===2) {
+                // 继续 退出本次循环 ，继续下一次循环
+                // continue执行过程 let =1 ！== 2 就会执行下面的语句 打印
+                //  回到i++ 使用完现在i++是2 等于2就会执行  continue 
+                // 直接退出2的打印 在回到i++  执行完+1 i===3 不等于2  就执行执行打印
+                // continue //最终打印1345
+                break //结束循环 直接退出循环
+                //  break 执行条件 先判断条件i是不是小于1 是的，小于直接打印
+                //  使用完 i++2 等于2直接执行break 跳出循环 直接到循环外面
+            }
+
+
+            document.write(i)
+        }
+
+      
+
+        
+
+        while(true){
+
+        }
+    </script>
+
+</body>
+
+</html>

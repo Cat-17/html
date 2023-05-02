@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>盒子模型排版</title>
+    <style>
+        .logo {
+            height: 60px;
+            background-color: goldenrod;
+        }
+
+        div {
+            float: left;
+            background-color: darkgreen;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="logo">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+    </div>
+
+    <div class="">
+        <!-- 最大父级盒子 浮动盒子配合父级标准流的盒子 标准流盒子负责宽高
+        外边距 上下内边距 文字大小 位置，单独选择子级去调整 -->
+        <div >
+            负责版心跟背景图
+            <div>负责左边</div>
+            <div>负责右边</div>
+
+        </div>
+        <div>负责左边</div>
+        <div>负责右边</div>
+    </div>
+    <!--  -->
+    <div>
+        <!-- 直接调用版心  设置高度-->
+        <div>
+            <!-- 设置内容  想要让内容一行排，每个内容设置浮动，再到设置大小，边距-->
+            <h1>   精品推荐</h1>
+            <ul>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+         
+            列表
+
+            跳转链接
+            <a href=""></a>
+        </div>
+    </div>
+
+    <!--  -->
+    <div>
+        <!-- 调用俩个类名 一个版心，一个外边最大的盒子大盒子 标准流负责宽高 -->
+        <!-- 内容 分上下 -->
+        <div class="">
+            <h1></h1>
+            <a class="" href="">查看全部</a>
+        </div>
+        <div class="bottom">
+            <ul>
+                <!-- 每个lli有自己的宽高 里面在包含三部分内容 -->
+                <li>
+                    <img src="" alt="">
+                    <p>
+                        <h2></h2>
+                        <span></span>
+                        <!-- 单独的样式进行调整 -->
+                        <!-- 在一行排给内容浮动，内外边距再调 -->
+                    </p>
+                </li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- 底部 -->
+    <div>
+        <!-- 一个通栏的盒子 设置一个高度 背景色 -->
+        <!-- 在调用一个版心的 -->
+        <div class="版心">
+            <!-- 左边一部分 右边一部分 -->
+            <div>左边
+                <img src="" alt="">
+                <p>段落</p>
+                <!-- 下载地址 -->
+                <a class="" href=""></a>
+            </div>
+            <div>
+                <!-- 来一个右浮动 里面的内容需要一行排 在给dl浮动 左右浮动再到文字的的细节 -->
+                <dl>
+                    <dt>负责标签名</dt>
+                    <dd>负责解释dt标题</dd>
+                    <dd>负责解释dt标题</dd>
+                    <dd>负责解释dt标题</dd>
+                </dl>
+                <dl>
+                    <dt>负责标签名</dt>
+                    <dd>负责解释dt标题</dd>
+                    <dd>负责解释dt标题</dd>
+                    <dd>负责解释dt标题</dd>
+                </dl>
+                <dl>
+                    <dt>负责标签名</dt>
+                    <dd>负责解释dt标题</dd>
+                    <dd>负责解释dt标题</dd>
+                    <dd>负责解释dt标题</dd>
+                </dl>
+            </div>
+
+        </div>
+    </div>
+
+
+
+</body>
+
+</html>

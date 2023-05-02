@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>行高的继承</title>
+    <style>
+        /* 想把子标签的的文字颜色变成粉红色 */
+        /* 直接找到父级设置子级会继承 子元素可以继承父级的行高 */
+        div {
+           color: aqua;
+           font-size: 20px;
+           font: 14px/1.5 '微软雅黑';
+         
+        }
+        p {
+            /* 子元素继承了父元素div的行高1.5 */
+            /* 这个1.5就是当前元素文字大小的1.5倍 所以当前p标签的行高就是21像素 */
+            font-size: 14px;
+
+        }
+        span {
+            font-size: 16px;
+        }
+
+    </style>
+</head>
+<body>
+    <div>
+        <p>粉红色的回忆</p>
+        <span>粉红色的回忆</span>
+    </div>
+    
+</body>
+</html>

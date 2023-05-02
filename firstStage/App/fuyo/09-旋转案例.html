@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>旋转案例</title>
+    <style>
+        div {
+            /* 超出父级的部分隐藏 */
+            overflow: hidden;
+            position: relative;
+            width: 200px;
+            height: 200px;
+            border: 1px solid #000;
+            margin: 10px;
+            /* 一行排 加浮动 */
+            float: left;
+        }
+        div::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 200px;
+            height: 200px;
+            background-color: plum;
+            transform: rotate(180deg);
+            transform-origin: left bottom;
+            transition: all .6s;
+
+        }
+        /* 鼠标经过div before发送变化 */
+        div:hover::before {
+            transform: rotate(0);
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+    <div></div>
+    <div></div>
+    
+</body>
+</html>

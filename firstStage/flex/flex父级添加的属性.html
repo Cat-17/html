@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>常见flex布局属性</title>
+    <!-- 主轴侧轴的排列方式 -->
+    <style>
+        div {
+            /* 给父级添加flex布局 */
+            /* 下面的子元素 默认的主轴排列方式 从左到右 */
+            display: flex;
+            width: 800px;
+            height: 300px;
+            background-color: palegoldenrod;
+            /*默认主轴排列方式 从左到右 1234 */
+            /* flex-direction: row; */
+            /* 主轴排列，从右到左 翻转 4321  这个简单了解*/
+            /* flex-direction: row-reverse; */
+
+            /* 主轴和侧轴是会发生变化的，就看flex-direction:设置谁为主轴，剩下的就是侧轴 */
+
+            /* 我们可以把主轴设置为y轴 那么x轴就成了侧轴 */
+            /* 主轴排列方式从上到下 */
+            flex-direction: column;
+
+
+        }
+        div span {
+            width: 150px;
+            height: 100px;
+            background-color: palevioletred;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <span>1</span>
+        <span>2</span>
+        <span>3</span>
+        <span>4</span>
+    </div>
+    
+</body>
+</html>

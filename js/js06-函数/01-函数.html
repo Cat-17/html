@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>函数</title>
+    <!-- 为什么需要函数呢 -->
+    <!-- 代码复用，提高开发效率 -->
+    <!-- 函数是什么？ -->
+    <!-- function执行特定任务的代码块 -->
+    <!-- 思路1.九九乘法表 需要打印多个怎么办？ -->
+    <style>
+        div {
+            display: inline-block;
+            width: 80px;
+            height: 30px;
+            line-height: 30px;
+            margin: 5px;
+            background-color: plum;
+            padding: 0 10px;
+            border-bottom: 1px solid palevioletred;
+            border-radius: 8px;
+            color: peru;
+            box-shadow: 2px 2px 2px rgba(0, 0, 0, .2);
+            text-align: center;
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <script>
+        //  function 是被设计为执行特定任务的代码块 块指的就是 大括号里面包含的一块区域
+        // 说明 函数可以把相同相似逻辑的代码，"包裹"起来，通过函数调用执行这些被"包裹"的代码逻辑
+        // 这么做的优势是有利于精简代码复用 重复使用
+        function fn(){
+             // 打印99乘法表
+        // 利用for嵌套
+        // 外层for负责行数  从0开始 小于等于9 一共10行 
+        for (let i = 0; i <= 9; i++) {
+            // 内层循环负责的是列 
+            for (let j = 1; j <= i; j++) {
+                
+                document.write(`
+
+                <div>  ${j}*${i} =  ${j*i}  </div>
+                
+                `)
+
+                 // i是一行 j是一列 每次循环完加1 此次类推 123456789  1*1=1 1*2等于2
+                // 所以是行乘以列  每行 每列的数字不是固定的，等同于 循环一次 每行的数字加1
+            }
+            document.write('<br>')
+
+        }
+        }
+        fn()
+        fn()
+        fn()
+       
+       
+    </script>
+</body>
+
+</html>

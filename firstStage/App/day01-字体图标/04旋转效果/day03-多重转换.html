@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            /* 大盒子的尺寸 */
+            width: 800px;
+            height: 200px;
+            border: 1px solid #000;
+        }
+        img {
+            /* 里面内容的尺寸 */
+            width: 200px;
+            /*配合鼠标悬停的过渡效果  */
+            transition: all 8s;
+        }
+        .box img:hover {
+            /* 复合属性 空格隔开 */
+            transform: translate(600px) rotate(720deg);
+            /* 不可以改属性顺序，先位移 在旋转 如果是选旋转后位移 会改变坐标轴向，位移方向会受影响
+            多重转换如果涉及到旋转 放到最后书写 */
+           
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="box">
+        <img src="../images/tyre.png" alt="">
+    </div>
+    
+</body>
+</html>

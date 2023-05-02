@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 事件流 是指事件完整执行过程中的流动路径 -->
+    <!-- 抓捕阶段  是父到子 -->
+    <!-- 冒泡阶段 子到父 -->
+    <style>
+        .faset {
+            width: 500px;
+            height: 500px;
+            background-color: palegoldenrod;
+        }
+        .son{
+            width: 200px;
+            height: 200px;
+            background-color: sandybrown;
+        }
+    </style>
+</head>
+<body>
+    <div class="faset">
+        <div class="son"></div>
+    </div>
+    <script>
+
+        let fa = document.querySelector('.faset')
+        let son = document.querySelector('.son')
+        fa.addEventListener('click',function(){
+            alert('我是爸爸')
+        })
+        son.addEventListener('click',function(){
+            alert('我是儿子')
+        })
+        // 以上都是属于冒泡事件 当一个元素的时间被触发时，同样的时间将会在钙元素的所有祖先元素中依次被触发
+        // 这一过程为事件冒泡 当一个元素触发事件后，会依次向上调用所有父级元素的同名事件 事件冒泡是默认存在的
+        document.addEventListener('dblclick',function(){
+            alert('我是爷爷')
+        })
+    </script>
+    
+    
+</body>
+</html>

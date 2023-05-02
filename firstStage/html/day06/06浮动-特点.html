@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 浮动的标签特点；顶对齐 有行内块的属性 可以设置宽高 一行排 并且可以有多个属性 */
+        /* 问题，我ouy不想顶对齐 */
+        
+        .ouy {
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+            float: left;
+            /* 答，单独对标签设置一个外边框 */
+            margin-top: 50px;
+        }
+        .yui {
+            width: 200px;
+            height: 200px;
+            background-color: green;
+            float: left;
+            /* 因为有浮动 设置水平居中不能生效 盒子无法水平居中 */
+            margin: 0 auto;
+        }
+        .hjk {
+            width: 300px;
+            height: 300px;
+            background-color:red;
+
+        }
+
+
+        
+    </style>
+</head>
+<body>
+    <div class="ouy">ouy</div>
+    <div class="yui">yui</div>
+    <div class="hjk">hjk</div>
+
+    
+</body>
+</html>

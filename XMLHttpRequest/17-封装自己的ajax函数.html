@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>封装一个自己的ajax函数</title>
+    <script src="./js/itheima.js"></script>
+</head>
+<body>
+    <script>
+        // 调用itmeima函数  get 看是否生效
+        // itheima({
+        //     method:'GET',
+        //     url:'http://www.liulongbin.top:3006/api/getbooks',
+        //     // data:{
+        //     //     id:2
+        //     // },
+        //     success:function(res){
+        //         console.log(res)
+
+        //     }
+        // })
+
+        // 调用itmeima函数  post 看是否生效
+        itheima({
+            method:'POST',
+            url:'http://www.liulongbin.top:3006/api/addbook',
+            data:{
+                bookname:'梦游',
+                author:'施耐庵',
+                publisher:'北京出版社'
+            },
+            success:function(res){
+                console.log(res)
+            }
+        })
+    </script>
+
+    
+</body>
+</html>

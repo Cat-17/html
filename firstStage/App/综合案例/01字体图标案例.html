@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>字体图标引入</title>
+    <!-- 第一步 引入字体图标文件 -->
+    <link rel="stylesheet" href="./iconfont/iconfont.css">
+    <!-- 先确定自己已经有iconfont这个文件  -->
+
+    <!-- 单独设置图标的颜色大小 单独选中图标修改颜色 -->
+    <style>
+        /* 清除系统默认的间距 */
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        /* 清除圆点符号 */
+        li {
+            list-style: none;
+        }
+        /* 字体的颜色 */
+        a {
+            color: #333;
+            /* 清除下划线 */
+            text-decoration: none;
+        }
+        
+        .box {
+           width: 200px;
+            margin: 20px auto;
+        
+        }
+        /* 第三步 单独给第一个图标换颜色 选中类名进行调整 */
+        .icon-cart-Empty-fill {
+            color: red;
+        }
+
+        
+
+       
+
+    </style>
+
+    
+</head>
+<!-- 第二步 书写代码 -->
+    <div class="box">
+        <ul>
+            <li>
+                <a href="#">
+                     <!-- span是行内标签 不换行显示 -->
+                    <span class="iconfont icon-cart-Empty-fill"></span>
+                    <span>购物车</span>
+                    <span class="iconfont icon-arrow-down"></span>
+                </a>
+            </li>
+        </ul>
+       
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,283 @@
+/* 放index页面的样式表 */ 
+.banner {
+    
+    
+    /* 放一个通体的盒子只放宽 */
+    height: 500px;
+    background-color: #f5f5f5;
+}
+/*  */
+.banner.wrapper {
+    height: 500px;
+    background-color: pink ;
+
+}
+.wrapper {
+    position: relative;
+}
+/* 先放上侧导航 */
+.banner .aside {
+    /* 2;位置不对，这样用定位 自绝父相 */
+    position: absolute;
+    left: 0;
+    top: 0;
+
+    /* 1;先测量侧导航的宽高范围 */
+    width: 250px;
+    height: 500px;
+    background-color: rgba(0, 0,0, .8);
+}
+.banner .aside li {
+    height: 50px;
+    line-height: 50px;
+}
+.banner .aside a {
+    position: relative;
+    padding-left: 36px;
+    padding-right: 19px;
+    /*  */
+    display: block;
+    height: 50px;
+    color: #fff;
+    font-size: 16px;
+}
+    
+.banner .aside a span {
+    margin-left: 15px;
+    font-size: 14px;
+}
+.banner .aside a:hover {
+    /* 添加背景色 */
+    background-color: #27ba9b;
+}
+/* a的里面最后的位置添加箭头 */
+.banner .aside a::after {
+    position: absolute;
+    content:'' ;
+    right: 19px;
+    top: 19px;
+    /* 精灵图使用定位 子绝父相 */
+    /* 设置精灵图的尺寸 */
+    width: 6px;
+   height: 11px;
+    /* 添加精灵图 */
+    background-image: url(../images/sprites.png);
+ 
+    /* 调图片的位置 */
+    background-position: -80px -110px;
+}
+
+/* 箭头 */
+.prev,
+.next {
+    /* 用到子绝父相 定位 图片层叠 */
+    position: absolute;
+    top: 228px;
+    width: 45px;
+    height: 45px;
+    /* 半透明效果 */
+    background-color: rgba(0, 0,0, .2);
+    /* 圆形的半透明 */
+    border-radius: 50%;
+    background-image: url(../images/sprites.png);
+
+}
+
+/* 背景图片负责俩件事；改变箭头在盒子里面的位置；改变精灵图的位置
+导致在精灵图中测量的尺寸不准确 */
+/* 解决方案2种；
+1；书写背景图的位置的属性，借助谷歌调试工具，右键检查，找到这个标签，直接在上面选中滚动鼠标，找到合适的位置
+2；书写标签的时候。a负责盒子的，里面再添加一个span负责箭头 */
+.prev {
+    left: 260px;
+    /* 调图片位置 */
+    background-position: 14px -60px;
+
+}
+.next {
+    right: 10px;
+    /* 精灵图位置  如果跟设计稿有出入，可以直接在右键检查 ，直接在上面调试位置 */
+    background-position: -23px -60px;
+
+}
+/* 圆点 */
+.banner ol {
+    /* 父级已经添加了相对定位，下面的子级都是生效的 */
+    position: absolute;
+    left: 680px ;
+    bottom: 30px;
+   
+    height: 10px;
+  
+
+
+}
+.banner ol li {
+    /* 现在是换行排加 */
+    float: left;
+    margin-left: 24px;
+    width: 10px;
+    height: 10px;
+    background-color: rgba(255, 255,255,.4);
+    /* 圆点 */
+    border-radius: 50%;
+    cursor: pointer;
+}
+.banner ol .current {
+    background-color: #fff;
+} 
+
+
+/* x新鲜好物 */
+.goods.hd {
+    background-color: pink;
+    height: 114px;
+}
+
+.goods .hd h2 {
+    display: inline-block;
+    height: 114px;
+    font-size: 29px;
+    font-weight: 400;
+    line-height: 114px;
+    
+    
+}
+.goods h2 span {
+    margin-left: 34px;
+    font-size: 16px;
+    color: #999;
+    font-weight: 400;
+
+}
+
+
+.goods .hd  a ,
+.shengxian .hd .more {
+    float: right;
+    /* line-height: 114px; */
+    color: #999;
+}
+.goods .hd a ::after,
+.shengxian .hd .more::after {
+    content: '';
+    display: inline-block;
+    margin-left: 13px;
+    width: 7px;
+    height: 13px;
+    background-image: url(../images/sprites.png);
+    background-position: 0 -110px;
+    /* 但是还没有对齐 */
+    /* 基线对齐 */
+    vertical-align: middle;
+}
+  
+.goods .bd li {
+    position: relative;
+    margin-right: 8px;
+    /* 换行排，加浮动 */
+    float: left;
+    width: 304px;
+    height: 405px;
+    background-color: #f0f9f4;
+    text-align: center;
+}
+/* 找到li里面的最后一个设置右间距为0 */
+.goods .bd li:last-child {
+    margin-right: 0;
+}
+.goods .bd li img {
+    width: 304px;
+    
+}
+.goods .bd li h3 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-size: 20px;
+    font-weight: 400;
+}
+.goods .bd li div {
+    font-size: 17px;
+    color: #9a2e1f; 
+}
+.goods .bd li div span {
+    font-size: 23px;
+} 
+.goods .bd li b {
+    /* 定位 子绝父相 */
+    position: absolute;
+    left: 17px;
+    top: 18px;
+    width: 28px;
+    height: 51px;
+    border: 1px solid #27ba9b;
+    /* 圆边 */
+    border-radius: 2px;
+    font-size: 18px;
+    color: #27ba9b;
+    font-weight: 400;
+    line-height:24px ;
+}
+.shengxian .hd {
+    height: 96px ;
+  
+   
+}
+.shengxian .hd h2 {
+    float: left;
+    font-size: 29px;
+    font-weight: 400;
+}
+.shengxian .hd .more {
+    float: right;
+}
+.shengxian .hd ul {
+   
+    float: right;
+    
+}
+.shengxian .hd ul li {
+    float: left;
+}
+
+.shengxian .hd  li a {
+    padding: 3px 7px ;
+    margin-left: 6px;
+    
+   
+}
+.shengxian .hd  li a:hover {
+    background-color: #27ba9b;
+    color: #fff;
+    margin-top: 20px;
+}
+
+
+.shengxian .bd .left {
+    float: left;
+    width: 240px;
+    height: 610px;
+    background-color: pink;
+}
+.shengxian .bd .right {
+    float: left;
+    width:1000px;
+    height: 610px;
+    background-color: steelblue;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

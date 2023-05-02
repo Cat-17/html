@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>排他思想</title>
+    <style>
+        .pink {
+            background-color: pink;
+        }
+    </style>
+</head>
+<body>
+    <button class="pink">第一个</button>
+    <button>第二个</button>
+    <button>第三个</button>
+    <button>第四个</button>
+    <button>第五个</button>
+    <!-- 获取元素 -->
+    <script>
+        let  btn = document.querySelectorAll('button')
+        // 全选获取的是伪数组 要把里面数组的内容获取
+        for(let i = 0; i < btn.length; i++) {
+            // 事件监听
+            btn[i].addEventListener('click',function(){
+                // 点击按钮背景颜色变成分色 或含所有的
+                // this.classList.add('pink')
+                // 干掉所有人 
+                // for(let j = 0; j<btn.length;j++) {
+                //     // 移除粉色 所有的
+                //     btn[j].classList.remove('pink')
+                // }
+                // 我只需要找出那个唯一的pink类，删除
+                document.querySelector('.pink').classList.remove('pink')
+                // 复活我自己 添加 一个类
+                this.classList.add('pink')
+
+            })
+        }
+    </script>
+    
+</body>
+</html>

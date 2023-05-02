@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>遍历数组对象案例</title>
+    <style>
+        table {
+            width: 600px;
+            text-align: center;
+        }
+
+        table,
+        th,
+        td {
+            border: 1px solid #000;
+            /* 边框为0 一个边框 */
+            border-collapse: collapse;
+        }
+
+        caption {
+            font-size: 18px;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        tr {
+            height: 40px;
+            cursor: pointer;
+        }
+
+        table tr:nth-child(1) {
+            background-color: #ddd;
+        }
+
+        /* 表格里除了not（）其他的行鼠标经过的时候变颜色 */
+        table tr:not(:first-child):hover {
+            background-color: #eee;
+        }
+    </style>
+</head>
+
+<body>
+
+
+
+    <!-- 表格 -->
+
+    <!--
+    <tr>
+        <td>2</td>
+        <td>小红</td>
+        <td>19</td>
+        <td>女</td>
+        <td>湖北省</td>
+    </tr>
+    <tr>
+        <td>3</td>
+        <td>小丽</td>
+        <td>29</td>
+        <td>女</td>
+        <td>安徽省</td>
+    </tr>
+    <tr>
+        <td>4</td>
+        <td>小刚</td>
+        <td>16</td>
+        <td>男</td>
+        <td>武汉省</td>
+    </tr> -->
+
+
+    <script>
+        // 先声明一个数组对象
+        let students = [
+            { name: '小鸣', age: 18, gender: '男', hometown: '河北省' },
+            { name: '小红', age: 19, gender: '女', hometown: '湖北省' },
+            { name: '小刚', age: 17, gender: '男', hometown: '安徽省' },
+            { name: '小丽', age: 16, gender: '女', hometown: '浙江省' },
+            { name: '小强', age: 16, gender: '女', hometown: '浙江省' }
+        ]
+        // 第一步先把表格的头部尾部打印渲染
+        // 打印表格 头部和尾部
+        document.write(`
+        <h2>学生信息</h2>
+        <p>将数据渲染到页面中</p>
+        <table>
+        <caption>学生列表</caption>
+        <tr>
+            <th>序号</th>
+            <th>姓名</th>
+            <th>年龄</th>
+            <th>性别</th>
+            <th>家乡</th>
+        </tr>
+
+        `)
+        
+        
+        
+        // 第二步 有数组的地方不然有for循环 遍历数组
+        // 中间的行遍历数字 ，然后 填充对象数据 原则就是有几条数据 就遍历几次
+        // 
+        for (let i = 0; i < students.length; i++) {
+            document.write(`
+            <tr>
+                <td>${i+1}</td>
+                <td>${students[i].name}</td>
+                <td>${students[i].age}</td>
+                <td>${students[i].gender}</td>
+                <td>${students[i].hometown}</td>
+           </tr>
+            `)
+
+        }
+
+
+
+
+        // 第一步 渲染打印尾部
+        document.write(`
+       </table>
+        `
+        )
+
+    </script>
+
+</body>
+
+</html>

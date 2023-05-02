@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>盒子居中</title>
+    <!-- 块级盒子 必须设置了宽度 才能生效 只要保证左右auto 就可以实现水平居中 -->
+    <!--  margin: 0 auto;水平居中只对块元素生效 行内跟行内块想要居中，给其父元素添加text-align: center; -->
+    <style>
+        .heath {
+            width: 500px;
+            height: 300px;
+            background-color: pink;
+            margin: 0 auto;
+            text-align: center;
+
+        }
+
+        /* 行内和行内块元素水平居中给其父元素添加 text-align: center;  */
+        .wsxcv {
+            width: 500px;
+            height: 300px;
+            background-color: pink;
+            text-align: center;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="heath">
+        <span>里面的文字</span>
+    </div>
+    <div class="wsxcv">
+        <img src="../day04/images/logo.png" alt="">
+
+    </div>
+
+</body>
+
+</html>

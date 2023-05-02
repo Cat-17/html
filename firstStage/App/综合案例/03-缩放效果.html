@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width:300px ;
+            height: 210px;
+            margin: 100px auto;
+            background-color: pink;
+            /* 配合鼠标 过渡效果 */
+            transition: all 1s;
+        }
+        .box img {
+            /* 图片过大 设置一个宽度随父级的大小 */
+            width: 100%;
+        }
+
+        /* 鼠标悬停 有缩放的效果 */
+        /* 鼠标放到box 下面的图片发生变化 */
+        .box img:hover  {
+            /* 缩放效果 数值超过1就是放大 小于1就是缩小 */
+            /* transform: scale(1.5); */
+            transform: scale(0.8);
+
+        }
+    </style>
+</head>
+<body>
+    <div class="box"> 
+        <img src="../day01-字体图标/images/product.jpeg" alt="">
+    </div>
+    
+</body>
+</html>

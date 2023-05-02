@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>循环案例</title>
+
+</head>
+
+<body>
+    <script>
+        // 第三步； 准备一个金额 
+        let money = 100
+        // 不断弹出对话框
+        // 第一步； 循环
+        while (true) {
+            let str = prompt(`请您选择操作：
+            1:存钱
+            2:取钱
+            3:查看余额
+            4:退出`)
+
+
+            // 除非输入4 则退出循环
+            // 第二步；满足条件的直接退出 用户选择4的时候 直接退出 不在循环
+            if (str === '4') {
+                break
+            }
+
+
+            // 第4步 swich 进行加减操作
+            switch (str) {
+                case '1':
+                    let cun = +prompt(' 请您输入存钱的金额')
+                    money += cun
+                  
+                    break
+
+                case '2':
+                    let qu = +prompt('请您输入取钱的金额')
+                    money -= qu
+                    break
+                case '3':
+                    alert(`您卡上的为${money}`)
+                    break
+            }
+        }
+
+
+
+    </script>
+
+</body>
+
+</html>

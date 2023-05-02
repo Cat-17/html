@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3d转换</title>
+    <!-- 3d位移   3d 旋转 -->
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            background-color: palegoldenrod;
+            /* 位移复合写法，又有x轴 又有y轴的写法 */
+            transform: translateX(100px) translateY(100PX) translateZ(100px);
+            /* 1; translateZ(100px) 沿着z轴移动 */
+            /* 2； translateZ(100px)后面的单位，一般都是用像素，px */
+            /* 3； translateZ(100px) 正值就是向外移动100px{像我们眼前移动} 复制就是向里面移动 */
+            /* 4；3d移动的简写写法 */
+            /*  */
+            /* transform: translate3d(x,y,z); */
+            /* x,y,z 三个值是不能省略的，没有直接写0 */
+            transform: translate3d(100px,100px,100px);
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+    
+</body>
+</html>

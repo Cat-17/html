@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>for循环案例</title>
+</head>
+
+<body>
+    <script>
+        // 利用for循环 输出多少岁了
+        // for (let i = 1; i <= 100; i++) {
+        //     document.write(`<p>我今年${i}岁了</p>`)
+        // }
+
+        // 利用for循环 输出1-100之间的偶数和
+        let sum = 0  //求和的0
+        // 循环的条件  for循环是只循环 不能筛选 
+        for (let i1 = 1; i1 <= 100; i1++) {
+            // 筛选偶数
+            // if 是具有选择性的 满足的执行 不满足就不执行
+            // 这是写的是能满足偶数的条件的
+            if (i1 % 2 === 0) {
+                // 偶数相加的和
+                //  sum = sum + i1
+                sum += i1
+            }
+
+        }
+
+        // 注意打印结果 写到循环外面 循环完了 在输出结果
+        document.write(sum)
+
+
+        // 页面中打印5个小星星
+        for (let num = 1; num <= 5; num++) {
+            document.write('❤')
+        }
+
+    //   循环还有一个叫法 遍历 遍历数组  
+        // for循环最大的价值：循环数组
+        // 需求；请将数组  let arr = ['马超', '黄忠', '关羽', '张飞' , '貂蝉'] 依次打印出来
+        // 因为这个数组里面的内容是会发生变化 会增加 减少 每次都还要在进行修改
+        // 有一个属性很好解决这个问题 arr.length 翻译过来就是数组的长度
+        let arr = ['马超', '黄忠', '关羽', '张飞', '貂蝉','pink', '小宝']
+        // document.write(arr[0])
+        // document.write(arr[1])
+        // document.write(arr[2])
+        // document.write(arr[3])
+        // document.write(arr[4])
+
+
+        // 例如循环的方式 数组是从0开始计算 
+        // 0-4 包含4 是5个数 0-5 不含包5 也是5个数 等于5的话就是6个数了 
+        for (let i = 0; i < arr.length; i++) {
+            // 为什么写i i=0 每次循环结束后 +1 变成2 循环5次
+            //  依次打印对应的 0 1 2 3 4 对应的就是 ['马超', '黄忠', '关羽', '张飞' , '貂蝉']
+            document.write(`名字是${arr[i]}<br>`)
+        }
+
+        // 总结；for循环和while循环有什么区别
+        // 1；当明确了循环的次数的时候推荐使用for
+        // 2；当不明确循环的次数的时候推荐使用while循环 比如 做的案例 你爱我嘛  不确定输入几次能输入对 用for就很难做
+
+
+
+    </script>
+
+</body>
+
+</html>

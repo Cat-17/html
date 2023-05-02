@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>使用xhr发起带参数的get请求</title>
+    <!-- 使用xhr对象发起带参数的get请求时，只需要在调用xhropen期间 为url地址指定参数既可 -->
+    <!-- xhr.open('GET','http://www.liulongbin.top:3006/api/getbooks?id=1') --> 
+    <!-- ?id=1 获得数据的第一条数据 -->
+    <!-- 这种在url地址后面拼接的参数，叫做查询字符串 -->
+   
+</head>
+<body>
+    <script>
+        //1 ; 创建xhr对象 
+        var xhr = new XMLHttpRequest()
+        // 2;调用xhr.open()函数 传递俩个参数 指定请求方式 get 与url地址
+        xhr.open('GET','http://www.liulongbin.top:3006/api/getbooks?id=1')
+        // 3;调用xhr.send() 函数 发起ajax请求
+        xhr.send()
+        //  4;监听xhr.oneradystatechange事件
+        xhr.onreadystatechange = function(){
+            // 4.1 监听 xhr 对象的 请求状态 readyState ;与服务器响应的状态 status 
+            // 监听两个数据  做一个判断 
+          if(xhr.readyState === 4 && xhr.status === 200){
+            // 4.2 打印响应回来的数据
+            console.log(xhr.responseText)
+          }
+
+        }
+
+      //  1 创建一个xhr对象
+        var xhr = new XMLHttpRequest()
+        // 2；调用xhr.open()函数 传递俩个参数 指定请求的方式 跟 url地址
+        // 带参数的GET请求 ?id=1  获得数据中第一条数据
+        xhr.open('GET','http://www.liulongbin.top:3006/api/getbooks?id=2')
+        // 3 调用 xhr.send函数 发起ajax请求
+        xhr.send()
+        // 4 监听xhr.onreadystatechange事件
+        xhr.onreadystatechange = function(){
+          // 判断 是否接收数据成功
+          if(xhr.readyState === 4 && xhr.status === 200){
+            // 成功响应回来的数据
+            console.log(xhr.responseText)
+          }
+        }
+
+    </script>
+    
+</body>
+</html>

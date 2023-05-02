@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .box {
+           
+            /* 设置大的背景图片的尺寸 */
+            width: 1366px;
+            height: 600px;
+            /* 居中 上下无所谓 左右跟浏览器的的尺寸居中 */
+            margin: 0 auto;
+            /* 背景图片 */
+            background: url(../images/bg.jpg);
+
+            /* 超出父级范围的隐藏 */
+            overflow: hidden;
+        }
+
+        /* html位子变过要从新打开页面 */
+
+        /* 左右相同的样式 */
+        /* 注意用，隔开 伪元素 */
+        /* 并集选择器  设置相同的部分*/
+        .box::before,
+        .box::after {
+            float: left;
+            content: '';
+            /* 放左右俩边相同的样式 
+            相同的宽高背景，不一样的再单独选择设置*/
+            width: 50%;
+            height: 600px;
+            background-image: url(../images/fm.jpg);
+            /*现在内景图看不到，想到伪元素是行内元素  设置宽高不生效 这里加浮动 宽高生效 */
+            /* 过渡元素 */
+            transition: all .5s;
+
+        }
+        /* 单独控制after的位置图位置 */
+        .box::after {
+            /* 要背景图的最右的位置 */
+            background-position: right 0;
+            
+        }
+
+        /* 位移效果  鼠标移入box 
+        before向左移动 -100%  after 向右移动100% + */
+        .box:hover::before {
+            transform: translate(-100%);
+        }
+        .box:hover::after {
+            transform: translateX(100%);
+        }
+        /* 现在位移已经设置好了，但是超出父级一外的还能看到，找到父级设置隐藏 */
+
+
+
+    </style>
+</head>
+<body>
+    <div class="box">
+        <!-- 1；手写2个div，父子级关系，使用子绝父相 设置背景图片
+        2；使用css伪元素befo after  使用浮动 让两个图片一行排 -->
+
+    </div>
+    
+</body>
+</html>

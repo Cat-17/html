@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css的弊端</title>
+    <style>
+        /* 没有很好的计算能力 */
+        html {
+            font-size: 50px;
+        }
+        img {
+            /* width: 84px;
+            height: 84px; */
+            /* 如果我们想要设置文字不同的大小 像素单位需要改成rem */
+            /* 需要手动计算 85/50=1.64rem  */
+            width: 1.64rem;
+            height: 1.64rem;
+        }
+        /* 不方便维护跟扩展 如果我们要修改颜色，自己手动删改 工作量比较大 */
+        div {
+            background-color: paleturquoise;
+        }
+
+        p {
+            background-color: paleturquoise;
+        }
+
+        span {
+            background-color: paleturquoise;
+        }
+    </style>
+</head>
+
+<body>
+
+</body>
+
+</html>

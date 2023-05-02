@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>循环退出</title>
+    <!--  -->
+</head>
+<body>
+   
+    <!-- 循环结束 ；某些特定情况要循环结束 -->
+    <!--特点我们要吃6个包子  -->
+    <script>
+        // 我们要打印吃包子
+        let i = 1
+        while (i <= 6) {
+            //   // 需求 那我迟到第三个包子的时候 发现吃饱 不想吃了
+            if (i===3) {
+                // 除了第三个不执行 其他正常执行 继续下次循环 循环结束 continue
+                i++
+                // continue
+                // 退出循环  break 实际开发中用的多一点  直接跳出所在循环
+                break
+            }
+            document.write(`我要吃${i}包子 <br>`)
+            i++
+        }
+      
+    </script>
+    
+    
+</body>
+</html>

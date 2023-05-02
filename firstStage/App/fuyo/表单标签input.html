@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>表单标签 表单属性</title>
+</head>
+<body>
+    <form action="">
+        <ul>
+            <li>
+                <!-- required属性；内容不能为空  placeholder=""占位符 autofocus 光标自动订到哪行  name="username" autocomplete="off 输入的时候不显示提交过的账号-->
+                邮箱：<input type="email" required placeholder="请输入邮箱" autofocus name="username" autocomplete="off" >
+
+            </li>
+            <li>
+                <!-- 多选文件 multiple属性-->
+                上传头像: <input type="file" multiple>
+            </li>
+           
+            <li>
+                日期：<input type="date">
+            </li>
+            <li>
+                时间：<input type="time">
+            </li>
+            <li>
+                数量：<input type="number">
+            </li>
+            <li>
+                手机号：<input type="tel">
+            </li>
+            <li>
+                搜索框：<input type="search">
+            </li>
+            <li>
+                颜色：<input type="color" >
+            </li>
+            <li>
+                提交；<input type="submit" value="提交">
+
+            </li>
+        </ul>
+       
+        
+    </form>
+    
+</body>
+</html>

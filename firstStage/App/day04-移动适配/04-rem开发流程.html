@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 移动适配 */
+        /* html标签添加字号1/10;2.写rem单位的chic */
+        @media (width:320px) {
+            html {
+                font-size: 32px;
+            }
+        }
+        @media (width:3750px) {
+            html {
+                font-size: 37.5px;
+            }
+        }
+        @media (width:414px) {
+            html {
+                font-size: 41.4px;
+            }
+        }
+        .box {
+            /*宽是68px 高是29px    */
+            /* 按照rem 写法 就是要得出 68px=？？rem 
+            设计稿375，375是视口  按照html 10分之1  37.5   68*37.5 就是我们要书写的rem   */
+            width: 1.813rem ;
+            height: 0.773rem;
+            border-right-color: aquamarine;
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+    
+</body>
+</html>

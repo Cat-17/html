@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            width: 200px;
+            height: 100px;
+            background-color: pink;
+            /* animation 属于复合属性 后面 加名字 需要的时间 匀速 速度曲线   */
+            /* animation: change 1s linear; */
+            /*steps(3)是分部动画 数值你想分成几部分就写几 后面1s代表延迟时间 刷新等一秒钟在出动画效果 数字3表示重复次数  */
+            /* animation: change 1s steps(3) 1s 3; */
+            /* infinite 动画无限循环  alternate 反向效果是返回 从大到小*/
+            /* animation: change 1s  infinite  alternate; */
+            /* 执行完毕时的状态 加forwards是结束状态  */
+            animation: change 1s forwards;
+        }
+        /* 第一步；定义动画  加名字 */
+        @keyframes change {
+            from{
+                width: 200px;
+            }
+            to {
+                width: 500px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+    
+</body>
+</html>

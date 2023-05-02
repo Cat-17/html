@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>节流策略</title>
+    <script src="./lib/jquery.js"></script>
+    <style>
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        #angel {
+            position: absolute;
+        }
+    </style>
+    <!-- 可以减少一段时间内事件的触发频率 -->
+    <!-- 应用场景 鼠标连续不断的触发某事件（如点击），只在单位时间内只触发一次 -->
+    <!-- 蓝加载时要监听计算滚动条的位置，但不必每次滑动都触发，可以降低计算的频率，而不必去浪费cpu资源 -->
+
+    <!-- 节流阀   节流阀为空 表示可以执行下次操作，不为空 表示不能执行下次操作  -->
+    <!-- 当前操作执行完，必须将节流阀重置为空，表示可以执行下次操作了 -->
+    <!-- 每次执行操作恰，必须先判断节流阀是否为空 -->
+
+    <!-- 防抖：如果事件被频繁触发，防抖能保证只有最后一次触发生效，前面的n多次触发会被忽略 -->
+    <!-- 节流：如果事件被频繁触发，节流能够减少事件触发的频率，因此，节流是有选择性的执行一部分事件 -->
+</head>
+
+<body>
+    <img src="./angel.gif" alt="" id="angel">
+    <script>
+        $(function () {
+            // 获取图片元素
+            var angel = $('#angel')
+            // 1;预定义一个节流阀
+            var timer = null
+            // 监听文档的mousemove 鼠标移动事件
+            $(document).on('mousemove', function (e) {
+                // 3; 判断节流阀是否为空 ，如果不为空，则证明距离上次执行间隔不足16毫秒
+                if(timer){
+
+                    return
+                }
+                timer = setTimeout(function () {
+                    // 设置图片css的位置
+                    $(angel).css('left', e.pageX + 'px').css('top', e.pageY + 'px')
+                    // 当设置了鼠标跟随效果后，情况timer节流阀 ，方便下次开启延时器
+                    timer = null
+                    console.log('ok')
+
+                },16)
+
+            })
+        })
+    </script>
+
+</body>
+
+</html>

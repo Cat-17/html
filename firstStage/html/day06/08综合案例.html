@@ -1,0 +1,89 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 写网页布局，在最开始的加一个清除系统默认间距 */
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .juh {
+            margin: 0 auto;
+
+            width: 1226px;
+            height: 614px;
+            /* background-color:#fff; */
+           
+        } 
+        .leftO {
+            float: left;
+
+            width: 234px;
+            height: 614px;
+            background-color:rgb(69, 4, 79);
+        } 
+        .rightT {
+            float: right;
+
+            width: 987px;
+            height: 614px;
+            /* background-color:#fff; */
+        }
+        
+        ul {
+            /* 去除列表符号 */
+            list-style: none;
+        }
+        .leftOne li {
+
+            float: left;
+
+            margin-right: 14px;
+            margin-bottom: 14px;
+
+            width: 234px;
+            height: 300px;
+            background-color: #87ceeb;
+            /* 现在是快标签自动换行，现在想要在一行 往上面排加浮动 无间距 */
+            /* margin-right: 14px;
+            margin-bottom: 14px; */
+        }
+        /* 如果父级的宽度不够，子级会自动换行 */
+        /* 第四个li和第八个li清除右间距清除 */
+        /*  */
+        .leftOne li:nth-child(4n) {
+            margin-right: 0;
+        }
+
+
+        
+
+        
+    </style>
+</head>
+<body>
+    <div class="juh">
+        <div class="leftO">rleftight</div>
+        <div class="rightT">
+            <div class="leftOne">
+                <ul>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    
+</body>
+</html>

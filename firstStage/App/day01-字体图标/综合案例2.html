@@ -1,0 +1,187 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./iconfont/iconfont.css">
+    <style>
+         *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background-color: #f8f8f8;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+        }
+        img {
+            /* 宽度跟父级一样 */
+            width: 100%;
+            vertical-align: middle;
+        }
+        .box {
+            position: relative;
+         
+            /* 大盒子能放下三个图片的尺寸 距离 */
+            width: 1149px;
+            height: 271px;
+            margin: 20px auto;
+            
+        }
+        /*设置图片的宽高尺寸  */
+        .box li {
+            position: relative;
+            float: left;
+            width: 383px;
+            height: 271px;
+            padding: 20px;
+        }
+        
+        .box .txt { 
+            position: absolute;
+            left: 0;
+            top: 78px;
+            width: 343px;
+            height: auto;
+            padding: 20px 30px;
+            z-index: 1;
+            color: #fff;
+            transition: transform .5s;
+        }
+        .box .txt h4 {
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 2em;
+            color: #fff;
+        }
+        .box .txt h5 {
+            margin-bottom: 40px;
+        }
+        .box .txt p {
+            color: #fff;
+            font-size: 14px;
+        }
+        .box .txt p .iconfont {
+            color: #c7000b;
+            vertical-align: middle;
+            font-size: 20px;
+            font-weight: 700;
+        }
+        .box a {
+            position: relative;
+        }
+
+
+        /* 渐变 内容 */
+        /* 用伪元素 */
+        .box li a::after {
+            position: absolute;
+            left: 0;
+            top: 0;
+            content:'';
+            width: 343px;
+            height: 241px;
+            /* 渐变背景色 */
+            background-image: linear-gradient(
+                transparent,
+                rgba(0,0,0,.6)
+            );
+            /* 默认状态透明度 看不到 */
+            opacity: 0;
+            /* 过渡 */
+            transition: all  .5s;
+        }
+        .box li:hover a::after {
+            opacity: 1;
+        }
+        /* 缩放 */
+      
+        /* 图片的缩放 */
+        .box li .piv img {
+            /* 过渡 */
+            transition: all 0.3s;
+
+        }
+        .box li:hover .piv img {
+            /* 缩放 */
+            transform: scale(1.1);
+        }
+
+        /* 文字效果 ；hover的时候 向上移动 Y -50PX */
+        .box li:hover .txt {
+            transform: translateY(-50px );
+        }
+
+        .piv {
+            overflow: hidden;
+
+        }
+        
+
+        
+
+    </style>
+</head>
+<body>
+    <div class="box">
+      <ul>
+        <li>
+            <a href="#">
+                <div class="piv"><img src="./images/huawei1.jpeg" alt=""></div>
+
+                <div class="txt">
+                <h4>产品</h4>
+                <h5>OceanStor Pacific 海量存储斩获2021 Interop金奖</h5>
+                <p>
+                    <span>了解更多</span>
+                    <i class="iconfont icon-arrow-right"></i>
+                </p>
+                </div>
+                <!-- 添加伪元素  确认盒子的大小 -->
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <div class="piv"><img src="./images/product.jpeg" alt="">
+                </div>
+
+                <div class="txt">
+                    <h4>产品</h4>
+                    <h5>OceanStor Pacific 海量存储斩获2021 Interop金奖</h5>
+                    <p>
+                        <span>了解更多</span>
+                        <i class="iconfont icon-arrow-right"></i>
+                    </p>
+                </div>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <div class="piv"><img src="./images/huawei2.jpeg" alt="">
+                </div>
+                <div class="txt">
+                    <h4>产品</h4>
+                    <h5>OceanStor Pacific 海量存储斩获2021 Interop金奖</h5>
+                    <p>
+                        <span>了解更多</span>
+                        <i class="iconfont icon-arrow-right"></i>
+                    </p>
+                </div>
+            </a>
+        </li>
+      </ul>
+        
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>增加节点</title>
+</head>
+<body>
+    <ul>
+        <li>我是大猫</li>
+        <li>我是二毛</li>
+        <!-- <li class="er">我是er猫</li> -->
+
+     
+    </ul>
+    
+    <script>
+        // <!-- 创建新的标签节点 -->
+        // document.createElement(''标签名)
+    //  let div =  document.createElement('div')
+    //  追加属性
+        // div.className = 'current'
+        // 获取父元素
+        let ul = document.querySelector('ul')
+        // 创建新的标签节点
+         let li = document.createElement('li')
+        // let li = document.createElement('li')
+        // 获取子元素 不要再单独获取了 父元素.children获取的是一个数组[选择第几个孩子]
+        // ul.children[1]
+
+        // let er = document.querySelector('.er')
+        // 往小丽里面加内容
+        li.innerHTML= '我是小丽'
+        // 插入都父元素的最后一个子元素  追加节点不需要引号 因为追加的li已经赋值给一个变量了 不需要加引号
+        // ul.appendChild(li)
+
+        // 插入到父元素中某个子元素的前面
+        // 父元素.insertBefore(要插入的元素,在哪个元素前面)
+        // ul.insertBefore(li,ul.children[1])
+        ul.insertBefore(li,ul.children[0])
+
+
+    </script>
+</body>
+</html>

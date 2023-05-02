@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        body{
+            height: 3000px;
+        }
+    </style>
+</head>
+<body>
+
+    <script>
+        // 文档中的所有标签 拿到所有标签就可以知道我滚动多少距离
+        console.log(document.documentElement) //返回是html 元素 标签
+        // 先做页面滚动事件
+        window.addEventListener('scroll',function(){
+            // console.log('ii')
+            //得到页面滚动的距离 scrollTop 属性是可修改的
+            console.log(document.documentElement.scrollTop)
+            // 想让页面一刷新 滚动距离在500
+            document.documentElement.scrollTop = 500
+
+
+            
+        })
+        // 在得的页面滚动的距离
+    </script>
+    
+</body>
+</html>

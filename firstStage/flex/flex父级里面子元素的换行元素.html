@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>子元素的换行元素</title>
+    <style>
+        div {
+            display: flex;
+            width: 600px;
+            height: 400px;
+            background-color: palevioletred;
+            /* flex布局中，默认是一行排列不排列 flex-wrap: nowrap; 修改子元素的宽度 在一行排 */
+            flex-wrap: nowrap;
+            /* 想让元素换行排，就设置  flex-wrap: wrap;*/
+            flex-wrap: wrap;
+        }
+        div span {
+            width: 150px;
+            height: 100px;
+            background-color: peru;
+            color: #fff;
+            margin: 10px;
+        }
+        /* 之前的布局模式，如果盒子的父级宽度不够的情况下，下面的子盒子会另起一行 */
+        /* 现在用flex布局是怎么样的 会让子元素在一行排列，会缩小子元素的宽度在一行排 */
+    </style>
+</head>
+<body>
+    <div>
+        <span>1</span>
+        <span>2</span>
+        <span>3</span>
+        <span>4</span>
+    </div>
+
+    
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>实现一个简单jsonp数据请求</title>
+
+</head>
+<body>
+    <script>
+        function success(data){
+            console.log('jsonp响应回来的数据是:')
+            console.log(data)
+        }
+    </script>
+    <!--端口坏了 跨域请求 指定一个函数接收数据 在使用script src标签跨域数据 使用查询字符串的方式 响应回来的数据回调到callback=success -->
+    <script src="http://ajax.frontend.itheima.net:3006/api/jsonp?callback=success&name=zs&age=20">
+        // 由于jsonp是通过script标签的src属性，来实现跨域数据获取的，所以。jsonp值支持get请求 不支持post请求
+        // 注意：jsonp和ajax没有任何关系，不能吧jsonp请求数据的方式叫做ajax。因为jsonp没有用到XMLHttpRequest这个对象
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>比较运算符的</title>
+    <!-- 比较运算符  -->
+    <!-- >:左边是否大于右边
+    < :左边是否小于右边
+    >=: 左边是够大于或等于右边
+    >=:左边是否小于或等于右边
+    ==：右俩边是否相等
+    ===：左右俩边是否类型和值都相等
+    ！==：左右俩边是否不全等 -->
+    <!-- 比较运算符的结果为布尔类型 boolean， 只会得到true或false 真假 -->
+    <script>
+        console.log(3 > 5); //false
+        console.log(5 >= 5);//true
+        // 注意=是赋值号 左边必须是个容器
+        // console.log(5=5);
+        // 判断两边值是否相等 是==
+        console.log(5 == 5); //true
+        // ==只要值一样 就是true 不管数据类型
+        console.log(5 == '5');//true
+
+        // ===前端程序员 以后判断要用3等于 开发最常用  要求值和数据类型都一样
+        console.log(5 === 5); //true
+        console.log(5 === '5'); //false
+
+        // 不相等
+        console.log(5 !== 3);
+        
+
+
+        // 特殊情况
+        console.log('pink' > 'red');
+        // 安装字母的排列比较 谁靠在前面就谁大
+
+        // NaN 不等于任何值 ，包括他本身
+        console.log(NaN > NaN);
+        // 尽量不要比较小数 因为小数有精确度问题
+        console.log(10.3444 > 20.3334);
+        // 不同类型之间比较会发生隐私转换
+        console.log(10 < '15');
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

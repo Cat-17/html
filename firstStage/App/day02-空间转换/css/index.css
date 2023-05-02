@@ -1,0 +1,130 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+html{
+   height:100%;
+}
+/* 注意 body和html的高度都要写上100% */
+body {
+
+    height: 100%;
+    /* 背景图 不平铺 注意background是复合属性 后面跟 no-repeat 注意要把背景图的img删掉才可以生效
+    图片居中center 0 */
+    background: url(./images/f1_1.jpg) no-repeat center 0;
+    /* 图太小 想要背景图变大 */
+
+    /* 缩放背景图 */
+
+    /* contain 图片是等比例缩放，当宽度或高度和盒子尺寸相等，图片就不在缩放*/
+    /* background-size: contain; */
+    /* 图片等比例缩放 图片会完全覆盖整个盒子 可能会导致图片显示不全 */
+    background-size: cover;
+
+}
+/* 第一步 引入img 图片 控制位置
+第二步  定义动画 */
+
+/* 控制云彩的位置 */
+.cloud img {
+    position: absolute;
+    /* 宽度的一半 中间的位置 */
+    left: 50%;
+    top: 0;
+}
+
+/* 使用伪元素选中img图片进行位置固定 */
+/* 选中img里面的第一个图片 */
+.cloud img:nth-child(1){
+    margin-left: -300px;
+    top:20px;
+    /* 添加动画的效果 */
+    /* 无限循环  反向 */
+    animation: cloud 1s infinite alternate;
+
+
+}
+.cloud img:nth-child(2){
+    margin-left: 400px;
+    top: 100px;
+    animation: cloud 1s infinite alternate 0.2s;
+
+}
+.cloud img:nth-child(3){
+    margin-left: -500px;
+    top: 200px;
+    animation: cloud 1s infinite alternate 0.4s;
+}
+
+/* 定义 云彩的动画 */
+@keyframes cloud {
+
+    to {
+        transform: translateX(20px);
+    }
+}
+
+/* 插入周边游图片 */
+.new {
+    position: absolute;
+    left:50%;
+    top: 50%;
+    margin-left: -16%;
+    margin-top: -7%;
+    
+   
+}
+.new img {
+    width: 480px;
+    height: 250px;
+}
+.giraffe {
+ position: absolute;
+ left: 58%;
+ top: 14%;
+
+ 
+
+}
+.giraffe img {
+    width: 180px;
+    height: 180px;
+  
+}
+.balloon {
+    position: absolute;
+    left: 28%;
+    top: 16%;
+      /* 动画效果 */
+  animation: chunb 1s infinite alternate ;
+}
+.price {
+    position: absolute;
+    left: 26%;
+    bottom: 5%;
+    
+}
+.price img {
+    width: 130px;
+    height: 130px;
+    margin-left: 50px;
+    animation:price 1s infinite alternate ;
+   
+}
+
+ 
+
+/*定义动画 */
+@keyframes chunb {
+    to{
+        transform: translateY(10px);
+    }
+}
+
+/*  */
+@keyframes price {
+    to{
+        transform: translateY(20px);
+    }
+}
+

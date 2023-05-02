@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+          *{
+            margin: 0;
+            padding: 0;
+
+          }  
+        
+        table {
+            margin: 0 auto;
+            text-align: center;
+            border-collapse: collapse;
+        }
+        table th,
+         td {
+            border: 1px solid #000;
+            padding: 15px;
+
+        }
+        table caption {
+            margin: 15px 0;
+        }
+    </style>
+</head>
+<body>
+
+    
+    <script>
+    //    let name =prompt('请输入您的姓名：')
+    //    let age =prompt('请输入您的年龄：')
+    //    let gender =prompt('请输入您的性别：')
+    //    console.log( name + age + gender)
+    //    console.log( age )
+    //    console.log(  gender )
+
+
+    // 需要转换数据类型 字符串转换成数字型 在字符串的前面加
+    // let age = prompt('您现在多少岁了')
+    // let total = +age +5
+    // prompt(`据我估计 五年后您能${ total}岁了`)
+
+
+    // 计算银行卡减去水费电费 剩下多少余额
+    // 先定义5个变量存储数据 第5个变量用来计算数据 注意 用引号包过的都是字符串 不能进行运算 需要转换成数字型
+    // 在进行运算
+    let balance = +prompt('银行卡余额：')
+    let Electric = +prompt('电费')
+    let Water  = +prompt('水费')
+    let Network = +prompt('网费')
+    let table = balance - Electric - Water - Network
+ 
+    // 渲染表格
+    document.write(`<table>
+        <caption>
+            <h2>2020年12月消费支出</h2>
+        </caption>
+        <tr>
+            <th>银行卡余额</th>
+            <th>水费</th>
+            <th>电费</th>
+            <th>网费</th>
+            <th>银行卡余额</th>
+        </tr>
+        <tr>
+            <th>${balance}元</th>
+            <th>${Electric}元</th>
+            <th>${Water}元</th>
+            <th>${Network}元</th>
+            <th>${table}元</th>
+
+        </tr>
+    </table>`)
+
+   
+      
+
+
+       
+       
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            display: inline-block;
+            width: 80px;
+            height: 30px;
+            line-height: 30px;
+            margin: 5px;
+            background-color: plum;
+            padding: 0 10px;
+            border-bottom: 1px solid palevioletred;
+            border-radius: 8px;
+            color: peru;
+            box-shadow: 2px 2px 2px rgba(0,0,0,.2);
+            text-align: center;
+
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 需求 打印倒三角小星星-->
+
+    <script>
+        // 外层负责打印几行
+        for (let i = 1; i <= 9; i++) {
+            // 内层打印几个星星
+
+            // 内层循环的个数跟第几行是一一对应的
+            // i是1的时候就是打印一个 i打印完了变成2 第二行就是2个小心心
+            // 为什么是 index <= i 小于等于 i=1 <6 开始执行内层的，inde=1 1<=1 打印一颗小心心
+            // 在执行下面的大意换行再起一行 回到 i++  使用完变2 i使用完+1 i也是2 index1<=i2 执行打印一颗
+            // 在回到index++ 现在index2 2<=2 在执行一颗 不满足就直接跳到下面执行打印换行 
+            for (let index = 1; index <= i; index++) {
+                // 只需要❥(^_-) 1*1=1
+
+                document.write(`
+                <div>
+                    // 每一行的数字都是变量 结果是俩个变量乘的和  不能固定的值
+                    ${index} * ${i} = ${index * i}
+                </div>
+                `)
+
+            }
+            document.write('<br>')
+
+
+        }
+
+
+    </script>
+
+</body>
+
+</html>

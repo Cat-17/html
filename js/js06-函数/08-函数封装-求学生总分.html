@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>学生总分求和</title>
+</head>
+
+<body>
+    <script>
+        // 求学生总分
+        // 声明函数 一个数组 数组名
+        function name(arr) {
+            // arr=[99,10,100]
+
+            //    求和的变量
+            let sum = 0
+
+            for (let i = 0; i < arr.length; i++) {
+                sum += arr[i]
+
+
+            }
+            document.write(sum)
+
+        }
+
+        //    调用函数
+        name([99, 10, 100])
+        // 传递不同的实参 得到不同的结果
+        name([99, 100, 100])
+        // 声明函数
+        function  arr1 (arr) {
+            // 求和的变量接收
+            let sum = 0
+
+            for (let i = 0 ; i < arr.length;i++) {
+                sum += arr[i]
+
+            }
+            document.write(sum)
+
+        }
+
+
+        // 调用函数
+        arr1([100,100,80])
+        // 调用不同的函数实参 得到不用的结果
+        arr1([100,100,80])
+    </script>
+
+</body>
+
+</html>

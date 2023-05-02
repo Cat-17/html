@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex布局</title>
+    <!-- 以前的布局方式，兼容性比较好，但是布局比较繁琐，要考虑浮动的清除 考虑的比较多 -->
+    <!-- 现在flex布局，移动端就可以放心用 或者是pc端不考虑兼容性问题 -->
+    <style>
+
+        div {
+            display: flex;
+            width: 80%;
+            height: 300px;
+            background-color: plum;
+            justify-content: space-around;
+        }
+        /* span是行内元素，设置宽高没生效，靠内容撑开
+         之前都是靠浮动布局 但是移动端我们直接给父级添加 display: flex; */
+         /* 并且有不同的布局方式 让他们居中排列 */
+        div span {
+            /* width: 150px; */
+            height: 100px;
+            background-color: peru;
+            margin-right: 5px;
+            /* 不设置宽度，随着父级的宽高 自分配成1等份，有几个就分配成几份  */
+            flex: 1;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <span>1</span>
+        <span>2</span>
+        <span>3</span>
+    </div>
+    
+</body>
+</html>

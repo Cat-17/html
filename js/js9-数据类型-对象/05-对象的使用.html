@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+    <!-- 对象的使用 ；对象是由属性和方法组成的，那么属性和方法都要写在对象里面 -->
+    <script>
+        let ldh = {
+            // 属性 属性都是成对出现的，包括属性名和值
+            uname: '刘德华',
+            // 方法 方法名：加函数function(){}
+            sing: function(){
+                document.write('唱歌')
+            },
+            // 多个方法之间用英文,分割
+            // 函数之间是可以传参 直接使用传参打印
+            dance: function(s){
+                // 直接调用形参的进行打印
+                document.write(s)
+
+            }
+        }
+
+        // 调用 是在对象外调用 里面负责声明
+        ldh.sing()
+        // 下面这个小括号 是实参 传递到 上面function() 
+        // 现在就相当于function()=恭喜发财 但是要求是形参跟实参的个数要一致
+        ldh.dance('恭喜发财')
+    </script>
+    
+</body>
+</html>

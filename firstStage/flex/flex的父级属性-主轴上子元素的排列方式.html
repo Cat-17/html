@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>设置主轴上子元素的排列方式</title>
+    <!-- 第一步先确定哪个方向为主轴 因为主轴跟侧轴是会发生变化的，就看设置谁为主轴 -->
+    <style>
+        div {
+            /*给父元素确定布局方式 */
+            display: flex;
+            width: 800px;
+            height: 300px;
+            background-color: palegoldenrod;
+            /* 2.在确定安装那种方式排列 默认是x轴从左到右排列  flex-direction: row; */
+            /* flex-direction: row; */
+            /* 确认是沿着x轴方向排列 */
+            /* justify-content:是设置沿着主轴的排列方式 ; */
+            /* 这是属性是默认沿着主轴方向让下面子元素的排列方式排列 从头部从左到右 */
+            /* justify-content:flex-start ; */
+            /* 沿着主轴方向让下面子元素从右到左排列 */
+            /* justify-content: flex-end; */
+            /* 沿着主轴方向让下面的子元素居中排列 */
+            /* justify-content: center; */
+            /* 沿着主轴方向让下面子元素平均分配剩余尺寸 每个子元素盒子左右间距都是一样的 */
+            /* justify-content: space-around; */
+            /* 先俩边贴边，在平均分配剩余部分 */
+            justify-content: space-between;
+        }
+        div span {
+            width: 150px;
+            height: 100px;
+            background-color: plum;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <span>1</span>
+        <span>2</span>
+        <span>3</span>
+        <span>4</span>
+       
+
+    </div>
+    
+</body>
+</html>

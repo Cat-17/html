@@ -1,0 +1,15 @@
+.father {
+  color: red;
+  width: 1.81333333rem;
+}
+.father .son {
+  background-color: pink;
+}
+/* 
+块注释 
+可以换行
+换行
+shift Alt A 快捷键
+ */
+@import './01-体验less.less';
+@import './02-注释.less';

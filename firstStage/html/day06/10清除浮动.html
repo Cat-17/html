@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .clearfix {
+            /* 清除左右浮动 */
+            clear: both;
+        }
+
+        .clearfix ::after{
+        /* 单伪元素清除浮动 必须加content 不然不生效 */
+        content:"" ;
+        /* /* 伪元素添加的标签是行内，要求是块标签才可以 */ 
+        display: block;
+        /* 父级标签的类标签空格 添加 */
+      /* 为了兼容性 */
+       height: 0;
+       visibility: hidden;
+        
+        
+    }
+    /* .clearfix::before 作用；解决外边距塌陷问题 */
+    /* 什么情况下出现外边距塌陷；父子级标签，都是块级，子级加margin会影响父级的位置 */
+    /* 清除浮动 */
+    .clearfix::before
+    .clearfix::after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+    /* 真正清除浮动的标签 */
+    .clearfix::after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+    /* 直接给父级添加清除浮动 好处便捷 方便 */
+    /* overflow:hidden */
+
+
+    </style>
+</head>
+<body>
+    <!--父级标签，子级浮动 ，父级没有高度，后面的标准流盒子会受影响， -->
+    <div class=" top clearfix">
+        <div></div>
+        <div></div>
+        <!-- 清除左右两侧浮动的影响，在父级标签 内荣结束的地方添加 到css当中写 -->
+        <div class="clearfix"></div>
+
+        
+    </div>
+    
+</body>
+</html>

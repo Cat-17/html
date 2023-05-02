@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>层叠性</title>
+    <!-- 对选择器进行相同的样式 后面的会层叠掉前面的 -->
+    <style>
+        div {
+            color: red;
+            font-size: 20px;
+        }
+        /* 只存在样式相同的会层叠 */
+        div {
+            color: pink;
+        }
+    </style>
+</head>
+<body>
+    <div>长江后浪推前浪,前浪死在沙滩上</div>
+
+    
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            /* 透视属性原理：视觉效果近大远小 */
+            perspective: 800px;
+        }
+        .box {
+            width: 200px;
+            height: 200px;
+            /* 上下100间距 左右居中 */
+            margin: 100px auto;
+            background-color: pink;
+            /* 过渡效果配合鼠标悬停 */
+            transition: all 0.5s;
+        }
+        .box:hover {
+            /* 三D转换 配合透视属性 透视属性加给自己的父级 取值建议800—1200px */
+            /* 三D属性配合透视属性使用 */
+            transform: translateZ(200px);
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+    
+</body>
+</html>

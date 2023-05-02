@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!--  1. 练习1: 使用for循环 - 求出数组元素的和 [5, 8, 9, 2, 1, 5] -->
+    <!-- 第一步先声明数组 -->
+    <script>
+        // let arr = [5, 8, 9, 2, 1, 5]
+        // // 声明一个新的变量用来接收元素的和
+        // let temp = 0
+        // // 利用遍历 
+        // for (let i = 0; i < arr.length; i++) {
+        //     // 数组里面的元素相加赋值给声明的变量和
+        //     temp += arr[i]
+
+        // }
+        // document.write(temp) // 结果为30
+
+
+        // 练习2: 使用for循环 - 求出数组里大于5的和 [4, 9, 5, 20, 3, 11]
+        // 声明数组
+        // let arr = [4, 9, 5, 20, 3, 11]
+        // // 大于5的和 新变量存和
+        // let temp = 0
+        // // 利用for循环
+        // for(let j = 0; j < arr.length;j++) {
+        //     // 筛选 数组里面大于的5的元素
+        //     if(arr[j] > 5) {
+
+        //         // document.write(`${arr[j]},`)
+        //     //    temp  = temp + arr[j]
+        //         temp  += arr[j]
+
+        //     }
+        // }
+        // document.write(temp)
+
+
+        // 练习3: 使用for循环 - 求出班级里同学们平均年龄[15, 19, 21, 33, 18, 24]
+        //    声明数组
+        // let arr = [15, 19, 21, 33, 18, 24]
+        // // 声明一个平均年龄的变量 用来存储数据
+        // let age = 0
+        // // for循环
+        // for (let i = 0; i < arr.length; i++) {
+        //     age += arr[i]
+
+        // }
+        // // 求数组里面数组相加的平均值
+        // // age是相加的数字 处于数组的行数 就可以得到平均值
+
+        // document.write(`${ age / arr.length}`)
+
+
+        // 练习4: 打印数组里所有的奇数  [5, 2, 8, 10, 3, 7]
+        // 声明数组
+    //     let arr = [5, 2, 8, 10, 3, 7]
+
+    //     for(let i = 0; i < arr.length; i++){
+    //         if(arr[i] % 2 !== 0){
+    //         document.write(`${arr[i]}`)
+    //     }
+    // }
+          
+        //调试很重要，很多结果不符合预期就可以用调试看看具体错在哪一部，前面设个断点，一步步下去，然后选中一部分看看从哪里开始错的一下就能找到问题
+        //调试完一定要把断点去掉从新刷新 ，不然页面会突然被断点卡主
+      
+    //    数组 所有 这俩关键字第一反应就是循环
+    //     奇数 这个也就是说需要用if判断 那我知道了
+
+
+    // 练习5: 计算练习5: 计算[2, 6, 18, 15, 40] 中能被3整除的偶数的和 中能被3整除的偶数的和
+    // 声明数组
+    // let arr = [2, 6, 18, 15, 40]
+    // // 声明一个偶数和的变量
+    // let temp = 0
+    // // 利用for循环
+    // for(let i = 0 ; i < arr.length; i++){
+    //     if (arr[i] % 2 === 0) {
+    //         // 这里可以打印确定一下里面的偶数是不是选出来正确的
+    //         // document.write(`${arr[i]},`)
+    //         // temp = temp+ arr[i]
+    //         // 数组里面的偶数数字相加 在赋值给之前声明偶数和 进行打印验证
+    //         temp += arr[i]
+    //     }
+    // }
+    // document.write(temp)
+
+
+    //练习6: 计算[2, 6, 18, 15, 40] 中能被3整除的偶数的个数
+    // 声明数组
+    // let arr = [2, 6, 18, 15, 40]
+    // // for循环选中里面
+    // for(let i = 0; i<arr.length;i++){
+    //     if(arr[i] % 3 === 0){
+
+    //         document.write(`${arr[i]},`)
+
+    //     }
+    // }
+
+
+    //练习7：给一个数字数组，该数组中有很多数字0，将不为0的数据存入到一个新的数组中
+
+    let arr = [2, 0, 6, 1, 77, 0, 52, 0, 25]
+    // 声明一个新的数值 用来存放不为0的数字
+    let non_zero = []
+    for(let i = 0 ;i <arr.length;i++){
+        if (arr[i] > 0) {
+            // 这里注意 删选出来不为0 的数字 不是赋值  赋值会影响前面的元素 而是 追加 
+            non_zero.push(arr[i])
+           
+
+
+           
+
+
+        }
+    }
+    document.write( non_zero)
+   
+       
+
+
+
+    </script>
+
+</body>
+
+</html>

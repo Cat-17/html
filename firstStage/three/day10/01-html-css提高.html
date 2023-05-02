@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>html-css新增的语义标签</title>
+    <!-- 一般网页布局都是用div来写，定义类名，div对于搜索引擎来说是没有语义的，新增的一些语义化标签 -->
+    <!-- <header></header>;头部标签 -->
+    <!-- nav；导航标签 -->
+    <!-- articlel；内容标签 -->
+    <!-- section；定义文档某个区域 -->
+    <!-- <aside></aside>；侧边栏标签 -->
+    <!-- <footer></footer> ；尾部标签-->
+    <style>
+        /* 这些新标签可以多次使用，这些语义化标签主要是针对搜索引擎的。对于ie9 需要把这些元素转化炒年糕块级元素 */
+        header {
+            width: 500px;
+            height: 100px;
+            background-color: skyblue;
+            border-radius: 20px;
+            margin: 0 auto;
+
+        }
+        nav{
+            
+            width: 500px;
+            height: 100px;
+            background-color: darkgoldenrod;
+            border-radius: 20px;
+            margin: 0 auto;
+        }
+        article {
+            
+            border-radius: 20px;
+            margin: 0 auto;
+            width: 100px;
+            height: 100px;
+            background-color: green;
+        }
+        section {
+            width: 400px;
+            height: 400px;
+            background-color: sienna;
+        }
+    </style>
+  
+
+</head>
+<body>
+    <header>t头部标签</header>
+    <nav>导航标签</nav>
+    <article>内容标签</article>
+    <section>某个区域内容</section>
+    <aside>侧边栏标签</aside>
+    <footer>尾部</footer>
+    
+</body>
+</html>

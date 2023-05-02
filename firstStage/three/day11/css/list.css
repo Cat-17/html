@@ -1,0 +1,72 @@
+/* 列表页专门的样式 */
+/* 秒杀图 */
+.sk {
+    position: absolute;
+    left: 190px;
+    top: 40px;
+    border-left: 1px solid red;
+    padding: 3px 0 0 14px;
+}
+
+/* 秒杀列表 */
+.nav  {
+    overflow: hidden;
+}
+.nav .sk-list  {
+    float: left;
+
+}
+.nav .sk-list li {
+    float: left;
+   
+    
+}
+.nav .sk-list li a {
+    display: block;
+    font-weight: 700;
+    font-size: 16px;
+    padding: 0 30px;
+    line-height:47px ;
+}
+.nav .sk-con {
+    float: left;
+}
+.nav .sk-con  ul li {
+    float: left;
+
+}
+.nav .sk-con  ul li a {
+    display: block;
+    font-size: 14px;
+    padding: 0 20px;
+    line-height:51px ;
+
+}
+.nav .sk-con  ul li:last-child a::after {
+    content: '\e91e';
+    font-family: 'icomoon';
+}
+.sk-container .sk-bd li {
+    overflow: hidden;
+    float: left;
+    margin-right: 13px;
+    width: 290px;
+    height: 460px;
+    /* 透明边框 */
+    border: 1px solid transparent;
+}
+
+/* 鼠标经过的时候发现图片晃动 往下走，这时候，给
+li添加透明边框 鼠标经过的时候换颜色就可以了 */
+.sk-container .sk-bd li:hover {
+    z-index: 1;
+    border: 1px solid red;
+}
+/* 第一排跟第二排第三批的第四个li不需要外边框 
+这时候用到伪元素选中4的倍数，把右边的边框去掉就可以了 */
+.sk-container .sk-bd li:nth-child(4n) {
+    margin-right: 0;
+}
+
+/* 因为小li没有高度，加了浮动以后，会影响下面盒子模型，这时候找到li的父级，ul
+添加清除浮动clearfix */

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>事件对象获取</title>
+    <!-- 事件对象也是个对象 这个对象开有事件触发时的相关信息 -->
+    <!-- 系列 鼠标点击事件中，事件对象就存了鼠标点在哪个位置等信息
+     -->
+</head>
+<body>
+    <!-- 如果获取 在事件绑定的回调函数的第一个参数就是事件对象 -->
+    <!-- 一般命名为 event ev e -->
+    <button>点击</button>
+    <!-- 获取 -->
+    <script>
+        let btn = document.querySelector('button')
+        btn.addEventListener('click',function(e){
+            // e就是事件对象
+            console.log(e)
+        })
+    </script>
+    
+</body>
+</html>

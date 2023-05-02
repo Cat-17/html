@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>元素显示模式转换</title>
+    <style>
+        /* 开发中需要设置宽高 */
+        a {
+            width: 120px;
+            height: 120px;
+            background-color: pink;
+            /* 这里转换成块级元素 */
+            display: block;
+
+        }
+
+        div {
+            /* 是块级元素 独占一行 宽高生效 */
+            /* 现在想让俩个div一行显示 */
+            /* 转换成行内元素 */
+            display: inline;
+
+        }
+
+        span {
+
+            height: 100px;
+            background-color: teal;
+            /*转换成行内块 宽高生效  一行可以排多个*/
+            display: inline-block;
+        }
+    </style>
+
+</head>
+
+<body>
+    <!-- a是行内元素 设置宽高不生效 -->
+    <a href="#">尽兴阿姨</a>
+    <div>我是块级元素</div>
+    <div>我是块级元素</div>
+    <span>我是行内元素 宽高不生效 转换成行内块元素</span>
+    <span>我是行内元素 宽高不生效 转换成行内块元素</span>
+
+</body>
+
+</html>

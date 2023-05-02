@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        span {
+           /* 转行内块 */
+            display: block;
+             /* 注意，设置完宽高背景按道理来说应该会显示一个粉色的背景色
+            但是一刷新发现没有，这时候就要想到sapn 标签属于行内 设置宽高不生效，转成行内块，宽高生效 */
+            width:18px;
+            height: 24px;
+            background-color:pink ;
+            /* 显示以后，加一个背景图片 */
+            background-image: url(../day09/img.html/taobao.png);
+            /* 现在图片显示不完美，但凡想要修改背景图片的位置 */
+            /* 水平方向位置 垂直方向的位置 初始位置 都是0  */
+            /* 想要向左侧方向移动位置 位置取负值  垂直方向取 0*/
+            background-position: -3px 0;
+        }
+        b {
+            /*2； 转行内块 */
+            display: block;
+            /* 1；注意，设置完宽高背景按道理来说应该会显示一个粉色的背景色
+            但是一刷新发现没有，这时候就要想到sapn 标签属于行内 设置宽高不生效，转成行内块，宽高生效  */
+            width: 25px;
+            height: 21px;
+            background-color: green;
+            /* 3；显示完 添加背景图片 */
+            background-image: url(../day09/img.html/taobao.png);
+            /* 4;添加完，发现不是自己想要的哪张图，用像素大事，测量想要的图的位置
+            上面说，想要改变图的位置，用 background-position: */
+            /* 水平方向为0 垂直方向 量一下距离 往上走 取值负数  */
+            background-position: 0 -90px;
+
+        }
+
+    </style>
+</head>
+<body>
+    <!-- 一般精灵的标签都是用行内标签，sapn ，b，alt="" -->
+    <span></span>
+
+
+    <b></b>
+    
+    
+</body>
+</html>

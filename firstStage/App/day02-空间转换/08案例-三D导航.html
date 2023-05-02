@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D导航</title>
+    <style>
+        /* 清除标签的默认样式 间距跟圆点*/
+        ul {
+            margin: 0;
+            padding:0;
+            list-style: none;
+        }
+        /* 设置盒子的宽高尺寸 */
+        .navs {
+           width: 300px;
+           height: 40px;
+           /* 上下间距 50px 左右居中 */
+           margin: 50px auto;
+           
+        }
+        .navs li {
+            position: relative;
+            /* 让文字浮动 成一行排 */
+            float: left;
+            width: 100px;
+            height: 40px;
+            /*浮动完文字是靠上的位置 左右加了margin已经居中 现在让他上下垂直居中  */
+            line-height: 40px;
+            /* 过渡 配合鼠标悬停使用 */
+            transition: all 5s;
+            /*第一步； 呈现立方体属性 给要呈现效果a的父级加一个立方体标签*/
+            transform-style: preserve-3d;
+
+            /* 旋转属性  */
+            /* transform: rotateX(-20deg) rotateY(30deg); */
+
+
+            /* 测试缩放效果 */
+            /* transform: scale3d(0.5,1.1,2); */
+        }
+        .navs li a {
+            /* 第2步 定位 找到俩个a的父级 */
+            position: absolute;
+            left: 0;
+            top: 0;
+            /* li里面有俩个a 宽高尺寸跟父级一样 */
+            /* a设置宽高不生效 转一下属性 */
+            display: block;
+            /* 因为设置了 display: block;是块标签 上下排，独占一行 */
+            width: 100px;
+            height: 40px;
+            /* 让文字居中 */
+            text-align: center;
+            color: #fff;
+            /* 清除下划线 */
+            text-decoration: none;
+        }
+        /* 俩个a是俩种不同颜色 单独选中设置颜色 因为都是a
+         使用伪元素 选择a里面的第一个 和a里面的最后一个单独设置颜色 */
+        .navs li a:first-child {
+            background-color: green;
+            transform: translateZ(20px);
+        }
+        .navs li a:last-child {
+            background-color: orange;
+            /* 第三步 让橙色 躺平是x轴旋转的 效果是出现在立方体的顶部 ，出现位移z()确保看到这个盒子，看到就是视觉用z轴
+             旋转之后会改变坐标的轴向 但永远水平上下是x 垂直左右y 视觉远近z    */
+            transform: rotateX(90deg) translateZ(20px) ;
+        }
+        /* 第四步 鼠标悬停 让li：hover 立方体旋转  */
+        .navs li:hover {
+            transform: rotateX(-90deg) ;
+        }
+
+
+
+
+    </style>
+</head>
+<body>
+    <div class="navs">
+        <ul>
+            <li>
+                <!--盒子一个是中文一个是英文跳转界面不一样，所以一个li里面包含俩个a -->
+                <a href="#">首页</a>
+                <a href="#">Index</a>
+            </li>
+            <li>
+                <a href="#">登录</a>
+                <a href="#">login</a>
+            </li>
+            <li>
+                <a href="#">注册</a>
+                <a href="#">Register</a>
+            </li>
+        </ul>
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>递归函数</title>
+</head>
+<body>
+    <script>
+        // 递归函数：自己调用自己就是递归函数
+        // 想要使用递归函数 加一个退出条件  不然会报错造成死递归
+        let num = 0
+        function fn(){
+            console.log(111)
+            // 退出条件
+            if(num  >= 100){
+                // 大于等于100的时候退出函数
+                return
+            }
+            // 递归就是自己调用自己
+            fn()
+
+        }
+        // 调用函数在外面调用
+        fn()
+
+
+    </script>
+    
+</body>
+</html>

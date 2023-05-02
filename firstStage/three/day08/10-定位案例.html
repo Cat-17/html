@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>定位案例淘宝焦点布局</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        .tb-promo {
+            position: relative;
+            width: 400px;
+            height: 280px;
+            margin: 20px auto;
+        }
+
+        .tb-promo img {
+            width: 400px;
+            height: 280px;
+
+        }
+
+        .tb-promo .prev {
+            position: absolute;
+            left: 0;
+            top: 50%;
+            margin-top: -15px;
+            width: 20px;
+            height: 30px;
+            background-color: rgba(0, 0, 0, .3);
+            text-align: center;
+            line-height: 30px;
+            border-top-right-radius: 15px;
+            border-bottom-right-radius: 15px;
+            color: #fff;
+            text-decoration: none;
+            font-size: 20px;
+
+
+        }
+
+        .tb-promo .next {
+            position: absolute;
+            right: 0;
+            top: 50%;
+            margin-top: -15px;
+            width: 20px;
+            height: 30px;
+            background-color: rgba(0, 0, 0, .3);
+            text-align: center;
+            line-height: 30px;
+            border-top-left-radius: 15px;
+            border-bottom-left-radius: 15px;
+            color: #fff;
+            text-decoration: none;
+            font-size: 20px;
+
+
+        }
+
+        .tb-promo .promo-nav {
+            position: absolute;
+            bottom: 15px;
+            left: 50%;
+            margin-left: -35px;
+            width: 70px;
+            height: 13px;
+            background-color: rgba(255, 255, 255, .3);
+            border-radius: 6px; 
+            
+        }
+
+        .tb-promo .promo-nav li {
+            float: left;
+            width: 8px;
+            height: 8px;
+            background-color: #fff;
+            border-radius: 50%;
+            margin: 3px 3px;
+          
+           
+        }
+    </style>
+</head>
+
+<body>
+    <div class="tb-promo">
+        <img src="./images1/tb.jpg" alt="">
+        <a class="prev" href="#"> > </a>
+                <a class="next" href="#"> > </a>
+                <ul class="promo-nav">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+    </div>
+    <!-- 一个 完整的网页，是标准流，浮动 定位一起完成布局 每个都有自己的显示特点-->
+    <!-- 标准流 在网页中一行一行排列 -->
+    <!-- 想要让多个块级盒子 在一行排列 就用到浮动 在一行排 -->
+    <!-- 有一些需要固定的盒子，就用定位来做  一些压在盒子上面的也用定位来做或者，如果元素自由在某个盒子内移动就用定位布局 -->
+
+
+
+</body>
+
+</html>

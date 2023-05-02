@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3d透视属性</title>
+    <style>
+        /* 就是眼睛到屏幕的距离 视距 近大远小 */
+        /* 给观察对象的父盒子上面 */
+        body {
+            /* 如果透视越小 物体越大 透视数值越大，看着就越小 */
+            perspective: 800px;
+
+        }
+        div {
+            width: 200px;
+            height: 200px;
+            background-color: palegoldenrod;
+            margin: 100px auto;
+            
+            transform: translate3d(400px,100px,100px);
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+    
+</body>
+</html>

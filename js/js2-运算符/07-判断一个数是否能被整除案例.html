@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>案例 判断是否能不能被整除</title>
+</head>
+
+<body>
+    <script>
+        // 需求；用户输入一个，判断这个数能否被4整除，但是不能被100整除
+        let unm = prompt('请输入一个数') 
+        // 如果用户没有输入数据
+        unm = unm || 0
+        console.log(unm);
+        console.log( unm % 4 === 0  &&  unm % 100 !== 0);
+    </script>
+
+</body>
+
+</html>

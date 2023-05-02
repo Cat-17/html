@@ -1,0 +1,350 @@
+/* 这个index.css是用来美化首页的 */
+
+* {
+    margin: 0;
+    padding: 0;
+    /* 內减模式 */
+    box-sizing: border-box;
+}
+li {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+
+.clearfix:before,.clearfix:after {
+    content:"";
+    display:table; 
+  }
+  .clearfix:after {
+    clear:both;
+  }
+
+
+/* 版心 */
+body {
+    background-color: #f3f5f7;
+}
+.wrapper {
+    width: 1200px;
+    margin: 0 auto;
+}
+/* 头部 */
+.header {
+    height: 42px;
+    background-color: pink ;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+h1 {
+    float: left;
+}
+/* 导航 */
+.nav {
+    float: left;
+    margin-left: 70px;
+    /* 现在是换行排，找到上一个的标签浮动 */
+    height: 42px;
+   
+}
+.nav li {
+    float: left;
+    margin-right:26px ;
+}
+.nav li a {
+    padding-left: 0 9px;
+    /*  */
+    display: block;
+    height: 42px;
+    /* 行高垂直文字居中 */
+    line-height: 42px;
+    /* 文字下面的实线 */
+    /* border-bottom: 2px solid #004faa; */
+    font-size: 18px;
+    color:#050505 ;
+}
+/* 鼠标悬停效果 */
+.nav li a:hover {
+    border-bottom: 2px solid #004faa;
+
+} 
+.search{
+    /* 浮动 */
+    float: left;
+    width: 412px;
+    height: 40px;
+    border: 1px solid #004faa;
+    /* 现在搜索框是跟logo齐平的，但是因为浮动脱标，不占位置，所以给搜索框在设置一下浮动 */
+}
+.search input {
+    float: left;
+    padding: 20px;
+    /* 因为左右加在一起的尺寸 要小于等于410 */
+    width: 360px ;
+    height: 38px;
+    border: 0;
+   
+}
+
+/* 想控制 placeholder里面的文字 */
+.search input::placeholder {
+    font-size: 14px;
+    color: #bfbfbf;
+}
+/* 搜索框 一般在工作中当中 装饰性的小图就用背景图实现 */
+.search button {
+    /* 如果加了浮动还不上去，检查父级的尺寸 */
+    float: left;
+    /* 量下背景图的尺寸 */
+    width: 50px;
+    height: 40px;
+    background-image: url(../images/btn.png);
+    /* 现在背景图片显示了，但是有边框 把边框去掉 */
+    border: 0;
+    /* 现在图片是换行排，想要图片在一行排，加浮动 浮动怎么加，加给他的上级跟自己 */
+}
+/* 用户 */
+.naer {
+    float: right;
+    margin-right: 35px;
+    height: 42px;
+    /* 垂直方向 */
+    line-height: 42px;
+}
+/* 如果出现图跟文字是拧巴的，这时候怎么办？ */
+/* 给图片加一个 */
+.naer img {
+    vertical-align: middle;
+}
+.banber {
+    height: 420px;
+    background-color: #1c036c;
+}
+.banber .wrapper {
+    height: 420px;
+    background-image: url(../images/banner2.png);
+} 
+.banber .left {
+    float: left;
+    padding: 0 20px;
+
+    /* 左边盒子的尺寸 */
+    width: 190px;
+    height: 420px;
+    background-color: rgba(0,0,0, 0.3);
+    /* 行高属于文字控制，子级都能继承 */
+    line-height: 44px;
+} 
+.banber .left span {
+    float:right;
+}
+.banber .left a {
+    font-size: 14px;
+    color: #fff;
+}
+.banber .left a:hover{
+    color: #004faa;
+}
+.banber .right {
+    /* 右边图片太靠上边 */
+    margin-top: 50px; 
+    /* 想让盒子并齐排，加浮动 */
+    float: right;
+    /* 右边盒子的尺寸 */
+    width: 228px;
+    height: 300px;
+    background-color: #fff;
+}
+.banber .right h2 {
+    height: 48px;
+    background-color: #9bceea;
+    text-align: center;
+    line-height:48px ;
+    font-size: 18px;
+    color: #fff;
+}
+.banber .right .content {
+    padding: 0 18px;
+}
+.banber .right .content dl {
+    padding: 12px 0;
+    border-bottom: 2px solid #e5e5e5;
+}
+.banber .right .content dt {
+    font-size: 16px;
+    color: #4e4e4e;
+}
+.banber .right .content dd {
+    font-size: 14px;
+    color: #4e4e4e;
+}
+.banber .right .more {
+    margin: 4px 14px 0;
+    /* 行内 */
+    display: block;
+    width: 200px;
+    height: 40px;
+    border: 1px solid #004faa;
+    /* a是块级标签，宽高不生效  转显示模式 */
+    font-size: 16px;
+    color: #004faa;
+    font-weight: 700;
+    text-align: center;
+    line-height:40px ;
+
+}
+
+/* 精品推荐 */
+.gongs {
+    margin-top: 8px;
+    padding-left: 34px;
+    padding-right: 26px;
+    height: 60px;
+    background-color: #fff;
+    /*图片阴影 */
+    box-shadow: 0px 2px 3px 0px
+    rgba(118, 118, 118, 0.2);
+}
+.gongs  h2 {
+    float: left;
+    font-size: 16px;
+    color: #004faa;
+    font-weight: 400;
+}
+.gongs ul {
+    float: left;
+    margin-left: 30px;
+}
+.gongs li {
+    float: left;
+}
+.gongs li a {
+  border-left: 1px solid #bfbfbf;
+  padding: 0 30px;
+  font-size: 16px;
+  color: #050505;
+}
+
+.gongs .xingqu {
+    float: right;
+    font-size: 14px;
+    color: #004faa;
+
+}
+
+/* 精品推荐课程 */
+.box {
+    margin-top: 35px;
+}
+.box .title {
+    height: 40px;
+  
+}
+
+.box .title h2 {
+    float: left;
+    font-size:20px ;
+    color: #494949;
+    font-weight: 400;
+
+}
+.box .title a {
+    float: right;
+    margin-right: 30px;
+    font-size: 12px;
+    color: #a5a5a5;
+}
+.box .conten li {
+    float: left;
+    margin-right: 15px;
+    margin-bottom: 15px;
+    width: 228px;
+    height: 270px;
+    background-color: #fff;
+   
+}
+.box .conten li:nth-child(5n){
+    margin-right: 0;
+}
+
+.box .conten li h3 {
+    padding: 20px;
+    font-size: 14px;
+    color: #050505;
+    font-weight: 400;
+}
+.box .conten li p {
+    padding: 0 20px;
+    font-size: 12px;
+    color: #999;
+}
+.box .conten li span {
+    color: #ff7c26;
+}
+
+
+/* 版权 */
+.footer {
+  margin-top: 40px;
+  padding-top: 30px;
+    /* 清除浮动。找到他的上级 */
+    /* 发现图片走不动，啥时候会遇到这种情况，上面盒子如果加了浮动没有给高，就会下面的盒子脱标 影响底下盒子的位置
+    清除浮动 */
+   
+    height: 417px;
+    background-color: #fff;
+}
+.footer .left {
+    float: left;
+}
+
+.footer .left p {
+    font-size: 12px;
+    margin: 20px 0 10px;
+    color: #666;
+}
+
+.footer .left a {
+    display: inline-block;
+    width: 120px;
+    height: 36px;
+    border: 1px solid #00a4ff;
+    text-align: center;
+    line-height: 36px;
+    font-size: 16px;
+    color: #00a4ff;
+
+} 
+
+
+.footer .right{
+    float: right;
+    
+}
+.footer .right dl {
+   float: left;
+   margin-left:120px ;
+   color: #050505;
+  
+}
+.footer .right dt {
+    font-size: 19px;
+    padding-bottom: 10px;
+}
+.footer .right dd {
+  
+    font-size: 12px;
+    padding-bottom: 10px;
+    color: #050505;
+}
+
+
+
+
+
+
+
+
+
+

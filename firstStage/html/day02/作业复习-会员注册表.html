@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>
+        青春不常在，抓紧谈恋爱
+    </h1>
+    <hr>
+    <!-- 文本框 input type="text"  placeholder占位符 文本框里的文字  -->
+    昵称：<input type="text" placeholder="请输入昵称">
+    <br>
+    <br>
+    性别:
+    <!-- input输入框  type属性 radio单选框 
+        下面是设置单选框，只能选一个-->
+        <input type="radio" name="sex">男 
+        <input type="radio" name="sex" >女
+        <br>
+        <br>
+
+        <!-- 下拉式菜单select属性 -->
+         所在城市：
+         <select >
+            <option >安徽</option>
+            <option >上海</option>
+            <option >合肥</option>
+            <option >深圳</option>
+            <!-- 默认选中添加selected 默认城市 -->
+            <option  selected>广东</option>
+        </select>
+            <br>
+            <br>
+            
+            婚姻状况:
+
+            <label><input type="radio" name="sex">未婚</label>
+            <label><input type="radio" name="sex">已婚</label>
+            <label><input type="radio" name="sex">离异</label>
+            <br>
+            <br>
+            喜欢的类型:
+            <!-- label常用于绑定内容与表单标签的关系
+            使用方法①：
+                1. 使用label标签把内容（如：文本）包裹起来
+                2. 在表单标签上添加id属性
+                3. 在label标签的for属性中设置对应的id属性值
+            使用方法②：
+                1. 直接使用label标签把内容（如：文本）和表单标签一起包裹起来
+                2. 需要把label标签的for属性删除即可
+                 checkbox 多选框 -->
+            <label ><input type="checkbox" checked>可爱</label>
+            <label ><input type="checkbox" checked>性感</label>
+            <label ><input type="checkbox" checked>活泼</label>
+            <label ><input type="checkbox" checked>善良</label>
+            <br>
+            <br>
+            个人介绍:
+            <br>
+            <!-- textarea 文本域标签  name是当前控件的意思，提交之后可以告诉后端发送过去的数据是什么含义 -->
+            <textarea name="" id="" cols="60" rows="10"></textarea>
+
+                <h3>我承诺</h3>
+
+                <!-- u1是无序列表 表示无序列表的整体，用于包裹li标签
+                显示特点每一项前面默认原点标识 -->
+                <ul>
+                    <li>年满18岁、单身</li>
+                    <li>抱着严肃的态度</li>
+                    <li>真诚寻找另一半</li>
+                    <br>
+                    
+                    <label ><input type="checkbox" checked>我同意所有条款</label>
+                </ul>
+                <!-- submit是提交按钮 value属性用于给按钮里面添加文字 -->
+                
+                <input type="submit" value="免费注册">
+                
+                <!--button普通按钮  -->
+                <button type="reset">重置</button>
+
+            
+
+
+        
+
+        
+    
+</body>

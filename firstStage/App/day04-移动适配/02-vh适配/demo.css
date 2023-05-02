@@ -1,0 +1,9 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.box {
+  width: 20.17804154vw;
+  height: 4.34782609vh;
+  background-color: goldenrod;
+}

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>数组删除元素</title>
+    <!-- 数组.pop()从数组中删除最后一个元，并返回该元素的值 -->
+</head>
+<body>
+    <script>
+        let arr = ['pink','syblue','blue']
+        // 删除数组中的元素
+        // 只删除最后一个元素
+        // arr.pop ()
+        // arr.pop ()
+        // 删除最后一个元素blue 并返回告诉你删除的是什么元素
+        console.log( arr.pop ());
+        console.log(arr);  
+
+
+        // 还可以删除第一个pink元素 并返回告诉你删除的是什么元素 
+        // arr.shift()
+        console.log(arr.shift());
+
+
+        // 数组删除 删除指定元素
+        // 数组.splice() 删除指定元素
+        // arr.splice(start,deleteCount)
+        // start 起始位置；指定修改的开始位置 从0计数
+        // deleteCount 表示要移除的数组元素的个数
+        // 可选的。如果省略则默认从指定的起始位置删除到最后
+        // arr.splice(起始位置,删除几个元素)
+
+        // 我就像把pink删掉
+        arr.slice(0,1)  //第一个0 是从索引号是0的位置开始删
+        // 第一个1 是删除1个
+        console.log(arr);
+
+
+
+        // 指定删除元素的使用场景；
+        // 随时抽奖，中奖的用户就需要从数组里面删除，不允许重复抽奖
+        // 点击删除按钮，相关的数据就会从商品数据中删除
+
+
+
+    
+
+    </script>
+    
+</body>
+</html>

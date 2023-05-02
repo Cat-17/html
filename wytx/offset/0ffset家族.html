@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>offset家族</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+      body{
+            height: 3000px;
+        }
+        div {
+            width: 200px;
+            height: 200px;
+            background-color: palegoldenrod;
+            overflow: auto;
+            padding: 20px;
+            border: 10px solid red;
+            margin: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        我里面可以放很多文字
+        我里面可以放很多文字
+        我里面可以放很多文字
+        我里面可以放很多文字
+        我里面可以放很多文字
+        我里面可以放很多文字
+        我里面可以放很多文字
+        我里面可以放很多文字
+        我里面可以放很多文字
+        我里面可以放很多文字
+        我里面可以放很多文字
+        我里面可以放很多文字
+        我里面可以放很多文字
+        我里面可以放很多文字
+        我里面可以放很多文字
+        我里面可以放很多文字
+        我里面可以放很多文字
+        我里面可以放很多文字
+        我里面可以放很多文字
+        我里面可以放很多文字
+        我里面可以放很多文字
+        我里面可以放很多文字
+        我里面可以放很多文字
+        我里面可以放很多文字
+        我里面可以放很多文字
+        我里面可以放很多文字
+        我里面可以放很多文字
+        我里面可以放很多文字
+        我里面可以放很多文字
+        我里面可以放很多文字
+        我里面可以放很多文字
+        我里面可以放很多文字
+        我里面可以放很多文字
+        我里面可以放很多文字
+        我里面可以放很多文字
+        我里面可以放很多文字
+        我里面可以放很多文字
+        我里面可以放很多文字
+        我里面可以放很多文字
+        我里面可以放很多文字
+        我里面可以放很多文字
+        我里面可以放很多文字
+        我里面可以放很多文字
+        我里面可以放很多文字
+        我里面可以放很多文字
+        我里面可以放很多文字
+        我里面可以放很多文字
+        我里面可以放很多文字
+        我里面可以放很多文字
+        我里面可以放很多文字
+        我里面可以放很多文字
+        我里面可以放很多文字
+        我里面可以放很多文字
+        我里面可以放很多文字
+        我里面可以放很多文字
+        我里面可以放很多文字
+        我里面可以放很多文字
+        我里面可以放很多文字
+        我里面可以放很多文字
+
+    </div>
+    <!-- 获取元素自身宽高，包含元素自身设置的宽高， padding: border: ; -->
+    <script>
+        let div = document.querySelector('div')
+        // 得到是盒子元素的大小 盒子本身的宽度高度 + padding  + border
+        console.log(div.offsetWidth) // 200
+        console.log(div.offsetHeight) // 200 不带单位
+
+        // 获取位置
+        // 获取元素距离自己定位父级元素的左 上距离
+        // 如果都没有则以 文档左上角为准
+        console.log(div.offsetLeft)
+        console.log(div.offsetTop)
+
+
+    </script>
+
+</body>
+
+</html>

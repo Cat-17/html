@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>小米logo</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        li {
+            list-style: none;
+        }
+        .logo {
+            position: relative;
+           
+        }
+        .logo .logo2 {
+            display: block;
+            width: 55px;
+            height: 55px;
+            background-color: #ff6700;
+            text-align: left;
+            margin-left: 10px;
+           
+        }
+      
+       .logo2::before  {
+            position: absolute;
+            left: 0;
+            top: 0;
+            content: '';
+            width: 55px;
+            height: 55px;
+            background: url(./images/mi-logo.png) no-repeat center;
+            opacity: 1;
+            transition: all 3s;
+        }  
+
+         .logo2::after {
+            position: absolute;
+            left: 0;
+            top: 0;
+            content: '';
+            width: 55px;
+            height: 55px;
+            background: url(./images/mi-home.png) no-repeat center;
+            opacity: 0;
+            transition: all 3s;
+           
+           
+        }
+        .logo:hover::before {
+            margin-right: -110px;
+
+
+        } 
+      
+           
+
+        
+
+    </style>
+</head>
+<body>
+    <div class="logo">
+        <a href="#" class="logo2">
+           
+        </a>
+       
+
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>数组筛选案例</title>
+</head>
+
+<body>
+    <!-- 需求；将数组[2,0,6,1,77,0,52,0,25]中大于等于10元素选出来，放入新数组 -->
+    <script>
+        // 原数组
+        let arr = [2, 0, 6, 1, 77, 0, 52, 0, 25]
+        // 声明 需要一个空的新数组 数组字面量[]  符合条件给新数组
+        let newArr = []
+
+        // 遍历数组
+        for (let i = 0; i < arr.length; i++) {
+            // 这里要注意是 数组里面的元素不等于0 那就不是i i就是计数的相当于索引号 选中数组里面的元素
+            // 数组名[索引号]
+            if (arr[i] !== 0) {
+                // 追加给新数组 增加
+                newArr.push(arr[i])
+                
+
+            }
+        }
+        // 循环完了一户打印，只打印一次
+        console.log( newArr);
+
+
+
+
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>

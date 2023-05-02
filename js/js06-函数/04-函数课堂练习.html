@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        div {
+            display: inline-block;
+            width: 80px;
+            height: 30px;
+            line-height: 30px;
+            margin: 5px;
+            background-color: plum;
+            padding: 0 10px;
+            border-bottom: 1px solid palevioletred;
+            border-radius: 8px;
+            color: peru;
+            box-shadow: 2px 2px 2px rgba(0, 0, 0, .2);
+            text-align: center;
+
+        }
+    </style>
+</head>
+
+<body>
+    
+
+    <!-- 需求1； 写一个打招呼的函数 hi~~ -->
+    <script>
+        // function sayHi() {
+        //     document.write(`${'hi~'}`)
+        // }
+        // // 写完以上的函数 只是做了声明 并没有实际的内容产出
+        // // 需要的话 要调用函数名哦
+        // // 可以多次调用 每次调用就会执行一次函数体内的代码
+        // sayHi()
+
+
+        // 需求2 把99乘法表封装到函数里面，重复调用三次
+        // 九九乘法表 用for嵌套做
+       
+        function addSquares(){
+         // 外层循环 负责行数 一共有10行
+            for(let i = 0; i <= 9; i++){
+
+                for (let index = 1; index <= i; index++) {
+
+                    document.write(`
+                    <div>${index}*${i}= ${index*i}</div>
+                    `)
+                  
+                    
+                }
+                document.write('<br>')
+            }
+           
+        }
+
+        // 函数调用 函数名（）
+        // 可以多次调用 每次调用就会执行一次函数体内的代码
+        addSquares()
+        addSquares()
+        addSquares()
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>

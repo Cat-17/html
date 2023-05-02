@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        // 这个let没啥含义，就是固定格式表示定义变量
+        // 然后是这个num2可以理解成一个包，起的名字就是num2
+        // 后面的等于相当于往包里放东西，放了个刘德华 那这个包现在就等于刘德华
+        // 这个时候num2就等于刘德华
+        // 打印的话就能验证num2等于多少
+
+        //console.log('num2:'+num2)
+        // 刚才写在这里就没生效，原因是这个时候刘德华还没有放入包里
+        let num3 = 123 //这种就是数字，数字可以进行加减乘除，字符串不行
+        console.log('num3 '+(num3+1))//跟字符串相加也会变成字符串,就不能加减乘除了，所以在后面加小括号，先进行加减乘除运算完，再去加字符串
+        let num2 = '刘德华'//像这种有引号的变量类型就叫字符串
+        // 这里才放进去，所以要在他下面打印，才发现变了
+        console.log('num2:'+num2)
+        //这个时候包里的东西又变成了小鸣12345，原来的刘德华被覆盖掉了
+        num2 = '小鸣12345'
+        console.log('num2:'+num2,'num3:'+num3)
+        console.log('num2:'+num2+',num3:'+num3)//很多方式都可以，有区分就好了
+        //这个时候名为num2的包里装的是小鸣12345
+        //再弄个包，叫temp，把num2里的东西给temp，
+        let temp  //这一步叫定义，也叫创建变量，等于号后面的可以一起写，也可以先定义，等用到在给东西
+
+        temp = num2;//就是等于号右边的东西给到左边，这就相当于把num2的包里装的复制一份放到temp里面
+        console.log('temp'+temp)
+        
+        //还有名字不能重复，比如前面定义了变量叫num2，后面就不能再定义了，只能覆盖
+
+        let num1 = 'pink'//首先这里num1=pink
+        let num4 = '老师' //这里是等于老师
+        let tenp 
+        tenp = num1 //然后这里pink给了tenp，tenp=pink
+        tenp = num4
+        num4 = num1 //然后这里 tenp就是pink，pink又给了num4，num4=pink，但是在这里被覆盖了，右边的给到左边
+        //num4=pink，又给了num1，num1不就也变成pink了，三个都变成pink了
+// 可以吧预想结果下在这里一会对比一下
+
+        console.log('num4:'+num4,'tenp:'+tenp)//这个后面加点东西，比如空格，比如：，不然的话会糊在一起
+
+        // let num1 = 'pink'
+        // let temp 
+        // temp = num1
+        // num1 = num2
+        // num2 = temp
+        // console.log(num1,num2)打印的时候你也像我那样，前面弄个注释一样的，要不然打印好多行分不清那是哪
+
+
+    </script>
+</body>
+</html>

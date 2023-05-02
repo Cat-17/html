@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2d缩放</title>
+    <style>
+        div{
+            width: 200px;
+            height: 200px;
+            background-color: palevioletred;
+            margin: 100px auto;
+            /* transform-origin: right bottom; */
+        }
+        div:hover {
+            /* 1.里面写的数值不加像素 就是倍数的意思 1就是1倍 2就是2倍 */
+            transform: scale(x,y);
+            /* 1不发生变化  w变大，高度不变 */
+            /* transform: scale(2,1); */
+            /* 如果是只写一个数值 就代表宽高一起变化 */
+            /* transform: scale(2); */
+
+            /* 大于1就是放大 小于1就是缩小 */
+            transform: scale(.5);
+            /* 优势，不会影响其他盒子 而且可以设置缩放的中心点 */
+            /* 可以改变中心点 默认是以中心向周边缩放 */
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+    
+</body>
+</html>

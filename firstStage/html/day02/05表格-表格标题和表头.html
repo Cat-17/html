@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- tabl是一级 ，tr明显在塔下面-->
+   
+    <!-- border是属性，肯定是table的里面的一员我， 放在外面有啥用 -->
+    <!--table 是表格的整体，属性跟标签内容都是在这里面完成  -->
+    <table border="1" > 
+        <!-- caption是表格的表头 单独一个标签，其他内容换一行写 -->
+        <caption><strong>学生成绩单</strong></caption>
+
+        <!--要注意理解结构，一层一层下来-->
+        <!-- tr是表格的标题 一个标题一行内容 几行就写几个th-->
+        <tr> 
+            <th>姓名</th>
+            <th>成绩</th>
+            <th>评语</th>
+        </tr>
+        <tr>
+            <!-- td是表格的内容 td是在tr里面完成，包含内容不限-->
+            <td>李慧</td>
+            <td>100分</td>
+            <td>再接再厉</td>
+        </tr>
+        <tr>
+            <!-- table表格整体 caption是表头 tr是大标题td是表格内容 -->
+            <td>小宝</td>
+            <td>90分</td>
+            <td>比上一次好</td>
+        </tr>
+        <tr>
+            <td>总结</td>
+            <td>努力加油</td>
+            <td>加油加油</td>
+        </tr>
+    </table>
+</body>
+</html>

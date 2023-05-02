@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>三元运算符</title>
+    <!-- ？ : 冒号配合使用 -->
+    <!-- 作用一般用来取值 -->
+    <!-- 语法：  条件 ？ 满足条件执行的代码 : 不满足条件执行的代码 -->
+</head>
+<body>
+    <script>
+       console.log( true ? 1 : 2)
+       console.log( false ? 1 : 2)
+    //    输出的结果 是1 理论是 前面条件如果是真的 返回的则是第一个值 
+    //   前面条件如果是假的返回是第二个值
+
+// if 比较适合多个值的返回结果
+    // if (3 > 5) {
+    //     alert('第一个')
+    // } else {
+    //     alert('第二个')
+    // }
+    
+// 条件的情况为真 则执行第一个 假的则执行第一个 适合简短一点
+    3 > 5 ? alert('第一个') : alert('第二个')
+    </script>
+</body>
+</html>

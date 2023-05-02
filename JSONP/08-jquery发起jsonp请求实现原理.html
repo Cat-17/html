@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./lib/jquery.js"></script>
+</head>
+
+<body>
+    <button dir="btnjsonp">发起jsonp请求</button>
+    <!-- //jquery发起jsonp请求实现原理 也是通过<script>标签的src属性实现跨域数据访问的，
+        // 只不过jquery采用的是动态创建和移除<script>标签的方式，来发起jsonp数据请求 
+            // 在发起jsonp请求的时候，动态向header中addend添加一个script标签
+            // 在jsonp请求成功以后，动态从header中移除append添加进去的scipt标签 -->
+    <script>
+        $(function () {
+            $('#btnjsonp').on('click', function () {
+                $.ajax({
+                    url: 'http://ajax.frontend.itheima.net:3006/api/jsonp?name=zs&age=20',
+                    dataType: 'jsonp',
+                    jsonpCallback: 'abc',
+                    success: function (res) {
+                        console.log(res)
+                    }
+                })
+            })
+        })
+
+    </script>
+</body>
+
+</html>

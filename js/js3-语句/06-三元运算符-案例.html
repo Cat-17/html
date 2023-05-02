@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>三元运算符案例</title>
+    <!-- 语法 ：条件 ？ 满足条件执行的代码 ：不满足条件执行的代码 -->
+    <!-- 三元运算符又叫三元表达式 -->
+</head>
+
+<body>
+    <!-- 需求：用户输入2个数，控制台输出最大的值 -->
+    <script>
+        // 第一步 弹框输入
+        let num2 =prompt('请输入数字')
+        let num3 =prompt('请输入数字')
+        // 第二步 分支输出
+        num2 > num3 ? num2 : num3
+        // 赋值打印
+        let sum =  num2 > num3 ? num2 : num3
+
+        console.log(sum)
+
+
+
+
+
+
+
+
+        // 第一步 弹框
+        let num = 40
+        let num1 = 30
+        // num 大于 num1 满足条件执行num 不满足执行num1 
+        // num > num1 ? console.log(num) : console.log(num1)
+
+        // 真正开发中的写法 本身三元运算符式子的作用就是取值 
+        // 满足条件就返回 num 不满足返回 num1 
+        num > num1 ? num : num1
+        //  但是没有打印输出 怎么办？
+        let re = num > num1 ? num : num1
+        // re得到的值 要么是num 或者是 num1 
+        // let re = num || num1
+        console.log(re);
+
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>

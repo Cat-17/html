@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            
+            height: 40px;
+            /* 下面有一个一样的，推荐先加上，能清楚的看到文字在什么位置 */
+            background-color: #fff;
+            border-top: 3px solid #ff8500;
+            border-bottom: 1px solid #edeef0;
+        }
+        /* 用到后台选择器 选择.box里面的a 避免后面有其他标签里面也有a */
+        .box  a {
+            /* 问题 网页界面有三个字 四个字的，宽度固定的话，多个字就放不下，会乱掉，这时候设置内间距代替 width 宽度，这样你写几个字都没关系*/
+            padding:  0 16px;
+
+            /* width: 80px; */
+            height: 40px;
+            /* 行内标签设置宽高不生效，这里转成行内块在设置 */
+           
+            /* 文字内容居中 */
+            text-align: center;
+            /* 内容字号 */
+            font-size: 12px;
+            /* 内容文字颜色 */
+            color: #4c4c4c;
+
+            /* 圆点的 消除符号*/
+            text-emphasis: none;
+        }
+             
+        .box a:hover {
+            background-color: #edeef0;
+            color: #ff8400;
+        }
+    </style>
+   
+</head>
+<body>
+     <!-- 布局思路 先从外到内；先宽高背景颜色，放内容 ，调节内容的位置；在控制文字细节-->
+    <div class="box">
+        <a href="#">新浪导航导航</a>
+        <a href="#">新浪导航</a>
+        <a href="#">新浪导航</a>
+        <a href="#">新浪导航</a>
+        <a href="#">新浪导航</a>
+         </div>
+
+   
+    
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>外边距塌陷问题</title>
+    <style>
+        /* 给父级的外上边距设置一个100px */
+        .faserd {
+            width: 500px;
+            height: 400px;
+            background-color: green;
+            margin-top: 50px;
+            /*  */
+            /* border: 1px solid #000; */
+            /*  */
+            /* padding-left: 1px; */
+            /*  */
+            overflow: hidden;
+        }
+        /* 现在想让子级离父元素远一点 我们试试 */
+        .son {
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+            margin-top: 100px;
+            /*给子元素设置外边距 外带把父级也带下来了 ，这就是嵌套块元素垂直外边距的塌陷 */
+            /* 对于俩个嵌套关系{父子关系} 的块元素，父元素有上外边距同时 子元素也有上外边距，
+            此时父元素会塌陷较大的外边距值*/
+        }
+        /* 解决塌陷问题 */
+        /* 1；给父元素加边框
+        2；可以给父级定义上内边距
+        3；可以给父级添加overflow: hidden; */
+
+    </style>
+</head>
+<body>
+    <!-- 先准备一个父子级的盒子 -->
+    <!-- 属于嵌套关系 -->
+    <div class="faserd">
+        <div class="son"></div>
+    </div>
+    
+</body>
+</html>

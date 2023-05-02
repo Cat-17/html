@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>精灵图</title>
+    <!-- 为什么需要精灵图 -->
+    <!-- 为了有效的减少服务器和发送请求的次数，减少 -->
+    <!-- 精灵图技术主要针对背景图的使用，就是把多个小背景图整合到一行图片上 -->
+    <!-- 背景图片，移动背景图片的属性去使用  background-position: 0 0; x轴 y轴移动
+        ，一般情况下都是往上往左移动，所以数值都是负值  需要精确测量-->
+    <style>
+       .box1{
+            width: 60px;
+            height: 60px;
+            margin: 100px auto;
+            background-image: url(./images/sprites.png);
+            background-position:-182px 0 ;
+        }
+        .box2 {
+            width: 25px;
+            height: 27px;
+            margin: 100px auto;
+            background-image: url(./images/sprites.png);
+            background-position: -155px -106px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box1">
+
+    </div>
+    <div class="box2"></div>
+    
+</body>
+</html>

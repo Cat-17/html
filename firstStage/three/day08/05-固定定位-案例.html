@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>固定定位案例 </title>
+    <style>
+        /* 一种固定定位的小技巧，固定在版心的右侧位置
+        设置left50%已经走了版心的一半，1200的版心，一半就是600,800的版心 就是400px剩下的距离就是外边距的距离 在配合 margin-left: 600px; 就可与实现紧贴着版心右侧的位置/* */ */
+        .w {
+            width: 1200px;
+            margin: 0 auto;
+        }
+        .gyu img {
+            width: 1200px;
+            margin: 30px auto;
+        }
+        .top .rel {
+            position: fixed;
+            left: 50%;
+            top: 400px;
+            margin-left: 600px;
+            width: 130px;
+            height: 300px;
+
+        }
+        .top .ij {
+            position: fixed;
+            right: 0;
+            top: 100px;
+            width: 130px;
+            height: 300px;
+        }
+    </style>
+</head>
+<body>
+    <div class="gyu w">
+        <img src="./images1/box.png" alt="">
+        <div class="top">
+            <img class="rel" src="./images1/ad-l.png" alt="">
+            <img class="ij" src="./images1/ad-r.png" alt="">
+        </div>
+    </div>
+    
+</body>
+</html>

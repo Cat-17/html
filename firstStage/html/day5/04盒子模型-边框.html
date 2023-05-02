@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 200px;
+             height: 200px;
+            background-color: pink;
+            /* border:是复合属性后面可以添加多种属性，比较想让边框线变成实线就是 border: 1px solid+实线 */
+            /* 边框线变成实线就是 border: 1px solid+#000; */
+            /* border: 1px solid #000; */
+            /* border: 边框线 5px 像素加粗数字变大 dashed 虚线 */
+            /* border: 5px dashed #000; */
+            /* border: 5px dotted #000 边框线变成点线*/
+            /* border: 5px dotted #000 */
+            /* 总结；border:粗细px 线条样式（实线虚线点线）颜色 */
+
+            /* 问题一，比如想让盒子只有下面的边框线怎么办? */
+            /* 答；border加-跟-left方向（上下左右）:后面的数值不变 */
+            border-left: 5px dotted #000;
+            /* border-right: 5px dotted #000 */
+            border-right: 5px dotted #000;
+
+            
+
+             
+
+
+        }
+    </style>
+</head>
+<body>
+    <div>这是内容</div>
+    
+</body>
+</html>

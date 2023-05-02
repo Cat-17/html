@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        li {
+            /* 清除圆点 */
+            list-style: none;
+        }
+        img {
+            /* 清除下划线 */
+            text-decoration: none;
+        }
+
+        /* 想要图片去到手机页面对最底部 用到固定定位 给大盒子写固定定位 */
+        .toolbar {
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            /* % 这种写法叫百分比布局 也叫流式布局 自适应 */
+            width: 100%;
+            height: 50px;
+            background-color: pink;
+            /* 边框线 */
+            border: 1px solid #ccc;
+        }
+
+        .toolbar li img {
+            /* 高度跟父级一样 百分比写法 */
+            height: 100%;
+        }
+        .toolbar li {
+             /* 使用固定定位 让图片到最底下  但是因为a标签是块标签 自称一行  转换成一行排
+             a标签的问题导致图片换行排 所以我们要找到a的父级 设置浮动 或者是 display: inline-block; */
+             float: left;
+             /* 流式布局 百分比写法 */
+             width: 20%;
+             height: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="toolbar">
+        <ul>
+            <li>
+                <a href="#"><img src="./images/index.png" alt=""></a>
+            </li>
+            <li>
+                <a href="#"><img src="./images/classify.png" alt=""></a>
+            </li>
+            <li>
+                <a href="#"><img src="./images/login.png" alt=""></a>
+            </li>
+            <li>
+                <a href="#"><img src="./images/car.png" alt=""></a>
+            </li>
+            <li>
+                <a href="#"><img src="./images/login.png" alt=""></a>
+            </li>
+        </ul>
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>音频标签</title>
+    <!-- 主要支持格式为；ogg MP3 wav  如果不支持的话，就整俩种格式的 -->
+</head>
+<body>
+    <!-- 第一种写法； -->
+    <!-- controls 播放控件  loop 循环播放
+         autoplay自动播放 谷歌浏览器给自动播放禁用了 用户打开就有声音体验不好 -->
+    <!-- <audio src="" controls loop  autoplay></audio> -->
+    <!-- 第二种写法； -->
+    <!-- 因为不同的浏览器支持不同的格式，我们采取的解决方式是，我们为这个音频多准备个格式 -->
+    <audio controls="controls">
+        <!-- 多个音频写法 source 是单标签  src=“里面写音频的格式路径” 后面type=“”写上告诉浏览器是什么格式的音频  -->
+        <source src="" type="audio/mpeg">
+        <source src="" type="audio/ogg">
+        <!-- 如果俩个还不支持，在写句话 -->
+        <!-- 浏览器不支持打开 建议使用其他浏览器 -->
+    </audio>
+</body>
+</html>

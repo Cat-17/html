@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>修改DOM元素属性</title>
+    <style>
+        img {
+            width: 500px;
+            height: 300px;
+        }
+    </style>
+</head>
+
+<body>
+    <img src="./images/1.webp" alt="">
+
+    <script>
+        // 1; 获取元素 图片
+        let pic = document.querySelector('img')
+        // 获取一个随机数
+        function name(min, max) {
+
+            return Math.floor(Math.random() * (max - min + 1)) + min
+
+
+        }
+        // 1~6张图片 
+        let num = name(1,6)
+
+        // 获得一个随机数
+        // 2 换一张图片 修改元素属性 src 对象.属性 = 值
+        pic.src = `./images/${num}.webp`
+        pic.title = '我是pink老师'
+        // pic.src = `./images/${num}.webp`
+
+
+    </script>
+
+</body>
+
+</html>

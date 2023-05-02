@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>文字围绕图片的技巧</title>
+    <!-- 一般做法；图片跟文字分开做，加浮动  -->
+    <!-- 高级做法；直接让父盒子填满文字，规定图片的带下，直接浮动，浮动不会压住文字，会环绕在图片的右侧，在调借一下一些细节就可以 -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .wer {
+            width: 300px;
+            height: 70px;
+            background-color: sandybrown;
+            margin: 100px auto;
+            padding: 5px;
+        }
+
+        .pic {
+            float: left;
+            width: 120px;
+            height: 60px;
+            margin-right: 5px;
+
+
+
+        }
+
+        .pic img {
+
+            width: 100%;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wer">
+        <div class="pic">
+            <img src="./images/img.png" alt="">
+        </div>
+        <p> [集锦]内巴尔时候独孤傻瓜高速高度数</p>
+    </div>
+
+</body>
+
+</html>

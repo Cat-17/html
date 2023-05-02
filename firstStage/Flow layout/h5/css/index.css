@@ -1,0 +1,270 @@
+/* 首先先确认整体的布局   确定是单独界面制作，技术；流失布局 使用到百分比 */
+body {
+    /* 宽度百分百宽度，随着手机的大小自动伸缩 */
+    width: 100%;
+    /* 但是，为了防止过度的拉伸导致内容变形，确定一个盒子的最大值跟最小值 */
+    max-width: 980px;
+    min-width: 320px;
+    /* 让盒子不管是在什么情况下都是居中显示 */
+    margin: 0 auto;
+    /* 指定字号 */
+    font-size: 14px;
+    line-height: 1.5;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: silver;
+  
+
+}
+
+/* 头部导航 */
+.app {
+    height: 45px;
+
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+img {
+    /* 消除图片底部的空隙 */
+    vertical-align:middle;
+}
+/* a设置统一的样式 清除下划线 */
+a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.app ul li {
+    float: left;
+    height: 45px;
+    background-color: #333333;
+    color: #fff;
+    line-height: 45px;
+    text-align: center;
+
+}
+
+.app ul li:nth-child(1) {
+    width: 8%;
+}
+
+.app ul li:nth-child(1) img {
+    width: 16px;
+}
+
+.app ul li:nth-child(2) {
+    width: 10%;
+
+}
+
+.app ul li:nth-child(2) img {
+    width: 30px;
+    /* 一般出现行内块的时候，默认跟文字的基线对齐，所以改变他默认的就可以居中 */
+    vertical-align: middle;
+
+
+}
+
+.app ul li:nth-child(3) {
+    width: 57%;
+}
+
+.app ul li:nth-child(4) {
+    width: 25%;
+    background-color: red;
+}
+
+/* 搜索栏 */
+.search-w {
+    /* 这里的相对定位改成固定定位   */
+    /* 但是发现不是我们要的效果，注意有定位的盒子，必须要有宽度 */
+    width: 100%;
+    position: fixed;
+    height: 44px;
+    overflow: hidden;
+   /*还要设置 最大拉伸 和最小拉伸  */
+   max-width:980px; 
+   min-width: 320px;
+}
+
+.search-btn {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 44px;
+    height: 44px;
+
+
+}
+
+.search-btn::before {
+    content: "";
+    display: block;
+    width: 20px;
+    height: 18px;
+    background: url(../imgs/data_image_png;base…\ \(1\).png) no-repeat;
+    /* 图片比较大 盒子撑不下，缩放一下 */
+    background-size: 20px 18px;
+    margin: 14px 0 0 15px;
+
+
+}
+
+.search {
+    position: relative;
+    height: 30px;
+    margin: 0 50px;
+    border-radius: 15px;
+    margin-top: 7px;
+    background-color: #fff;
+}
+
+.search-btn .search {
+    height: 30px;
+    margin: 0 50px;
+    /* 因为父级没有给宽，出现外边距塌陷的问题，给父级添加
+     overflow: hidden; */
+    margin-top: 8px;
+}
+
+
+
+
+.jd-search {
+    display: block;
+    width: 20px;
+    height: 15px;
+    position: absolute;
+    left: 13px;
+    top: 8px;
+
+    background: url(../imgs/data_image_png;base….png) no-repeat;
+    background-size: 20px 15px;
+
+
+
+}
+
+.iconfont {
+    position: absolute;
+    top: 5px;
+    left: 50px;
+    width: 18px;
+    height: 15px;
+  
+
+}
+
+.jd-search::after {
+    content: "";
+    position: absolute;
+    right: -8px;
+    top: 0;
+    display: block;
+    width: 1px;
+    height: 15px;
+    background-color: #ccc;
+}
+
+
+.search-logih {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 44px;
+    height: 44px;
+
+    color: #fff;
+    text-align: center;
+    line-height: 44px;
+
+}
+
+/* 主体部分 滑动图 */
+/* 本身图片是很大的，这里直接选中图片，
+宽度随着屏幕的百分比进行缩放 
+只写一个宽，另外一个高会等比例缩放 */
+.slider img {
+    width: 100%;
+}
+/* 这里做完 原本应该滑动图是在搜罗栏的下面， 搜索栏滑动的时候，是固定在屏幕上面，我们扎到搜索栏设置一下 */
+
+
+/* 内容 */ 
+/* 盒子的左上跟右上有一个圆角 */
+.baner {
+    border-radius: 10px 10px 0 0;
+    /* 发现设置完 没有变化，我们是让盒子的角度变化，里面的图没有变化，这时候在设置隐藏超出父级的部分 */
+    overflow: hidden;
+} 
+
+/* 做完以后发现上面的图片地下有缝隙 这时候要把去除图片底部空隙 */
+.baner div {
+    /* 让图片在一行排 并且划分成3等份排列 */
+    float: left;
+    width: 33.33%;
+}
+/* 发现图片还是很大 这时候现在里面的图片，设置跟父级一样 */
+.baner div img {
+    width: 100%;
+}
+
+
+/*导航栏布局思路 直接用我们导航栏标签 里面直接放a连接   */
+/* 把a连接直接划分宽度就可以了 */
+nav {
+    padding-top: 5px;
+}
+nav a {
+    float: left;
+    width: 20%;
+    /* a里面的内容都要居中 直接给a设置，里面的内容都会继承，就不用一个一个写l */
+    text-align: center;
+}
+nav a img {
+   width: 40px;
+   margin:  0 10px;
+}
+/* span是行内元素，一行排 */
+nav a span {
+    display: block;
+}
+
+
+/* 新闻板块naws */
+/* 给图片单独设置百分比宽度 */
+/* .news a:nth-child(1) {
+    width: 50%;
+} */
+/* 2-3属性一样 可以简写 第一种，直接在后面接着写 用，隔开 */
+/* .news a:nth-child(2),
+.news a:nth-child(3)
+ {
+    width: 25%;
+
+} */
+/* .news a:nth-child(3) {
+    width: 25%;
+
+} */
+/* 还可以直接跟公式 */
+/* 选中2本身以及后面的 */
+.news a:nth-child(n+1) {
+    width: 25%;
+    border-left:1px solid #ccc ;
+
+}
+.news img {
+    width: 100%;
+}
+.news a {
+    float: left;
+    /* 内减 */
+    box-sizing: border-box;
+   
+}
+
+

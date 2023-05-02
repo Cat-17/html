@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div p:nth-child(1) {
+            background-color: saddlebrown;
+        }
+
+        div:nth-child(2) {
+            background-color: pink;
+        }
+
+        /* nth-child就是选里面的第几个孩子 不管是不是同一标签的 
+        p span 都是他的孩子，已经排好是第几个*/
+        /* 选择指定类型的选中span 其他标签就不管了 */
+        /* 选中第一个span */
+         div span:first-of-type {
+            background-color: slateblue;
+        }
+        /* 选中最后一个span */
+        div span:last-of-type {
+            background-color: rgb(178, 195, 29);
+        }
+        /* 任意一个标签 */
+        div span:nth-of-type(2) {
+            background-color: skyblue;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div>
+        <p>w shi sjide </p>
+        <span>ssddf</span>
+        <span>ssddf</span>
+        <span>ssddf</span>
+    </div>
+
+</body>
+
+</html>

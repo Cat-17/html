@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 需求 打印5行5列小星星 -->
+    <!-- 第一步，外层行 里层每个几个小星星 -->
+    <script>
+        // 外层的for 负责行爱心 里面的负责列爱心
+        for (let i = 1; i < 6; i++) {
+
+            for (let index = 0; index < 6; index++) {
+                document.write('❥')
+
+            }
+            // 换行是给外层换行 里面的5个爱心打印完了换行 这个外层的for里面打印换行
+            document.write('<br>')
+        }
+
+    </script>
+
+</body>
+
+</html>

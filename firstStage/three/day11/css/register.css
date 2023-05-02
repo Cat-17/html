@@ -1,0 +1,129 @@
+.w {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.header {
+    height: 84px;
+    border-bottom: 1px solid red;
+}
+
+.header .logo {
+    padding-top: 18px;
+}
+
+.registerarea {
+    height: 522px;
+    border: 1px solid #ccc;
+    margin-top: 20px;
+
+}
+
+.registerarea h3 {
+    height: 42px;
+    border-bottom: 1px solid #ccc;
+    background-color: #ececec;
+    line-height: 42px;
+    padding: 0 10px;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.loghn {
+    float: right;
+    font-size: 14px;
+}
+
+.loghn a {
+    color: red;
+}
+
+.reg-fomr {
+    width: 600px;
+    margin: 50px auto;
+   
+}
+.reg-fomr ul li {
+    margin-bottom: 20px;
+}
+
+.reg-fomr ul li label {
+    display: inline-block;
+    width: 88px;
+    /* 右对齐 */
+    text-align: right;
+
+}
+.reg-fomr ul li .inp {
+    width: 242px;
+    height: 37px;
+    border: 1px solid #ccc;
+}
+.reg-fomr ul li .error {
+    color: red;
+}
+.error  .error-icon,
+.success .success-icon {
+    display: inline-block;
+    vertical-align: middle;
+    width: 20px;
+    height: 20px;
+    background: url(../images/error.png) no-repeat;
+}
+.success {
+    color: green;
+}
+.success .success-icon {
+   
+    background: url(../images/success.png) no-repeat;
+}
+.safe {
+    padding-left: 170px;
+}
+.safe em {
+    padding: 0 12px;
+
+
+}
+.safe .ruo {
+    background-color: red;
+}
+.safe .zhong {
+    background-color: green;
+}
+.safe .qiang {
+    background-color: yellow;
+}
+.agree {
+   padding-left: 100px;
+}
+.agree input {
+    vertical-align: middle;
+}
+.btn {
+    margin: 30px 0 0 70px;
+    width: 200px;
+    height: 40px;
+    background-color: red;
+    font-size: 14px;
+    color: #fff;
+}
+
+
+
+/* 底部 */
+
+.footer .mod-copyrigth {
+    text-align: center;
+    padding-top: 20px;
+}
+.footer .links {
+    margin-bottom: 15px;
+}
+.footer .bottom {
+    line-height: 20px;
+
+}
+
+
+

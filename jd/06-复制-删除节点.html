@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>删除 复制节点</title>
+    <!-- 特殊情况下 我们新增节点，按照如下操作   -->
+    <!-- 复制一个原有的节点 把复制的节点放到指定的元素内部 -->
+</head>
+
+<body>
+    <ul>
+        <li>我是内容</li>
+    </ul>
+    <!-- 克隆节点 -->
+    <!-- 元素.cloneNode(布尔值)   布尔值就俩个 true false -->
+    <!-- 若为true 则代表克隆时会包含后代节点一起克隆 -->
+    <!-- 若为false 则代表克隆是不包含后代节点  默认是false -->
+    <script>
+        // 把ul获取过来
+        let ul = document.querySelector('ul')
+        // 克隆一份 ul 保存下来   括号为空则为false 如果是false ze不克隆后代
+        // let newul = ul.cloneNode()
+        // 若为true 则代表克隆时会包含后代节点一起克隆
+        let newul = ul.cloneNode(true)
+
+        // 追加一份显示 父元素.insertBefore(要插入的元素,在哪个元素前面)
+       document.body.appendChild(newul)
+
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>

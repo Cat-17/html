@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>立体图形</title>
+    <style>
+        .cube {
+            position: relative;
+            width: 200px;
+            height: 200px;
+            /*上下100间距 左右居中 */
+            margin: 100px auto;
+            background-color: pink;
+            /* 过渡 配合鼠标悬停使用 */
+            transition: all 2s;
+            /* 立方体的的标签 */
+            /*第二步；想要实现立方体的效果 光加标签还不够，要先让俩个盒子层叠在一起使用子绝父相  */
+           transform-style: preserve-3d;
+        }
+        .cube div {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 200px;
+            height: 200px;
+        }
+        /* 想要让front和back呈现立方体的效果 给它们的父级添加 */
+        /* 第一步；使用定位 让俩个盒子层叠 给它们的父级添加相应定位 */
+        .front {
+           
+            background-color: orange;
+            /* 第三步；把后面的盒子拉近一点 */
+            /* 第四步；俩个盒子已经有空间感 因为电脑是平面 用鼠标悬停 旋转一下 */
+            transform: translateZ(200px);
+        }
+        .back {
+           
+            background-color:green;
+
+        }
+        /* 第四步；cube hove一下 为了看空间效果 */
+        .cube:hover {
+            /* 找到cube 添加一个过渡效果 慢慢看到变化的过程 */
+            /* 空间旋转 */
+           transform: rotateY(100deg);
+        }
+    </style>
+</head>
+<body>
+    <!-- 立方体 -->
+    <div class="cube">
+        
+            <div class="front">前面</div>
+            <div class="back">后面</div>
+        
+    </div>
+    
+</body>
+</html>

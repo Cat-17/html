@@ -1,0 +1,52 @@
+// banner
+// 响应式框架
+.carousel{
+    // 如果视口宽小于768 图高250 max-width
+    // 如果视口宽小于992 图高400 max-width
+    // 如果视口宽小于1200 图高500 min-width
+
+    img {
+        height: 100% !important;
+        
+    }
+   
+    @media (max-width:992px) {
+        .item {
+            height: 400px;
+        }
+    }
+    @media (max-width:768px) {
+        .item {
+            height: 250px;
+        }
+    }
+    @media (min-width:992px) {
+        .item {
+            height: 500px;
+        }
+    }
+
+}
+
+// 头部
+.navbar-default {
+    background-color: transparent;
+    border: 0;
+}
+
+// 定制如果有插件不符合就可以走定制，先找到组件找打类名 在到组件找到更改就可以了
+// 开源项目
+.project {
+    padding-bottom: 30px;
+    text-align: center;
+
+    .container {
+        background-color: pink;
+    }
+    a {
+        display: block;
+        height: 200px;
+        background-color: seagreen;
+    }
+
+}

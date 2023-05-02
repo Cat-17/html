@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            /* 1;设置宽高背景 */
+            width: 400px;
+            height: 300px;
+            background-color: pink ;
+            background-image: url(../day09/img.html/1.jpg ) ;
+            /* 2;背景的尺寸比较大，图片刚上去显示很多，只显示一个，就不平铺 */
+            background-repeat: no-repeat;
+            /* 测试一下背景图的缩放，有四种方式可以写 */
+            /* 背景图片的尺寸，跟高度一样可以数字加px  */
+            /* background-size: 300px; */
+            /* 背景图片的尺寸，可以加% */
+            /* background-size: 50%; */
+            /* 如果图的宽或高与盒子的尺寸相同了，另一个方向停止缩放，导致盒子会有留白 */
+            background-size: contain;
+            /* 保证宽或高和尺寸完全相同，导致图片显示不全 */
+            /* background-size: cover; */
+            /*工作中，图的比例和盒子都是等比例的，contain; cover 显示的效果完全相同  */
+            
+           
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+    
+</body>
+</html>

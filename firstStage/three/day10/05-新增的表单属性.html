@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>表单属性</title>
+    <style>
+        input::placeholder {
+            color: blue;
+            padding-left: 5px;
+
+        }
+    </style>
+</head>
+<body>
+    <form action="">
+        <ul>
+            <!-- 内容不能为空 required="required"   光标聚焦；autofocus="autofocus -->
+            <li><input type="search" name="" required="required"></li>
+            <!-- autocomplete="off" 关闭提示 -->
+            <li><input type="text" placeholder="请输入文字" autofocus="autofocus" autocomplete="off"></li>
+            <!-- 多选文件夹 -->
+            <li><input type="file"  multiple="multiple"></li>
+            <li><input type="submit" value="提交"></li>
+        </ul>
+    </form>
+    
+</body>
+</html>

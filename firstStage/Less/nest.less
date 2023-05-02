@@ -1,0 +1,23 @@
+// less嵌套关系
+.header {
+    width: 200px;
+    height: 200px;
+    background-color: plum;
+// less子元素样式 直接写到父元素里面就可以了
+    a {
+        width: 100px;
+        height: 100px;
+        background-color: palegoldenrod;
+        // 伪类选择器的写法 前面加一个&
+        &:hover {
+            background-color: slateblue;
+        }
+    }
+}
+
+// 后代选择器
+.nav {
+    .logo {
+        color:salmon;
+    }
+}

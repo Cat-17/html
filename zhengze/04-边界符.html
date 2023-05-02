@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>元字符</title>
+    <!-- 是一些具有特殊含义的字符，可以极大提高了灵活性和强大的匹配功能 -->
+    <!-- 比如；规定用户只能输入英文26个英文字母，abcdefg 但是换成元字符写法[a-z] -->
+</head>
+<body>
+    <!--为了方便学习和记忆 对众多的元字符进行了分类  -->
+    <!-- 1；边界符 （表示位置，开头和结尾，^必须用什么开头，$用什么结尾 -->
+    <script>
+    console.log(/哈/.test('哈哈'))
+    console.log(/哈/.test('二哈'))
+    //^开头 
+    console.log(/^哈/.test('二哈')) //false 必须是哈开头
+    console.log(/^哈/.test('我开心的哈哈大笑')) //false 必须是哈开头
+    console.log(/^哈/.test('你哈哈')) //false 必须是哈开头
+    // $结尾
+    console.log(/^哈$/.test('哈里个哈')) //false 必须是哈开头 哈结尾
+    console.log(/^哈$/.test('我开心的哈哈大笑')) //false 必须是哈结尾
+    console.log(/^哈$/.test('哈哈')) //false 必须是哈结尾 开头结尾中间只有一个哈
+    console.log(/^哈$/.test('哈')) //true 精确匹配 必须是哈结尾 开头结尾中间只有一个哈
+
+ 
+    </script>
+   
+    <!-- 3；字符类（比如\d 表示0~9 -->
+    
+</body>
+</html>

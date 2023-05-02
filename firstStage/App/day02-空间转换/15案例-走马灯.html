@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        li {
+            list-style: none;
+        }
+        img {
+            width: 200px;
+        }
+
+        .box {
+            width: 600px;
+            height: 112px;
+            border: 2px solid #000;
+            margin: 100px auto;
+            /* 溢出屏幕隐藏 */
+            overflow: hidden;
+        }
+        
+        .box ul {
+            width: 2000px;
+            animation: move 10s infinite linear;
+        }
+        
+        .box li {
+            float: left;
+        }
+
+
+        /* 定义动画  位移 ul 左侧移动 左右x 往左走 取-值 移动的距离1400*/
+        @keyframes move {
+           
+                /* 使用位移 让图片往左走 取值范围就是box的宽度 往左走取值-值 */
+            to {
+                transform: translateX(-1400px);
+            }
+        } 
+        /* 想要鼠标放上去就暂停的效果 给box 在box里面的范围点进去 暂停 */ 
+        .box:hover ul {
+            animation-play-state: paused;
+        }
+
+        
+    </style>
+   
+</head>
+<body>
+    <div class="box">
+        <ul>
+            <li><img src="./images/1.jpg" alt=""></li>
+            <li><img src="./images/2.jpg" alt=""></li>
+            <li><img src="./images/3.jpg" alt=""></li>
+            <li><img src="./images/4.jpg" alt=""></li>
+            <li><img src="./images/5.jpg" alt=""></li>
+            <li><img src="./images/6.jpg" alt=""></li>
+            <li><img src="./images/7.jpg" alt=""></li>
+
+
+            <!-- 做无缝动画 第567移动的时候，显示区域不能留白 -->
+            <li><img src="./images/1.jpg" alt=""></li>
+            <li><img src="./images/2.jpg" alt=""></li>
+            <li><img src="./images/3.jpg" alt=""></li>
+        </ul>
+    </div>
+    
+</body>
+</html>

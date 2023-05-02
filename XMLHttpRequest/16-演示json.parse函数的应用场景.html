@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+    <script>
+        var xhr = new XMLHttpRequest()
+        xhr.open('GET','http://www.liulongbin.top:3006/api/getbooks')
+        xhr.send()
+        xhr.onreadystatechange = function(){
+            if(xhr.readyState === 4 && xhr.status === 200){
+                console.log(xhr.responseText)
+                // xhr.responseText 响应回来的数据是json字符串类型 不方便操作
+                // 这里把json字符串转换成js对象
+                var result = JSON.parse(xhr.responseText)
+                console.log(result)
+                // 这里转换的数据为js对象
+            }
+        }
+
+
+        // 序列化和反序列化
+        // 把数据对象转换为字符串的过程,叫做序列化。列如：调用JSON.stringify()函数的操作，叫做json序列化
+        // 把字符串转换数据对象的过程,叫做反序列化。列如：调用JSON.parse()函数的操作，叫做json反序列化
+    </script>
+    
+</body>
+</html>

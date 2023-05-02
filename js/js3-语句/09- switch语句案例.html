@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 需求 ；用户输入俩个数字，然后输入+-*/中任何一个，可以计算结果 -->
+    <script>
+        // 第一个 所有的只要涉及到运算的，书写的时候+prompt +号一直要写 转成成数字类型相加 不会出错
+        let num = +prompt('请输入第一个数字：')
+        let num2 = +prompt('请输入第二个数字：')
+        let num3 = prompt('请输入+ - * /运算：')
+
+        // 俩个注意的地方 第一个 所有的只要涉及到运算的，书写的时候+prompt +号一直要写 转成成数字类型相加 不会出错
+        // 第二个  num3 = prompt 这里也是字符串 swich 的执行条件是 要全等=== 才会执行 那么在case的时候 +是一定价要'''
+        switch (num3) {
+            case '+':
+                // 提示要做的很贴心哦 这样做
+                alert(`您选择的是加法，计算结果为：${num + num2}`)
+                break
+            case '-':
+                alert(`您选择的是加法，计算结果为：${num - num2}`)
+                break
+            case '*':
+                alert(`您选择的是加法，计算结果为：${num * num2}`)
+                break
+            case '/':
+                alert(`您选择的是加法，计算结果为：${num / num2}`)
+                break
+                default :
+                alert('输入错误 请输入+ - * /运算')
+
+        } 
+    </script>
+
+</body>
+
+</html>

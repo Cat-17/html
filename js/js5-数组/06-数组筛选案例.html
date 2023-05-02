@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>数组筛选案例</title>
+</head>
+
+<body>
+    <!-- 需求；将数组[2,0,6,1,77,0,52,0,25]中大于等于10元素选出来，放入新数组 -->
+    <script>
+        // 原数组
+        let arr = [2, 0, 6, 1, 77, 0, 52, 0, 25]
+        // 声明 需要一个空的新数组 数组字面量[]  符合条件给新数组
+        let newArr = []
+
+        // 遍历旧数组
+        for (let i = 0 ; i < arr.length; i++) {
+            // arr[i] 就是数组里面所有的元素 进行对比 符合大于等于10 进行下面打印出来
+            if (arr[i] >= 10) {
+                // console.log(arr[i]);
+                // 满足条件 大于10 的元素，一次追加给新的数组
+                // 把arr[i] 追加给newArr 不影响前面的元素，在元素的后面追加
+                newArr.push(arr[i])
+                // 赋值  newArr=arr[i] 不可以  会影响前面的元素
+               
+
+               
+                
+               
+               
+            }
+
+          
+          
+           
+           
+
+        }
+        // 注意 是循环完了以后打印  只打印一次
+        console.log(newArr);
+
+
+        let arr1 = [2, 0, 6, 1, 77, 0, 52, 0, 25]
+        let newArr1= []
+        for(let i = 0;i<arr1.length;i++){
+            // 大于10的筛选出来 重新添加给新数组
+            if(arr1[i] >= 10){
+                // 增加到哪个数组里面就写谁 后面.push() 这是个方法
+
+                newArr1.push(arr[i])
+            }
+        }
+        document.write(newArr1)
+
+    </script>
+
+</body>
+
+</html>

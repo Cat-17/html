@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function fu(x,y) {
+            let jia = x + y
+            let jian = x - y
+            // return jia ,jian 结果返回是jian return 只能返回一个值 
+            // 解决方法
+            // 数组字面量 可以存储多个 以逗号隔开 什么都可以放
+            return [jia,jian]
+        }
+       let er = fu(1,2) //返回的是数组是[3, -1]
+        document.write(`相加之后的结果是${er[0]} ,相减之后的结果是${er[1]}`)
+    </script>
+    
+</body>
+</html>

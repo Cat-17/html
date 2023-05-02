@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>表单控件</title>
+</head>
+<body>
+    <!-- input是复合属性 “”里面不同的内容 显示不同的内容 -->
+    <!-- 书写表单控件  要在表单域里面 加form 把表单控件包含在里面 -->
+   <form >
+    <!-- text 用户可以在文本框里面写内容 -->
+    用户名: <input type="text" value="请输入文字"> <br>
+    密码: <input type="password" > <br>
+    <!--提交按钮 点了提交按钮 就是吧表单域里面的的表单送给后台  -->
+    提交:<input type="submit"  value="免费注册"><br>
+    <!-- 重置 可以还原表单元素的初始状态 -->
+    重置: <input type="reset" value="重新填写">
+<br>
+    <!-- 不会提交数据  普通按钮  后期搭配js使用-->
+    <input type="button" value="获取短信验证码"><br>
+<!-- 文件域：上传文件用的 -->
+    上传头像: <input type="file">
+
+    <!-- 下拉表单 -->
+    籍贯:
+    <select>
+        <!-- selected 默认选中 -->
+        <option  selected>山东</option>
+        <option >山东</option>
+        <option >山东</option>
+        <option >山东</option>
+        <option >山东</option>
+        
+    </select><br>
+
+    <!-- 文本域 -->
+    <!-- z作用于留言 -->
+    今日反馈:
+    <textarea  cols="30" rows="10">
+
+    </textarea>
+
+
+
+
+
+   </form>
+    
+</body>
+</html>

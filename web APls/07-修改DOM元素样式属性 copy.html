@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>修改DOM元素属性</title>
+    <style>
+     div {
+        width: 300px;
+        height: 300px;
+        background-color: palevioletred;
+     }
+    </style>
+</head>
+
+<body>
+   <div></div>
+
+    <script>
+
+        //获取元素
+        let box = document.querySelector('div')
+        // 对象.style.样式属性
+        // 改变背景颜色
+        box.style.background = 'pink'
+        // 改变宽度 记得加单位
+        box.style.width = '400px'
+        // 改变高度 记得加单位
+        box.style.height = '500px'
+        // 改变外边距
+        box.style.marginTop = '50px'
+        // js修改的样式是在标签内
+
+        //    background-color 需要转换小驼峰命名法  backgroundColor
+
+
+      
+      
+
+
+    </script>
+
+</body>
+
+</html>

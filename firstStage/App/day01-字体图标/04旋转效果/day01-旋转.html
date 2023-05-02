@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>旋转效果</title>
+    <style>
+        img {
+            /* 图片的宽 */
+            width: 250px;
+            /* 动态效果 配合鼠标悬停 缓慢移动 */
+            transition: all 2s;
+        }
+        img:hover {
+            /* 旋转效果 deg 是角度，360度旋转 */
+            transform:rotate(360deg) ;
+            /* 取值负值 就是逆时针旋转 正数是顺时针旋转 */
+            transform: rotate(-360deg);
+        }
+    </style>
+</head>
+<body>
+    <img src="../images/rotate.png" alt="">
+    <!-- 一般图片也属于公用的，创一个文件夹都放进去，不要和代码放一起 -->
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 第一个li选中 */
+        ul li:first-of-type{
+            background-color: darkcyan;
+        }
+        /* 最后一个li选中 */
+        ul li:last-of-type {
+            background-color: goldenrod;
+        }
+        /*  nth-chil 所有的孩子都会排列序号，在执行的时候首先看nth-child(1) 之后会看前面的div 会发现不一样，所以不执行效果  */
+        section div:nth-child(1) {
+            background-color: salmon;
+
+        }
+        /* nth-of-type h会把指定的元素排列序号 先看div指定的元素 在去看div 选中第一个执行 */
+        section div:nth-of-type(1) {
+            background-color: gray;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+        <li>7</li>
+        <li>8</li>
+    </ul>
+    <!-- 区别 -->
+    <section>
+        <p>hdidsdsbd</p>
+        <div>xiongda</div>
+        <div>dhishidi</div>
+       
+    </section>
+    
+</body>
+</html>

@@ -1,0 +1,296 @@
+/* 各个页面相同的样式表；头/尾部 */
+/* 版心 */
+/* 居中数值取项目图的数值 */
+.wrapper {
+    width: 1240px;
+    margin: 0 auto;
+}
+/* 快捷导航 */
+.shortcut {
+    /* 1；只设置高度，高度量一下设计稿，宽度随浏览器大小 */
+    height: 52px;
+    background-color: #333;
+}
+.shortcut .wrapper {
+    /* 跟背景色一样的高度 */
+    /*需要居中的内容加wrapper内容是版心居中的 */
+    height: 52px;
+    
+}
+.shortcut .wrapper ul {
+    /*选中ul里面的内容靠右，这里加一个右浮动 */
+    float: right;
+}
+.shortcut .wrapper li {
+    /*加完内容以后，发现是一行怕，想让他们在一行排，加一个float：left  */
+    float: left;
+    /*现在是在一行排，但是是靠上的位置，要居中才好看，这里加一下行高，参考父级的 */
+    line-height: 52px;
+}
+.shortcut .wrapper a {
+    /* 文字之间是有间距的，设计稿里面量一下，这里是内间距 */
+    padding: 0 16px;
+    /* 文字右边有一个实线 文字的右边添加实线 */
+    border-right: 1px solid #666;
+    /* 文字字号 */
+    font-size: 14px;
+    /* 文字颜色 */
+    color:#666 ;    
+}
+.shortcut .wrapper a span {
+    /* 最后一行文字有一个小图标，叫精灵图 */
+    /* 设计图里面去量一下图表的宽高，在设置一个背景图 */
+    /* 行内 */
+    display: inline-block;
+    /* 图片跟文字现在是齐平的，但是图跟字之间是有距离的，这里用外间距向右 */
+    margin-right: 8px;
+    width: 11px;
+    height: 16px;
+    background-image: url(../images/sprites.png);
+    /* 设置完宽高背景图 没有显示，是因为span是块标签，设置宽高不生效，转行内 */
+    /* 现在只能看到一点点小边，这里要设置一下精灵图的标签 */
+    background-position: -160px -70px;
+    /* 图现在还有点偏上，想让他靠下一下 */
+    /* 图跟文字有偏差，用基线对齐的方式 */
+    vertical-align: middle;
+    
+}
+
+/* 头部布局 */
+.header {
+    /* wrapper 已经让内容居中，宽度参考版心的宽度  */
+    /* 这里要注意，上面已经设置了 margin:0 auto 这里显示左右auto 居中，后面如果
+    写0会覆盖前面的，跟上面统一 */
+    /* margin: 30px 0; */
+    margin: 30px auto;
+    height: 70px;
+    
+}
+
+.logo {
+    /* 图标的位置，数值量设计稿 */
+    float: left;
+    width: 207px;
+    height: 70px;
+  
+}
+    /* 搜索引擎优化，提高排名的做法 */
+.logo h1 a {
+    /* a标签是块 宽高不生效 转一下  display: inline;  display: block;都行  */
+    display: block;
+    /*放跟logo一个的宽高 */
+    width: 207px;
+    height: 70px;
+    /* 再来一个背景图 */
+    background-image: url(../images/logo.png);
+    /*图没有完全显示出来，有一种缩放图片的代码  */
+    background-size:contain ;
+    /*又有图又有子，看着很乱 把字体大小设置为0 及看不见字，也能优化引擎 */
+    font-size: 0;
+
+}
+
+.nav {
+    /* 现在是换行排，加浮动，一行排，logo nav 俩个都要加浮动 */
+    float: left;
+    /* 一行排，但是中间是有间隙的，量一下是多少，给logo加 给nav加都行，注意方向 */
+    margin-left: 40px;
+    height: 70px;
+    
+}
+/* 受li标签的影响 文字换行排 找到.nav li设置浮动  */
+.nav li{
+    float: left;
+    /* 文字之间是有距离的
+    子乘父级 给父级设置里面的子级就会继承 */
+   margin-right: 48px;
+   /* 现在子是比较靠上的设置垂直行高
+   跟父级的高度一致 */
+   line-height:70px ;
+}
+.nav li a {
+    padding-bottom: 7px;
+}
+
+/* 鼠标悬停换颜色 */
+.nav li a:hover {
+    color: #27ba9b;
+    /* 文字的下面有一条线 */
+    border-bottom: 1px solid #27ba9b ;
+}
+
+
+.search {
+    position: relative;
+    /* 不显示宽高，设置浮动 */
+    float: left;
+    /* 搜索框跟文字不在一条线上搜索框偏下面 对齐 */
+    margin-top: 24px ;
+    /* 搜索框跟文字的距离， */
+    margin-left: 34px;
+       /* 搜索框的宽高 */
+    width: 172px;
+    height: 30px;
+    /*加一条下边框线 */
+    border-bottom: 2px solid #e7e7e7;
+}
+.search input {
+    padding-left: 30px;
+    /* 搜索框的宽高 */
+    width: 172px;
+    height: 28px;
+}
+/* 想要修改文本框里面的样式 */
+.search input::placeholder{
+    /* 搜一搜 字号 颜色 */
+    font-size: 14px;
+    color: #ccc;
+}
+.search span {
+    /* 想要把放大镜一直放在搜索框里，有一个子绝父相定位 */
+    position: absolute;
+    left: 2px;
+    top: 0;
+
+    /* 设置宽高不生效，转行内块 */
+    display: inline-block;
+    /* 放大镜的宽高 */
+    width: 18px;
+    height: 18px;
+   
+    background-image: url(../images/sprites.png);
+    /* 定位标签 取负值  */
+    background-position: -79px -69px;
+}
+/* 购物车 */
+.car {
+    position: relative;
+    /* 不显示宽高 设置浮动 */
+    float: left;
+    /* 位置跟文字齐平 */
+    margin-top: 28px;
+    margin-left: 15px;
+    width: 23px;
+    height: 23px;
+    
+    /* 添加背景图 */
+    background-image: url(../images/sprites.png);
+    /* 图片不完全显示，设置一下缩放 */
+    background-position: -119px -69px;
+}
+.car span {
+    /*因为这里是绝对定位，盒子具备行内块特点 */
+    position: absolute;
+    right: -13px ;
+    top: -6px;
+    /* 背景图的宽高 */
+    width: 20px;
+    height: 15px;
+    background-color: #e26237;
+    /* span 快标签 宽高不生效
+    加 display: inline-block也行 加子绝父相也可以 */
+    border-radius: 8px;
+    /* 小红点的尺寸 */
+    font-size: 13px;color: #fff;
+    /* 垂直居中 */
+    text-align: center;
+    line-height: 15px;
+}
+
+/* 版权footer */
+.footer{
+    height:342px ;
+    background-color: #333;
+}
+
+/* 因为版权的宽度 跟上面版心宽度不一样，所以要在单独设置宽度一下 */
+.footer.wrapper {
+
+    width: 1393px;
+}
+
+.footer .top {
+    padding-top: 59px;
+    
+    height: 175px; 
+    /* 把内容分上下俩部分 */
+   border-bottom: 3px solid #434343;
+}
+.footer .top li {
+    position: relative;
+    float: left;
+    /* 内容间距 */
+    margin-right: 300px;
+    width: 195px;
+    height: 58px;
+   
+
+    
+}
+/* 选中最后一个右边距设置为0 */
+.footer .top li:last-child {
+    margin-right: 0;
+}
+/*如果是伪元素添加的标签，行内 宽高不生效 */
+/* 行内块和行内文字无法通过 vertical-align: middle;或行高对齐，用定位 */
+.footer .top li::before {
+    content: "";
+    /* 子绝父相 */
+    position: absolute;
+    left: 0;
+    top: 0;
+
+    /* display: inline-block; */
+    width: 58px;
+    height:58px ;
+    background-image: url(../images/sprites.png);
+    /*文字和在一行拧巴的加一个基线对齐  */
+    vertical-align: middle;
+}
+.footer .top li span {
+    font-size: 28px;
+    color: #fff;
+    /* 加了子绝父相以后文字跟图都在左上角，这样单独给文字在加个外间距 */
+    margin-left: 77px;
+    line-height: 58px;
+}
+/* 第二个li里面的berfore 添加背景图位置属性 */
+/* 选中第二个li */
+/* .footer .top li:nth-child(2) ::before {
+    background-position: -64 0;
+    background-image: url(../images/sprites.png);
+} */
+
+
+
+.footer .bottom {
+    padding-top: 40px;
+    font-size: 14px;
+    color: #999;
+    /* 文字居中 */
+    text-align: center;
+}
+.footer .bottom a {
+    font-size: 14px;
+    color: #999;
+}
+.footer .bottom p {
+    margin-bottom: 20px;
+}
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+       
+ 

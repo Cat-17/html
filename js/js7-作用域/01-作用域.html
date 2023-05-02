@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>作用域</title>
+    <!--通常来说，一段程序代码中所用到的名字并不总是有效和可用的，而限定这个名字的可用性代码范围就是这个名字的作用域 -->
+    <!-- 作用域的使用提高了程序逻辑的局部性，增强了程序的可靠性，减少了名字冲突 -->
+</head>
+<body>
+    <!-- 全部有效<script></script>  还有外部js也是全局有效的-->
+    <!-- 局部有效；函数内的代码环境 就是局部作用域 因为跟函数有关系，所以也称为函数作用域 -->
+    <!-- 块级作用域 {}内有效 块作用域由{} 包括 ，if语句和for语句里面的{}-->
+    <script> //全部作用域
+    let num = 0 
+    console.log(11)
+    function  nam ()  { //局部作用域 也叫函数作用域
+
+    }
+    function nam () {} 
+    // for() {}if(){} //块级作用域 在大括号内有效
+
+    </script>
+    
+    
+</body>
+</html>

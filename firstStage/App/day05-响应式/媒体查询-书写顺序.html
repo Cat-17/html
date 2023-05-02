@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 视口大于等于768px，网页背景色是 粉色 */
+         /* 视口大于等于992px，网页背景色是 粉色 */
+          /* 视口大于等于1200px，网页背景色是 粉色 */
+
+          /* @media 也是css 所有的css都有层叠性 */
+
+          /* @media 书写顺序  使用min-width （从小到大书写）*/
+          /*  @media 书写顺序  使用max-width （从大到小书写） */
+
+          @media(min-width:1200px) {
+            body {
+                background-color: skyblue;
+            }
+          }
+
+          @media(min-width:768px) {
+            body {
+                background-color: pink;
+            }
+          }
+          @media(min-width:992px) {
+            body {
+                background-color: green;
+            }
+          }
+          /* @media(min-width:1200px) {
+            body {
+                background-color: skyblue;
+            }
+          } */
+
+          /*从小到大写显示正常  打乱顺序就会导致有些不显示 */
+
+
+
+
+    </style>
+</head>
+<body>
+    
+</body>
+</html>

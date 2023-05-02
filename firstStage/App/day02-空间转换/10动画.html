@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 200px;
+            height: 100px;
+            background-color: pink;
+
+
+            /*第二步；动画的名字 名字就是定义用的名字 后面跟需要花费多少时间
+              找到谁要是变成动画效果添加 animation:定义的名字change 需要多长时间 1s ; 使用动画的属性 */
+            animation: change 1s ;
+        }
+
+        /* 定义动画；从200变大到600 */
+        /* 动画的实现效果 第一步 ；先定义动画 @keyframes 后面的名字可以自定义 change {
+            from{改变什么属性 就写什么 比较宽高 颜色}
+            to{最终呈现效果 要改变成什么样子}
+            from {
+                width: 200px;
+            }
+            to {
+                width: 600px;
+            }  */
+        /* @keyframes change {
+            from {
+                width: 200px;
+            }
+            to {
+                width: 600px;
+            }
+        } */
+
+        /* 动画百分比写法  */
+        /* 多种动画效果的写法 */
+        /* 定义动画；200 到 500*300 到 800*500 */
+        /* 百分比指的是动画总时长的占比 */
+        @keyframes change {
+            0%{
+                width: 200px;
+            }
+            50%{
+                width: 500px;
+                height: 300px;
+            }
+            100%{
+                width: 800px;
+                height: 500px;
+            }
+        }
+
+
+
+
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+    
+</body>
+</html>

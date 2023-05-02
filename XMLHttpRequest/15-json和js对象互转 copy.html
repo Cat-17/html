@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>json和js对象互转</title>
+</head>
+<body>
+    <!-- json是js对象的字符串表示法，他使用文本表示一个js对象的信息，本质是一个字符串 -->
+    <script>
+        // 这是一个json字符串 本质是一个字符串
+
+
+         // 想把json字符串转换为js对象 使用 json.parse()方法
+
+        // var json = '{"a":"hello","b":"world"}'
+
+        // var obj = JSON.parse(json)
+
+        // console.log(obj)
+        // js对象 {a: 'hello', b: 'world'}
+
+
+        // 想把js对象转换为json字符串 使用 json.stringify()方法
+        var srt = {a: 'hello', b: 'world' ,c:false}
+        var obj = JSON.stringify( srt)
+        console.log(obj)
+        //json字符串 {"a":"hello","b":"world","c":false}
+
+
+
+       
+
+
+
+
+
+    </script>
+    
+</body>
+</html>

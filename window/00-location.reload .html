@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>location对象</title>
+    <!--    location的数据类型是对象，他拆分并保存了url地址的各个组成部分  -->
+</head>
+<body><button>刷新</button>
+    <script>
+        // location.reload //reload 方法用来刷新当前页面，传入参数true时表示强制刷新
+    let btn = document.querySelector('button')
+    btn.addEventListener('click',function(){
+        // reload（）刷新按钮方法  有本地缓存小括号里面可以赋值 
+        // 强制刷新ctrl+f5 直接更新最新内容从网上拉去，不走本地缓存
+        // 不给值 默认是falae   给值ture是强制刷新
+        location.reload(true)
+    
+       
+    })
+    </script>
+</body>
+</html>

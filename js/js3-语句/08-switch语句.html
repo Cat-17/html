@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>switch语句</title>
+    <!--作用；switch  case  语句一般用于等值判断，不适合区间判断 多选一
+        比如 switch （num > 80）case 就没有办法写值 case后面只能跟确定的值 就会一直弹 下面的数据  
+        switch  case一般需要配合break关键字使用，没有break会在乘case穿透  -->
+
+
+</head>
+
+<body>
+    <script>
+        // switch 语法  
+        // switch (数据) {
+        //     case 值1:
+        //         代码1
+        //         break
+        //     case 值2:
+        //         代码2
+        //         break
+        //     default:
+        //         代码n
+        //         break
+        // }
+        // 第一个坑 ；如果用户输入时数字 但是 prompt 输出的结果是字符串类型的
+        // 如果数据里面是字符串 那么执行的条件必须要有'' 因为执行条件是全等===
+        // 
+        switch (2) {
+            case 1:
+                alert(1)
+                break
+            case 2:
+                alert(2)
+                break
+            case 3:
+                alert(3)
+                break
+        //    没有全等的数值 就执行下面的
+                default :
+                alert('没有数据')
+               
+                // 执行顺序 直接找到 全等的 直接找打2 不会去看1 3 执行效率更高
+        }
+
+        // 找到跟小括号里数据全等的case值，并执行里面对应的代码
+        // 若没有全等===的则执行default里的代码
+        // 列；数据若跟case值2全等，则执行代码2
+    </script>
+
+</body>
+
+</html>

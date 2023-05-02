@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>http请求行的组成</title>
+    <script src="../Ajax/lib/jquery.js"></script>
+    <!-- 请求行 由 请求方式，url http协议版本三个部分组成 他们之间用空格隔开 -->
+</head>
+<body>
+    <button id="btnGET">GET请求</button>
+    <button id="btnPOST">POST请求</button>
+    <script>
+        $(function(){
+            $('#btnGET').on('click',function(){
+            $.get('https://www.baidu.com/')
+
+            })
+        })
+    </script>
+    
+</body>
+</html>

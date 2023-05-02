@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            /* 1;设置盒子的宽高背景色 */
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+            /* 加盒子的阴影部分，默认是盒子的外面加阴影 */
+            /*box-shadow盒子阴影； 水平 垂直 模糊度 阴影扩大 阴影颜色 内阴影  */
+            /* 注意；外阴影不能添加outset ，添加了会导致属性报错 */
+            box-shadow: 5px 10px 20px 10px green inset ;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+    
+</body>
+</html>

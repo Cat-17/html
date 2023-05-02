@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>显示转换</title>
+    <!-- 依靠系统内部的隐式转换是不严谨的 ，因为隐私转换规律并不清晰 大多靠经验总结 -->
+    <!-- 显示转换；自己写代码告诉系统该转成什么类型 -->
+    <!-- 转换成数字型 number -->
+</head>
+<body>
+    <script>
+        let num = '10'
+        // 把字符串转换成数字型 取值Number
+        console.log(Number('10.01'))
+        // 把字符串转换成数字型 没有四舍五入 取前面整数，取值parseInt
+        console.log(parseInt('10'))
+        console.log(parseInt('10.111'))
+        console.log(parseInt('10.999'))
+          // 把字符串转换成数字型 会保留小数
+        console.log(parseFloat('10.999'))
+
+        let num1='19'
+        console.log(parseInt(num1)+1)
+        console.log('num1:'+(parseInt(num1)+1))
+
+        // 区别
+          // 把字符串转换成数字型 取值Number
+        //   1；Number 是只识别数字 不能放sdc这样的 否则返回的是NaN(这不是数字)
+          console.log(Number('10.qwe01'))
+
+
+            // 把字符串转换成数字型 会保留小数
+            // parseFloat 经常用于过滤单位 
+        console.log(parseFloat('10.9'))
+        console.log(parseFloat('100px'))
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>

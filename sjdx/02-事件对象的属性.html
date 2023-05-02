@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //文档中 鼠标移动
+        document.addEventListener('mousemove', function (e) {
+            // console.log(11);
+            // pageX 和 pageY 跟文档坐标有关系
+            console.log('clientX:' + e.clientX, 'clientY:' + e.clientY);
+            console.log('pageX:' + e.pageX, 'pageY:' + e.pageY);
+            console.log('offsetX:' + e.offsetX, 'offsetY:' + e.offsetY);
+
+        })
+    </script>
+
+</body>
+
+</html>

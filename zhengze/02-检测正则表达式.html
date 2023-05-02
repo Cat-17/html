@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>检测正则表达式</title>
+</head>
+
+<body>
+    <script>
+        // 1 定义正则表达式
+        let srt = /小宝/
+        let reg = '我是小宝'
+        // 2 检测 返回俩种结果  检测前面是否包含在后面的字符串里
+        let re = srt.test(reg)
+        console.log(re) //返回结果是true 则表示包含在后面字符串里面
+    //  返回false 则不包含
+    </script>
+
+</body>
+
+</html>

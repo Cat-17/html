@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>数组对象作业</title>
+</head>
+
+<body>
+
+    <script>
+        // // 点名: 每次刷新网页运行, 
+        // // 在控制台 随机输出一位同学的名字 ["老赵", "老李", "小传", "小黑"]
+        // // ，如果输出了，则数组中删除这个名字 -->
+        // // 随机数
+        // // 随机数
+        // function name(min, max) {
+
+        //     return Math.floor(Math.random() * (max - min + 1)) + min
+
+
+        // }
+        // // 声明一个数组
+        // let arr = ["老赵", "老李", "小传", "小黑"]
+        // // 在声明一个随机数
+        // let random = name(0, arr.length - 1)
+        // // console.log( random)
+        // // 调用 随机显示一个同学的名字
+        // // 数组里面的名字+随机数 就可以显示不同同学的名字
+        // console.log(arr[random])
+        // // 如果输出了，则数组中删除这个名字
+        // // 指定删除  随机删除 删除1个 
+        // arr.splice(random, 1)
+        // console.log(arr)
+
+
+
+
+
+
+
+
+
+
+        // //练习题 复习声明对象
+        // //   1. 声明一个变量per, 类型为对象类型
+        // let per = {
+        //     //   2. 该对象的属性为性别,年龄,爱好(3个)
+        //     uname: '老赵',
+        //     age: 18,
+        //     hobby: '唱歌',
+        //     //   3. 该对象的方法有 说话, 吃饭(2个)
+        //     speak: function () {
+        //         document.write('说话')
+
+        //     },
+        //     eat: function () {
+        //         document.write('吃饭')
+
+        //     }
+
+
+        // }
+
+        // //   4. 在控制台分别调用该对象的属性和方法 
+        // console.log(per.uname) //调用打印的方法  对象名.属性
+        // console.log(per['age']) //第2种 调用方法  对象名['属性']
+
+        // //  方法的调用 对象名.方法()
+        // per.speak()
+        // per.eat()
+
+
+
+        // // 1. 对象声明完毕后, 调用对象中的吃饭的方法
+        // // 2. 提示: 对象中的方法本质是函数, 调用需要加()
+
+        // let obj = {
+        //     //  对象的属性
+        //     uname: '老赵',
+        //     age: 18,
+        //     hobby: '唱歌',
+        //     // 对象的方法
+        //     // 形参 实参的数据会传到形参里面 打印直接形参 下面调用就可以生效了 
+        //     speak: function (s) {
+        //         // 直接打印形参
+        //         document.write(`我今天吃了${s}`)
+
+        //     },
+        //     eat: function (f) {
+
+        //         document.write(f)
+
+        //     }
+
+        // }
+        // // 调用属性
+        // document.write(`我的名字是:${obj.uname} <br>`)
+        // document.write(`我的年龄是:${obj.age} <br>`)
+        // document.write(`我的爱好是:${obj.hobby} <br>`)
+        // // 调用对象的方法
+        // // 3. 方法也可以传递参数的
+        // obj.eat('吃饭 <br>')
+        // // 实参
+        // obj.speak('苹果<br>')
+
+
+
+        // 猜数字游戏，设定次数，最多猜8次
+
+        // 先要有一个随机数
+        function random(min, max) {
+
+            return Math.floor(Math.random() * (max - min + 1)) + min
+        }
+
+        // 生成一个数字先,猜0-20之间的数
+        let num = random(0, 20)
+
+        let flag = true
+        // 最多猜8次
+        for (let i = 1; i <= 8; i++) {
+
+            let userNum = prompt('请输入您要猜的数字')
+
+            // 比较数字
+            if (userNum > num) {
+
+                alert('您猜的数字大了')
+            } else if (userNum < num) {
+
+                alert('您猜的数字小了')
+            } else {
+                flag = false
+                alert('恭喜猜对了！')
+                break
+            }
+        }
+
+        if (flag) {
+            alert('太笨了，这都猜不到！O(∩_∩)O')
+        }
+
+
+
+
+
+    </script>
+</body>
+
+</html>

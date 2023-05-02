@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>多分支语句</title>
+</head>
+
+<body>
+    <script>
+        //   分时案例
+        // 第一步用户输入时间 
+        let time = prompt('请输入小时：')
+
+        // 第二步多分支判断
+        if (time < 12) {
+
+            alert('上午好')
+
+        } else if (time < 18) {
+
+            alert('下午好')
+
+        } else if (time < 20) {
+
+            alert('晚上好')
+
+        } else {
+
+            alert('抓紧睡觉')
+        }
+
+        
+        // 先判断条件1  若满足条件1 就执行条件1 其他不执行
+        // 若不满足则向下判断条件2 满足条件2 就执行条件2  其他不执行
+        // 若依然不满足继续往下判断依次类推
+        // 若以上条件都不满足 执行else里的代码n
+        // 注释 可以写n个条件 但这里演示只写2个
+    </script>
+
+</body>
+
+</html>
