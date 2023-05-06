@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./lib/jquery.js"></script>
+    <script src="./data.php"></script>
+</head>
+<body>
+    <h1>天气信息查询</h1>
+    <input type="text" id="city" placeholder="请输入城市名称">
+    <input type="button" id="btn" value="查询">
+    <script>
+
+        window.onload = function(){
+            var btn = document.querySelector("#btn")
+            btn.onclick = function(){
+                var cityName = document.querySelector("#city").value
+
+                // 动态撞见script标签 动态定制src属性的值
+                var script = document.createElement("script")
+                script.src = "http://www.lisi.com/data.php?city=" + cityName + "&callback=foo2"
+
+                // 等价于上面调用function 相当于给window添加了一个属性方法 
+                window["foo2"] = function(data){
+                    console.log(data)
+                }
+                // 相当于在head标签里面写入了一个script
+                var head = document.querySelector("head")
+                head.appendChild(script)
+            }
+        }
+    </script>
+    
+</body>
+</html>

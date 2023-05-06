@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 引入跨域封装的函数 -->
+    <script src="./myutils.js"></script>
+    <script src="./lib/jquery.js"></script>
+
+</head>
+
+<body>
+    <input type="text" id="keyword" placeholder="请输入相关的关键字">
+    <input type="button" id="btn" value="查询">
+    <ul>
+        <li>1</li>
+        <li>1</li>
+        <li>1</li>
+        <li>1</li>
+        <li>1</li>
+
+    </ul>
+    <script>
+        window.onload = function () {
+            var btn = document.querySelector("#btn")
+            btn.onclick = function () {
+                var keywordValue = document.querySelector("#keyword").value
+                console.log(keywordValue)
+                // 使用jquery来获取跨域的数据
+                // 使用jquery  dataType:"jsonp" 设置jsonp
+                // 可以通过jsonp:"cb"修改key值
+                // 可以通过jsonpCallback:"haha" 修改value值
+                // key默认是就是callback
+                // value的值是以jquery开头的字符串，这个字符串就是函数调用的名称
+                $.ajax({
+                    url:"https://suggest.taobao.com/sug",
+                    data:{q:keywordValue},
+                    success:function(data){
+                        console.log(data)
+                    },
+                    dataType:"jsonp",
+                    jsonp:"callback",
+                    jsonpCallback:"haha"
+
+
+                })
+
+
+
+            //     maAjax({
+            //         url:"https://suggest.taobao.com/sug",
+            //         data:{q:keywordValue},
+            //         success:function(data){
+            //             var liTag = ""
+            //         // 循环遍历result
+            //         for (var i = 0; i < data.result.length; i++) {
+            //             var temp = data.result[i]
+            //             var tempSug = temp[0]
+            //             liTag += "<li>"+tempSug+"</li>"
+            //         }
+            //         // 追加到ul里面
+            //         var uLTag= document.querySelector("ul")
+            //         uLTag.innerHTML = liTag
+
+            //     }
+            // }
+        
+            
+            // )
+        
+        
+        
+         
+
+        //         // 请求跨域地址 通过script src属性实现 获取数据
+        //         // https://suggest.taobao.com/sug 
+        //         // 创建一个script标签
+        //         var script = document.createElement("script")
+        //         script.src = "https://suggest.taobao.com/sug?q=" + keywordValue + "&callback=xixi"
+        //         // 回调函数 响应传回来的数据 用data接收
+        //         window["xixi"] = function (data) {
+        //             // console.log(data)
+        //             // 把响应回来的数据追加到li标签里面
+        //             var liTag = ""
+        //             // 循环遍历
+        //             for (var i = 0; i < data.result.length; i++) {
+        //                 var temp = data.result[i]
+        //                 var tempSug = temp[0]
+        //                 liTag += "<li>"+tempSug+"</li>"
+        //             }
+        //             // 追加到ul里面
+        //             var uLTag= document.querySelector("ul")
+        //             uLTag.innerHTML = liTag
+
+        //         }
+        //         // 把创建好的script 标签放到head标签里面
+        //         var head = document.querySelector("head")
+        //         head.appendChild(script)
+
+
+            }
+        }
+
+    </script>
+
+</body>
+
+</html>

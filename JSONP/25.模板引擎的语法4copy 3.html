@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>模板引擎</title>
+    <script src="./lib/jquery.js"></script>
+    <!-- 模板引擎 -->
+    <script src="./lib/template-web.js"></script>
+</head>
+<body>
+    <div id="container">
+       
+    </div>
+    <!-- 定义引擎模板 -->
+    <script type="text/html" id="resulTemplate">
+       <p>不转义:{{@ value}}</p>
+       <p>默认转义: {{value}}</p>
+       
+
+    </script>
+    <script>
+       
+            window.onload = function(){
+                // 这里的数据当中包含特殊字符
+                // 解析标签 @ 
+                var data = {
+                    value:'<span style="color:#F00">hello world!</span>'
+                }
+           
+            var html = template("resulTemplate",data)
+            document.getElementById("container").innerHTML = html
+           
+      
+            
+        
+            
+        }
+
+    </script>
+    
+</body>
+</html>

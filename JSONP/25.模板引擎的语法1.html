@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>模板引擎</title>
+    <script src="./lib/jquery.js"></script>
+    <!-- 模板引擎 -->
+    <script src="./lib/template-web.js"></script>
+</head>
+<body>
+    <div id="container">
+       
+    </div>
+    <!-- 定义引擎模板 -->
+    <script type="text/html" id="resulTemplate">
+        <h1>{{title}}</h1>
+        {{each books value index}}
+        <div>{{value}}</div>
+       
+        {{/each}}
+       
+
+    </script>
+    <script>
+        window.onload = function(){
+            var data = {
+                title:'四大名著图书信息',
+                books:['三国演义','水浒传','西游记','红楼梦']
+            }
+        var html =  template("resulTemplate",data)
+        var container = document.querySelector("#container")
+        container.innerHTML = html
+            
+        }
+
+    </script>
+    
+</body>
+</html>

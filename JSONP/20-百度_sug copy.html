@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./myutils.js"></script>
+    <script src="./lib/jquery.js"></script>
+    <!-- 引入模板引擎 渲染界面 -->
+    <script src="./lib/template-web.js"></script>
+</head>
+
+<body>
+    <input type="text" id="keyword" placeholder="请输入相关的关键字">
+    <input type="button" id="btn" value="查询">
+  <div id="resultDiv">
+    <ul>
+        <li>
+            <div>
+                <span>结果1</span>
+                <span>1</span>
+            </div>
+        </li>
+
+
+    </ul>
+  </div>
+    <!-- 定义模板 -->
+    <script type="text/html" id="resulTemplate">
+        <!-- 使用模板引擎的循环语句each  循环data里面s的这个数组 value 等于数组
+        里面的值 i代表索引号   -->
+    <ul>
+        {{each s value index}}
+        <li>
+            <div>
+                <span>{{index+1}}</span>
+                <span>{{value}}</span>
+            </div>
+        </li>
+        {{/each}}
+    </ul>
+
+    </script>
+    <script>
+        window.onload = function () {
+            var btn = document.querySelector("#btn")
+            btn.onclick = function () {
+                var keywordValue = document.querySelector("#keyword").value
+                console.log(keywordValue)
+
+                $.ajax({
+                    url: "https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su",
+                    data: { wd: keywordValue },
+                    success: function (data) {
+                        console.log(data)
+                        //获取到数据以后 调用模板引擎
+                        // 模板的id 数据
+                        //  template的含义就是将数据和模板结合起来生成html片段
+                        var html = template("resulTemplate", data)
+                        console.log(html);
+                        var divResult = document.querySelector("#resultDiv")
+                        divResult.innerHTML = html
+                        // var liTag = ""
+                        // for (var i = 0; i < data.s.length; i++) {
+                        //     var temp = data.s[i]
+                        //     liTag += "<li>" + temp + "</li>"
+                        // }
+                        // // 追加到ul里面
+                        // var uLTag = document.querySelector("ul")
+                        // uLTag.innerHTML = liTag
+                    },
+
+                    dataType: "jsonp",
+                    jsonp: "cb",
+                    // jsonpCallback:"haha"
+
+
+                })
+
+
+                // maAjax({
+                //     url:"https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su" ,
+                //     data:{wd:keywordValue},
+                //     success:function(data){
+                //         console.log(data)
+                //     },
+                //     jsonp:"cb",
+                // })
+
+                // // 请求跨域地址 通过script src属性实现 获取数据
+                // // https://suggest.taobao.com/sug 
+                // // 创建一个script标签
+                // var script = document.createElement("script")
+                // script.src = "https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?wd="+keywordValue+"&cb=haha"
+                // // 回调函数 响应传回来的数据 用data接收
+                // window["haha"] = function (data) {
+                //     // console.log(data)
+                //     // 把响应回来的数据追加到li标签里面
+                //     var liTag = ""
+                //     // 循环遍历
+                //     for (var i = 0; i < data.s.length; i++) {
+                //         var temp = data.s[i]
+                //         liTag += "<li>"+temp+"</li>"
+                //     }
+                //     // 追加到ul里面
+                //     var uLTag= document.querySelector("ul")
+                //     uLTag.innerHTML = liTag
+
+                // }
+                // // 把创建好的script 标签放到head标签里面
+                // var head = document.querySelector("head")
+                // head.appendChild(script)
+
+
+            }
+        }
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>模板引擎</title>
+    <script src="./lib/jquery.js"></script>
+    <!-- 模板引擎 -->
+    <script src="./lib/template-web.js"></script>
+</head>
+<body>
+    <div id="content">
+      
+       
+    </div>
+    <!-- 定义引擎模板 -->
+    <script type="text/html" id="test">
+        {{if isAdmin }}
+        <h1>{{title}}</h1>
+        <h2>一共有{{count}}条数据</h2>
+        {{each list value index }}
+        <div>索引{{index+1}} {{value}}</div>
+        {{/each}}
+        {{/if}}
+        {{if !isAdmin}}
+        <h1>没有任何数据</h1>
+        {{/if}}
+    
+    </script>
+   
+    <script>
+        window.onload = function(){
+            var data = {
+                title:'条件判断基本例子',
+                isAdmin:true,
+                list:['文艺','播客','摄影','电影','名呀哦','旅行','吉他',]
+            }
+            data.count = data.list.length
+        var html =  template("test",data)
+        document.querySelector("#content").innerHTML = html
+        // container.innerHTML = html
+            
+        }
+
+    </script>
+    
+</body>
+</html>
