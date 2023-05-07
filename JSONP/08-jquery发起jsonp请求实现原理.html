@@ -10,7 +10,7 @@
 </head>
 
 <body>
-    <button dir="btnjsonp">发起jsonp请求</button>
+    <button id="btnjsonp">发起jsonp请求</button>
     <!-- //jquery发起jsonp请求实现原理 也是通过<script>标签的src属性实现跨域数据访问的，
         // 只不过jquery采用的是动态创建和移除<script>标签的方式，来发起jsonp数据请求 
             // 在发起jsonp请求的时候，动态向header中addend添加一个script标签
@@ -19,7 +19,7 @@
         $(function () {
             $('#btnjsonp').on('click', function () {
                 $.ajax({
-                    url: 'http://ajax.frontend.itheima.net:3006/api/jsonp?name=zs&age=20',
+                    url: 'https://suggest.taobao.com/sug?q=ad',
                     dataType: 'jsonp',
                     jsonpCallback: 'abc',
                     success: function (res) {
