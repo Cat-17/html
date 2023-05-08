@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>子节点</title>
+</head>
+<body>
+    <ul>
+        <li>我是li 1</li>
+        <li>我是li</li>
+        <li>我是li</li>
+        <li>我是li 4</li>
+    </ul>
+    <script>
+        // DOM提供的方法 （API)获取
+        var ul =document.querySelector('ul')
+        // var lis = ul.querySelector('li')
+        // 子节点 ul.clildNodes 所有的子节点 包含元素节点 文本节点等等
+        // ❤子节点 ul.children 只获得子元素节点 也是我们实际开发中常用的
+        console.log(ul.children)
+
+        // 获得第一个孩子 获取的是第一个子节点 不管是文本节点还是元素节点
+        // console.log(ul.firstChild);
+        console.log(ul.firstElementChild)
+        // 获得最后一个孩子 获取的是最后一个子节点 不管是文本节点还是元素节点
+        // console.log(ul.lastChild);
+        console.log(ul.lastElementChild)
+
+        // 后面 这俩个 方法 有兼容性问题
+
+        //实际开发的写法 既没有兼容性问题又返回第一个子元素
+        console.log(ul.children[0])
+        // 最后一个li不确定是几 如果写死了就不对 
+        // 这里可以根据 4个元素 要写3  个数减1 就是最后一个元素
+        console.log(ul.children[ul.children.length - 1])
+
+
+    </script>
+</body>
+</html>

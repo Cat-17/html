@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>执行事件的步骤</title>
+    <!-- 1；获取事件源 触发谁 就把谁获取过来 -->
+    <!-- 2；注册事件，绑定事件 给事件源这个对象绑定鼠标点击事件 还是鼠标经过事件 按下键盘事件 -->
+    <!-- 3；添加事件处理程序（采取函数赋值形式 -->
+</head>
+<body>
+    <div>123</div>
+    <script>
+        // 执行事件步骤
+        // 点击div 控制台输出  我被选中了
+        var div = document.querySelector('div')
+        // 绑定事件 注册事件
+        div.onclick = function(){
+            console.log('我被选中了')
+        }
+
+
+        // onclick 鼠标点击事件
+        // onmouseover 鼠标经过触发事件
+        // onmouseout 鼠标离开触发
+        // onfocus 获得鼠标焦点触发
+        // onblur 失去鼠标焦点触发
+        // onmousemove 鼠标移动触发
+        // onmouseup 鼠标弹起触发
+        // onmousedown 鼠标按下触发
+
+    </script>
+</body>
+</html>

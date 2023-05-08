@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>微博发布案例</title>
+    <!-- 核心思路：点击按钮之后，就动态创建一个li 添加到ul里面 -->
+    <!-- 创建li的同事，把文本域里面的值通过li.innerHTML赋值给li -->
+    <!-- 如果想要新的留言后面显示就用appendCild如果想要显示在前面就是insertBefore -->
+    <style>
+        textarea {
+            width: 200px;
+            height: 200px;
+            border: 1px solid pink;
+            margin: auto 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <textarea name="" id="">123</textarea>
+    <button>发布</button>
+    <ul>
+
+    </ul>
+    <script>
+        // 1;获取按钮
+        var btn = document.querySelector('button')
+        var test = document.querySelector('textarea')
+        var ul = document.querySelector('ul')
+        // 2;注册事件
+        btn.onclick = function () {
+            if (test.value == '') {
+                alert('您没有输入内容')
+
+                return false
+            } else {
+                // console.log(test.value)
+                // (1)创建元素
+                var li = document.createElement('li')
+                // 先有li 才能赋值
+                li.innerHTML = test.value
+                //  (2)添加元素 添加给ul
+                // ul.appendChild(li)
+                // 指定添加元素
+                ul.insertBefore(li,ul.children[0])
+            }
+
+
+        }
+    </script>
+
+</body>
+
+</html>

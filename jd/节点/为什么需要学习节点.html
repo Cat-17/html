@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>节点</title>
+    <!-- 节点 网页中所有的内容都是节点 在DOM中使用node来表示 -->
+    <!-- html DOM树中的所有节点均可通过javaScript进行访问 所有的html元素（节点）均可被修改 可以创建或删除 -->
+
+    <!-- 一般，节点至少拥有nodeType(节点类型)  nodeNmae（节点名称）nodeValue（节点值）这三个属性-->
+    <!-- 元素节点：nodeType 为 1 -->
+    <!-- 属性节点：nodeType 为 2 -->
+    <!-- 文本节点：nodeType 为 3（文本节点包含文字 空格  换行 -->
+    <!-- 我们实际开发中 节点操作的主要是元素节点 -->
+    <!--获取元素通常使用俩种方式 -->
+    <!-- 1；利用DOM提供的方法获取元素  缺点是逻辑性不强 比较繁琐-->
+    <!-- 节点的优点 -->
+    <!-- 利用父子兄节点关系获取元素 -->
+    <!-- 逻辑性强 但是兼容性稍差 -->
+
+</head>
+<body>
+    <div>我是div</div>
+    <span>我是span</span>
+    <ul>
+        <li>我是li</li>
+        <li>我是li</li>
+        <li>我是li</li>
+        <li>我是li</li>
+    </ul>
+    <div class="box">
+        <span class="erweima">x</span>
+    </div>
+    <script>
+        var box = document.querySelector('.box')
+        console.dir(box);
+
+    </script>
+    
+</body>
+</html>

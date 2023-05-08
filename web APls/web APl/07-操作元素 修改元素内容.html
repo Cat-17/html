@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>修改元素</title>
+    <!-- javaScript的DOM操作可以改变网页，结构和样式，我们可以利用DOM操作元素
+    来改变里面的内容。属性。注意一下都是属性 -->
+    <style>
+        div,p {
+            width: 300px;
+            height: 30px;
+            line-height: 30px;
+            color: #fff;
+            background-color: pink;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <button id="btn">显示当前系统时间</button>
+    <div>某个时间</div>
+    <p>123</p>
+    <script>
+        //  <!-- 改变元素内容 -->
+        // 从起始位置到终止为止的内容 但他去除html标签，同时空格和换行也会去掉
+        // 起始位置到终止位置的全部内容，包括html标签，同时保留空格和换行
+        var btn = document.querySelector('#btn')
+        var div = document.querySelector('div')
+        btn.onclick = function () {
+
+            div.innerHTML = getData()
+        }
+
+        function getData() {
+            var dt = new Date()
+            // //获得年月日的时间 
+            var y = dt.getFullYear()
+            var m = dt.getMonth() + 1
+            var d = dt.getDate()
+            var arr = ['星期日', '星期一', '星期二', '星期三', '星期四', '星期五', '星期六',]
+            var day = dt.getDay()
+            return '今天是:' + y + '年' + m + '月' + d + '日' + arr[day]
+            // return  "2"//return就代表把结果赋值给deteFormat
+        }
+
+        // 我们元素可以不用添加事件
+        var p = document.querySelector('p')
+        p.innerHTML =  getData()
+
+
+    </script>
+
+
+</body>
+
+</html>

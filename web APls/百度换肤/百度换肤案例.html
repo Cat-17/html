@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>百度换肤案例</title>
+    <!-- 案例分析 -->
+    <!-- 这个案例联系的是给一组元素注册事件 -->
+    <!-- 给4个小图片利用循环注册点击事件 -->
+    <!-- 当我们点击了这个图片 让我们页面背景颜色改为当前的图片 -->
+    <!-- 核心算法 把当前图片的src路劲取过来 给body作为背景即可 -->
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            background: url(./images/1.jpg)no-repeat center top;
+        }
+        li {
+            list-style: none;
+        }
+        .baidu {
+            overflow: hidden;
+            margin: 100px auto;
+            background-color: #fff;
+            width: 410px;
+            padding-top: 3px;
+        }
+        .baidu li {
+            float: left;
+            margin: 0 1px;
+            cursor: pointer;
+        }
+        .baidu img {
+            width: 100px;
+        }
+    </style>
+
+</head>
+<body>
+    <ul class="baidu">
+        <li><img src="./images/1.jpg" alt=""></li>
+        <li><img src="./images/2.jpg" alt=""></li>
+        <li><img src="./images/3.jpg" alt=""></li>
+        <li><img src="./images/4.jpg" alt=""></li>
+    </ul>
+
+    <script>
+        // 1获取元素
+        var imgs = document.querySelector('.baidu').querySelectorAll('img')
+        // 2;循环注册事件
+        for(var i = 0 ; i < imgs.length;i++){
+            imgs[i].onclick = function(){
+                // console.log(this.src);
+                // 得到当前图片src属性的路径 添加给body
+                document.body.style.backgroundImage = 'url('+this.src+')'
+
+
+            }
+
+        }
+
+    </script>
+
+    
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>创建节点</title>
+    <!--
+        // document.createElement()方法创建由tagName指定html元素
+         因为这些元素原先不存在，是根据我们的需求动态生成的，所以我们也称为动态创建元素节点 -->
+</head>
+
+<body>
+    <ul>
+        <li>123</li>
+
+    </ul>
+    <script>
+        //     // 创建节点元素节点
+        //  var li = document.createComment('li')
+        // //  添加节点 元素
+        // // node.appendChild()将一个节点添加到指定父节点的子节点列表末尾、类似于css里面的after伪元素
+        // // 获取 父节点
+        // var ul = document.querySelector('ul') 
+        // ul.appendChild(li)
+        // // 添加节点 指定添加
+        // var lili = document.createElement('li')
+        // ul.insertBefore(lili,ul.children[0])
+
+        //创建一个节点
+        var lis = document.createElement('li')
+        //   添加节点
+        lis.innerHTML = '您好'
+        // 把创建的li放到ul里面
+        var ul = document.querySelector('ul')
+        ul.appendChild(lis)
+        // 指定添加
+        ul.insertBefore(lis,ul.children[0])
+
+
+    </script>
+</body>
+
+</html>

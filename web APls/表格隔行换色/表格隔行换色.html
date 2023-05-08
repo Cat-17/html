@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>表格隔行换色</title>
+    <!-- 1；用到新的鼠标事件鼠标经过onmouseover 鼠标离开 onmouseout -->
+    <!-- 2；核心思路 鼠标经过tr行 当前的行变背景颜色 鼠标离开去掉当前的背景颜色 -->
+    <!-- 注意：第一行（thead里面的行）不需要变换颜色 因此我们获取的是tbody里面的行  -->
+    <style>
+        table{
+            width: 800px;
+            margin: 100px auto;
+            border-collapse: collapse;
+            text-align: center;
+            font-size: 14px;
+        }
+        thead tr {
+            height: 30px;
+            background-color: skyblue;
+        }
+        tbody tr {
+            height: 30px;
+        }
+        tbody td {
+            border-bottom: 1px solid #d7d7d7;
+            font-size: 12px;
+            color: blue;
+        }
+        .bg {
+            background-color: pink;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th>代码</th>
+                <th>名称</th>
+                <th>最新公布净值</th>
+                <th>累计净值</th>
+                <th>前单位净值</th>
+                <th>净值增长率</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>003526</td>
+                <td>003526</td>
+                <td>003526</td>
+                <td>003526</td>
+                <td>003526</td>
+                <td>003526</td>
+            </tr>
+            <tr>
+                <td>003526</td>
+                <td>003526</td>
+                <td>003526</td>
+                <td>003526</td>
+                <td>003526</td>
+                <td>003526</td>
+            </tr>
+            <tr>
+                <td>003526</td>
+                <td>003526</td>
+                <td>003526</td>
+                <td>003526</td>
+                <td>003526</td>
+                <td>003526</td>
+            </tr>
+            <tr>
+                <td>003526</td>
+                <td>003526</td>
+                <td>003526</td>
+                <td>003526</td>
+                <td>003526</td>
+                <td>003526</td>
+            </tr>
+            <tr>
+                <td>003526</td>
+                <td>003526</td>
+                <td>003526</td>
+                <td>003526</td>
+                <td>003526</td>
+                <td>003526</td>
+            </tr>
+        </tbody>
+    </table>
+    <script>
+        // 1; 获取元素 获取的是tbody里面的所有行
+        var trs = document.querySelector('tbody').querySelectorAll('tr')
+        // 2;利用循环绑定s鼠标经过注册事件
+        for(var i = 0 ; i < trs.length; i++){
+            trs[i].onmousemove = function(){
+                // console.log(1);
+                // 鼠标经过事件绑定成功 经过谁谁变化背景颜色
+                // 这里通过添加类的方式去做 如果后期需要变化颜色 直接修改css样式 js不需要改动
+                this.className = 'bg'
+            }
+            // 鼠标离开的时候移除类
+            trs[i].onmouseout = function(){
+                this.className = ''
+            }
+        }
+        
+    </script>
+    
+</body>
+</html>
