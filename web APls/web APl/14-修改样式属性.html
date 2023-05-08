@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>修改样式属性</title>
+    <!-- 我们可以通过js修改河源市的大小，颜色位置等样式 -->
+    <!-- .style   行内样式操作  单一样式使用-->
+    <!-- .className 类名样式操作  需要修改的元素比较多 通过类名修改-->
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            background-color: palegoldenrod;
+
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+    <script>
+        var div = document.querySelector('div')
+        div.onclick = function(){
+            // 背景颜色发生变化
+            // js修改样式属于行内样式 如果有冲突 以js为主 行内样式比css的权重高 
+            this.style.backgroundColor = 'pink'
+            this.style.width = '400px' 
+        }
+    </script>
+    
+</body>
+</html>

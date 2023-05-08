@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>开关灯案例</title>
+    <style>
+      
+    </style>
+</head>
+<body>
+   <button id="btn">开关灯</button>
+    <!-- 给开关灯 绑定一个点击事件 -->
+    <script>
+        var btn = document.querySelector('#btn')
+        var flat = 0
+        btn.onclick = function(){
+            // 要有一个判断条件 点了一下变黑，再点就恢复
+            if(flat === 0){
+                document.body.style.backgroundColor = 'black'
+                // 相对应的flat也要发生变化
+                flat = 1
+            } else{
+
+                document.body.style.backgroundColor = '#fff'
+                // 相对应的flat也要发生变化
+                flat = 0
+
+            }
+            
+        }
+    </script>
+    
+</body>
+</html>

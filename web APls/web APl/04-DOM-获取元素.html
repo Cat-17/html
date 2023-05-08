@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM-获取元素</title>
+</head>
+
+<body>
+    <div id="time">2023-</div>
+
+    <ul>
+        <li>知否知否</li>
+        <li>知否知否</li>
+        <li>知否知否</li>
+        <li>知否知否</li>
+        <li>知否知否</li>
+    </ul>
+    <ol id="ol">
+        <li>生僻字</li>
+        <li>生僻字</li>
+        <li>生僻字</li>
+        <li>生僻字</li>
+    </ol>
+
+   <div class="box"></div>
+   <div class="box"></div>
+   <div id="nav">
+    <ul>
+        <li>首页</li>
+        <li>产品</li>
+    </ul>
+   </div>
+
+    <!-- 获取页面元素有4中方法 -->
+
+    <!-- 根据id获取 -->
+    <script>
+        // document.getElementById()方法可以获取带有id的元素对象
+        // 参数 字符串类型
+        // 返回的是一个元素对象 object是对象 在dom返回的都是对象
+        var time = document.getElementById('time')
+        console.log(time)
+        console.log(typeof time)
+        //  console.dir(time) 打印我们返回元素对象，更好的查看里面的属性和方法
+        console.dir(time)
+
+    </script>
+    <!-- 根据标签名获取 -->
+    <script>
+        // 1;返回的是 获取过来元素对象的集合 以伪数组的形式存储
+    var  lis =  document.getElementsByTagName("li")
+    console.log(lis)
+    console.log(lis[0])
+    // 2;我们想要依次打印里面的元素对象我们可以采取遍历的方式
+    for(var i =0 ; i < lis.length; i++){
+        console.log(lis[i])
+        // 得到元素对象是动态的，如果上面的html标签里面的内容发生变化，这里是
+        // 不需要改动的 会按照变化的内容进行打印
+
+        // 3；如果页面中只有一个li 返回的还是伪数组
+        // 4：如果页面没有li 返回是一个伪数组 空的 长度为0
+        // 5；element.getElementsByTagName('标签名')
+        // 还可以获取某个元素（父元素）内部所有指定标签名的子元素
+        // 注意：父元素必须是单个对象（必须指明是哪一个元素对象）获取的时候不包括父元素自己
+        var ol = document.getElementById("ol")
+        console.log(ol.getElementsByTagName('li'))
+
+
+    }
+
+    </script>
+
+    <!-- 通过html5新增的方法获取 -->
+    <script>
+        // 根据类名获得某些元素
+     var boxs =   document.getElementsByClassName("box")
+        console.log(boxs)
+        // 2:返回指定选择器的第一个元素对象
+        document.querySelector(".box")
+        // 3 返回指定选择器的所有元素的对象集合
+        var allBox = document.querySelectorAll('.box')
+    </script>
+
+
+    <!-- 特殊元素获取 -->
+    <script>
+        // <!-- 获取body 元素 -->
+    var bodyEle =    document.body
+    console.log(bodyEle)
+    console.dir(bodyEle)
+    // <!-- 获取html 元素 -->
+    var htmlEle = document.documentElement
+    console.log(htmlEle)
+
+    </script>
+    
+    
+    
+     
+
+</body>
+
+</html>

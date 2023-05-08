@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>父节点</title>
+</head>
+
+<body>
+    <!-- 父子关系 -->
+    <div class="box">
+        <span class="erweima">x</span>
+    </div>
+    <script>
+        // 把erweima的父亲获取过来 parentNode 得到是离最近的父级节点
+        // 亲爸爸 如果找不到父节点就返回为空null 
+        var erweima = document.querySelector('.erweima')
+        // var box = document.querySelector('.box')
+        console.log(erweima.parentNode)
+    </script>
+
+
+</body>
+
+</html>

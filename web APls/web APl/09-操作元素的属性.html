@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>操作元素的属性</title>
+    <!-- 元素：页面中所有的标签都是元素，DOM中使用element表示-->
+    <!-- innerText,innerHTML 改变元素的内容 -->
+    <!-- 元素的属性：图片的src href id alt title -->
+    <style>
+        img {
+            width: 300px;
+        }
+
+    </style>
+
+</head>
+<body>
+    <button id="ldh">刘德华</button>
+    <button id="zxy">张学友</button>
+    <img src="../images/2.webp" alt="" title="刘德华">
+    <script>
+        // 修改元素属性
+        // 1；获取元素
+        var ldh = document.getElementById('ldh')
+        var zxy = document.getElementById('zxy')
+        var img = document.querySelector('img')
+        // 2;注册事件
+        zxy.onclick = function(){
+            // 点击zxy按钮 图片的src属性发生变化
+            img.src = '../images/4.webp'
+            img.title = '张学友'
+
+        }
+        ldh.onclick = function(){
+            img.src = '../images/2.webp'
+            img.title = '刘德华'
+        }
+            
+        
+
+        
+    </script>
+    
+</body>
+</html>

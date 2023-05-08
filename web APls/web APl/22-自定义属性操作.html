@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>自定义属性操作</title>
+    <!-- 主要属性目的：是为了保存并使用数据 有些数据可以保存到页面中而不用保存到数据库中 -->
+    <!-- 自定义属性获取 是通过getAttribute（'属性'）获取 -->
+    <!-- 自定义属性data-开头作为属性名并且赋值 -->
+</head>
+<body>
+<div id="demo" data-index = "1"  data-list-name="andy"></div>
+<script>
+    // 1；获取元素的属性值
+    // （1）元素 .属性 获取属性值
+    // 获取内置属性值（元素本身自带
+    var div = document.querySelector('div')
+     console.log(div.id);
+    //  2 元素. 得到属性值
+    // 主要获得自定义的属性（标准）我们程序员自定义属性
+    div.getAttribute('id')
+    console.log(div.getAttribute('data-index'));
+    // h5新增的获取自定义属性的方法
+    // dataset 里面存放的是自定义属性的集合 只能获取data-开头的
+    console.log(div.dataset);
+    console.log(div.dataset.index)
+    console.log(div.dataset['index'])
+    console.log(div.dataset['listName'])
+    console.log(div.dataset.listName)
+// 如果自定义属性里面有多个-连接的单词 我们获取的时候采用 驼峰命名法
+
+    // 更改属性值 元素.属性 = ’值
+    div.id = 'test'
+    div.className = 'navs'
+    // （2） 修改属性值  元素.setAttribute('属性','值') 
+    // 主要针对于自定义属性
+    div.setAttribute('data-index',2)
+    // class 特殊 这里面写class 不是className 
+    // 设置属性
+    div.setAttribute('class','footer')
+    div.setAttribute('data-time',20)
+
+
+
+    // 移除属性
+    div.removeAttribute('index')
+
+
+</script>
+    
+</body>
+</html>

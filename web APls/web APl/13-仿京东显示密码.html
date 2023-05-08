@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>仿京东显示密码</title>
+    <!-- 点击按钮将密码框切换为文本框。并可以查看密码明文 -->
+    <!-- 核心思路：点击眼睛按钮 把密码框类型改为文本框就可以看见里面的密码 -->
+    <!-- 一个按钮俩个状态，点击一次，切换为文本框 继续点击一次切换为密码框 -->
+    <!-- 算法：利用一个flag变量，来判断flag的值，如果是1就切换为文本框，flag设置
+    为0就切换为密码框，flag设置为1 -->
+    <style>
+        .box {
+            position: relative;
+            width: 400px;
+            border-bottom: 1px solid #ccc;
+            margin: 100px auto;
+        }
+        .box input {
+            width: 300px;
+            height: 30px;
+            border: 0;
+            outline: none;
+        }
+        .box img {
+            position: absolute;
+            top: 2px;
+            right: 2px;
+            width: 24px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <label for="">
+            <img src="./images/close.png" alt="" id="eye">
+        </label>
+        <input type="password" id="pwd">
+
+        <script>
+            // 1 获取元素
+            var eye = document.getElementById('eye')
+            var pwd = document.getElementById('pwd')
+            var flag = 0
+            eye.onclick = function(){
+                // 点击一次之后，flag一定要变化
+                if(flag === 0){
+                    // 当我们点击了一次图片
+                    // 里面的input的属性发生变化  变成可见的文本框
+                    // 图片也对应的发生变化
+                    pwd.type = 'text'
+                    eye.src = './images/open.png'
+                    flag = 1 //赋值操作
+
+                } else {
+                    pwd.type = 'password'
+                    eye.src = './images/close.png'
+                    flag = 0
+
+                }
+               
+            }
+
+
+        </script>
+
+    </div>
+    
+</body>
+</html>
