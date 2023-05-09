@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>三种创建元素方式区别</title>
+</head>
+<body>
+    <div class="create"></div>
+    <div class="inner"></div>
+    <button>点击</button>
+    <p>abc</p>
+    <script>
+        // 三种创建元素方式区别
+        // document.write() 创建元素 
+        var btn = document.querySelector('button')
+        btn.onclick = function(){
+            //  document.write 是直接将内容写入页面额内容流，
+            // 但是文档流执行完毕，再去调用这句话则会导致页面全部重绘
+            document.write('<div>123</div>')
+        }
+       
+        // .innerHTML =  创建元素
+        var  create =document.querySelector('.create')
+
+        //  for(var i = 0; i<=100; i++){
+        //     create.innerHTML  += '<a href="#">百度</a>'
+        //  }
+        // 解决innerHTML效率问题 还有一种解决方式  
+        // innerHTML创建多个元素效率更高（不要拼接字符串 采取数组形拼接，结构稍微复杂
+        var arr = []
+        for(var i = 0 ;i <= 100 ;i++){
+            // 没循环一次把数据追加到数组里面
+            arr.push('<a href="#">百度</a>')
+        }
+        // join('') 将数组变化为字符串
+        create.innerHTML = arr.join('')
+
+        // document.createElement() 创建元素
+        var inner = document.querySelector('.inner')
+
+        for(var i =0;i<=100;i++){
+    //  document.createElement('a')创建多个元素效率稍微低一点，但是结构更清晰
+        var a =   document.createElement('a')
+        a.innerHTML = '您好'
+        inner.appendChild(a)
+
+       }
+
+    // 在同样循环多个标签的时候，innerHTML是属于拼接的方式，效率很慢 要3500毫秒 
+    // document.createElement('a') 创建一个新标签 是需要20毫秒 效率高
+
+    </script>
+    
+</body>
+</html>
