@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>禁止鼠标右键复制文字</title>
+</head>
+<body>
+    <div>
+        我是一段不愿意分享的文字
+    </div>
+    <script>
+        var div = document.querySelector('div')
+        // contextmenu 主要控制应该何时显示上下文菜单，主要用于程序员默认取消的上下文菜单
+        div.addEventListener('contextmenu',function(e){
+            // 阻止事件 
+            e.preventDefault()
+        })
+        // 禁止鼠标选中 给整个页面添加禁止选中
+        document.addEventListener('selectstart',function(e){
+            // 阻止事件 
+            e.preventDefault()
+        })
+    </script>
+    
+</body>
+</html>

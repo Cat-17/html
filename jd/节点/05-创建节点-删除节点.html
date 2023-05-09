@@ -5,16 +5,23 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>创建节点</title>
+    <title>创建节点 删除节点</title>
     <!--
         // document.createElement()方法创建由tagName指定html元素
          因为这些元素原先不存在，是根据我们的需求动态生成的，所以我们也称为动态创建元素节点 -->
 </head>
 
 <body>
-    <ul>
+    <!-- <ul>
         <li>123</li>
 
+    </ul> -->
+
+    <button>删除</button>
+    <ul>
+        <li>熊大</li>
+        <li>熊二</li>
+        <li>光头强</li>
     </ul>
     <script>
         //     // 创建节点元素节点
@@ -30,13 +37,36 @@
 
         //创建一个节点
         var lis = document.createElement('li')
-        //   添加节点
-        lis.innerHTML = '您好'
-        // 把创建的li放到ul里面
+        // //   添加节点
+        // lis.innerHTML = '您好'
+        // // 把创建的li放到ul里面
+        // var ul = document.querySelector('ul')
+        // ul.appendChild(lis)
+        // // 指定添加
+        // ul.insertBefore(lis,ul.children[0])
+
+
+
+        // 删除节点操作
+        // 获取元素 
         var ul = document.querySelector('ul')
-        ul.appendChild(lis)
-        // 指定添加
-        ul.insertBefore(lis,ul.children[0])
+        var btn = document.querySelector('button')
+        // 删除节点 removeChild
+        // ul.removeChild(ul.children[0])
+        btn.onclick = function(){
+            // 这里加一个判断条件 父元素里面孩子的长度为0 
+            // 说明已经没有孩子，直接禁用按钮
+           if(ul.children.length === 0){
+
+            this.disabled = true
+
+           } else {
+            ul.removeChild(ul.children[0])
+           }
+        }
+
+
+
 
 
     </script>

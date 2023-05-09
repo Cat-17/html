@@ -16,6 +16,12 @@
             border: 1px solid pink;
             margin: auto 100px;
         }
+        li  {
+            width: 300px;
+        }
+        li a {
+            float: right;
+        }
     </style>
 </head>
 
@@ -23,6 +29,7 @@
     <textarea name="" id="">123</textarea>
     <button>发布</button>
     <ul>
+        
 
     </ul>
     <script>
@@ -41,11 +48,24 @@
                 // (1)创建元素
                 var li = document.createElement('li')
                 // 先有li 才能赋值
-                li.innerHTML = test.value
+                // 阻止连接跳转 javaScript:void（0）或者javascript：；
+                li.innerHTML = test.value + " <a href='javascript:;'>删除</a>"
                 //  (2)添加元素 添加给ul
                 // ul.appendChild(li)
                 // 指定添加元素
                 ul.insertBefore(li,ul.children[0])
+
+                // 删除元素 删除的是当前连接的li 它的父亲
+                var as = document.querySelectorAll('a')
+                for(var i = 0 ;i < as.length ; i++){
+                    as[i].onclick = function(){
+                        // 删除的是li 当前a所在的li  
+                        // 删除ul里面的li li是当前as的父亲 
+                        ul.removeChild(this.parentNode)
+                        
+
+                    }
+                }
             }
 
 

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>阻止事件冒泡</title>
+    <!-- 事件冒泡：开始时由最具体的元素接收，然后逐级向上传播到dom最顶层节点 -->
+    <style>
+        .father {
+            width: 300px;
+            height: 200px;
+            background-color: palegreen;
+            margin: 100px auto;
+
+        }
+        .son {
+            width: 200px;
+            height: 100px;
+            background-color: peru;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="father">
+        <div class="son">son盒子</div>
+    </div>
+
+<script> 
+     var sons = document.querySelector('.son')
+    sons.addEventListener('click',function(e){
+        alert('son')
+        // 事件对象 里面有个阻止冒泡的方法
+        //  e.stopPropagation()
+        e.stopPropagation()
+
+    },true)
+    var father = document.querySelector('.father')
+    father.addEventListener('click',function(e){
+        alert('father')
+        e.stopPropagation()
+
+    },false)
+    document.addEventListener('click',function(){
+        alert('document')
+    },false)
+
+    </script>
+    
+</body>
+</html>
