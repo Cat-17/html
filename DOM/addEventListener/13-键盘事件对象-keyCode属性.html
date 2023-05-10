@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>键盘事件对象-keyCode属性</title>
+</head>
+<body>
+    <script>
+        // 键盘事件对象-keyCode属性 可以得到相应键的ascll码值
+      document.addEventListener('keyup',function(e){
+        console.log(e.keyCode)
+        // 1;我的keyup keydown事件不区分大小写 a A 得到的都是65
+        // 我们可以利用keyCode返回的sscll码值来判断用户按下了那个建
+        if(e.keyCode === 65){
+            alert('您按下了a键盘')
+        } else {
+            alert('您没有按下a键盘')
+        }
+
+       
+      })
+
+      document.addEventListener('keypress',function(e){
+         // 2；我们的keypress 事件 区别大小写  a 是97 和A得到的是65
+        console.log('press'+ e.keyCode)
+      })
+   
+
+
+    //   ascll码值 键盘有很多 都给他标了对象的序号 1的ascll码值就是49
+    </script>
+    
+</body>
+</html>

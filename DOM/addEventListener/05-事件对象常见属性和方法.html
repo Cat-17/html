@@ -47,6 +47,13 @@
         })
 
         // 区别：e.target 点击了那个元素，就返回那个元素 this 哪个元素绑定了这个点击事件，那么就返回谁
+
+        // 兼容性写法：
+        // div.onclick = function(e){
+        //     e = e ||window.event
+        //     var target = e.target || e.srcElement
+        //     console.log(target)
+        // }
     </script>
 </body>
 </html>

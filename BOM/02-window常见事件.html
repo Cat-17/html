@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>window常见事件</title>
+</head>
+
+<body>
+    <!-- 窗口加载事件 -->
+    <!-- window.onload是窗口（页面）加载事件，当文档内容完全加载完成会触发该事件（包括图像
+    脚本文件，css文件等），就调用的处理函数 -->
+    <script>
+        // 传统的窗口加载事件 等文档内容完全加载完成才会触发里面的代码
+        // 注意，有了window.onload就可以把js代码写到页面元素的上方
+        //，因为onload是 等文档内容完全加载完成才会触发里面的代码 再去执行处理函数
+        // window.load传统注册事件方式只能写一次 如果有多个，会以最后一个window.load为准
+        window.onload = function () {
+            var btn = document.querySelector('button')
+            btn.addEventListener('click', function () {
+                alert('点击我')
+            })
+        }
+        // 最新的方法监听事件 使用addEventListener则没有限制
+        window.addEventListener('load',function(){
+            var btn = document.querySelector('button')
+            btn.addEventListener('click', function () {
+                alert('点击我')
+            })
+        })
+        window.addEventListener('load',function(){
+            var btn = document.querySelector('button')
+            btn.addEventListener('click', function () {
+                alert('22')
+            })
+        })
+
+
+        document.addEventListener('DOMContentLoaded',function(){
+            var btn = document.querySelector('button')
+            btn.addEventListener('click', function () {
+                alert('22')
+            })
+        })
+        // load是等页面内容全部加载完毕，包含页面dom元素，图片 flash css等等
+        // DOMContentLoaded 是DOM加载完毕，不包含图片 falsh css 就可以执行 加载速度比load更快一些
+
+    </script>
+    <button>点击</button>
+
+
+</body>
+
+</html>

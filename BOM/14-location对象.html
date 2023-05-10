@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>location对象</title>
+    <!-- window对象给我们提供了一个location属性用于获取或这只窗体的url，并且可以用于解析url
+    因此这个属性返回的是一个对象，所以我们将这个属性也称为location对象 -->
+
+    <!-- url叫统一资源定位符是互联网上标准资源的地址，互联网上的每个文件都有一个唯一的url
+    他包含你的信息指出文件的位置以及浏览器应该怎么处理他 -->
+</head>
+<body>
+    <script>
+        console.log(location.href) //获取或者设置整个url
+        console.log(location.host) //返回主机（域名
+        console.log(location.port) //返回端口号 如果没写空字符串
+        console.log(location.pathname)//返回路径
+        console.log(location.href)//返回参数
+        console.log(location.hash)//返回片段#后面内容常见于连接 锚点
+
+
+        // 主要记住 location.href 返回整个地址 location.href返回参数
+
+
+    </script>
+    
+</body>
+</html>

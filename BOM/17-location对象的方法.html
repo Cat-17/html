@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>location对象的方法</title>
+</head>
+<body>
+    <button>按钮</button>
+    <script>
+        // console.log(location.assign())//跟href一样 可以跳转页面（也称为重定向页面
+        // console.log(location.replace())//替换当前页面，因为不记录历史，所有不能后退页面
+        // console.log(location.reload())//重新加载页面，相当于刷新按钮，或者f5 如果参数为true强制刷新ctrl+f5
+        var btn = document.querySelector('button')
+        btn.addEventListener('click',function(){
+            // 特点 可以保存历史 可以后退页面
+            // location.assign('http://www.itcast.cn')
+            //   不保存历史 不可以后退页面
+            // location.replace('http://www.itcast.cn')
+            // 相当于刷新页面 
+            location.reload('http://www.itcast.cn')
+           
+        })
+
+    </script>
+    
+</body>
+</html>

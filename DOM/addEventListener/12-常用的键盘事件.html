@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>常用的键盘事件</title>
+    <!-- 事件除了使用鼠标触发 还可以使用键盘触发 -->
+    <!-- 三种键盘事件 onkeyup 某个键盘按键被松开时触发 -->
+    <!-- 三种键盘事件 onkeydown 某个键盘按键按下时触发 能识别功能键 -->
+    <!-- 三种键盘事件 onkeypress 某个键盘按键被按下时触发 但是不识别功能比如 ctrl shift 左右箭头-->
+</head>
+<body>
+   <script>
+    // // 传统注册键盘被松开事件
+    //  document.onkeyup = function(e){
+    //     alert('弹起')
+    // }
+
+    // 方法监听注册键盘被松开事件
+    // document.addEventListener('keyup',function(){
+    //     alert('弹弹弹')
+        
+    // })
+    // onkeydown 某个键盘按键按下时触发
+    document.addEventListener('keydown',function(){
+        alert('弹弹弹')
+        
+    })
+
+    // 三个事件的执行顺序 keydown  keypress   keyup
+    
+   </script>
+    
+</body>
+</html>
