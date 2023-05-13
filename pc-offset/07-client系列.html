@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>client系列</title>
+    <!-- 翻译过来就是客户端，我们使用client系列的相关属性来获取元素可视区的相关信息，通过client
+    系列的相关属性可以动态的得到该元素的边框大小，元素大小等 -->
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            background-color: darkkhaki;
+            border: 10px solid #000;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+    <script>
+        // client
+        var div = document.querySelector('div')
+        console.log(div.clientWidth) //返回自身包括padding 。内容区的宽度，不含边框 返回数值不带单位
+        console.log(div.clientHeight) //返回自身包括padding 。内容区的高度，不含边框 返回数值不带单位
+        // 如果想获取边框
+        console.log(div.clientTop)
+        console.log(div.clientLeft)
+    </script>
+    
+</body>
+</html>
