@@ -177,7 +177,7 @@
             var x = e.pageX - login.offsetLeft
             var y = e.pageY - login.offsetTop
             // 只有按下才会触发移动事件 一定要写在按下事件里面
-            // 2;鼠标移动的时候，吧鼠标在页面中的坐标，减去
+            // 2;鼠标移动的时候，吧鼠标在页面中的坐标，减去鼠标在盒子内的坐标
             // 鼠标在盒子内的坐标就是模态框的left和top
             document.addEventListener('mousemove',move)
             

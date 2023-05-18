@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>数据类型转换</title>
+    <!--判断数据是什么类型 typeof -->
+</head>
+
+<body>
+    <!-- 检测数据类型 -->
+    <!-- <script>
+        var num = 10
+        console.log(typeof num)
+        var srt = 'pink'
+        console.log(typeof srt)
+        var flag = true
+        console.log(typeof flag)
+
+        var age = +prompt('请您输入年年')
+        console.log(typeof age)
+
+    </script>  -->
+    <!-- 字面量 -->
+    <!-- <script>
+    // 字面量 18数据黑色是字符串类型   蓝色 是数据子  深一点蓝色是布尔值  浅灰色 是null undefined 
+    console.log(18)
+    console.log('18')
+    console.log(true)
+    console.log(undefined)
+    console.log(null)
+</script> -->
+    <!-- 数据类型转换 -->
+    <!-- <script>
+        // 转换成字符串类型
+        // 加号拼接字符串
+        var num = 1
+        alert(num + '我是字符串') //隐式转换
+    // 转换为数字型
+    // 转换为布尔型
+  
+  </script> -->
+<!-- 转换为数字型 -->
+
+    <script>
+        // parseInt()函数  将字符串转换成整数数值型  去掉单位
+        // parseFloat()函数 保留小数点
+        // Number() 强制转换函数 
+        // js 隐私转换（- + * /) 利用算术运算转换位数值型 
+        // var num = +prompt('请输入您的年龄')
+        console.log(parseInt('3.14'))  //取整
+        console.log(parseInt('120px'))  //去掉单位
+
+        console.log(parseFloat('123.456')) // 保留小数
+        console.log(parseInt('120px'))  //去掉单位
+
+        var str = '123'
+        console.log(Number(str))
+      
+
+    </script>
+
+    <script>
+        // 除了false 里面 的值会被转换成false 其余值都会被转换为true 
+        console.log(Boolean('')) // false
+        console.log(Boolean(0)) // false
+        console.log(Boolean(NaN)) // false
+        console.log(Boolean(null)) // false
+        console.log(Boolean(undefined)) // false
+        console.log(Boolean('小白')) //true
+        console.log(Boolean(12)) //true
+    </script>
+</body>
+
+</html>

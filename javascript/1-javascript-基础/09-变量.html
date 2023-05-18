@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>变量</title>
+    <!-- 相当于在内存当中开辟一个空间 用来存放数据的容器（盒子） -->
+
+    <!-- 变量的使用 1；声明变量；2；赋值 -->
+</head>
+<body>
+    <script>
+        // 变量的命名规范  以驼峰式的命名法
+        // 可以出现& _ 这俩种符号是可以出现 其他不允许
+        // 关键字也不可以 比较 循环for var 变量
+
+
+        // 交换俩个变量  先声明一个临时变量 用来交换
+        var rulsr = 0 
+        var my = 10
+        var my2 = 100
+        rulsr  =  my
+        my =  my2
+        my2 =  rulsr
+        console.log(my,my2) // my 100 my2 10 左边的值赋值给右边的
+        
+    </script>
+    <script>
+        // var 是一个js关键词 通过var 声明
+        // age 定义的变量名 自己定义
+        // = 后面就是要存放的数据 = 赋值 
+        // var age = 1
+        // console.log(age)
+        var myname = '旗木卡卡西'
+        var address = '火影村'
+        var age = 30
+        var gz = 2000
+        var data = [
+        name='旗木卡卡西',
+        address = '火影村',
+        age = 30,
+        gz = 2000
+
+        ]
+        console.log(data)
+           
+       
+        console.log('我的名字是：' + myname,'住址：' + address,'年龄：'+ age,  '工资：'+ gz )
+    //   变量案例 弹出用户名
+        var namey = prompt('请输入名字')
+        alert(namey)
+
+
+        // 更新变量 变量被重新赋值后，它原有的值会被覆盖掉，变量值将以最后一次赋的值为准
+        var my  = 0
+         my = 10
+        console.log(my)  // 打印结果10 后面覆盖前面的
+
+
+
+        // 声明多个变量
+        // 只需要写一个var 多个变量名之间使用英文，逗号隔开
+        var age = 18 ,
+            address = '火影村',
+            gz = 2000
+            
+    //变量的特殊情况
+    // 只声明不赋值 结果是：undefined 未定义的
+    var sex
+    console.log(sex)
+    // 不声明不赋值
+    // console.log(tel) //直接报错
+    // 不声明 直接赋值 使用
+    qq = 110
+    console.log(qq)//可以输出结果
+
+
+    
+    
+
+
+
+
+    </script>
+  
+     
+</body>
+</html>

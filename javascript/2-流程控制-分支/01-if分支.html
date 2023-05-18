@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>if分支</title>
+    <!-- 流程控制就是来控制我们的代码按照什么结构顺序来执行 -->
+    <!-- 流程控制主要有三种结构，分别是顺序结构，分支结构和循环结构  -->
+</head>
+
+<body>
+    <!-- <script>
+        // if 如果  条件表达式的结果为真执行下面的语句  不为真 则执行if下面的代码
+        var age = prompt('请输入您的年龄')
+        if (age >= 18) {
+            alert('欢迎来到网吧')
+        } else {
+            alert('未成年不允许进入网吧')
+        }
+
+    </script> -->
+    <!-- <script>
+        // 算法：能够被4整除且不能整除100的为闰年 或者能够被400整除的就是闰年
+        var yean = prompt('请您输入要检测的年份')
+        if(yean % 4 == 0 && yean % 100 != 0  || yean % 400 == 0){
+            alert('闰年')
+        } else {
+            alert('平年')
+        }
+    </script> -->
+
+    <script>
+        // 多分支语句 适合判断多重添加 多选一
+        var num  = prompt('请输入您的成绩')
+        if( num >= 90){
+            alert('真棒，辛苦啦')
+
+        } else if(num >= 70){
+            alert('回家，举高高')
+
+        } else if(num >= 60){
+            alert('下一次会更好')
+
+        } else {
+            alert('别灰心')
+        }
+    </script>
+
+</body>
+
+</html>
