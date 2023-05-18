@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>立即执行函数-flexible,js源码解析</title>
+    <!-- 立即执行函数  (function(){})() -->
+   
+</head>
+<body>
+    <script>
+        // 立即执行函数：不需要调用 ，立马就能够自己执行的函数
+        // 写法 1
+        // (function(){})()
+    //    也可以传递参数
+        (function(a ,b){
+            console.log(a + b)
+            var num = 10 //局部变量
+        })(1,2) ;//第二个小括号可以看做是调用函数
+
+          // 写法2
+        // (function(){}())
+        // 如果有多个立即执行函数 分；隔开
+        // 也可以定义名字
+        (function sum(b,c){
+            console.log(b + c)
+            var num = 10 //局部变量
+
+        }(1,3))
+        // <!-- 主要作用：创建一个独立的作用域  里面所有的变量都是局部变量，不会有命名冲突的问题-->
+
+
+       
+    </script>
+    
+</body>
+</html>

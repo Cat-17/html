@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>switch语句</title>
+    <!-- 主要针对变量设置一系列的特定值的选项是，就可以使用switch -->
+</head>
+
+<body>
+    <!-- 执行思路 利用我们的表达式的值 和 case 后面的选项值相匹配 如果匹配上就执行case里面的语句 -->
+    <!-- 如果都没有匹配上，那么执行 default里面的语句 -->
+    <script>
+        // 小括号里面的值 跟case 后面的值相匹配
+        // 1；我们开发中，里面的表达式是变量
+        // 2；我们num的值和case 里面的值相匹配的时候是全等  必须是值和数据类型一致才可以 
+        // beeak 如果当前的case里面没有break 则不会退出switch 继续执行下一个case
+        // var num = 2
+        // switch (num) {
+        //     case 1:
+        //         console.log('1')
+        //         break
+        //     case 2:
+        //         console.log('哇哦')
+        //         break
+        //     default:
+        //         console.log('没有匹配到')
+
+
+        // }
+        var fruits = prompt('请输入您要查询的水果')
+        switch (fruits) {
+            case '芒果':
+                alert('芒果价格为20一斤')
+                break
+            case '苹果':
+                alert('苹果价格为15一斤')
+                break
+            case '榴莲':
+                alert('榴莲价格为27一斤')
+                break
+            case '香蕉':
+                alert('香蕉价格为3.5一斤')
+                break
+            default:
+                alert('没有查询到你要的水果')
+        }
+
+        // if和switch区别
+        // 1；判断时间阶段。比如用户输入12点弹出中午好，用户输入18点弹
+
+    </script>
+
+</body>
+
+</html>

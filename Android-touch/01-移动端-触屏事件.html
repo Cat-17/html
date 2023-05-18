@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>移动端-触屏事件</title>
+    <!-- 移动端浏览器兼容性比较好，我们不需要考虑以前js的兼容性问题，可以放心使用原生js书写效果
+    但是移动端也有自己独特的地方，比如触屏事件touch（也称触摸事件）Android和ios都有  -->
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+        }
+    </style>
+</head>
+<body>
+    <!-- touch对象代表一个触摸点，触摸点可能是一根手指，也可能是一根触摸笔，触屏事件可响应用户手指（或触控笔）
+    对屏幕或者触控板操作 -->
+    <!-- 触屏touch 事件 -->
+   
+    <!-- -->
+    <!-- -->
+    <div></div>
+    <script>
+        // 获取元素
+        var div = document.querySelector('div')
+        //  <!-- touchstart  手机触摸到一个dom元素时触发 -->
+        div.addEventListener('touchstart',function(){
+           console.log(1);
+        })
+        //  touchmove  手机触摸到一个dom元素上滑动时触发
+        div.addEventListener('touchmove',function(){
+           console.log('移动')
+        })
+        //  touchend  手机触摸到一个dom元素上移开时触发
+        div.addEventListener('touchend',function(){
+           console.log(3)
+        })
+    </script>
+
+    
+</body>
+</html>

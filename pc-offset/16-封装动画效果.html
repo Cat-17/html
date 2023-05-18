@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>动画实现原理</title>
+    <!-- 核心原理：通过定时器setlnterval()不断移动盒子位置 -->
+    <!-- 实现步骤：1；获得盒子当前位置 2；让盒子在当前位置加上1个移动距离 -->
+    <!-- 利用定时不断重复这个操作 结束定时器的条件 -->
+    <!-- 5；注意此元素需要添加定位，才能使用element。style.left  -->
+    <style>
+        div {
+            position: absolute;
+            left: 0;
+            width: 100px;
+            height: 100px;
+            background-color: plum;
+        }
+
+        span {
+            position: absolute;
+            left: 0;
+            display: block;
+            width: 150px;
+            height: 150px;
+            background-color: peru;
+        }
+    </style>
+</head>
+
+<body>
+    <button>点击夏雨荷才走</button>
+    <div></div>
+    <span>夏雨荷</span>
+    <script>
+        // obj是个对象
+        // var obj = {
+        //     obj.name= 'andy'
+        // }
+        // 简单动画函数封装 obj目标对象 target 目标位置
+        function animate(obj, target) {
+            //当我们不断的点击按钮。这个元素的速度会越来越快，因为开启了太多了定时器
+            // 先清除以前的定时器，只保留当前的一个定时器
+            clearInterval(obj.timer)
+            // 给不同的元素指定不同的定时器
+            obj.timer = setInterval(function () {
+                if (obj.offsetLeft >= target) {
+                    // 停止动画 本质是定时器
+                    clearInterval(obj.timer)
+                }
+                //获得当前位置
+                // offsetLeft 是获取  style是修改元素
+                // 
+                obj.style.left = obj.offsetLeft + 1 + 'px'
+            }, 30)
+
+        }
+        var div = document.querySelector('div')
+        var span = document.querySelector('span')
+        var btn = document.querySelector('button')
+        animate(div, 300)
+        btn.addEventListener('click', function () {
+            animate(span, 600)
+        })
+
+    </script>
+
+
+</body>
+
+</html>

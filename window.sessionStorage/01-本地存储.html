@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>本地存储</title>
+    <!-- 本地存储特性：1；数据存储在用户浏览器中 -->
+    <!-- 设置 读取方便，甚至页面刷新不丢失数据 -->
+    <!--容量较大 sessionStorage约5m  localStorage约20m -->
+    <!-- 只能存储字符串 可以将对象JSON.stringify()编码后存储 -->
+</head>
+<body>
+    <input type="text" >
+    <button class="set">存储数据</button>
+    <button class="get">获取数据</button>
+    <button class="remove">删除数据</button>
+    <button class="del">清空所有数据</button>
+    <script>
+        var ipt = document.querySelector('input')
+        var set = document.querySelector('.set')
+        var get = document.querySelector('.get')
+        var remove = document.querySelector('.remove')
+        var del = document.querySelector('.del')
+    //    sessionStorage 生命周期为关闭浏览器窗口
+    // 在同一个窗口（页面下）数据可以共享
+    // 以键值对的形式存储使用 name：andy  name是键 andy是值
+   set.addEventListener('click',function(){
+    // 当我们点击了之后，就可以把表单里面的值存储起来
+     var val = ipt.value
+    // 存储数据
+     sessionStorage.setItem('uname',val)
+     sessionStorage.setItem('p wo',val)
+   
+   })
+//    获取数据
+   get.addEventListener('click',function(){
+    console.log(sessionStorage.getItem('uname'))
+   })
+//    删除数据
+   remove.addEventListener('click',function(){
+    sessionStorage.removeItem('uname')
+   })
+//    删除所有的数据 慎用
+   del.addEventListener('click',function(){
+    sessionStorage.clear()
+    
+   })
+
+    
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>运算符</title>
+</head>
+
+<body>
+    <script>
+        // + - * / %（取余）  算术运算符
+        console.log(1 + 1)
+        console.log(2 - 1)
+        console.log(3 * 1)
+        console.log(4 / 2)
+        console.log(5 % 2) // 1 取余主要判断这个数是否能被整除 
+    </script>
+    <script>
+        // 表达式 是由数字。运算符 变量等组成的式子 我们称为表达式 1+1
+        console.log(1 + 1)
+        // 返回值 2就是返回值
+        // 在我们程序里面  2 = 1 + 1 由右边的结果给了左边
+    </script>
+    <script>
+        // 递增递减运算符 ++ --  两种写法 前置递增运算符 写在变量的前面 ++ 
+
+        var age = 10
+        ++age
+        console.log(age) //结果是11   先计算 再返回值
+        // 后置递增运算符  写在变量的后面
+        var num = 10
+        num++
+        console.log(num) // 返回结果11
+        // 1；前置跟后置如果单独使用，效果是一样的
+        // 2；后置自增 ：口诀 先返回原值 后面变量再自加1
+
+    </script>
+    <script>
+        // 比较运算符 > < >= <=  ==(等于 ,默认转换数据类型 把字符串转换为数字型)
+        //  !=（不等于） ===  !==(全等 一模一样 要求俩侧的值 还有数据类型完全一致才可以)
+        //    返回值是布尔值 false true
+        // = 赋值 把右边给左边的
+        // == 判断 判断俩边值是否相等（默认转换数据类型 把字符串转换为数字型）
+        // === 全等 一模一样 判断要求俩侧的值 还有数据类型完全一致才可以
+
+    </script>
+    <script>
+        // 逻辑运算符  后面开发经常用于多个条件判断
+        // && 逻辑与  
+        console.log(3 > 5 && 3 > 2)  // 如果俩侧结果有一个为假 那么结果就为假 false
+        console.log(3 < 5 && 3 > 2)  // true 俩侧都为true 结果才是true
+        // || 逻辑或
+        console.log(3 > 5 || 3 > 2) // true 只要俩侧有一个为真 结果就为真
+        console.log(3 < 5 || 3 > 2)  //false  俩侧都为flase 结果才是flase
+        // ！ 逻辑非  取反
+        console.log(!true) // false 
+
+        //短路运算（逻辑中断）
+        // 1.用我妈的布尔值参与的逻辑运算 true && false == false
+        // 2；123 && 456 是值 或者是 表达式 参与逻辑运算
+        // 短路运算的原理：当有多个表达式（值）时，
+        // 左边的表达式值可以确定结果时，就不再继续运算右边的表达式的值 、
+        // 逻辑与短路运算  
+        console.log(123 && 456) // 456 如果表达式1 结果为真 则返回表达式2
+        console.log(0 && 456) // 0 如果表达式1为假 那么返回表达式1
+        // 、如果有null 或者否定的为假 其他都是真的 0 ' ' null   undefined NaN
+        //   逻辑或短路运算  
+        console.log(123 || 456)// 123如果表达式1 结果为真 则返回表达式1
+        console.log(0 || 456) // 456 如果表达式1 结果为假 则返回表达式2
+        var num = 0
+        console.log(123 || num++) // 逻辑或的短路运算  第一个值为真则返回第一个值 后面的不执行 num++不生效
+        console.log(num) // 返回结果是0
+
+
+    </script>
+    <script>
+        // 赋值运算符
+        var num = 10
+        num += 10 // 等价于 num = num + 10
+        num -= 10 // 等价于 num = num - 10
+        num *= 10 // 等价于 num = num * 10
+        num /= 10 // 等价于 num = num / 10
+    </script>
+    <!-- 运算符优先级   () 小括号  num++ 一元运算符  算数运算符先*/%后+-  关系运算符 >< 
+    相等运算符== ！= === ！==   逻辑运算符 先&&后|| 赋值运算符 =  逗号运算符， -->
+
+</body>
+
+</html>

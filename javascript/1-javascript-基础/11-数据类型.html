@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>数据的类型</title>
+    <!-- 在计算机，不同的额数据所需占用的存储空间是不同的，为了便于把数据分成所需内存大小不同的数据
+    充分利用存储空间，于是定义了不同的数据类型 -->
+</head>
+<body>
+    <!-- js变量的数据类型是只有程序在运行过程中，根据等号右边的值来确定的 -->
+    <!-- javascript拥有动态类型 同时也意味着相同的变量可用作不同的类型 -->
+    <script>
+        var x = 6
+          x = 'Bill' 
+          console.log(x) // 
+    </script>
+
+
+<!--js把数据类型分为俩类  简单数据类型（数字型 字符串 布尔值（false true）  未定义  空值类型 -->
+<!-- 复杂数据类型（object） -->
+<script>
+    var num = 10
+    var PT = 3.14
+    // 1;八进制 0~7 我们程序里面数据前面加0 表示八进制
+    var num1 = 010
+    console.log(num1) // 010 八进制  转换为 10进制  输出结果为 8
+
+    // 、2；16进制  0~9 a~f 数字的前面加0x 表示十六进制
+    var num3 = 0x9
+    console.log(num3)
+
+    // 数字型的最大值
+    console.log(Number.MAX_VALUE)
+    // 数字型的最小值
+    console.log(Number.MIN_VALUE)
+    // 无穷大
+    console.log(Number.MAX_VALUE * 2) //Infinity 无穷大
+    // 无穷小
+    console.log(-Number.MAX_VALUE * 2) //-Infinity 无穷小
+    // NaN  Not 非数字
+    console.log('pink老师' - 100)  //nan 表示非数字
+
+    // isNaN()这个方法来判断非数字 并且返回一个字，如果是数字返回的是false
+    // 不是数字返回true
+    console.log(isNaN(12))  // false
+    console.log(isNaN('pingk'))  // true
+
+
+</script>
+
+
+<!-- 字符串型数据类型 'pink' '12' 'true' 带引号 推荐使用单引号-->
+<script>
+    alert('老师')
+    var str = '我是一个高度帅的程序员'
+    //字符串引号嵌套 （外双内单 外单内双）
+    var str1 = "您好,我是 '白富美'" 
+    var str1 = '您好,我是 "白富美"\n程序员'
+    console.log(str1)
+
+
+    // 转义符
+    // \n 换行 
+    // \t  缩进
+
+    alert('酷热难耐,火辣的太阳底下,成为了最为独特的风景。\n 我审视四周,这里,是我的舞台, 我就是天地间的王者。\n这一刻,我豪气冲天,终于大喊一声:"收破烂啦~')
+
+    // 字符串拼接 +
+    // 检测获取字符串的长度  length
+    var  srt = '您好'
+    console.log(srt.length)
+    console.log('沙漠'+ '駱駝') // 字符串的 沙漠駱駝
+    // 只要有字符串和其他類型相憑藉，最終結果就是字符串拼接
+    console.log('12'+12) //1212
+    // +号总结口诀：数值相加，字符相连
+    // 变量和字符串相连的口诀：引引加加
+
+
+
+    
+
+
+
+    
+</script>
+<script>
+    // 布尔值 只有俩个值 true false 
+    var flag = true  // flag 布尔型
+    var flag1 = false  // flag 布尔型
+    console.log(flag + 1) // true 参与加法运算当1来看
+    console.log(flag1 + 1) // false 参与加法运算当0来看
+</script>
+
+<!-- 如果一个变量声明未赋值，就是undefined 未定义数据类型 -->
+<!-- undefined 和数字相加，最后结果是NaN -->
+<script>
+    var str 
+    console.log(str)
+    var ianle = undefined
+    console.log(ianle + 'pink')//undefinedpink
+    // null
+    var space = null
+    console.log(space + 'pink')//nullpink
+    console.log(space + 1) //1
+</script>
+    
+</body>
+</html>
