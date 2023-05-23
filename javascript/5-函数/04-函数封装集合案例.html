@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>函数封装集合案例</title>
+</head>
+
+<body>
+    <script>
+        // 利用函数最最大值
+        function fn() {
+            // 不确定实参传递过来有多少个 形参也不方便写 利用arguments属性也获取
+            var max = arguments[0] // 数组里面的第一个元素 依次对比数组
+            for (var i = 1; i < arguments.length; i++) {
+                // 函数求任意个数的最大值
+                if (max < arguments[i]) {
+
+                    max = arguments[i]
+                }
+            }
+            return max
+
+        }
+        console.log(fn(1, 2, 3, 5, 7, 30))
+        console.log(fn(10, 26, 39, 58, 70, 30))
+    </script>
+    <script>
+        // 利用函数翻转任意数组  翻转
+        function reverse(arr) {
+            var newArr = []
+            for (var i = arr.length - 1; i >= 0; i++) {
+                newArr[newArr.length] = arr[i]
+
+            }
+            return newArr
+
+        }
+        var srt = reverse([1, 2, 3, 4, 5])
+        console.log(srt)
+    </script>
+
+    <script>
+        //利用函数冒泡排序
+        function sort(arr) {
+            for (var i = 0; i < arr.length - 1; i++) {
+                for (var j = 0; j < arr.length - i - 1; j++) {
+                    if (arr[j] > arr[j + 1]) {
+                        var temp = arr[j]
+                        arr[j] = arr[j + 1]
+                        arr[j + 1] = temp
+                    }
+                }
+            }
+            return arr
+
+        }
+        var arr1 = sort([1, 4, 2, 9])
+        console.log(arr1)
+    </script>
+
+    <script>
+        // 用户输入年份，输出当前年份2月份的天数
+        function backDay() {
+            var yeay = prompt('请您输入年份:')
+            if (isRunYear(yeay)) { // 调用函数需要加小括号
+                alert('当前年份是闰年2月份有29天')
+            } else {
+                alert('当前年份是平年2月份有28天')
+            }
+
+        }
+        backDay()
+    </script>
+
+    <script>
+        // 利用函数判断闰年
+        function isRunYear(yeay) {
+            // 如果是闰年 我们返回是true 否则返回false
+            var flag = false
+            if (yeay % 4 == 0 && yeay % 100 !== 0 || yeay % 400 == 0) {
+                flag = true
+            }
+            return flag
+        }
+        console.log(isRunYear(2000))
+        console.log(isRunYear(1999))
+    </script>
+
+</body>
+
+</html>

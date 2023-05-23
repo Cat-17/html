@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>数组去重案例</title>
+</head>
+
+<body>
+    <script>
+        // 数组去重 
+        // 核心算法：遍历旧数组 拿着就数组元素去查询新数组，如果该元素在新数组里面没有出现过
+        // 就添加到新数组 否则不添加
+        // 利用新数组.indexOf(数组元素) 返回-1 就说明 新数组里面没有该元素 没有就追加 有就略过
+        function unique(arr) {
+            var newArr = []
+            for (var i = 0; i < arr.length; i++) {
+                if (newArr.indexOf(arr[i]) === -1) {
+                    newArr.push(arr[i])
+                }
+            }
+            return newArr
+
+        }
+        var demo = unique(['bule', 'red', 'bule'])
+        console.log(demo)
+    
+    </script>
+
+</body>
+
+</html>

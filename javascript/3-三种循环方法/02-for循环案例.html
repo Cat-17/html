@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>for循环案例</title>
+</head>
+
+<body>
+    <!-- <script>
+        // 1；求1~100之间的所有数的平均值
+        var sum = 0 //求和的变量
+        var average = 0
+        for (var i = 0; i <= 100; i++) {
+            sum += i
+
+        }
+        average = sum / 100
+        console.log(average)
+        // 2;求1—-100之间所有偶数和计数的和 我们需要偶数的和 even  期数 odd
+        var even = 0
+        var odd = 0
+        for (var i = 0; i <= 100; i++) {
+            if (i % 2 == 0) {
+                even += i
+            } else {
+                dd += i
+            }
+        }
+        console.log(even)
+        console.log(odd)
+
+        // 3;求1-100之间所有能够被3整除的数字的和
+        var result = 0
+        for (var i = 0; i <= 100; i++) {
+            if (i % 3 == 0) {
+                result += i
+            }
+        }
+        console.log(result)
+
+    </script> -->
+    <!-- <script>
+        var result = prompt('请输入班级总的人数')
+        var sum = 0 //总成绩分
+        var average = 0 // 平均分
+        for (var i = 1; i <= result; i++) {
+            var score = +prompt('第' + i + '个学生的成绩')
+            sum += score
+           
+
+        }
+        average = sum / result
+        alert('班级总成绩' + sum + '')
+        alert('班级平均分为' + average + '')
+
+    </script> -->
+    <!-- <script>
+        // 一行打印五颗❥
+        // 先声明一个空字符串
+        // 循环一次往字符串追加一个星星
+        // var str = ''
+        // for (var i = 1; i <= 5; i++) {
+        //     for (var j = 1; j <= 5; j++) {
+        //         str += '☆'
+        //     }
+        //     str += '\n'
+        // }
+        // // 可以把里面的循环看做是外层循环的语句
+        // // 外层循环循环一次，里面的循环执行全部
+        // console.log(str) 
+    </script> -->
+    <!-- <script>
+        // 要求用户输入行数和列数 控制台打印用户输入的行数和列数的星星
+        var str = ''
+        var number = prompt('请输入打印几行星星')
+        var line = prompt('请输入打印几列星星')
+        for (var i = 1; i <= number; i++) {
+            for (var j = 1; j <= line; j++) {
+                str += '★'
+            }
+
+            str += '\n'
+        }
+        console.log(str)
+    </script> -->
+    <!-- <script>
+         var str = ''
+        // 核心算法 ：里层的列数等于外层的行数 就可以实现倒三角的效果
+        
+        for(var i = 1 ; i <= 10 ;i++){
+            for(var j = i ; j <= 10 ;j++){
+                str += '☀'
+            }
+            str += '\n'
+        }
+        console.log(str)
+        var str = ''
+        // 核心算法 ：里层的列数等于外层的行数 就可以实现倒三角的效果
+        
+        for(var i = 1 ; i <= 10 ;i++){
+            for(var j = 1 ; j <= i ;j++){
+                str += '☀'
+            }
+            str += '\n'
+        }
+        console.log(str)
+    </script> -->
+    <!-- <script>
+        // 九九乘法表
+        var str  = ''
+        for(var i = 1 ;i <= 9;i++){
+            for(var j = 1 ; j <= i ;i++){
+                str += j + 'x' + i + '=' + i * j + '\t'
+            }
+            str  += '\n'
+        }
+        console.log(str)
+    </script> -->
+    <script>
+        for(var i = 1 ; i <= 5; i++){
+            if(i == 3){
+                continue
+                // 退出当前循环 接着下次循环
+                // 不会打印第三个包子
+                break
+                // 退出整个循环 下面的不执行
+            }
+            console.log('我正在吃'+i+'个包子')
+        }
+    </script>
+</body>
+
+</html>

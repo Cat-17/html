@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery的样式操作</title>
+    <!-- jQuery可以使用css方法来修改简单元素的样式：也操作操作类，修改多个样式 -->
+    <script src="./jquery.min.js"></script>
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            background-color: peru;
+            margin: 100px auto;
+            transition: all 0.5s;
+        }
+        .current {
+            background-color: rebeccapurple;
+            transform: rotate(360deg)
+        }
+    </style>
+</head>
+<body>
+    <div class="current"></div>
+    <!-- <script>
+        // 参数只写属性名 则是返回属性值
+        $(function(){
+            // 操作样式css方法 css 跟属性跟属性值 用逗号分隔 一定要加引号 如果值是数组可以不用加引号跟单位
+            // $("div").css("width","300px")
+            // 修改多个样式 采用对象的形式 可以不用加引号
+            $("div").css({
+                width:400,
+                height:400,
+                backgroundColor:"red"
+                // 如果是复合属性则不需采取驼峰命名法：如果值不是数组。则需要加引号""
+            })
+        })
+    </script> -->
+    <script>
+        $(function(){
+            // 1;添加类
+            // $("div").addClass("current")
+            // // 2；删除类
+            // $("div").removeClass("current")
+            // 3；切换类 如果有就删除 没有就添加
+            $("div").click(function(){
+                $(this).toggleClass("current")
+
+            })
+           
+        })
+
+    </script>
+    
+</body>
+</html>

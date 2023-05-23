@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>数组</title>
+    <!-- 数组可以存储多个数据 -->
+</head>
+
+<body>
+    <!-- <script>
+        // 数组 声明创建
+        // var arr = ['李慧', '17', '王建', '小宝']
+        // //把数组里面的元素全部取出来 数组获取 遍历（访问数组里面的每一个元素）数组
+        // // arr.length动态检测数组元素的个数
+        // for (var i = 0; i < arr.length; i++) {
+        //     console.log(arr[i])
+
+        // }
+        // var arr1 = [2, 6, 1, 7, 4]
+        // var num = 0
+        // var average = 0
+        // for (var i = 0; i < arr1.length; i++) {
+        //     num += arr1[i]
+        //    average  = num / arr1.length
+         
+
+        // }
+        // console.log(num) // 20
+        // console.log(average) // 4
+        var arr = [2,6,1,77,52,25,7]
+        var arrTop = arr[0]
+        for(var i = 1 ;i < arr.length;i++){
+            if(arrTop < arr[i]){
+                arrTop = arr[i]
+            }
+
+        }
+        console.log('最大值是：'+ arrTop)
+        
+        var arr = [2,6,1,77,52,25,7]
+        var arrmin = arr[0]
+        for(var i = 1 ;i < arr.length;i++){
+            if(arrTop > arr[i]){
+                arrTop = arr[i]
+            }
+
+        }
+        console.log('最小值是：'+ arrTop)
+    </script> -->
+    <script>
+        var arr = ['red', 'green', 'bule', 'pink']
+        var str = ''
+        var sep = '*'
+        for (var i = 0; i < arr.length; i++) {
+            str += arr[i] + sep
+        }
+        console.log(str)
+    </script>
+
+</body>
+
+</html>

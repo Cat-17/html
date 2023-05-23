@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //    数组去0案例
+        var arr2 = [2, 0, 6, 1, 77, 0, 52, 0, 25, 7]
+        var newArr = []
+        for (var i = 0; i < arr2.length; i++) {
+            if (arr2[i] !== 0) {
+                newArr[newArr.length] = arr2[i]
+            }
+        }
+        console.log(newArr)
+    </script>
+    <script>
+        // 数组取反元素
+        var arr = ['red', 'green', 'bule', 'pink']
+        var Arr = []
+        for (var i = arr.length - 1; i >= 0; i--) {
+            Arr[Arr.length] = arr[i]
+
+        }
+        console.log(Arr) //['pink', 'bule', 'green', 'red']
+
+    </script>
+    <script>
+        // 交换俩个变量
+        var num = 'pink'
+        var num1 = 'hotpink'
+        var temp = 0
+        temp = num
+        num = num1
+        num1 = temp
+        console.log(num, num1) //20 10
+
+
+
+    </script>
+    <script>
+        // 冒泡排序
+        var arr = [5, 4, 3, 2, 1]
+        for (var i = 0; i <= arr.length - 1; i++) {
+            for (var j = 0; j <= arr.length - i - 1; j++) {
+                // 内部交换2个变量的值，前一个和后面一个数组元素相比较
+                if (arr[j] > arr[j + 1]) {
+                    var temp = arr[j]
+                    arr[j] = arr[j + 1]
+                    arr[j + 1] = temp
+                }
+
+            }
+        }
+        console.log(arr)
+    </script>
+
+</body>
+
+</html>

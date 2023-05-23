@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>新增数组的俩种方式</title>
+</head>
+<body>
+    <script>
+        // 1；通过修改数组的length
+        var arr = ['red','blue','hotpink']
+        arr.length = 5  // length 可读写  增加的长度数组元素为undefined
+        console.log(arr)
+        
+        // 2；通过数组索引号 追加
+        var arr1 = ['red','blue','hotpink']
+        arr1[3] = 'pink' //数组的第三个是没有值的，可以直接添加，如果有元素直接替换
+        console.log(arr1)
+    </script>
+    
+</body>
+</html>

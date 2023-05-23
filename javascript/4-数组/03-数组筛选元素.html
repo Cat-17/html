@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>数组新增元素</title>
+</head>
+<body>
+    <script>
+        var arr = []
+        for(var i = 0 ;i < 100;i++){
+            arr[i] = i + 1
+        }
+        console.log(arr)
+
+        
+    </script>
+    <script>
+        // 数组筛选 方法1 
+        var arr1 = [2,0,6,1,77,0,52,0,25,7]
+        var max = []
+        var j = 0
+        for(var i = 0; i < arr1.length;i++ ){
+            if(arr1[i] >= 10){
+                // 新数组索引号应该从0开始，依次递增
+                max[j] = arr1[i]
+                j++
+            }
+        }
+        console.log(max)
+        
+        // 数组筛选方法2
+        // var arr1 = [2,0,6,1,77,0,52,0,25,7]
+        // var max = []
+        // // 刚开始max.length是0
+        // for(var i = 0; i < arr1.length;i++ ){
+        //     if(arr1[i] >= 10){
+        //         // 新数组索引号应该从0开始，依次递增
+        //         max[max.length] = arr1[i]
+            
+        //     }
+        // }
+        // console.log(max)
+      
+    </script>
+    
+</body>
+</html>

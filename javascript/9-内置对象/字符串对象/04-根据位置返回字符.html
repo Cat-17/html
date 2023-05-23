@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>根据位置返回字符方法</title>
+</head>
+<body>
+    <script>
+        // 根据位置返回字符
+        var str = 'andy'
+        console.log(str.charAt(3))
+       
+        // 遍历所有的字符
+        for(var i = 0 ; i < str.length;i++){
+            console.log(str.charAt(i))
+        }
+
+        // charCodeAt(index) 返回相应索引号的ASCII值 目的：判断用户按下了那个键 ASCII键盘上的字母对象的序号
+        console.log(str.charCodeAt(3))
+
+        // h5 新增 str[index] //里面写索引号 返回对应的字符
+        console.log(str[3])
+    </script>
+    
+</body>
+</html>

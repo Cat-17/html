@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>基本包装类型</title>
+    <!-- 为了方便操作基本数据类型 javascript还提供了是哪个特殊的引用类型  -->
+</head>
+<body>
+    <!-- 基本包装类型就是把简单数据类型包装成为复杂数据类型，这样基本数据类型就有了属性和方法 -->
+    <script>
+        var str = 'andy'
+        console.log(arr.length)
+        // 按道理基本数据类型是没有属性和方法的额，而对象才有属性和方法
+        // 上面的代码可以执行，就是因为js把简单数据类型包装成了复杂数据类型
+        // 1；生成临时变量 把简单类型包装后才能复杂数据类型
+        var temp = new String('andy')
+        // 2;赋值给我们声明的字符变量
+        str = temp
+        // 3；销毁临时变量
+        temp = null
+    </script>
+</body>
+</html>

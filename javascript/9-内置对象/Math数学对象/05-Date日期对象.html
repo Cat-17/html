@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date日期对象</title>
+</head>
+
+<body>
+    <script>
+        //  Date()日期对象 是一个构造函数， 必须使用new 来调用我们的日期对象
+        var date = new Date() // 如果没有跟参数 返回当前系统当前时间
+        console.log(date) // Mon May 22 2023 11:09:14 GMT+0800 (中国标准时间)
+        // 参数常用的写法 数字型 2023,5,22 或者是字符串型 '2023-5-22 8:8:8'
+        var date1 = new Date(2023, 5, 22)
+        console.log(date1)
+        var date2 = new Date('2023-5-22 8:8:8')
+        console.log(date2)
+
+    </script>
+    <script>
+        // 格式化日期 年月日
+        var date = new Date()
+        console.log(date.getFullYear())
+        console.log(date.getMonth() + 1)// 月份 比实际月份少1 记得月份要 + 1
+        console.log(date.getDate()) //返回的是几号
+        console.log(date.getDay()) // 返回的是一周的时间 但是周日返回的是0
+        // 写一个 2023年 5月 1日 星期三
+        var year = date.getFullYear()
+        var moth = date.getMonth() + 1
+        var dates = date.getDate()
+        // 时分秒
+        var hours = date.getHours()
+        var minutes = date.getMinutes()
+        var seconds = date.getSeconds()
+
+        var day = date.getDay()
+        // 周日返回的是0 数组的索引号从0开始 星期日要写在最前面
+        var arr = ['星期日', '星期一', '星期二', '星期三', '星期四', '星期五', '星期六']
+        console.log('今天是：' + year + '年' + moth + '月' + dates + '日 ' + arr[day] + hours + '时' + minutes + '分' + seconds + '秒')
+
+
+
+    </script>
+    <script>
+        // 封装一个函数返回当前的时分秒
+        function getTime() {
+            var time = new Date()
+            var h = time.getHours()
+            h = h < 10 ? '0'+ h : h
+            var m = time.getMinutes()
+            m = m < 10 ? '0'+ m : m
+            var s = time.getSeconds()
+            s = s < 10 ? '0'+ s : s
+            return h + ':' + m + ':'+ s
+        }
+        console.log(getTime())
+    </script>
+    <script>
+        //获得Date总的毫秒数 （时间戳） 是距离1970年1月1号过了多少毫秒
+        // 四种方法 第一种：valueOf() getTime()
+        var date = new Date()
+        console.log(date.valueOf)
+        console.log(date.getTime)
+        // 第二种 +new Date() 获得总毫秒数 最常用的写法
+        var date1 = +new Date() 
+        console.log(date1)
+        // h5 新增的 获得总毫秒数
+        console.log(Date.now())
+    </script>
+
+
+</body>
+
+</html>

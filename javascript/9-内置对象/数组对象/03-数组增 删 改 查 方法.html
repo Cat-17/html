@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>数组增 删 改 查 等方法</title>
+</head>
+<body>
+    <script>
+        // 增加数组元素 方法（） 数组开头  数组末尾 添加数组新元素
+        var arr = [1,2,3]
+        arr.push(4,'pink') // 在末尾添加新的数组元素 可以添加多个  参数直接写 
+        //  push完毕后返回的是新数组的长度
+
+        arr.unshift('小宝') // 在数组开头新添加数组 可以添加多个
+        //   参数直接写 unshift完毕后返回的是新数组的长度
+
+        console.log(arr) // 原数组也会发生变化
+
+    </script>
+    <script>
+        // 删除数组元素 pop() 删除数组最后一个元素
+        arr.pop() //  不跟参数  pop返回值：删除的数组元素  一次只能删除一个
+        console.log(arr) 
+        
+        // shift() 删除开头第一个元素  
+        arr.shift()   //  不跟参数 shift() 返回值：删除的数组元素  一次只能删除一个
+        console.log(arr)
+    </script>
+    <script>
+        var arr = [2001,2800,1500,1800,1900]
+        var newArr = []
+        for(var i = 0 ;i < arr.length;i++){
+            if(arr[i] < 2000){
+                // 把复合条件的数组元素 添加到新数组里面 push（参数） 方法
+                newArr.push(arr[i])
+
+            }
+        }
+        console.log(newArr)
+    </script>
+    
+</body>
+</html>

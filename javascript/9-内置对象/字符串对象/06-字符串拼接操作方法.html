@@ -1,0 +1,35 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width= , initial-scale=1.0">
+    <title>拼接字符串操作方法</title>
+</head>
+<body>
+    <script>
+        // 字符串操作方法
+        // 1；concat（'字符串1','字符串2'......)
+        var str = 'andy'
+        console.log(str.concat('red')) //andyred
+
+        // 截取字符串方法 substr（‘截取的起始位置','截取几个字符'
+        var str1 = '改革春风吹满地'
+        console.log(str1.substr(2,2)) //春风 第一个2 是索引号2 第二个是取几个字符
+
+    </script>
+    <script>
+        // 1；替换字符replace('被替换的字符','替换为的字符')
+        console.log(str.replace('andy','xindy')) // 返回替换为的字符
+        // var str = 'abcoefoxyozzoppo' 要求把o替换为*
+        var str1 = 'abcoefoxyozzoppo'
+        while(str1.indexOf('o') !== -1){
+            str1 = str1.replace('o','*')
+        }
+        console.log(str1) // abc*ef*xy*zz*pp*
+        // 2，字符转换为数组 split('分隔符')
+        console.log(str.split('&')) // ['andy']
+    </script>
+</body>
+</html>

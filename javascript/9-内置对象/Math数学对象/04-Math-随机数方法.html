@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>随机数方法</title>
+</head>
+
+<body>
+    <script>
+        // Math对象随机数方法 randow（）返回一个随机的小数 0 =< x < 1
+        // 这个方法里面不跟参数
+        // 代码验证
+        // console.log(Math.random())
+        // 我们想要得到俩个数之间的随机整合素 并且 包含这2个整数
+        // Math.floor(Math.random() * (max - min + 1)) + min; //含最大值，含最小值
+        function getRandom(min, max) {
+            return Math.floor(Math.random() * (max - min + 1)) + min; //含最大值，含最小值
+        }
+        console.log(getRandom(1, 10))
+        //    5.随机点名
+        var arr = ['张三', '小宝', '17', '王建', '李慧', 'pink']
+        console.log(arr[getRandom(0, arr.length - 1)])
+    </script>
+    <script>
+        
+        function getRandom1(min, max) {
+            return Math.floor(Math.random() * (max - min + 1)) + min
+        }
+        var random = (getRandom1(1, 10))
+        while (true) {
+            var num = prompt('你来猜，输入1~10之间的数字')
+            if (num > random) {
+                alert('你猜大了')
+            } else if (num < random) {
+                alert('你猜小了')
+            } else {
+                alert('你好帅，猜对了')
+                break
+            }
+        }
+    </script>
+</body>
+
+</html>

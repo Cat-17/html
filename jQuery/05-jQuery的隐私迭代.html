@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./jquery.min.js"></script>
+</head>
+<body>
+    <ol>
+        <li>兄弟</li>
+        <li>兄弟</li>
+        <li class="itme">ol 兄弟</li>
+        <li>兄弟</li>
+        <li>兄弟</li>
+       
+    </ol>
+   <div class="yeye">
+    <div class="father">
+        <div class="son">儿子</div>
+    </div>
+    <div class="nav">
+        <p>我是皮</p>
+        <div>
+            <p>我是p</p>
+        </div>
+    </div>
+   </div>
+    <div>惊喜不</div>
+    <div>惊喜不</div>
+    <div>惊喜不</div>
+    <div>惊喜不</div>
+    <ul>
+        <li>相同的操作</li>
+        <li>相同的操作</li>
+        <li>相同的操作</li>
+    </ul>
+    <ul>
+        <li>第一个</li>
+        <li>第二个</li>
+        <li>第三个</li>
+        <li>第四个</li>
+        <li>第五个</li>
+        <li>第六个</li>
+    </ul>
+    <script>
+        //1,； 获取四个div
+        $(function(){
+            console.log($("div"))
+        })
+        // 2；给四个div设置背景颜色为粉色
+        $(function(){
+            // 遍历内部DOM元素（伪数组形式存储）的过程就叫做隐私迭代
+            $("div").css("background","pink")
+            // 隐私迭代就是把匹配的所有元素内部进行遍历循环，给每一个元素添加css这个方法
+            $("ul li").css("background","red")
+        })
+
+    </script>
+    <script>
+        // jquery筛选选择器
+       console.log($("ul li:first"))// 获取ul 的第一个li元素
+       $('ul li:first').css('color','pink')
+        console.log($("ul li:last"))// 获取ul 的最后一个li元素
+        $("ul li:eq(2)").css("color","blue")// 获取ul 的索引号为2的li元素 索引号从0开始
+        
+        $("ul li:odd").css("color","#fff")// 获取ul 的索引号为奇数li元素
+        $("ul li:even").css("color","hotpink")// 获取ul 的索引号为偶数li元素
+    </script>
+    <script>
+        // 查找父子筛选方法
+        // 1;父parent() 返回最近一级的父亲 亲爸爸方法记得带小括号 
+        console.log($(".son").parent())
+
+        // 2；子 亲儿子 children()相当于子代选择器 ul>li
+        $(".nav").children("p").css("color","red")
+        // (2) 可以选择里面所有的孩子，包括儿子和孙子 find（） 类似于后代选择器
+        $(".nav").find("p").css("color","red")
+
+        // 3；兄 查找所有的亲兄弟元素 不包含自身siblings（）
+        $("ol .itme").siblings("li").css("color","red")
+        // 当前元素之后的兄弟元素 
+        $("ol .itme").nextAll("li").css("color","pink")
+         // 当前元素之前的兄弟元素
+        $("ol .itme").prevAll("li").css("color","hotpink")
+
+        // 选择第n个 
+        //选择索引号为2的元素更改样式 索引号选择器
+        $("ol li:eq(2)").css("background","red")
+        //选择方法的方式选择 更推荐
+        $("ol li").eq(2).css("color","blue")
+
+
+
+    </script>
+
+    <!-- 重点记住：parent()查找父元素 children()查找子元素 find（）查找所有的兄弟元素 eq()选择某一个元素 -->
+</body>
+</html>

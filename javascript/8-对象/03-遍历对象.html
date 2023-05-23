@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>遍历对象 </title>
+</head>
+<body>
+    <script>
+        //for in 遍历对象
+        var obj = {
+            name:'pink老师',
+            age:18,
+            sex:'男',
+            fn:function(){
+
+            }
+        }
+        // 因为对象是无序的,没有排序 索引号，用for是得不到我们对象里面的数据
+        // for(var i = 0; i < obj.length;i++){
+        //     console.log(obj[i])
+        // }
+        // for in 遍历对象 用于对数组或者对象的属性进行循环操作
+        // for(变量 in 对象)
+        for(var k in obj){
+            console.log(obj[k]) //k 输出的是变量 得到是属性名 name age sex
+            // obj 得到是属性值 pink老师 18 男
+        }
+        // 我们使用for in  里面的变量 我们喜欢写 k 或者key
+    </script>
+</body>
+</html>

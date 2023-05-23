@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>数组转换为字符串方法</title>
+</head>
+<body>
+    <script>
+        // 数组转换为字符串
+        // 方法1 ：toString()
+        var arr = [1,2,3]
+        console.log( typeof arr.toString())  // 字符串
+        // join(分隔符) 
+        console.log(arr.join('/')) //1/2/3
+        console.log(arr.join('*')) //1*2*3
+        console.log(arr.join('&')) //1&2&3
+        console.log(arr.join('-')) //1-2-3
+
+
+        console.log(arr.splice(0,1)) //splice(第几个开始,删除个数) 返回值 ：删除的length 跟个数
+        console.log(arr)
+
+ 
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery使用</title>
+    <!-- 引入jQuery文件-->
+    <script src="./jquery.min.js"></script>
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            background-color: plum;
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+    <script>
+        // jQuery 入口函数  可以写在页面的任意位置  是等着页面DOM页面加载完毕才会执行js代码
+        // 1；等着 DOM结构渲染完毕即可执行内部代码 不必等到所有的外部资源加载完成，jQuery帮我们完后了封装
+        // 相当于原生js中DOMcontentLoaded
+        // 不同于原生js中load事件是等页面温桑，外部的js文件，css文件，图片加载完毕才执行内部代码
+        $(document).ready(function(){
+            // 让div这个盒子隐藏
+            $('div').hide()
+        })
+
+        $(function(){
+            $('div').hide()
+        })
+
+    </script>
+    <script>
+        // jQuery的顶级对象$  $是jQuery的别称，在代码中可以使用jQuery代替$.但是一般为了方便，通常都直接使用$
+        // $是jQuery的顶级对象，相当于元素javascript中的window
+        // 把元素利用$包装成jQuery对象，就可以调用jQuery的方法
+        $(function(){
+            alert(11)
+            
+        })
+    </script>
+    
+</body>
+</html>
