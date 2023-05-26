@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>解绑事件</title>
+    <script src="./jquery.min.js"></script>
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            background-color: skyblue;
+        }
+    </style>
+</head>
+
+<body>
+    <div></div>
+    <ul>
+
+        <li>我们都是好孩子</li>
+        <li>我们都是好孩子</li>
+        <li>我们都是好孩子</li>
+    </ul>
+    <p>我是怕</p>
+    <script>
+        $(function () {
+            // 解绑事件 off（）方法可以移除通过on（）方法添加的事件处理程序
+            $("div").on({
+                click: function () {
+                    console.log("我点击了")
+                },
+                mouseover: function () {
+                    console.log("我鼠标经过了")
+                }
+            })
+            $("ul").on("click","li",function(){
+                console.log("你好")
+            })
+
+            // 解绑事件0ff（）方法 
+            // $("div").off() // 这个是解除了div身上的所有事件
+            $("div").off("click") // 这个是解除了div身上click的事件
+            // 如果是事件委派的情况下 怎么解除
+            $("ul").off("click","li")
+        })
+
+        // 如果有的事件只想触发一次，可以使用one（）来绑定事件
+        $("p").one("click",function(){
+            alert(11)
+        })
+
+    </script>
+
+</body>
+
+</html>

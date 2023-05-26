@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>获取元素固定属性值prop()</title>
+    <script src="./jquery.min.js"></script>
+    <style>
+        a {
+            display: block;
+            width: 50px;
+            height: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <a href="http://www.itcast.cn" title="都挺好">链接</a>
+    <!-- 复选框 默认选中 -->
+    <input type="checkbox" name="" id="" checked>
+    <div index="1" data-index="2">我是div</div>
+    <span>123</span>
+    <script>
+        // prop（）获取元素固定的属性值
+        $(function () {
+            // 获取属性值
+            console.log($("a").prop("href")) //http://www.itcast.cn/
+            //  修改或设置属性值
+            console.log($("a").prop("title", "我们都挺好"))
+
+            // 当复选框发生变化才会触发的事件
+            $("input").change(function () {
+                // 当我们复选框发生变化 检查我们checked是什么状态 返回结果是false
+                console.log($(this).prop("checked"))
+            })
+        })
+
+
+    </script>
+    <script>
+        //  元素的自定义属性 我们通过attr（）获取
+        $(function(){
+           console.log($("div").attr("index")) // 返回属性值 1 
+        //   修改属性值
+        $("div").attr("index","4")
+        })
+        // h5新增的自定义属性也可以获取
+        console.log($("div").attr("data-index")) // 2
+
+    </script>
+    <script>
+        // 数据缓存 data() 方法可以在指定的元素上存取数剧，
+        // 并不会修改DOM元素结构，一旦页面刷新。之前存放的数据都将被移除
+        $(function(){
+            $("span").data("uname","andy") // 存储方式
+            console.log( $("span").data("uname")) //获取  返回结果andy
+            // 也可以获取h5自定义的属性 不用写data
+            console.log($("div").data("index"))// 2 返回数字型的
+        })
+
+    </script>
+</body>
+
+</html>

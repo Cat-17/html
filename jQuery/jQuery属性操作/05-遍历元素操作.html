@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>遍历元素操作</title>
+    <script src="./jquery.min.js"></script>
+</head>
+<body>
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <script>
+        // $(function(){
+        //     var sum = 0
+        //     var arr = ["red","green","blue"]
+        //     // 隐式迭代 是对同一类元素做了同一的操作 可以把每一个div的颜色变成红色
+        //     // $("div").css("color","red")
+        //     // 如果想要给同一个元素作不同的操作，就需要用到遍历
+        //     // each(function(index,doeEle{})) 
+        //     // index 是每个元素的索引号，demEle是每个DOM元素对象 不是jquery对象
+        //     // 所有想要使用jquery方法，需要给这个demEle元素转换为jquery对象
+        //     $("div").each(function(index, domEle){
+        //         $(domEle).css("color",arr[index])
+
+        //         sum += parseInt($(domEle).text())
+
+
+        //     })
+        //     console.log(sum)
+        // })
+
+    </script>
+    <script>
+        //  var arr = ["red","green","blue"]
+        // 遍历方法2 
+        // $.each()方法可用于遍历任何对象。主要用于数据处理，比如数组对象
+        // 里面的函数2个参数：index是每个元素的索引号。element遍历内容
+        // $(function(){
+        //     $.each(arr,function(index,element){
+        //         console.log(index)
+        //         console.log(element)
+
+        //     })
+        // })
+        // 遍历对象
+        $.each({
+            name:"andy",
+            age:19
+
+        }),function(index ,element){
+            console.log(index)// 输出的是name age  属性名
+            console.log(element)// 输出的是andy 18 属性值
+        }
+    </script>
+</body>
+</html>

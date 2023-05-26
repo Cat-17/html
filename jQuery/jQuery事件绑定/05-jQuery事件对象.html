@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery事件对象</title>
+    <script src="./jquery.min.js"></script>
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            background-color: paleturquoise;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        // 只要有注册事件 就会有事件对象的产生
+        $(function(){
+            $(document).on("click",function(){
+                console.log("点击了document")
+            })
+            $("div").on("click",function(e){
+                console.log("点击了div")
+                // 有了事件对象 里面有很多的属性和方法
+                // 如果阻止默认行为
+                // e.preventDefault() // 阻止默认行为
+                e.stopPropagation()// 阻止冒泡
+            })
+            
+        })
+
+    </script>
+    <div></div>
+    
+</body>
+</html>

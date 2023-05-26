@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>获取尺寸 位置方法</title>
+    <script src="./jquery.min.js"></script>
+    <style>
+        /* .father {
+            position: relative;
+            width: 600px;
+            height: 600px;
+            background-color: palegoldenrod;
+            margin: 100px auto;
+          
+        }
+        .son {
+            position: absolute;
+            left: 10px;
+            top: 10px;
+            width: 200px;
+            height: 200px;
+            background-color: purple;
+        } */ 
+        body {
+            height: 2000px;
+        }
+        .container {
+            position: relative;
+            width: 900px;
+            height: 500px;
+            background-color: slateblue;
+            margin: 400px auto;
+            
+        }
+        .back {
+          position: fixed;
+            right: 30px;
+            bottom: 100px;
+            width: 50px;
+            height: 50px;
+            background-color: pink;
+            display: none;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="back">返回顶部</div>
+    <div class="container"></div>
+
+    <!-- <div></div> -->
+    <!-- <div class="father">
+        <div class="son"></div>
+    </div> -->
+    <!-- <script>
+        // 元素的大小
+        $(function(){
+            console.log($("div").width()) // 200
+            console.log($("div").height()) // 200 只获取宽高 不获取padding值
+            // console.log($("div").width(300)) // 修改宽度
+            console.log($("div").innerWidth())// 宽高+包含padding值 220
+            console.log($("div").outerWidth())// 宽高+包含padding值+border 239.2
+            console.log($("div").outerWidth(true))// 宽高+包含padding值+border+margin 239.2
+
+            
+
+        })
+    </script> -->
+    <!-- <script>
+        // 设置 获取元素的位置 相对于文档的位置 offset（） 不受父级影响
+        console.log($(".son").offset())
+        console.log($(".son").offset().top)
+        $(".son").offset({
+            top:200,
+            left:200
+        })
+        console.log($(".son").offset())
+        // 返回的一个对象 对象的left值 跟top值
+        // Objectleft: 52.400001525878906top: 44.400001525878906[[Prototype]]: Object
+    </script> -->
+    <!-- <script>
+        // 获取带定位的父级的坐标 如果父级都没有定位，则以文档为准
+        // 只能获取不能设置偏移
+    //    console.log($(".son").position())
+    </script> -->
+    <script>
+        // 被卷去的头部
+        $(function(){
+           
+            // $(".container").offset().top 得到我们盒子被卷去头部的位置
+            var boxTop = $(".container").offset().top
+            // 页面滚动事件
+            $(window).scroll(function(){
+                // console.log($(document).scrollTop());
+                // 只要大于我们盒子的的位置就显示返回顶部
+                if($(document).scrollTop() >= boxTop){
+                    $(".back").fadeIn()
+                } else {
+                    $(".back").fadeOut()
+                }
+
+                // 返回顶部
+                $(".back").click(function(){
+                    // $(document).scrollTop(0)
+                    // 是元素做动画不是呢个文档而是html body元素作动画
+                    $("body,html").animate({scrollTop:0})
+
+                })
+
+            })
+        })
+
+    </script>
+    
+</body>
+</html>
